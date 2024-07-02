@@ -1,0 +1,10 @@
+tasks:
+    - name: rust
+      before: |
+          cd ../backend
+      init: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      command: |
+          rustc --version && cargo --version
+
+    - name: zip
