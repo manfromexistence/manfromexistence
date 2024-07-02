@@ -57,9 +57,20 @@ fn main() {
     let book_slices:&[ String] = &["Maththamatics".to_string(), "Physics".to_string(), "Chemistry".to_string()];
     println!("Book Slice: {:?}", book_slices);
 
+    // Warning [All variables of Rust langueage is immutable means you cannot change it by default]
     // Strings Vs String Slices (&str)
     // Strings [Growable, Mutable, Owned String Type]
+    let mut stone_cold: String = String::from("Ohh, ");
+    stone_cold.push_str("Yeah!");
+    println!("Stone Cold Says: {}", stone_cold);
 
-    
+    // B- &stc (String Slice)
+    let string: String = String::from("Hello, World!");
+    let slice: &str = &string[0..5];
+    println!("Slice Value: {}", slice);
 
 }
+
+// fn print(){
+//    println!("SLICE: {}", slice);
+// }
