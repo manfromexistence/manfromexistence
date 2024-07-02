@@ -202,11 +202,11 @@ fn there_can_be_only_one_owner_at_a_time(){
 // Create a reference of a by using the & operator.
 fn create_a_reference(){
     let _x: i32 = 5;
-    // let r: i32 = x; // This is not good cause here we are taking ownership of x totally so x wil no longer be available anymore.
-    let _r: &i32 = &x; // This is good cause we are borrowing x. But notice that we no saying anything about mutability.
+    // let r: i32 = _x; // This is not good cause here we are taking ownership of x totally so x wil no longer be available anymore.
+    let _r: &i32 = &_x; // This is good cause we are borrowing x. But notice that we no saying anything about mutability.
     
     *_r += 1;
-    
+
     println!("Value of x is {}", _x);
     println!("Value of r is {}", _r);
 }
