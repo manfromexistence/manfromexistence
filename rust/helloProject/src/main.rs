@@ -1,3 +1,7 @@
+// In Rust the main function should always be called as fn main. If you don't specificly define it then it will throw Eroror
+// And a function / variable should be written in snake case
+// Snake Case: hello_world (Right)
+// Kebab Case: hello-world (Wrong)
 fn main() {
     println!("Hello, CRAB from CARGO!");
     // Rust has signed (+ and -) and unsigned (only +) integer types of different sizes.
@@ -69,7 +73,53 @@ fn main() {
     let slice: &str = &string[0..5];
     println!("Slice Value: {}", slice);
 
+
+    hello_world();
+    tell_height(182);
+    human_id("Emon", 21, 182.2);
+
+
+    let _X: i32 = {
+        let price: i32 = 5;
+        let qty: i32 = 10;
+        price * qty
+    };
+
+println!("Result is : {}", _X);
+
 }
+
+//const _X = {
+    // code
+//};
+
+fn hello_world(){
+    println!("Hello, Rust CRAB! from hello_world function")
+}
+
+fn tell_height(height: u32){
+    println!("My height is {} cm.", height)
+}
+
+fn human_id(name: &str, age: u32, height: f32){
+    println!("My name is {}, I am {} years old, and my height is {} cm.", name, age, height)
+}
+
+// Ecpressions and Statements
+// Expression: It is anything that returns a value.
+// Statement: It is anything that does not returns a value.
+
+
+// Expression
+// -----------------------------------
+// 5
+// true & false
+// add(3,4)
+// if condition {value1} else {value2}
+// 
+
+
+
 
 // fn print(){
 //    println!("SLICE: {}", slice);
