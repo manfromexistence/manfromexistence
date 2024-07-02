@@ -85,7 +85,10 @@ fn main() {
         price * qty
     };
 
-println!("Result is : {}", _X);
+    println!("Result is : {}", _X);
+    let y = add(4,6);
+    println!("Value of y is : {}", y);
+    println!("Value from function 'add' is {}.",  add(4,6))
 
 }
 
@@ -99,11 +102,15 @@ fn hello_world(){
 
 fn tell_height(height: u32){
     println!("My height is {} cm.", height)
-}
+};
 
 fn human_id(name: &str, age: u32, height: f32){
     println!("My name is {}, I am {} years old, and my height is {} cm.", name, age, height)
-}
+};
+
+fn add(a: i32, b: i32) -> i32{
+    a + b
+};
 
 // Ecpressions and Statements
 // Expression: It is anything that returns a value.
