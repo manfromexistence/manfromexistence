@@ -79,13 +79,13 @@ fn main() {
     human_id("Emon", 21, 182.2);
 
 
-    let _X: i32 = {
+    let _x: i32 = {
         let price: i32 = 5;
         let qty: i32 = 10;
         price * qty
     };
 
-    println!("Result is : {}", _X);
+    println!("Result is : {}", _x);
     let y = add(4,6);
     println!("Value of y is : {}", y);
     println!("Value from function 'add' is {}.",  add(4,6));
@@ -96,8 +96,10 @@ fn main() {
     println!("Your BMI is: {:.2}", bmi);
     // Rust Ownership Rues(3):
     each_value_in_rust_has_an_owner();
-    // there_can_be_only_one_owner_at_a_time();
+    there_can_be_only_one_owner_at_a_time();
     // when_the_owner_goes_out_of_scope_the_value_will_be_dropped();
+
+    create_a_reference();
 }
 
 //const _X = {
@@ -185,6 +187,29 @@ fn there_can_be_only_one_owner_at_a_time(){
 //    s.len()
 //}
 
+// ===============================================================================================================================================
+// Borrowing and References
+// ===============================================================================================================================================
+// So, this is for safety and performance issues.Borrowing is a way to allow multiple references to one piece of data.
+// References are a way to borrow data without taking ownership of it.
+// Understanding Borrowing and References
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
+// Borrowing is a way to allow multiple references to one piece of data.
+// Borrowing and References are similar to pointers in C.
+// There are two types of references in Rust:
+// 1. Immutable Reference: &T
+// 2. Mutable Reference: &mut T
+// Create a reference of a by using the & operator.
+fn create_a_reference(){
+    let _x: i32 = 5;
+    // let r: i32 = x; // This is not good cause here we are taking ownership of x totally so x wil no longer be available anymore.
+    let _r: &i32 = &x; // This is good cause we are borrowing x. But notice that we no saying anything about mutability.
+    
+    *_r += 1;
+    
+    println!("Value of x is {}", _x);
+    println!("Value of r is {}", _r);
+}
 
 
 
