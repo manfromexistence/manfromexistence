@@ -89,7 +89,15 @@ fn main() {
     let y = add(4,6);
     println!("Value of y is : {}", y);
     println!("Value from function 'add' is {}.",  add(4,6));
-
+    // Calling the BMI function
+    let weight: f64 = 70.0;
+    let height: f64 = 1.82;
+    let bmi = calculate_bmi(weight, height);
+    println!("Your BMI is: {:.2}", bmi);
+    // Rust Ownership Rues(3):
+    each_value_in_rust_has_an_owner();
+    there_can_be_only_one_owner_at_a_time();
+    when_the_owner_goes_out_of_scope_the_value_will_be_dropped();
 }
 
 //const _X = {
@@ -122,12 +130,61 @@ fn add(a: i32, b: i32) -> i32{
 // 5
 // true & false
 // add(3,4)
-// if condition {value1} else {value2}
-// 
+// 1. Variable Defination
+// 2. if condition {value1} else {value2} && control flow like while loop and etc plus so on...
+// 3. Function Defination
+// Final Exaple;
+// BMI = weight(kg)/height(m)*2
+fn calculate_bmi(weight_kg: f64, height_m: f64) -> f64{
+    weight_kg / (height_m * height_m)
+}
 
+// Statement
+// ------------------------------------
+// All the other things are mostly statements. I know you yeah ((You)) know that so do not ask me that.
 
-
-
-// fn print(){
-//    println!("SLICE: {}", slice);
+// Ownership, Borrowing and Refrences
+// Ownership
+// -----------------------------------------
+// C, C++ -> Memory Management Control Issue
+// Garbage Collector solved the issue, but created another new issue
+// [stops/Resums the programs]
+// Rust has solved the issue by introducing Ownerships to solve memory safety issues and high perfomance at the same time.
+// What is Ownership?
+// Every value has a single owner [every varible has one value, and it is its sole owner].
+// Ownership Rules:(3)
+// 1. Each value in Rust has an owner.
+fn each_value_in_rust_has_an_owner(){
+    let s1 = String::from("RUST");
+    let len = calculate_length(&s1);
+    println!("Length of '{}' is {}.", s1,len);
+}
+fn calculate_length(s: &String) -> usize{
+    s.len()
+}
+// 2. There can be only one owner at a time.
+fn there_can_be_only_one_owner_at_a_time(){
+    let s1 = String::from("RUST");
+    let s2 = s1;
+    // println!("{}", s1); (This will not work cause we transferred the ownership of s1 to s2)
+    println!("{}", s2)
+}
+// 3. When the owner goes out of scope, the value wil be dropped.
+fn when_the_owner_goes_out_of_scope_the_value_will_be_dropped(){
+    let s1 = String::from("RUST");
+    let len = calculate_length(&s1);
+    println!("Length of '{}' is {}.", s1,len);
+}
+// Outside of the scope s1 is defined it will go out of scope and its value will be dropped.
+// fn printLost(s: &string){
+//    println!("{}", &s1); =====================> We cannot access s1 here!
 // }
+
+fn calculate_length(s: &String) -> usize{
+    s.len()
+}
+
+
+
+
+
