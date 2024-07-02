@@ -23,5 +23,11 @@ fn main() {
     let letter: char ='a';
     println!{"The first letter of the alphabet is: {}", letter};
 
-
+    // Compound Data Types [Compound Data Types]:
+    // 1. Arrays
+    let numbers: [i32; 5] = [1,2,3,4,5];
+    // So, in Rust we have 2 formats to render something with println!
+    // 1. Debuggable
+    // 2. Display
+    println!("Number Array: {:?},", numbers);
 }
