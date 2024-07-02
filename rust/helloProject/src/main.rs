@@ -41,6 +41,25 @@ fn main() {
     println!("Fruits Arrary 3rd Item: {}", fruits[2]);
 
     // Tuples
-    let human: (&str, i32, bool) = ("Adam", 30, false);
+    let human: (String, i32, bool) = ("Adam".to_string(), 30, false);
     println!("Human Tuple: {:?}", human);
+
+    let my_mix_tuple = ("Kratos", 23, true, [1,2,3,4,5]);
+    println!("My Mix Tuple: {:?}", my_mix_tuple);
+
+    // Slices: [Contagies Sequence Of Data] = [1,2,3,4,5]
+    let number_slices:&[i32] = &[1,2,3,4,5];
+    println!("Number Slice: {:?}", number_slices);
+
+    let animal_slices:&[&str] = &["Lion", "Elephant", "Crocodile"];
+    println!("Animal Slice: {:?}", animal_slices);
+
+    let book_slices:&[ String] = &["Maththamatics".to_string(), "Physics".to_string(), "Chemistry".to_string()];
+    println!("Book Slice: {:?}", book_slices);
+
+    // Strings Vs String Slices (&str)
+    // Strings [Growable, Mutable, Owned String Type]
+
+    
+
 }
