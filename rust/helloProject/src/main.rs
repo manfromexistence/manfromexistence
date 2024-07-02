@@ -175,6 +175,7 @@ fn when_the_owner_goes_out_of_scope_the_value_will_be_dropped(){
     let len = calculate_length(&s1);
     println!("Length of '{}' is {}.", s1,len);
 }
+
 // Outside of the scope s1 is defined it will go out of scope and its value will be dropped.
 // fn printLost(s: &string){
 //    println!("{}", &s1); =====================> We cannot access s1 here!
