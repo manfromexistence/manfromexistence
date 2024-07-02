@@ -96,8 +96,8 @@ fn main() {
     println!("Your BMI is: {:.2}", bmi);
     // Rust Ownership Rues(3):
     each_value_in_rust_has_an_owner();
-    there_can_be_only_one_owner_at_a_time();
-    when_the_owner_goes_out_of_scope_the_value_will_be_dropped();
+    // there_can_be_only_one_owner_at_a_time();
+    // when_the_owner_goes_out_of_scope_the_value_will_be_dropped();
 }
 
 //const _X = {
@@ -170,20 +170,20 @@ fn there_can_be_only_one_owner_at_a_time(){
     println!("{}", s2)
 }
 // 3. When the owner goes out of scope, the value wil be dropped.
-fn when_the_owner_goes_out_of_scope_the_value_will_be_dropped(){
-    let s1 = String::from("RUST");
-    let len = calculate_length(&s1);
-    println!("Length of '{}' is {}.", s1,len);
-}
+// fn when_the_owner_goes_out_of_scope_the_value_will_be_dropped(){
+//     let s1 = String::from("RUST");
+//     let len = calculate_length(&s1);
+//     println!("Length of '{}' is {}.", s1,len);
+// }
 
 // Outside of the scope s1 is defined it will go out of scope and its value will be dropped.
 // fn printLost(s: &string){
 //    println!("{}", &s1); =====================> We cannot access s1 here!
 // }
 
-fn calculate_length(s: &String) -> usize{
-    s.len()
-}
+// fn calculate_length(s: &String) -> usize{
+//    s.len()
+//}
 
 
 
