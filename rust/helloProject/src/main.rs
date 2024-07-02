@@ -29,5 +29,18 @@ fn main() {
     // So, in Rust we have 2 formats to render something with println!
     // 1. Debuggable
     // 2. Display
-    println!("Number Array: {:?},", numbers);
+    println!("Number Array: {:?}", numbers);
+
+    // let mix = [1,2,3, "apple", true];
+    // println!("Mix Array: {}", mix);
+
+    let fruits: [&str; 3] = ["Apple", "Banana", "Orange"];
+    println!("Fruits Arrary: {:?}", fruits);
+    println!("Fruits Arrary 1st Item: {}", fruits[0]);
+    println!("Fruits Arrary 2nd Item: {}", fruits[1]);
+    println!("Fruits Arrary 3rd Item: {}", fruits[2]);
+
+    // Tuples
+    let human: (&str, i32, bool) = ("Adam", 30, false);
+    println!("Human Tuple: {:?}", human);
 }
