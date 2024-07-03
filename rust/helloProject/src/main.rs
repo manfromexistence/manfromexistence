@@ -100,6 +100,17 @@ fn main() {
     // when_the_owner_goes_out_of_scope_the_value_will_be_dropped();
 
     create_a_reference();
+
+    let mut account = BankAccount{
+        owner: "Alice".to_string(),
+        balance: 150.55,
+    };
+    // Immutable borrow to check the balance.
+    account.check_balance();
+
+    // Mutable borrow to widraw money.
+    account.withdraw(45.5);
+
 }
 
 //const _X = {
@@ -221,10 +232,10 @@ struct BankAccount {
     balance: f64,
 }
 
-impl BankAccount {{
+impl BankAccount {
     fn withdraw(&mut self, amount: f64) {
         println!("Withdrawing {} from account owned by {}", amount, self.owner);
-        seft.balance -= amount;
+        self.balance -= amount;
     }
 
     fn check_balance(&self){
