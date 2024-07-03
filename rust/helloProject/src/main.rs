@@ -137,6 +137,7 @@ fn main() {
     */
     if_else();
     else_if();
+    loop_example();
 }
 
 //const _X = {
@@ -359,4 +360,13 @@ fn else_if(){
     } else {
         println!("The number is not divisible by 4,3,2");
     }
+}
+
+fn loop_example(){
+    let mut i = 0;
+
+    while i < 10 {
+        println!("hello");
+        i = i + 1;
+    }    
 }
