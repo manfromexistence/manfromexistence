@@ -101,16 +101,25 @@ fn main() {
 
     create_a_reference();
 
+    // ================================================================================================================================================================================================
     let mut account = BankAccount{
         owner: "Alice".to_string(),
         balance: 150.55,
     };
+
     // Immutable borrow to check the balance.
     account.check_balance();
 
     // Mutable borrow to widraw money.
     account.withdraw(45.5);
 
+    // And if you widrawen your balance then you must check your balance again just to be safe!
+    account.check_balance();
+
+
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    declaring_variable();
+    declaring_constants();
 }
 
 //const _X = {
@@ -241,6 +250,27 @@ impl BankAccount {
     fn check_balance(&self){
         println!("Account owned by {} has a balance of {}", self.owner, self.balance);
     }
+}
+// ===========================================================================================================================================================================================================================================
+// [So, this "&" sign's name is ampersand]
+// Variables & Mutability
+// When the variable is immutable its value cannot be after its value is assined. And still you try to do so then you will get a compile error at your face!
+fn declaring_variable(){
+    let mut a = 5;
+    println!("So, the value of a is {}", a);
+    a = 10;
+    println!("So now again, the value of a is {}", a);
+}
+// ==========================================================================================================================================================================================================================================
+// Constants
+// This is like variable or I say borrowed from javascript.(LOL). So, constants are not allowed to change!
+// That means you cannot use mut in constants
+fn declaring_constants(){
+    let x = 5; // Plus use mut when it is not nessasary cause or else Rust will show a waring
+    const Y: u16 = 10; // This is not according to Rust Rules. | You should provide data type while declaring a constants | And constants should be in camel-case I guess I am a react guy so this is something that you have to accept from me.
+    // Cause in Rust Rules it just says the constant should be a UpperCase letter as a scrapy React.js developer by a lot of means I will probably assume that's means use a Camel-Case word! LOL 
+    println!("The value of LET x is {}", x);
+    println!("The value of CONST Y is {}", Y);
 }
 
 
