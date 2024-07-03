@@ -120,6 +120,21 @@ fn main() {
     // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     declaring_variable();
     declaring_constants();
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    shadowing();
+    shadowing_spaces();
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    /* 
+        We all know about the comments. So, nothing to learn here
+    */
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // Control Flow in Rust. Like:
+    /* 
+        1. if else statement
+        2. for loop
+        3. while loop
+        4. etc...
+    */
 }
 
 //const _X = {
@@ -265,12 +280,59 @@ fn declaring_variable(){
 // Constants
 // This is like variable or I say borrowed from javascript.(LOL). So, constants are not allowed to change!
 // That means you cannot use mut in constants
+// So, it is a feature of using (const)s that you can decalre it in GLOBAL scope. But that does mean you are a good or international programmer! (FREE KNOWLEDGE FOR EVERBODY!)
+// That means you can decalre a const here there anywhere in Rust with obiously type annotation (CAUSE YOU ALREADY SIGN YOUR NAME AS A RUST PROGRAMMER AND NOW YOU CANNOT BACK-OFF FROM THIS RESPONSIBILITY LIKE YOUR YOU DAD
+// DID WHEN HE WENT OUT TO BORROW SOME MILK FOR YOU AND NEVER CAME BACK || THIS TYPE OF SORROW WILL NEVER COME TO YOUR LIFE AGAIN CAUSE AS A RUST DEVELOPER YOU WILL GET A LIFETIME SUPPLY OF COPIUM
+// AND YOU WILL BE SEEN JUST MESSING AROUND SHOUTING ABUOT RUST AND WHY IT IS BETTER AND SAFER AND ETC... THAN ANY OTHER PROGRAMMING LANGUAGES OUT THERE!)
+// sORRY I THOUGHT CONST IN RUST IS CAMEL-CASE BUT NOT IT JUST THE BOUNCH OF UPPER CASE LETTER. YEAH, I KNOW THAT SUCKS!
 fn declaring_constants(){
     let x = 5; // Plus use mut when it is not nessasary cause or else Rust will show a waring
-    const Y: u16 = 10; // This is not according to Rust Rules. | You should provide data type while declaring a constants | And constants should be in camel-case I guess I am a react guy so this is something that you have to accept from me.
+    const Y: u16 = 10; // This is not according to Rust Rules. | You should provide data type annotation while declaring a constants :) So, why you might ask? Here is the answer(BECAUSE I SAID SO!!!) | And constants should be in camel-case I guess I am a react guy so this is something that you have to accept from me.
     // Cause in Rust Rules it just says the constant should be a UpperCase letter as a scrapy React.js developer by a lot of means I will probably assume that's means use a Camel-Case word! LOL 
     println!("The value of LET x is {}", x);
     println!("The value of CONST Y is {}", Y);
+    println!("The value of CONST PI declare above no.. no... in the bottom of this function is {}", PI);
+    println!("The value of CONST THREE_HOURS_IN_SECONDS declare above no.. no... in the bottom of this function is {}", THREE_HOURS_IN_SECONDS);
+}
+const PI: f64 = 3.141592653;
+const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+
+// ===========================================================================================================================================================================================================================
+// Shadowing
+// So, what is shadowing? You might wonder. So, the answer is my friend is: currently at this exact time while I am writing this I don't know either. Let me learn this first then I will try to mess up with it later.
+// As the Rust all knowing Rust Book tell us in their Rust Book
+fn shadowing(){
+    let x = 5;     // Let us take this x as x number 1. (x = 5)
+    let x = x + 1; // So, now This x can be said as x number 2. Is accually x number 1 with +1 right. (x = 6)
+                   // So, the first x was shadowed by the second x.
+                   // And when you print x the compiler will ignore first x and and just focus on the second x.
+                   // You can do this as many time as you want.
+                   // So now x = 6; and if keep doing it the x will increase as it is 7, 8, and so on...
+    println!("In the middle of the function x is: {}", x);
+    {               
+                   // So, now x is 6 times 2 = 12;
+        let x = x * 2;
+        println!("And in the inner funcion x is: {}", x);
+                    // In the inner function x is now 12
+    }
+
+    let x = x * 10000;
+    println!("In the outer main function x is: {}", x);
+    println!("After shadowing all other x's the value of x is: {}", x);
+}
+// Shadowing is simply means if you create a variable with the same name and letting the first one as a ingored code!
+// So, in the shadowing dark world the last shadow holds all the power!
+// Last but not least so, shadowing a variable is different than marking a variable as mutable.
+// Cause if you just simply try to re assign a shadowing value without let then you will face the TRUTH as a ERROR!
+// Here is another example clarifying this shadowing mess
+// So, let say you want to know how much space do you have in a variables like this:
+function shadowing_spaces(){
+    let spaces = "     ";       // Here, the spaces variable is type string.
+    let spaces = spaces.len();  // But, here the spaces variable is type number.
+                                // If you try to act smart and use mut here then Rust will send you a gift as ERROR!
+    println!("The value of shadowed_spaece is {}", spaces);
+    // let mut spaces = "     ";   // still a string type. But as I try to mutate it as number type using our same old mutate keyword
+    // spaces = spaces.len();      // Ther will be a ERROR and it will say that we're not allowed to mutate a varable's type.
 }
 
 
