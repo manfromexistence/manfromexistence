@@ -135,6 +135,7 @@ fn main() {
         3. while loop
         4. etc...
     */
+    if_else();
 }
 
 //const _X = {
@@ -326,7 +327,7 @@ fn shadowing(){
 // Cause if you just simply try to re assign a shadowing value without let then you will face the TRUTH as a ERROR!
 // Here is another example clarifying this shadowing mess
 // So, let say you want to know how much space do you have in a variables like this:
-function shadowing_spaces(){
+fn shadowing_spaces(){
     let spaces = "     ";       // Here, the spaces variable is type string.
     let spaces = spaces.len();  // But, here the spaces variable is type number.
                                 // If you try to act smart and use mut here then Rust will send you a gift as ERROR!
@@ -334,5 +335,15 @@ function shadowing_spaces(){
     // let mut spaces = "     ";   // still a string type. But as I try to mutate it as number type using our same old mutate keyword
     // spaces = spaces.len();      // Ther will be a ERROR and it will say that we're not allowed to mutate a varable's type.
 }
-
+// ===========================================================================================================================================================================================================================
+// Control Flow
+// 1. If Else Condition:
+fn if_else(){
+    let age: u8 = 18;
+    if age >= 18 {
+        println!("You can drive a car cause you are older than {}.", age);
+    } else {
+        println!("You can't drive a car cause you are not older than {} years.", age);
+    }
+}
 
