@@ -1,4 +1,4 @@
-So, today(02/074/2024 - Tuesday). I will learn these:
+So, today(02/07/2024 - Tuesday). I will learn these:
 1. Rust
 2. Zig
 3. Solidity
