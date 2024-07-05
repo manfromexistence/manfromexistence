@@ -24,7 +24,7 @@ Hey, bro. So, I am 100% sure that I can do this project.
 I am an experienced fullstack software engineer who loves to learn new techs and make something useful from that. My skills list:
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////|
-1. Frontend(WWW): Nextjs (React senior + Tailwind CSS + Shadcn ui framework -> I am constantly trying to put a component here + Firebase)                                                                                                                                     |
+1. Frontend(WWW): Nextjs (React senior + Tailwind CSS + Shadcn ui framework -> I am constantly trying to put my own component here + Firebase)                                                                                                                                |
                                                                                                                                                                                                                                                                               |
 2. Backend: Django + Elysia -> it is like Express but better + Laravel + and I am in a ongoing hunt to learn all use full backend technologies...                                                                                                                             |
                                                                                                                                                                                                                                                                               |
@@ -37,7 +37,7 @@ I am an experienced fullstack software engineer who loves to learn new techs and
 6. Frontend(DESKTOP): Electron + Tauri + just the native windows development + I use windows so Linux and Mac is out of my reach now but I think I am capable to make an app for these OS also.                                                                               |
                                                                                                                                                                                                                                                                               |
 7. (OUT OF TOPICS): UNREAL v5(No, as I am saying I use a pc which doesn't have any GPU. So I cannot do anything related to this but I will soon buy a fresh GPU for my PC. So then I can do this  task also)                                                                  |
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////|
 
 So, now you already know about all of my skills. Here is the list of some of my already created projects: 
 New Admin Panel: https://admin-panel-mahabub.vercel.app/
