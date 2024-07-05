@@ -1,0 +1,1 @@
+So, in this directroy I will be testing the new Nextjs(v15) feature with React(v19) and Tailwindcss(v4).
