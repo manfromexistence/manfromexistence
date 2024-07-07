@@ -1,0 +1,1 @@
+I am already very comfortable using Typescript but still have some slidest fear when using types and most this becomes worse when dealing with array and loops.

@@ -1,0 +1,1 @@
+Will learn new concepts and refresh my knowledge about Python.
