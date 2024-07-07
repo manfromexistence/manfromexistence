@@ -10,6 +10,8 @@ tasks:
     before: |
       cd rust
     init: |
+      echo "export RUSTUP_INIT_SKIP_KEYRING=yes" >> ~/.bashrc
       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && . "$HOME/.cargo/env"
     command: |
       rustc --version && cargo --version
+
