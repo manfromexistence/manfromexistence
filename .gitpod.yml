@@ -6,6 +6,12 @@ tasks:
       git pull
     command: |
       git status
+  - name: get_time
+    before: |
+      current_time=$(date +"%H:%M")
+      current_day=$(date +"%A")
+    command: |
+      bash manofexisence.sh
   - name: rust
     before: |
       cd rust
@@ -14,4 +20,3 @@ tasks:
       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && . "$HOME/.cargo/env"
     command: |
       rustc --version && cargo --version
-
