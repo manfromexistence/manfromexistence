@@ -1,6 +1,14 @@
 # Hey, folks it is: 07/07/2024(Sunday) ->
 Here are some lists that I maded today:
 
+## Will learn:
+1. Zig
+2. C++
+3. Python
+4. Typescript
+5. Testing
+N. And, currently I don't have a good amount of knowledge in OBJECT ORIENTED PROGRAMMING. So, will try to learn that.
+
 ## Notes:
 ```
 I choose to use folder dir as domain name when deploying websites to Vercel
