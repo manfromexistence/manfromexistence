@@ -1,4 +1,44 @@
-So, today(02/07/2024 - Tuesday). I will learn these:
+# Hey, folks it is: 07/07/2024(Sunday) ->
+Here are some lists that I maded today:
+## Notes:
+```
+I choose to use folder dir as domain name when deploying websites to Vercel
+```
+
+## Database:
+| List | Database |
+|---|---|
+| 1 | Cassandra + Hasura |
+| 2 | CloudFlared1 |
+| 3 | Cockrockdb |
+| 4 | Dolt + Gun |
+| 5 | DynamoDB |
+| 6 | Edgedb |
+| 7 | ElasticSearch |
+| 8 | Firebase |
+| 9 | Firebird |
+| 10 | Fuana |
+| 11 | Memgraph |
+| 12 | Meilisearch + Algoria |
+| 13 | Mindsdb |
+| 14 | Mongodb |
+| 15 | Mysql |
+| 16 | MariaDB |
+| 17 | Neo4j |
+| 18 | Oracle |
+| 19 | Postgresql |
+| 20 | Planetscale + Pocketbase |
+| 21 | PlanetScale |
+| 22 | Redis |
+| 23 | Surrealdb |
+| 24 | Superbase |
+| 25 | Xata |
+| 26 | 8base |
+| 27 | Yugabyte |
+
+
+# So, today(02/07/2024 - Tuesday). I will learn these:
+```
 1. Rust
 2. Zig
 3. Solidity
@@ -10,6 +50,7 @@ So, today(02/07/2024 - Tuesday). I will learn these:
 9. Wasm
 10. Neovim(Don't ask me why I want to learn Neovim)
 11. Nix(You know I will borrow this OS system code and build another OS myself === It is what it is)
+```
 
 # Best VScode Extentions for Rust:
 1. CodeLLDB (vadimcn.vscode-lldb)
