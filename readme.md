@@ -1,5 +1,6 @@
 # Hey, folks it is: 07/07/2024(Sunday) ->
 Here are some lists that I maded today:
+
 ## Notes:
 ```
 I choose to use folder dir as domain name when deploying websites to Vercel
