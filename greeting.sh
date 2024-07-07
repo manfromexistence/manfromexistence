@@ -1,6 +1,11 @@
 #!/bin/bash
 
-current_time=$(date +"%H:%M")
-current_day=$(date +"%A")
+current_time_utc=$(date +%Z -d "+0 hours")
 
-echo "Hello Sir, Good $(if [[ $(date +%H) -lt 12 ]]; then echo 'morning'; elif [[ $(date +%H) -lt 18 ]]; then echo 'afternoon'; else echo 'evening'; fi). The current time is $current_time, and today is $current_day."
+time_zone_offset="+06"  
+
+local_time=$(date -d "$current_time_utc $time_zone_offset hours")
+
+echo "Hello Programmer,"
+echo "Thanks for coding in our better codebase!"
+echo "Time in Kaligonj: $local_time"
