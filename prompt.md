@@ -294,3 +294,159 @@ Remember, the "pro" approach involves not only solving the immediate problem but
 
 
 ```
+
+# PROMPT(3):
+```
+So, I want to get the source code of unreal engine. I already done getting access of unreal engine souce code by siging to Epicgames and also added myself to Epicgames-developers organization in github. And forked the official private unreal engine source code. But, I don't do devlopemnt in my local pc. I use cloud devlopement solution like Gitpod for doing software development. But, I am having hard time to downlaod unreal engine source code cause it is to big to download and then use zip and then unziping it in gitpod. Is there any better way to get unreal engine source code in gitpod with git.
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+I am getting this ```gitpod /workspace/better (main) $ git clone --depth 1 --recursive git@github.com:manofexistence/UnrealEngine.git -b release
+Cloning into 'UnrealEngine'...
+The authenticity of host 'github.com (140.82.116.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.```
+
+here is the content of id_ed25519.pub ```ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH19cR3x6EWcpR7L4XZxUCg1t8KHX8gJG+FNyfBx7qSv ajju40959@gmail.com```. I am now on github "SSH and GPG keys" page. title of the SSH key is "how-to-get-unreal-engine-source-code-in-gitpod" what will be the key type and what to put as key?
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+here is my currrent teminal state ```gitpod /workspace/better (main) $      ssh-keygen -t ed25519 -C "ajju40959@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/gitpod/.ssh/id_ed25519): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/gitpod/.ssh/id_ed25519
+Your public key has been saved in /home/gitpod/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:Udt4EVJ3/xMeOUbT28R/anISHEMQfO2+6FevaCkxbzU ajju40959@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|         .===o.+o|
+|         ..=+oo.B|
+|        . ooo+ B=|
+|         . .o +.O|
+|        S    o +o|
+|          o o E o|
+|           + O +.|
+|          . *.o .|
+|           =o... |
++----[SHA256]-----+
+gitpod /workspace/better (main) $ cat /home/gitpod/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH19cR3x6EWcpR7L4XZxUCg1t8KHX8gJG+FNyfBx7qSv ajju40959@gmail.com
+gitpod /workspace/better (main) $ ``` use linux command to get the value of the entire content of your id_ed25519.pub file. And in the github SSH key page in Key type there are two options "1. Authentication key 2. Sigining key" what should I select here?
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+I added the key in gtihub ssh page but still geting this ```gitpod /workspace/better (main) $ git clone --depth 1 --recursive git@github.com:manofexistence/UnrealEngine.git -b release
+Cloning into 'UnrealEngine'...
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.```
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+here is the github repository link "https://github.com/manfromexistence/UnrealEngine.git"
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+In my github repository I wanna clone the unreal engine source code to view its code as inspiration. Now give me a nice folder name to put unreal engine source code
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+This is my gitpod yml file ```tasks:
+  - name: git
+    before: |
+      echo "Hello Sumon, how are you."
+    init: |
+      git pull
+    command: |
+      git status
+  - name: rust
+    before: |
+      cd rust
+    init: |
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && . "$HOME/.cargo/env"
+    command: |
+      rustc --version && cargo --version``` in rust terminal I have to manually enter key when downloading rust automate that process
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+```
+
+# RESULT(3):
+```
+git clone --depth 1 --recursive git@github.com:manofexistence/UnrealEngine.git -b release
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+It looks like you're encountering an issue with SSH authentication while trying to clone the Unreal Engine repository from GitHub. Let's troubleshoot this step by step:
+
+1. **SSH Key Setup**:
+   - Ensure that you have an SSH key associated with your GitHub account. If you haven't already, generate an SSH key pair using the following command (replace `<email>` with your GitHub email):
+     ```
+     ssh-keygen -t ed25519 -C "ajju40959@gmail.com"
+     ```
+   - Add the generated public key (`~/.ssh/id_ed25519.pub`) to your GitHub account under **Settings > SSH and GPG keys**.
+
+2. **SSH Agent**:
+   - Start the SSH agent in your Gitpod workspace:
+     ```
+     eval "$(ssh-agent -s)"
+     ```
+   - Add your private key to the agent:
+     ```
+     ssh-add ~/.ssh/id_ed25519
+     ```
+
+3. **Retry Cloning**:
+   - Now try cloning the Unreal Engine repository again:
+     ```
+     git clone --depth 1 --recursive git@github.com:manofexistence/UnrealEngine.git -b release
+     ```
+   - If prompted, confirm the authenticity of the host by typing "yes."
+
+4. **Check Permissions**:
+   - Make sure your GitHub account has access to the repository.
+   - Verify that you're using the correct repository URL (replace `<user>` with your GitHub username).
+
+If you encounter any further issues, let me know, and we'll continue troubleshooting! 🛠️¹²
+
+---
+I provided detailed steps to troubleshoot the SSH issue. If you need further assistance or encounter any other problems, feel free to ask!
+
+Source: Conversation with Copilot, 7/8/2024
+(1) Downloading Unreal Engine Source Code - Epic Dev. https://dev.epicgames.com/documentation/en-us/unreal-engine/downloading-unreal-engine-source-code.
+(2) Any alternative to github for downloading the source code?. https://forums.unrealengine.com/t/any-alternative-to-github-for-downloading-the-source-code/828355.
+(3) Downloading Unreal Engine Source Code. https://docs.unrealengine.com/4.26/ProgrammingAndScripting/ProgrammingWithCPP/DownloadingSourceCode/.
+(4) Downloading Unreal Engine Source Code - Epic Dev. https://dev.epicgames.com/documentation/de-de/unreal-engine/downloading-unreal-engine-source-code.
+(5) undefined. https://github.com/EpicGames/UnrealEngine.
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+Certainly! To automate the process of downloading Rust in your Gitpod workspace, you can use the following steps:
+
+1. **SSH Key Setup**:
+   - Generate an SSH key pair (if you haven't already) using the command:
+     ```
+     ssh-keygen -t ed25519 -C "ajju409599@gmail.com"
+     ```
+   - Add the generated public key (`~/.ssh/id_ed25519.pub`) to your GitHub account under **Settings > SSH and GPG keys**.
+
+2. **Gitpod Configuration**:
+   - In your `.gitpod.yml` file, add the following lines to set up your SSH key:
+     ```yaml
+     tasks:
+       - name: rust
+         before: |
+           cd rust
+         init: |
+           curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && . "$HOME/.cargo/env"
+           eval "$(ssh-agent -s)"
+           ssh-add ~/.ssh/id_ed25519
+         command: |
+           rustc --version && cargo --version
+     ```
+   - Replace `"your_email@example.com"` with your actual email address.
+
+3. **Automated SSH Authentication**:
+   - With the added SSH key, Gitpod will automatically use it for authentication during the Rust installation process.
+   - You won't need to manually enter the key each time.
+
+By following these steps, you'll have a smoother Rust setup experience in Gitpod. Happy coding! 🚀🔑
+
+---
+Feel free to ask if you need further assistance or have any other requests! 😊
+```

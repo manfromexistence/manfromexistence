@@ -1,4 +1,11 @@
 tasks:
+  - name: git
+    before: |
+      echo "Hello Sumon, how are you."
+    init: |
+      git pull
+    command: |
+      git status
   - name: rust
     before: |
       cd rust
@@ -6,4 +13,3 @@ tasks:
       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && . "$HOME/.cargo/env"
     command: |
       rustc --version && cargo --version
-  - name: git
