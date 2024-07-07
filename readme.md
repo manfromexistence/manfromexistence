@@ -9,6 +9,13 @@ Here are some lists that I maded today:
 5. Testing
 N. And, currently I don't have a good amount of knowledge in OBJECT ORIENTED PROGRAMMING. So, will try to learn that.
 
+## More learn whishlist:
+1. Graphql
+2. TRPC
+3. Tanstack Query
+4. Redux(I already know but need to know this even better)
+5. Some more...
+
 ## Notes:
 ```
 I choose to use folder dir as domain name when deploying websites to Vercel
