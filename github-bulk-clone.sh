@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Hello World"
+echo "All, repos are being cloned..."
 
 repo=(
     "stocks"
@@ -103,5 +103,5 @@ repo=(
 
 for n in ${repo[@]};
 do 
-    git clone https://github.com/manfromexistence/$n.git
+    git clone https://github.com/manfromexistence/$n.git && cd $n && rm -rf .git && cd ..
 done
