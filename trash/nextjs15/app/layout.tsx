@@ -12,8 +12,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DX",
-  description: "Developing Experience!",
+  title: "Nextjs15",
+  description: "Exploring new feature of Nextjs15 and Reactjs19. Will also use TailwindCSSv4",
 };
 
 export default function RootLayout({
@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${geistSans.variable} ${geistMono.variable} min-h-[100vh] w-full bg-background`}>
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>
