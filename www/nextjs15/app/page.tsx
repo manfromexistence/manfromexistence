@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function Home() {
   const [theme, setTheme] = useState<any>({
@@ -169,13 +168,11 @@ export default function Home() {
         <Button onClick={switchDefaultTheme}>Default(Gray)</Button>
         <Button>Slate</Button>
       </div>
-
       <div className="grid grid-cols-3 gap-3">
         {theme && Object.entries(theme).map(([key, value]: [any, any]) => (
           <p key={key} style={{ backgroundColor: `hsl(${value})` }} className={`flex-center text-[#00ff44] h-32 w-full border`}><strong>{key}</strong></p>
         ))}
       </div>
-
     </div>
   );
 }
