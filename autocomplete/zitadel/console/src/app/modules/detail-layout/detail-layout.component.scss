@@ -1,0 +1,42 @@
+@mixin detail-layout-theme($theme) {
+  $primary: map-get($theme, primary);
+  $primary-color: map-get($primary, 500);
+  $is-dark-theme: map-get($theme, is-dark);
+  $lighter-color: rgba(map-get($primary, 300), 0.5);
+
+  .detail-layout-head {
+    margin-bottom: 2rem;
+
+    .detail-layout-top-view {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+
+      .back-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        a {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    div {
+      h1 {
+        font-size: 1.8rem;
+        margin-top: 0;
+      }
+
+      .head-desc {
+        display: block;
+        font-size: 0.9rem;
+      }
+    }
+
+    .actions-wrap {
+      padding-top: 0.5rem;
+    }
+  }
+}

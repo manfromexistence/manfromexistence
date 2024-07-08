@@ -1,0 +1,27 @@
+<h1 mat-dialog-title class="title">{{ 'PROJECT.PAGES.PRIVATELABEL.DIALOG.TITLE' | translate }} {{ data?.number }}</h1>
+
+<div mat-dialog-content>
+  <p class="desc cnsl-secondary-text">{{ 'PROJECT.PAGES.PRIVATELABEL.DIALOG.DESCRIPTION' | translate }}</p>
+
+  <mat-radio-group class="project-radio-group" [(ngModel)]="setting">
+    <mat-radio-button class="radio-button" *ngFor="let selection of settings" [value]="selection">
+      <span class="label">{{ 'PROJECT.PAGES.PRIVATELABEL.' + selection + '.TITLE' | translate }}</span>
+    </mat-radio-button>
+  </mat-radio-group>
+  <cnsl-info-section class="info">{{ 'PROJECT.PAGES.PRIVATELABEL.' + setting + '.DESC' | translate }}</cnsl-info-section>
+</div>
+<div mat-dialog-actions class="action">
+  <button cdkFocusInitial mat-stroked-button (click)="closeDialog()">
+    {{ 'ACTIONS.CLOSE' | translate }}
+  </button>
+
+  <button
+    [disabled]="setting === undefined"
+    cdkFocusInitial
+    color="primary"
+    mat-raised-button
+    (click)="closeDialog(setting)"
+  >
+    {{ 'ACTIONS.OK' | translate }}
+  </button>
+</div>

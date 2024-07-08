@@ -1,0 +1,49 @@
+.title {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+
+  .fill-space {
+    flex: 1;
+  }
+
+  .ok-button {
+    margin-left: 0.5rem;
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  .left,
+  .right {
+    font-size: 14px;
+    flex: 1 0 auto;
+  }
+
+  .left {
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .right {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+  }
+}
+
+.download-button {
+  margin-bottom: 1rem;
+}

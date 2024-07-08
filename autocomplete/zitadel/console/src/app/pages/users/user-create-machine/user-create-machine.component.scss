@@ -1,0 +1,31 @@
+.machine-create-main-content {
+  max-width: 35rem;
+
+  .machine-create-form {
+    width: 100%;
+    padding-top: 1rem;
+
+    .machine-btn-container {
+      button {
+        margin-top: 3rem;
+        display: block;
+        padding: 0.5rem 4rem;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  .machine-create-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 -0.5rem;
+
+    .formfield {
+      flex: 1 0 33%;
+      margin: 0 0.5rem;
+    }
+  }
+}

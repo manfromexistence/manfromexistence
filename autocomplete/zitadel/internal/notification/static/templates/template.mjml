@@ -1,0 +1,53 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-font name="Lato" href="{{.FontURL}}" />
+      <mj-text align="center" color="{{.FontColor}}" font-family="{{.FontFamily}}" />
+      <mj-section padding="0" full-width="full-width" />
+      <mj-body width="800px" border-radius="16px"/>
+      <mj-image padding="0" />
+      <mj-column padding="0" />
+      <mj-wrapper padding-left="0" full-width="full-width" />
+    </mj-attributes>
+    <mj-style>
+      .shadow a {
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper background-color="{{.BackgroundColor}}" border-radius="16px">
+      {{if .IncludeLogo}}
+      <mj-section>
+        <mj-group>
+          <mj-column>
+            <mj-image src="{{.LogoURL}}" align="center" width="180px" border-radius="8px" padding="50px 0 30px 0" />
+          </mj-column>
+        </mj-group>
+      </mj-section>
+      {{end}}
+      <mj-section>
+        <mj-column width="60%">
+          <mj-text font-size="24px" font-weight="500">{{.Greeting}}</mj-text>
+          <mj-text font-size="16px" line-height="1.5" font-weight="light">{{.Text}}</mj-text>
+          <mj-button css-class="shadow" border-radius="6px" href="{{.URL}}" rel="noopener noreferrer" background-color="{{.PrimaryColor}}" font-size="14px" font-weight="500" >{{.ButtonText}}</mj-button>
+
+          {{if .IncludeFooter}}
+          <mj-divider
+                  border-color="#dbdbdb"
+                  border-width="2px"
+                  border-style="solid"
+                  padding-left="20px"
+                  padding-right="20px"
+                  padding-bottom="20px"
+                  padding-top="20px"
+          ></mj-divider>
+          <mj-text padding="16px">
+            {{.FooterText}} </mj-text>
+
+          {{end}}
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

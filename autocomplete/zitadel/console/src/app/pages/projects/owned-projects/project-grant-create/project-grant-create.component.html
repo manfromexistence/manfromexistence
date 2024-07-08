@@ -1,0 +1,58 @@
+<cnsl-create-layout
+  title="{{ 'PROJECT.GRANT.CREATE.TITLE' | translate }}"
+  [createSteps]="createSteps"
+  [currentCreateStep]="currentCreateStep"
+  (closed)="close()"
+>
+  <ng-container *ngIf="currentCreateStep === 1">
+    <h1>{{ 'PROJECT.GRANT.CREATE.SEL_ORG' | translate }}</h1>
+    <cnsl-search-org-autocomplete class="block" (selectionChanged)="selectOrg($event)"> </cnsl-search-org-autocomplete>
+    <span *ngIf="org"> {{ 'PROJECT.GRANT.CREATE.FOR_ORG' | translate }} {{ org.name }} - {{ org.primaryDomain }} </span>
+  </ng-container>
+
+  <ng-container *ngIf="currentCreateStep === 2">
+    <h1>{{ 'PROJECT.GRANT.CREATE.SEL_ROLES' | translate }}</h1>
+
+    <cnsl-card *ngIf="projectId">
+      <cnsl-project-roles-table
+        [displayedColumns]="['select', 'key', 'displayname', 'group', 'creationDate', 'changeDate']"
+        (changedSelection)="selectRoles($event)"
+        [projectId]="projectId"
+      >
+      </cnsl-project-roles-table>
+    </cnsl-card>
+  </ng-container>
+
+  <div class="btn-container">
+    <ng-container *ngIf="currentCreateStep === 1">
+      <button
+        [disabled]="!org"
+        (click)="next()"
+        color="primary"
+        mat-raised-button
+        class="big-button"
+        cdkFocusInitial
+        data-e2e="project-grant-continue"
+      >
+        {{ 'ACTIONS.CONTINUE' | translate }}
+      </button>
+    </ng-container>
+
+    <ng-container *ngIf="currentCreateStep === createSteps">
+      <button (click)="previous()" mat-stroked-button class="small-button">
+        {{ 'ACTIONS.BACK' | translate }}
+      </button>
+      <button
+        color="primary"
+        [disabled]="!org"
+        (click)="addGrant()"
+        mat-raised-button
+        class="big-button"
+        cdkFocusInitial
+        data-e2e="save-project-grant-button"
+      >
+        {{ 'ACTIONS.SAVE' | translate }}
+      </button>
+    </ng-container>
+  </div>
+</cnsl-create-layout>

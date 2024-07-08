@@ -1,0 +1,28 @@
+<div class="signed-out-wrap">
+  <div class="block">
+    <div class="signed-out-header">
+      <ng-container *ngIf="labelpolicy; else zitadelLogo">
+        <img alt="logo" *ngIf="dark && labelpolicy.logoUrlDark; else lighttheme" [src]="labelpolicy.logoUrlDark" />
+        <ng-template #lighttheme>
+          <img *ngIf="labelpolicy.logoUrl; else zitadelLogo" alt="logo" [src]="labelpolicy.logoUrl" />
+        </ng-template>
+      </ng-container>
+
+      <ng-template #zitadelLogo>
+        <img alt="zitadel logo" *ngIf="dark; else zitadellighttheme" src="./assets/images/zitadel-logo-light.svg" />
+        <ng-template #zitadellighttheme>
+          <img alt="zitadel logo" src="./assets/images/zitadel-logo-dark.svg" />
+        </ng-template>
+      </ng-template>
+
+      <p class="cnsl-secondary-text">{{ 'USER.SIGNEDOUT' | translate }}</p>
+
+      <a matTooltip="{{ 'ACTIONS.LOGIN' | translate }}" color="primary" mat-raised-button [routerLink]="['/users/me']">
+        <div class="cnsl-action-button">
+          <i class="las la-sign-in-alt"></i>
+          <span>{{ 'USER.SIGNEDOUT_BTN' | translate }}</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+{
+  "name": "@chakra-ui/cli",
+  "version": "2.4.1",
+  "description": "Generate theme typings for autocomplete",
+  "keywords": [
+    "theme",
+    "theming",
+    "typings",
+    "generator",
+    "chakra ui",
+    "ui mode",
+    "ui"
+  ],
+  "author": "Segun Adebayo <sage@adebayosegun.com>",
+  "homepage": "https://github.com/chakra-ui/chakra-ui#readme",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/esm/index.mjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chakra-ui/chakra-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chakra-ui/chakra-ui/issues"
+  },
+  "bin": {
+    "chakra-cli": "bin/index.js"
+  },
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "build:fast": "tsx ../../scripts/build/main.ts",
+    "build": "tsx ../../scripts/build/main.ts --dts",
+    "dev": "pnpm build:fast --watch",
+    "typecheck": " tsc --noEmit"
+  },
+  "dependencies": {
+    "@clack/prompts": "0.7.0",
+    "bundle-n-require": "1.1.1",
+    "chokidar": "3.6.0",
+    "commander": "12.0.0",
+    "prettier": "3.2.5"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=2.8.0"
+  },
+  "devDependencies": {
+    "@chakra-ui/react": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.mjs"
+      }
+    },
+    "./package.json": "./package.json"
+  }
+}

@@ -1,0 +1,63 @@
+@mixin message-texts-theme($theme) {
+  $primary: map-get($theme, primary);
+  $primary-color: map-get($primary, 500);
+  $is-dark-theme: map-get($theme, is-dark);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .spinner-wr {
+    margin: 0.5rem 0;
+  }
+
+  .message-texts-top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    .type {
+      display: block;
+      min-width: 200px;
+      width: fit-content;
+      margin-right: 1rem;
+      flex: 1;
+    }
+
+    .language {
+      display: block;
+      min-width: 150px;
+
+      .lighter {
+        font-size: 12px;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+.message-text-warn {
+  margin-top: 1rem;
+  display: block;
+}
+
+.message-text-content {
+  padding-top: 1rem;
+}
+
+.centerline {
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+}
+
+.message-text-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+
+  .save-button,
+  .reset-button {
+    display: block;
+    margin: 0 0.25rem 3rem 0.25rem;
+  }
+}

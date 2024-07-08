@@ -1,0 +1,28 @@
+.spinner-wr {
+  margin: 0.5rem 0;
+}
+
+.oidc-form-field {
+  max-width: 400px;
+  display: block;
+}
+
+.oidc-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+
+  .save-button {
+    display: block;
+  }
+}
+
+.lifetime-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}

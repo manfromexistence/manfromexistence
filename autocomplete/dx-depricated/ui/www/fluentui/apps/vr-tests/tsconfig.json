@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.v8.json",
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "lib",
+    "module": "commonjs",
+    "jsx": "react",
+    "declaration": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "preserveConstEnums": true,
+    "types": ["webpack-env", "@storybook/react"]
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,68 @@
+@mixin table-actions-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $is-dark-theme: map-get($theme, is-dark);
+  $card-background-color: map-get($background, cards);
+  $border-color: if($is-dark-theme, rgba(#8795a1, 0.2), rgba(#8795a1, 0.2));
+
+  .cnsl-table-action-wrapper {
+    height: 36px;
+
+    .cnsl-table-action {
+      display: flex;
+      background-color: $card-background-color;
+      transition: background-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+      outline: none;
+      box-shadow: 0 0 3px #0000001a;
+      height: 36px;
+      align-items: center;
+      width: fit-content;
+      float: right;
+      overflow: hidden;
+
+      button {
+        height: 36px;
+        width: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.more-button {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          padding: 0;
+        }
+      }
+
+      button:only-of-type {
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+        border-radius: 0.5rem;
+      }
+
+      button:first-of-type {
+        border-left: 1px solid $border-color;
+        border-radius: 0.5rem;
+      }
+
+      button:last-of-type {
+        border-right: 1px solid $border-color;
+        border-radius: 0.5rem;
+      }
+
+      [hoveractions] {
+        display: none;
+      }
+
+      &:hover {
+        [hoveractions] {
+          display: flex;
+        }
+      }
+    }
+  }
+}

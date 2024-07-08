@@ -1,0 +1,30 @@
+@import "../theming/theming";
+@import "mfa";
+
+@mixin lgn-mfa-theme() {
+  .lgn-mfa-options {
+    .mfa {
+      input[type="radio"] {
+        &:hover,
+        &:focus {
+          background-color: var(--zitadel-color-card-hover);
+          border-color: var(--zitadel-color-input-border-hover);
+        }
+      }
+
+      label {
+        border: 1px solid var(--zitadel-color-input-border);
+
+        .mfa-img {
+          margin-right: 1rem;
+        }
+      }
+
+      input[type="radio"]:checked + label {
+        background-color: var(--zitadel-color-card-hover);
+        border: 1px solid var(--zitadel-color-input-border-active);
+        box-shadow: 0 0 0 2px var(--zitadel-color-input-border-active);
+      }
+    }
+  }
+}

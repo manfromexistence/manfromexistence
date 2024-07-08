@@ -1,0 +1,42 @@
+<div class="refresh-table-header-row" [ngClass]="{ 'border-bottom': showBorder }">
+  <div class="refresh-table-row" *ngIf="selection.hasValue(); else leftActions">
+    <div>
+      <span class="count">{{ selection.selected.length }}</span>
+      <span class="count-desc">{{ 'ORG_DETAIL.TABLE.SELECTION' | translate }}</span>
+    </div>
+
+    <span class="count-slash">|</span>
+    <a mat-stroked-button (click)="selection.clear()">
+      <div [ngClass]="{ 'cnsl-action-button': showSelectionActionButton }">
+        <span>{{ 'ORG_DETAIL.TABLE.CLEAR' | translate }}</span>
+        <cnsl-action-keys
+          *ngIf="showSelectionActionButton"
+          [doNotUseContrast]="true"
+          [type]="ActionKeysType.CLEAR"
+          (actionTriggered)="selection.clear()"
+        >
+        </cnsl-action-keys>
+      </div>
+    </a>
+  </div>
+  <ng-template #leftActions>
+    <ng-content select="[leftActions]"></ng-content>
+  </ng-template>
+  <span class="fill-space"></span>
+  <mat-spinner class="refresh-table-spinner" *ngIf="loading" diameter="20"></mat-spinner>
+
+  <button
+    *ngIf="!hideRefresh"
+    mat-icon-button
+    (click)="emitRefresh()"
+    class="refresh-table-icon-button"
+    matTooltip="{{ 'ACTIONS.REFRESH' | translate }}"
+  >
+    <mat-icon class="icon">refresh</mat-icon>
+  </button>
+
+  <ng-content select="[actions]"></ng-content>
+</div>
+<div class="table-wrapper">
+  <ng-content></ng-content>
+</div>

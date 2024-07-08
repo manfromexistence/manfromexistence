@@ -1,0 +1,24 @@
+<form>
+  <cnsl-form-field class="full-width">
+    <cnsl-label>{{ 'USER.GRANTS.PROJECTNAME' | translate }}</cnsl-label>
+    <input cnslInput type="text" placeholder="Project XY" #nameInput [formControl]="myControl" [matAutocomplete]="auto" />
+
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)" [displayWith]="displayFn">
+      <mat-option *ngIf="isLoading" class="is-loading">
+        <mat-spinner diameter="30"></mat-spinner>
+      </mat-option>
+      <mat-option *ngFor="let project of filteredProjects" [value]="project">
+        <div class="project-option">
+          <div class="project-option-column">
+            <span>{{ project?.name ? project?.name : project?.projectName ? project?.projectName : '' }}</span>
+            <span class="fill-space"></span>
+            <span class="smaller cnsl-secondary-text">{{
+              (project.name ? 'USER.GRANTS.PROJECT-OWNED' : project?.projectName ? 'USER.GRANTS.PROJECT-GRANTED' : '')
+                | translate
+            }}</span>
+          </div>
+        </div>
+      </mat-option>
+    </mat-autocomplete>
+  </cnsl-form-field>
+</form>

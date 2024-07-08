@@ -1,0 +1,80 @@
+@mixin contributors-theme($theme) {
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $is-dark-theme: map-get($theme, is-dark);
+
+  .contributor-groups {
+    padding: 0.5rem 0;
+
+    .contributor-people {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 50vw;
+      padding: 6px 9px;
+      background-color: map-get($background, contributor);
+      padding-left: 9px;
+      transition: all 0.2s ease;
+
+      .contributor-img-list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &.padd-left {
+          padding-left: 1rem;
+        }
+
+        .spinner {
+          margin: -10px 20px -10px -15px;
+        }
+
+        .add-img {
+          float: left;
+          margin: 0 0 0 -8px;
+
+          &.no-margin {
+            margin: 0;
+          }
+        }
+
+        .contributor-avatar-circle {
+          float: left;
+          margin: 0 8px 0 -15px;
+          height: 32px;
+          width: 32px;
+          line-height: 1rem;
+          border-radius: 50%;
+          -webkit-box-shadow: 1px 0 3px -1px rgba(33, 34, 36, 0.5);
+          -moz-box-shadow: 1px 0 3px -1px rgba(33, 34, 36, 0.5);
+          box-shadow: 1px 0 3px -1px rgba(33, 34, 36, 0.5);
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: map-get($background, contributor-avatar);
+          color: white;
+
+          .contributor-avatar {
+            pointer-events: none;
+          }
+
+          .sa-icon {
+            display: block;
+            width: 32px;
+            margin: 0 0.5rem;
+
+            i {
+              margin: auto;
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .margin-neg {
+          margin-left: -1rem;
+        }
+      }
+    }
+  }
+}

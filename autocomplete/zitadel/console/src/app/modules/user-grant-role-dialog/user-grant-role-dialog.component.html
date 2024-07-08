@@ -1,0 +1,25 @@
+<span class="title" mat-dialog-title>{{ data.i18nTitle | translate }}</span>
+<div mat-dialog-content>
+  <div class="dialog-table-wrapper">
+    <cnsl-project-roles-table
+      class="role-table"
+      *ngIf="projectId"
+      [displayedColumns]="['select', 'key', 'displayname', 'group']"
+      (changedSelection)="selectRoles($event)"
+      [projectId]="projectId"
+      [grantId]="grantId"
+      [selectedKeys]="selectedRoleKeysList"
+      [showSelectionActionButton]="false"
+    >
+    </cnsl-project-roles-table>
+  </div>
+</div>
+<div mat-dialog-actions class="action">
+  <button mat-stroked-button (click)="closeDialog()">
+    {{ 'ACTIONS.CANCEL' | translate }}
+  </button>
+  <span class="fill-space"></span>
+  <button mat-raised-button color="primary" class="ok-button" (click)="closeDialogWithSuccess()">
+    {{ 'ACTIONS.CHANGE' | translate }}
+  </button>
+</div>

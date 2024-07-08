@@ -1,0 +1,40 @@
+.title {
+  font-size: 1.2rem;
+}
+
+.desc {
+  font-size: 0.9rem;
+}
+
+.roles-selection {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  .role-cb {
+    box-sizing: border-box;
+
+    .role-cb-content {
+      padding-left: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .info-hover {
+        font-size: 1.2rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+
+  .ok-button {
+    margin-left: 0.5rem;
+  }
+}

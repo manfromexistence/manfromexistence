@@ -1,0 +1,106 @@
+.user-create-main-content {
+  max-width: 45rem;
+
+  @media only screen and (max-width: 500px) {
+    padding: 0 0.5rem;
+  }
+
+  .user-create-form {
+    .user-create-content {
+      .user-create-section {
+        padding: 1rem 0 0 0;
+        flex-basis: 100%;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .user-create-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+
+        @media only screen and (max-width: 500px) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .email-is-verified,
+      .use-password-block {
+        flex-basis: 100%;
+        margin-top: 1.5rem;
+
+        .block-checkbox {
+          display: block;
+          margin: 0.25rem 0;
+        }
+      }
+    }
+
+    .user-create-btn-container {
+      button {
+        margin-top: 3rem;
+        display: block;
+        padding: 0.5rem 4rem;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  .pwd-section {
+    .section {
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.phone-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+
+  .phone-country {
+    min-width: 200px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trigger-name {
+  font-size: 14px;
+  margin-left: 0.5rem;
+}
+
+.phone-country-flag {
+  margin-right: 0.5rem;
+  min-width: 22px;
+}
+
+.phone-country-row {
+  display: flex;
+  align-items: center;
+
+  .phone-country-flag {
+    margin-right: 0.5rem;
+  }
+
+  .phone-country-name {
+    padding: 0 0.5em;
+  }
+
+  .phone-country-code {
+    color: darkgrey;
+  }
+
+  .fill-space {
+    flex: 1;
+  }
+}
+
+.create-button {
+  padding: 0.5rem 4rem;
+  height: 3.5rem;
+}

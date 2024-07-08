@@ -1,0 +1,43 @@
+.edit-dialog-formfield {
+  width: 100%;
+}
+
+.verified-checkbox {
+  margin-top: 1.5rem;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+.edit-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    border-radius: 0.5rem;
+  }
+}
+
+.edit-dialog-form {
+  width: 100%;
+
+  .phone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 1rem;
+
+    @media only screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.edit-dialog-phone-country-name {
+  padding: 0 0.5em;
+  margin-left: 1rem;
+}
+
+.edit-dialog-phone-country-code {
+  color: darkgrey;
+}

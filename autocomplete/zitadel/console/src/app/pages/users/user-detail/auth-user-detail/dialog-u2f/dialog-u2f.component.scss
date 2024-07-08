@@ -1,0 +1,27 @@
+.qrcode-wrapper {
+  display: flex;
+  align-content: center;
+
+  .qrcode {
+    margin: 1rem auto;
+  }
+}
+
+.form-field {
+  width: 100%;
+}
+
+.error {
+  color: var(--warn);
+  font-size: 14px;
+}
+
+.action {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+  }
+}

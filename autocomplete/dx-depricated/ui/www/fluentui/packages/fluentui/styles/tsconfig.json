@@ -1,0 +1,10 @@
+{
+  "extends": "../../../tsconfig.base.v0.json",
+  "compilerOptions": {
+    "composite": true,
+    "strict": true,
+    "outDir": "dist/dts"
+  },
+  "include": ["src", "test"],
+  "references": []
+}

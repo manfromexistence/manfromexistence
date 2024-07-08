@@ -1,0 +1,55 @@
+@mixin app-create-theme($theme) {
+  $primary: map-get($theme, primary);
+  $primary-color: map-get($primary, 500);
+
+  // Number of steps creating app
+  $steps: 3;
+
+  .app-create-wrapper {
+    // Reference: https://github.com/angular/components/issues/10681#issuecomment-695185806
+    @for $i from 1 through $steps {
+      @for $j from 1 through $i {
+        .last-edited-step-#{$i}
+          .mat-horizontal-stepper-header-container
+          .mat-step-header:nth-child(#{1 + 2 * ($j - 1)})::after,
+        .last-edited-step-#{$i}
+          .mat-horizontal-stepper-header-container
+          .mat-stepper-horizontal-line:nth-child(#{2 + 2 * ($j - 1)}),
+        .last-edited-step-#{$i}
+          .mat-horizontal-stepper-header-container
+          .mat-step-header:nth-child(#{3 + 2 * ($j - 1)})::before {
+          border-top-width: 3px;
+          border-top-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.create-layout-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .abort {
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+  }
+
+  .abort-2 {
+    margin-left: 2rem;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 0.25rem 1rem;
+    border: 1px solid rgba(#8795a1, 0.2);
+    border-radius: 50vw;
+  }
+}
+
+.create-layout-content {
+  padding-left: 4.5rem;
+}

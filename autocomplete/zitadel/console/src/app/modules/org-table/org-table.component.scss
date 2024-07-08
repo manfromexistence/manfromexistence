@@ -1,0 +1,48 @@
+td {
+  cursor: pointer;
+
+  .primary-domain-wrapper {
+    display: flex;
+    align-items: center;
+
+    .cpy-button {
+      visibility: hidden;
+
+      i {
+        pointer-events: none;
+      }
+    }
+
+    &:hover {
+      .cpy-button {
+        visibility: visible;
+      }
+    }
+  }
+
+  .orgdefaultlabel {
+    margin-left: 0.5rem;
+  }
+}
+
+.pointer {
+  outline: none;
+  cursor: pointer;
+}
+
+.filter {
+  margin-left: 1rem;
+}
+
+th {
+  .search-button {
+    visibility: hidden;
+  }
+
+  &:hover,
+  &.search-active {
+    .search-button {
+      visibility: visible;
+    }
+  }
+}

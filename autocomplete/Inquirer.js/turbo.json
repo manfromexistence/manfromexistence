@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "tsc": {
+      "dependsOn": ["^tsc"],
+      "outputs": ["dist/**"]
+    },
+    "attw": {
+      "dependsOn": ["tsc"],
+      "outputs": []
+    }
+  }
+}

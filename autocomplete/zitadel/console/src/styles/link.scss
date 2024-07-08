@@ -1,0 +1,13 @@
+@mixin link-theme($theme) {
+  $primary: map-get($theme, primary);
+  $primary-color: map-get($primary, 500);
+  $primary-color-lighter: map-get($primary, A300);
+
+  // a:not([mat-icon-button]):not([mat-stroked-button]):not([mat-raised-button]) {
+  //   color: $primary-color;
+  // }
+
+  // a:not([mat-icon-button]):not([mat-stroked-button]):not([mat-raised-button]):hover {
+  //   color: $primary-color-lighter;
+  // }
+}

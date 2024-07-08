@@ -1,0 +1,311 @@
+@mixin app-detail-theme($theme) {
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+  $is-dark-theme: map-get($theme, is-dark);
+  $warn: map-get($theme, warn);
+  $warn-color: map-get($warn, 500);
+  $button-text-color: map-get($foreground, text);
+  $button-disabled-text-color: map-get($foreground, disabled-button);
+  $divider-color: map-get($foreground, dividers);
+
+  .metadata-option {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    .upload-button {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      width: 25%;
+    }
+
+    .saml-config-option {
+      font-size: 14px;
+    }
+  }
+
+  .app-zitadel-warning {
+    font-size: 14px;
+    color: $warn-color;
+  }
+
+  .app-err-container {
+    color: $warn-color;
+    font-size: 14px;
+  }
+
+  .dev-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .devmode {
+      margin: 1rem 0 0.5rem 0;
+    }
+  }
+
+  .redirect-section {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .app-desc {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .app-input {
+    width: 100%;
+  }
+
+  .app-info-row {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -0.5rem;
+
+    .app-info-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0.5rem;
+      flex: 1;
+      align-items: flex-start;
+      box-sizing: border-box;
+
+      &:not(.width) {
+        min-width: 100px;
+      }
+
+      .app-info-row-title {
+        font-size: 12px;
+        margin: 0;
+      }
+
+      .app-info-row-desc {
+        margin: 0;
+        font-size: 14px;
+        padding: 2px 0;
+      }
+
+      .app-copy-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        margin-bottom: 0.5rem;
+
+        button {
+          transition: opacity 0.15s ease-in-out;
+          background-color: #8795a110;
+          border: 1px solid #8795a160;
+          border-radius: 4px;
+          padding: 0.25rem 1rem;
+          margin: 0.25rem 0;
+          color: $button-text-color;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          cursor: copy;
+
+          &[disabled] {
+            color: $button-disabled-text-color;
+          }
+        }
+
+        .environment {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin: 0.25rem 0;
+
+          .key {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .jumptoproject-row {
+    display: flex;
+    justify-content: space-between;
+
+    .jumptoproject {
+      margin-top: 0.25rem;
+      display: block;
+    }
+  }
+
+  .compliance {
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    border-bottom: 1px solid $divider-color;
+
+    .compliance-title {
+      margin: 1rem 0 1rem 0;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .problem {
+      font-size: 14px;
+      margin: 0 0 0.5rem 0;
+      display: block;
+    }
+  }
+
+  .app-main-content {
+    margin-top: 0.5rem;
+
+    .current-auth-method {
+      display: flex;
+      align-items: center;
+      border: 1px solid if($is-dark-theme, rgba(#8795a1, 0.2), rgba(#8795a1, 0.2));
+      color: white;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+
+      h3 {
+        margin: 0 1rem 0 0;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .fill-space {
+        flex: 1;
+      }
+
+      button {
+        margin-left: 1rem;
+      }
+    }
+
+    .cnsl-saml-config-line {
+      display: flex;
+      align-items: center;
+
+      .cnsl-app-or {
+        margin-right: 1rem;
+      }
+    }
+
+    .saml-xml {
+      margin-top: 2rem;
+
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.name-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .toggle {
+    outline: none;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+
+    * {
+      outline: none;
+    }
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+
+  .name-field {
+    flex: 1;
+  }
+}
+
+.docs-line {
+  flex-basis: 100%;
+  margin: 0.5rem 0;
+
+  p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  p:last-child {
+    margin: 0;
+  }
+}
+
+.app-oidc-grid {
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  .rt {
+    margin-top: 1.7rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.main-app-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-formfield {
+  flex: 1 1 30%;
+
+  &.full-width {
+    flex-basis: 100%;
+  }
+}
+
+.app-section-title {
+  margin: 1.5rem 0 0 0;
+}
+
+.app-full-width {
+  flex-basis: 100%;
+  margin-right: 0.5rem;
+}
+
+.clockskew-title {
+  font-size: 14px;
+  margin: 1rem 0.5rem 0 0.5rem;
+}
+
+.clockskew-slider {
+  width: 100%;
+  margin: 0 0.5rem;
+}
+
+.desc {
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.link a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

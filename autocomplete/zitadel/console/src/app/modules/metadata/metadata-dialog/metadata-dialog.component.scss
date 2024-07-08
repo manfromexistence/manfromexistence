@@ -1,0 +1,61 @@
+.title-row {
+  display: flex;
+  align-items: center;
+
+  .metadata-title {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .fill-space {
+    flex: 1;
+  }
+
+  .ts {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .icon-button {
+    .icon {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.metadata-dialog-content {
+  min-width: 400px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    margin: 0 -0.5rem;
+
+    .formfield {
+      flex: 1;
+      margin: 0 0.5rem;
+
+      @media only screen and (max-width: 450px) {
+        flex-basis: 100%;
+      }
+    }
+
+    .rm-button,
+    .set-button {
+      margin-top: 14px;
+    }
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: flex-end;
+
+  .ok-button {
+    margin-left: 0.5rem;
+  }
+
+  button {
+    border-radius: 0.5rem;
+  }
+}

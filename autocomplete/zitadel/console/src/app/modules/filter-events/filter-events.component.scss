@@ -1,0 +1,103 @@
+@mixin filter-events-theme($theme) {
+  $primary: map-get($theme, primary);
+  $primary-color: map-get($primary, 500);
+  $lighter-primary-color: map-get($primary, 300);
+  $darker-primary-color: map-get($primary, 700);
+
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $secondary-text: map-get($foreground, secondary-text);
+  $is-dark-theme: map-get($theme, is-dark);
+
+  $link-hover-color: if($is-dark-theme, map-get($primary, 200), $primary-color);
+  $link-color: if($is-dark-theme, $lighter-primary-color, $primary-color);
+
+  .filter-events-wrapper {
+    border-radius: 0.5rem;
+    z-index: 200;
+    border: 1px solid #ffffff30;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    min-width: 360px;
+    max-width: 450px;
+    padding-bottom: 0.5rem;
+    position: relative;
+    color: map-get($foreground, text);
+    background: map-get($background, cards);
+
+    .sp_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+
+    .filter-events-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.5rem 0.5rem 0.5rem;
+      border-bottom: 2px solid if($is-dark-theme, #ffffff15, #00000015);
+
+      .filter-middle {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .filter-events-section {
+    padding: 0 0.5rem;
+
+    .checkbox-wrapper {
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      background-color: map-get($background, cards);
+    }
+
+    .datetime-input {
+      width: 100%;
+    }
+
+    .datetime-range {
+      display: inline-block;
+    }
+
+    .filter-events-sub {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 0.5rem;
+      background-color: if($is-dark-theme, #00000020, #00000008);
+      margin: 0 -0.5rem;
+
+      .aggregate-type-select .mat-mdc-select {
+        height: 36px;
+        padding: 7px 10px;
+      }
+
+      .aggregate-type-select {
+        min-width: 250px;
+        margin-right: 0.5rem;
+      }
+
+      .event-types-select {
+        width: 100%;
+      }
+
+      .filter-input-value {
+        flex: 1;
+
+        input {
+          height: 36px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.git
+node_modules
+coverage
+dist
+packages/*/node_modules
+packages/*/__snapshots__

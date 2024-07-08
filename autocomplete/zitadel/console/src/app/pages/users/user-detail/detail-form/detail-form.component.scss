@@ -1,0 +1,89 @@
+.user-form-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 100%;
+  align-items: center;
+
+  .usernamediv {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    .formfield {
+      margin: 0;
+      flex: 1;
+    }
+
+    .edit {
+      display: block;
+      margin-top: 0.5rem;
+      cursor: pointer !important;
+    }
+  }
+
+  .camera-wrapper {
+    margin: 0 0.5rem;
+    position: relative;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    .i-wrapper {
+      display: none;
+      background-color: #00000080;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2 ease;
+
+      i {
+        font-size: 1.2rem;
+        margin: 0.25rem;
+        color: white;
+      }
+    }
+
+    &:hover {
+      .i-wrapper {
+        display: inline;
+      }
+    }
+  }
+
+  .formfield {
+    flex: 1 1 33%;
+    margin: 0 0.5rem;
+  }
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+
+  @media only screen and (min-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+  .submit-button {
+    border-radius: 0.5rem;
+  }
+}

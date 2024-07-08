@@ -1,0 +1,11 @@
+lib
+esm
+cjs
+dist
+public
+.cache
+*.d.ts
+*.js
+*.cjs
+*.mjs
+apps/mantine.dev/src/components/____test.component.tsx

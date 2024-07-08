@@ -1,0 +1,54 @@
+@mixin refresh-table-theme($theme) {
+  $foreground: map-get($theme, foreground);
+
+  .refresh-table-header-row {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box;
+
+    &.border-bottom {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid map-get($foreground, divider);
+    }
+
+    .refresh-table-row {
+      display: flex;
+      align-items: center;
+
+      .count {
+        margin-right: 0.5rem;
+      }
+
+      .count-desc {
+        font-size: 14px;
+      }
+
+      .count-slash {
+        margin: 0 0.5rem;
+        opacity: 0.8;
+      }
+    }
+
+    .refresh-table-spinner {
+      margin-top: 2px;
+      margin-bottom: 1px;
+      margin-right: 1rem;
+    }
+
+    .fill-space {
+      flex: 1;
+    }
+
+    .refresh-table-icon-button {
+      margin-right: 0.5rem;
+
+      .icon {
+        font-size: 1.2rem;
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+packages:
+  - 'crates/node'
+  - 'crates/node/npm/*'
+  - 'packages/*'
+  - 'playgrounds/*'

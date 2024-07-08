@@ -1,0 +1,2606 @@
+{
+  "APP_NAME": "ZITADEL",
+  "DESCRIPTIONS": {
+    "METADATA_TITLE": "Metadati",
+    "HOME": {
+      "TITLE": "Inizia con ZITADEL",
+      "NEXT": {
+        "TITLE": "I tuoi prossimi passi",
+        "DESCRIPTION": "Completa i seguenti passaggi per proteggere la tua applicazione.",
+        "CREATE_PROJECT": {
+          "TITLE": "Crea un progetto",
+          "DESCRIPTION": "Aggiungi un progetto e definisci i suoi ruoli e autorizzazioni."
+        }
+      },
+      "MORE_SHORTCUTS": {
+        "GET_STARTED": {
+          "TITLE": "Inizia",
+          "DESCRIPTION": "Segui la guida rapida passo dopo passo e inizia subito a costruire."
+        },
+        "DOCS": {
+          "TITLE": "Documentazione",
+          "DESCRIPTION": "Esplora la base di conoscenza di ZITADEL per familiarizzare con i concetti e le idee principali. Impara come funziona ZITADEL e come utilizzarlo."
+        },
+        "EXAMPLES": {
+          "TITLE": "Esempi e Kit di Sviluppo Software",
+          "DESCRIPTION": "Consulta i nostri esempi e SDK per utilizzare ZITADEL con i tuoi linguaggi di programmazione e strumenti preferiti."
+        }
+      }
+    },
+    "ORG": {
+      "TITLE": "Organizzazione",
+      "DESCRIPTION": "Un'organizzazione ospita utenti, progetti con app, provider di identità e impostazioni come il branding aziendale. Vuoi condividere le impostazioni tra più organizzazioni? Configura le impostazioni predefinite.",
+      "METADATA": "Aggiungi attributi personalizzati all'organizzazione come la sua posizione o un identificatore in un altro sistema. Puoi utilizzare queste informazioni nelle tue azioni."
+    },
+    "PROJECTS": {
+      "TITLE": "Progetti",
+      "DESCRIPTION": "Un progetto ospita una o più applicazioni, che puoi utilizzare per autenticare i tuoi utenti. Puoi anche autorizzare i tuoi utenti con i progetti. Per permettere agli utenti di altre organizzazioni di accedere alle tue applicazioni, concedi loro l'accesso al tuo progetto.<br/><br/>Se non riesci a trovare un progetto, contatta il proprietario del progetto o qualcuno con i diritti corrispondenti per ottenere l'accesso.",
+      "OWNED": {
+        "TITLE": "Progetti di Proprietà",
+        "DESCRIPTION": "Questi sono i progetti che possiedi. Puoi gestire le impostazioni di questi progetti, le autorizzazioni e le applicazioni."
+      },
+      "GRANTED": {
+        "TITLE": "Progetti Concessi",
+        "DESCRIPTION": "Questi sono i progetti che altre organizzazioni ti hanno concesso. Con i progetti concessi puoi dare ai tuoi utenti l'accesso alle applicazioni di altre organizzazioni."
+      }
+    },
+    "USERS": {
+      "TITLE": "Utenti",
+      "DESCRIPTION": "Un utente è un essere umano o una macchina che può accedere alle tue applicazioni.",
+      "HUMANS": {
+        "TITLE": "Umani",
+        "DESCRIPTION": "Gli umani si autenticano interattivamente in una sessione del browser con un prompt di login.",
+        "METADATA": "Aggiungi attributi personalizzati all'utente come il dipartimento. Puoi utilizzare queste informazioni nelle tue azioni."
+      },
+      "MACHINES": {
+        "TITLE": "Macchine",
+        "DESCRIPTION": "Le macchine si autenticano in modo non interattivo utilizzando un token JWT firmato con una chiave privata. Possono anche utilizzare un token di accesso personale.",
+        "METADATA": "Aggiungi attributi personalizzati all'utente come il sistema di autenticazione. Puoi utilizzare queste informazioni nelle tue azioni."
+      },
+      "SELF": {
+        "METADATA": "Aggiungi attributi personalizzati al tuo utente come il tuo dipartimento. Puoi utilizzare queste informazioni nelle azioni della tua organizzazione."
+      }
+    },
+    "AUTHORIZATIONS": {
+      "TITLE": "Autorizzazioni",
+      "DESCRIPTION": "Le autorizzazioni definiscono i diritti di accesso di un utente a un progetto. Puoi concedere a un utente l'accesso a un progetto e definire i ruoli degli utenti all'interno di quel progetto."
+    },
+    "ACTIONS": {
+      "TITLE": "Azioni",
+      "DESCRIPTION": "Esegui script sugli eventi che si verificano quando i tuoi utenti si autenticano su ZITADEL. Automatizza i tuoi processi, arricchisci i metadati dei tuoi utenti e i loro token o notifica sistemi esterni.",
+      "SCRIPTS": {
+        "TITLE": "Scripts",
+        "DESCRIPTION": "Scrivi il tuo codice JavaScript una volta e attivalo in più flussi."
+      },
+      "FLOWS": {
+        "TITLE": "Flussi",
+        "DESCRIPTION": "Scegli un flusso di autenticazione e attiva la tua azione su un evento specifico all'interno di questo flusso."
+      }
+    },
+    "SETTINGS": {
+      "INSTANCE": {
+        "TITLE": "Impostazioni dell'Istanza",
+        "DESCRIPTION": "Le impostazioni dell'istanza sono le impostazioni predefinite per tutte le organizzazioni. Con i permessi adeguati, alcune di esse possono essere sovrascritte nelle impostazioni dell'organizzazione."
+      },
+      "ORG": {
+        "TITLE": "Impostazioni dell'Organizzazione",
+        "DESCRIPTION": "Personalizza le impostazioni della tua organizzazione."
+      },
+      "FEATURES": {
+        "TITLE": "Impostazioni delle funzionalità",
+        "DESCRIPTION": "Sblocca funzionalità per la tua istanza."
+      },
+      "IDPS": {
+        "TITLE": "Fornitori di Identità",
+        "DESCRIPTION": "Crea e attiva fornitori di identità esterni. Scegli un fornitore ben noto o configura qualsiasi altro fornitore compatibile con OIDC, OAuth o SAML della tua scelta. Puoi anche utilizzare i tuoi token JWT esistenti come identità federate configurando un fornitore di identità JWT.",
+        "NEXT": "Cosa adesso?",
+        "SAML": {
+          "TITLE": "Configura il tuo Identity Provider SAML",
+          "DESCRIPTION": "ZITADEL è configurato. Ora è necessario configurare il tuo Identity Provider SAML. La maggior parte dei fornitori ti consente di caricare l'intero XML dei metadati di ZITADEL. Altri fornitori richiedono di fornire solo alcune URL distinte, come per esempio l'ID dell'entità (URL dei metadati), l'URL del Servizio di Consumo delle Asserzioni (ACS) o l'URL di Logout Singolo."
+        },
+        "CALLBACK": {
+          "TITLE": "Configura il tuo Identity Provider {{ provider }}",
+          "DESCRIPTION": "Prima di poter configurare ZITADEL, passa questa URL al tuo Identity Provider per abilitare il reindirizzamento del browser a ZITADEL dopo l'autenticazione."
+        },
+        "JWT": {
+          "TITLE": "Usa JWT come identità federate",
+          "DESCRIPTION": "Il Provider di Identità JWT ti permette di utilizzare i tuoi token JWT esistenti come identità federate. Questa funzionalità è utile se hai già un emittente per i JWT. Con un IdP JWT, puoi utilizzare questi JWT per creare e aggiornare utenti in ZITADEL al volo."
+        },
+        "LDAP": {
+          "TITLE": "Configura ZITADEL per connettersi al tuo Provider di Identità LDAP",
+          "DESCRIPTION": "Fornisci i dettagli della connessione al tuo server LDAP e configura il mapping dei tuoi attributi LDAP agli attributi di ZITADEL."
+        },
+        "AUTOFILL": {
+          "TITLE": "Compilazione automatica dei dati dell'utente",
+          "DESCRIPTION": "Usa un'azione per migliorare l'esperienza degli utenti. Puoi precompilare il modulo di registrazione di ZITADEL con i valori del provider di identità."
+        },
+        "ACTIVATE": {
+          "TITLE": "Attiva l'IdP",
+          "DESCRIPTION": "Il tuo IdP non è ancora attivo. Attivalo per permettere ai tuoi utenti di accedere."
+        }
+      },
+      "PW_COMPLEXITY": {
+        "TITLE": "Complessità della Password",
+        "DESCRIPTION": "Assicurati che i tuoi utenti utilizzino password complesse definendo regole di complessità."
+      },
+      "BRANDING": {
+        "TITLE": "Branding",
+        "DESCRIPTION": "Personalizza l'aspetto e la sensazione del tuo modulo di login. Ricorda di applicare la tua configurazione quando hai finito."
+      },
+      "PRIVACY_POLICY": {
+        "TITLE": "Link Esterni",
+        "DESCRIPTION": "Guida i tuoi utenti verso risorse esterne personalizzate mostrate nella pagina di login. Gli utenti devono accettare i Termini di Servizio e la Politica sulla Privacy prima che possano iscriversi."
+      },
+      "SMTP_PROVIDER": {
+        "TITLE": "Impostazioni SMTP",
+        "DESCRIPTION": "Configura il tuo server SMTP per utilizzare un dominio per l'indirizzo del mittente che i tuoi utenti conoscono e di cui si fidano."
+      },
+      "SMS_PROVIDER": {
+        "TITLE": "Impostazioni SMS",
+        "DESCRIPTION": "Per sbloccare tutte le funzionalità di ZITADEL, configura Twilio per inviare messaggi SMS ai tuoi utenti."
+      },
+      "IAM_EVENTS": {
+        "TITLE": "Eventi",
+        "DESCRIPTION": "Questa pagina mostra tutti i cambiamenti di stato nella tua istanza fino al limite dell'audit trail delle tue istanze. Filtra l'elenco per intervallo di tempo per scopi di debug o filtralo per un aggregato per scopi di audit."
+      },
+      "IAM_FAILED_EVENTS": {
+        "TITLE": "Eventi Falliti",
+        "DESCRIPTION": "Questa pagina mostra tutti gli eventi falliti nella tua istanza. Se ZITADEL non si comporta come ti aspetti, controlla sempre prima questa lista."
+      },
+      "IAM_VIEWS": {
+        "TITLE": "Views",
+        "DESCRIPTION": "Questa pagina mostra tutte le tue views del database e quando hanno elaborato il loro ultimo evento. Se ti mancano alcuni dati, controlla se la view è aggiornata."
+      },
+      "LANGUAGES": {
+        "TITLE": "Lingue",
+        "DESCRIPTION": "Limita le lingue in cui il modulo di login e i messaggi di notifica vengono tradotti. Se vuoi disabilitare alcune lingue, trascinale nella sezione Lingue Non Permesse. Puoi specificare una lingua consentita come lingua predefinita. Se la lingua preferita di un utente non è consentita, viene utilizzata la lingua predefinita."
+      },
+      "SECRET_GENERATORS": {
+        "TITLE": "Generatori di Segreti",
+        "DESCRIPTION": "Definisci la complessità e la durata dei tuoi segreti. Una maggiore complessità e durata migliorano la sicurezza, una minore complessità e durata migliorano la performance di decifratura."
+      },
+      "SECURITY": {
+        "TITLE": "Impostazioni di Sicurezza",
+        "DESCRIPTION": "Abilita le funzionalità di ZITADEL che possono avere impatti sulla sicurezza. Dovresti davvero sapere cosa stai facendo prima di cambiare queste impostazioni."
+      },
+      "OIDC": {
+        "TITLE": "Impostazioni OpenID Connect",
+        "DESCRIPTION": "Configura la durata dei tuoi token OIDC. Usa durate più corte per aumentare la sicurezza dei tuoi utenti, usa durate più lunghe per aumentare la loro comodità.",
+        "LABEL_HOURS": "Durata Massima in ore",
+        "LABEL_DAYS": "Durata Massima in giorni",
+        "ACCESS_TOKEN": {
+          "TITLE": "Token di Accesso",
+          "DESCRIPTION": "Il token di accesso è usato per autenticare un utente. È un token di breve durata che viene utilizzato per accedere ai dati dell'utente. Usa una durata breve per minimizzare il rischio di accesso non autorizzato. I token di accesso possono essere automaticamente rinnovati utilizzando un token di refresh."
+        },
+        "ID_TOKEN": {
+          "TITLE": "Token ID",
+          "DESCRIPTION": "Il token ID è un JSON Web Token (JWT) che contiene dichiarazioni sull'utente. La durata del token ID non dovrebbe superare quella del token di accesso."
+        },
+        "REFRESH_TOKEN": {
+          "TITLE": "Token di Refresh",
+          "DESCRIPTION": "Il token di refresh è usato per ottenere un nuovo token di accesso. È un token di lunga durata che viene utilizzato per rinnovare il token di accesso. Un utente deve ri-autenticarsi manualmente quando il token di refresh scade."
+        },
+        "REFRESH_TOKEN_IDLE": {
+          "TITLE": "Token di Refresh Inattivo",
+          "DESCRIPTION": "La durata massima di un token di refresh inattivo è il tempo massimo in cui un token di refresh può rimanere inutilizzato."
+        }
+      },
+      "MESSAGE_TEXTS": {
+        "TITLE": "Testi dei Messaggi",
+        "DESCRIPTION": "Personalizza i testi delle tue email di notifica o messaggi SMS. Se vuoi disabilitare alcune lingue, limitale nelle impostazioni lingua delle tue istanze.",
+        "TYPE_DESCRIPTIONS": {
+          "DC": "Quando rivendichi un dominio per la tua organizzazione, agli utenti che non usano questo dominio nel loro nome di login verrà chiesto di cambiare il loro nome di login per corrispondere al dominio rivendicato.",
+          "INIT": "Quando viene creato un utente, riceverà un'email con un link per impostare la sua password.",
+          "PC": "Quando un utente cambia la sua password, riceverà una notifica del cambiamento se hai abilitato questo nelle impostazioni di notifica.",
+          "PL": "Quando un utente aggiunge un metodo di autenticazione senza password, deve attivarlo cliccando su un link in un'email.",
+          "PR": "Quando un utente reimposta la sua password, riceverà un'email con un link per impostare una nuova password.",
+          "VE": "Quando un utente cambia il suo indirizzo email, riceverà un'email con un link per verificare il nuovo indirizzo.",
+          "VP": "Quando un utente cambia il suo numero di telefono, riceverà un SMS con un codice per verificare il nuovo numero.",
+          "VEO": "Quando un utente aggiunge una Password Monouso tramite metodo email, deve attivarla inserendo un codice inviato al suo indirizzo email.",
+          "VSO": "Quando un utente aggiunge una Password Monouso tramite metodo SMS, deve attivarla inserendo un codice inviato al suo numero di telefono."
+        }
+      },
+      "LOGIN_TEXTS": {
+        "TITLE": "Testi dell'Interfaccia di Login",
+        "DESCRIPTION": "Personalizza i testi del tuo modulo di login. Se un testo è vuoto, il placeholder mostra il valore predefinito. Se vuoi disabilitare alcune lingue, limitale nelle impostazioni lingua delle tue istanze."
+      },
+      "DOMAINS": {
+        "TITLE": "Impostazioni dei Domini",
+        "DESCRIPTION": "Definisci restrizioni sui tuoi domini e configura i pattern dei nomi di login. Se questa opzione è attivata, i domini dell'organizzazione devono essere verificati prima che possano essere utilizzati per la scoperta di domini o il suffisso del nome utente.",
+        "REQUIRE_VERIFICATION": {
+          "TITLE": "Richiedi che i domini personalizzati siano verificati",
+          "DESCRIPTION": "Se questa opzione è attivata, i domini dell'organizzazione devono essere verificati prima che possano essere utilizzati per la scoperta di domini o il suffisso del nome utente."
+        },
+        "LOGIN_NAME_PATTERN": {
+          "TITLE": "Pattern del Nome di Login",
+          "DESCRIPTION": "Controlla il pattern dei nomi di login dei tuoi utenti. ZITADEL seleziona l'organizzazione dei tuoi utenti non appena inseriscono il loro nome di login. Pertanto, i nomi di login devono essere unici in tutte le organizzazioni. Se hai utenti che hanno un account in più domini, puoi garantire l'unicità aggiungendo il dominio dell'organizzazione ai tuoi nomi di login."
+        },
+        "DOMAIN_VERIFICATION": {
+          "TITLE": "Verifica del Dominio",
+          "DESCRIPTION": "Permetti alla tua organizzazione di usare solo i domini che controlla effettivamente. Se attivata, i domini dell'organizzazione vengono verificati periodicamente tramite DNS o sfida HTTP prima che possano essere utilizzati. Questa è una funzionalità di sicurezza per prevenire il dirottamento dei domini."
+        },
+        "SMTP_SENDER_ADDRESS": {
+          "TITLE": "Indirizzo Mittente SMTP",
+          "DESCRIPTION": "Permetti un indirizzo mittente SMTP solo se corrisponde a uno dei domini della tua istanza."
+        }
+      },
+      "LOGIN": {
+        "LIFETIMES": {
+          "TITLE": "Durate di Vita del Login",
+          "DESCRIPTION": "Rafforza la tua sicurezza riducendo alcune durate massime relative al login.",
+          "LABEL": "Durata Massima in ore",
+          "PW_CHECK": {
+            "TITLE": "Controllo Password",
+            "DESCRIPTION": "I tuoi utenti devono cambiare le loro password in questi periodi."
+          },
+          "EXT_LOGIN_CHECK": {
+            "TITLE": "Controllo Login Esterno",
+            "DESCRIPTION": "I tuoi utenti vengono reindirizzati ai loro provider di identità esterni in questi periodi."
+          },
+          "MULTI_FACTOR_INIT": {
+            "TITLE": "Controllo Inizializzazione Multifattore",
+            "DESCRIPTION": "Ai tuoi utenti verrà richiesto di impostare un secondo fattore o un Multifattore in questi periodi, se non lo hanno già fatto. Una durata di vita di 0 disattiva questo promemoria."
+          },
+          "SECOND_FACTOR_CHECK": {
+            "TITLE": "Controllo Secondo Fattore",
+            "DESCRIPTION": "I tuoi utenti devono rivalidare il loro secondo fattore in questi periodi."
+          },
+          "MULTI_FACTOR_CHECK": {
+            "TITLE": "Controllo Multifattore",
+            "DESCRIPTION": "I tuoi utenti devono rivalidare il loro Multifattore in questi periodi."
+          }
+        },
+        "FORM": {
+          "TITLE": "Modulo di Login",
+          "DESCRIPTION": "Personalizza il modulo di login.",
+          "USERNAME_PASSWORD_ALLOWED": {
+            "TITLE": "Username e Password consentiti",
+            "DESCRIPTION": "Permetti ai tuoi utenti di accedere con il loro username e password. Se questa opzione è disattivata, i tuoi utenti possono accedere solo utilizzando l'autenticazione senza password o con un provider di identità esterno."
+          },
+          "USER_REGISTRATION_ALLOWED": {
+            "TITLE": "Registrazione Utente consentita",
+            "DESCRIPTION": "Permetti agli utenti anonimi di creare un account."
+          },
+          "ORG_REGISTRATION_ALLOWED": {
+            "TITLE": "Registrazione Organizzazione consentita",
+            "DESCRIPTION": "Permetti agli utenti anonimi di creare un'organizzazione."
+          },
+          "EXTERNAL_LOGIN_ALLOWED": {
+            "TITLE": "Login Esterno consentito",
+            "DESCRIPTION": "Permetti ai tuoi utenti di accedere con un provider di identità esterno invece di utilizzare l'utente ZITADEL per accedere."
+          },
+          "PASSWORD_RESET_ALLOWED": {
+            "TITLE": "Reset Password consentito",
+            "DESCRIPTION": "Permetti ai tuoi utenti di reimpostare la loro password."
+          },
+          "DOMAIN_DISCOVERY_ALLOWED": {
+            "TITLE": "Scoperta Dominio consentita",
+            "DESCRIPTION": "Trova le organizzazioni dei tuoi utenti in base al dominio dei loro nomi di login, ad esempio il loro indirizzo email."
+          },
+          "IGNORE_UNKNOWN_USERNAMES": {
+            "TITLE": "Ignora Username sconosciuti",
+            "DESCRIPTION": "Se questa opzione è attivata, il modulo di login non mostrerà un messaggio di errore se lo username è sconosciuto. Questo aiuta a prevenire il tentativo di indovinare gli username."
+          },
+          "DISABLE_EMAIL_LOGIN": {
+            "TITLE": "Disabilita Login Email",
+            "DESCRIPTION": "Se questa opzione è attivata, i tuoi utenti non possono utilizzare i loro indirizzi email per accedere. Attenzione se disattivi questa opzione, gli indirizzi email dei tuoi utenti devono essere unici in tutte le organizzazioni per poter accedere."
+          },
+          "DISABLE_PHONE_LOGIN": {
+            "TITLE": "Disabilita Login Telefono",
+            "DESCRIPTION": "Se questa opzione è attivata, i tuoi utenti non possono utilizzare i loro numeri di telefono per accedere. Attenzione se disattivi questa opzione, i numeri di telefono dei tuoi utenti devono essere unici in tutte le organizzazioni per poter accedere."
+          }
+        }
+      }
+    }
+  },
+  "PAGINATOR": {
+    "PREVIOUS": "Precedente",
+    "NEXT": "Avanti",
+    "COUNT": "Risultati totali",
+    "MORE": "avanti"
+  },
+  "FOOTER": {
+    "LINKS": {
+      "CONTACT": "Contatto",
+      "TOS": "Termini di servizio",
+      "PP": "Informativa sulla privacy"
+    },
+    "THEME": {
+      "DARK": "Scuro",
+      "LIGHT": "Luminoso"
+    }
+  },
+  "HOME": {
+    "WELCOME": "Iniziare con ZITADEL",
+    "DISCLAIMER": "ZITADEL tratta i tuoi dati in modo confidenziale e sicuro.",
+    "DISCLAIMERLINK": "Ulteriori informazioni",
+    "DOCUMENTATION": {
+      "DESCRIPTION": "Inizia con ZITADEL."
+    },
+    "GETSTARTED": {
+      "DESCRIPTION": "Inizia con ZITADEL."
+    },
+    "QUICKSTARTS": {
+      "LABEL": "Primi passi",
+      "DESCRIPTION": "Inizia con ZITADEL."
+    },
+    "SHORTCUTS": {
+      "SHORTCUTS": "Scorciatoie",
+      "SETTINGS": "Scorciatoie disponibili",
+      "PROJECTS": "Progetti",
+      "REORDER": "Per spostare, tieni premuto e trascina il riquadro",
+      "ADD": "Per aggiungere, tieni premuto e trascina il riquadro"
+    }
+  },
+  "ONBOARDING": {
+    "DESCRIPTION": "Il tuo processo di onboarding",
+    "MOREDESCRIPTION": "più scorciatoie",
+    "COMPLETED": "completato",
+    "DISMISS": "chiudi",
+    "CARD": {
+      "TITLE": "Fate funzionare il vostro ZITADEL",
+      "DESCRIPTION": "Questa lista di azioni aiuta a configurare la vostra istanza e vi guida attraverso i passaggi più essenziali."
+    },
+    "MILESTONES": {
+      "instance.policy.label.added": {
+        "title": "Imposta il tuo marchio",
+        "description": "Definisci la colorazione e il design del vostro login e caricate il vostro logo e le vostre icone.",
+        "action": "Imposta marchio"
+      },
+      "instance.smtp.config.added": {
+        "title": "Configura le impostazioni SMTP",
+        "description": "Imposta il proprio server di posta",
+        "action": "Configura SMTP"
+      },
+      "PROJECT_CREATED": {
+        "title": "Crea il tuo primo progetto",
+        "description": "Aggiungere il primo progetto e definire i ruoli e le autorizzazioni.",
+        "action": "Crea progetto"
+      },
+      "APPLICATION_CREATED": {
+        "title": "Registra la tua app",
+        "description": "Registra la tua applicazione web, nativa, api o saml e configura un flusso di autenticazione.",
+        "action": "Registra app"
+      },
+      "AUTHENTICATION_SUCCEEDED_ON_APPLICATION": {
+        "title": "Accedi alla tua app",
+        "description": "Integra la tua applicazione con ZITADEL per l'autenticazione e testala accedendo con il tuo utente amministratore.",
+        "action": "Accedi"
+      },
+      "user.human.added": {
+        "title": "Aggiungi utenti",
+        "description": "Aggiungi gli utenti dell'applicazione",
+        "action": "Aggiungi utente"
+      },
+      "user.grant.added": {
+        "title": "Crea autorizzazioni per gli utenti",
+        "description": "Consenti agli utenti di accedere alla tua applicazione e imposta il loro ruolo.",
+        "action": "Crea autorizzazione"
+      }
+    }
+  },
+  "MENU": {
+    "INSTANCE": "Impostazioni default",
+    "DASHBOARD": "Pagina iniziale",
+    "PERSONAL_INFO": "Informazioni personali",
+    "DOCUMENTATION": "Documentazione",
+    "INSTANCEOVERVIEW": "Istanza",
+    "ORGS": "Organizzazioni",
+    "VIEWS": "Views",
+    "EVENTS": "Eventi",
+    "FAILEDEVENTS": "Eventi falliti",
+    "ORGANIZATION": "Organizzazione",
+    "PROJECT": "Progetti",
+    "PROJECTOVERVIEW": "Progetto",
+    "PROJECTGRANTS": "Organizzazioni ammissibili",
+    "ROLES": "Ruoli",
+    "GRANTEDPROJECT": "Progetto delegato",
+    "HUMANUSERS": "Utenti",
+    "MACHINEUSERS": "Utenti di servizio",
+    "LOGOUT": "Esci con tutti gli utenti",
+    "NEWORG": "Nuova organizzazione",
+    "IAMADMIN": "Sei un amministratore IAM. Nota che hai autorizzazioni estese.",
+    "SHOWORGS": "Mostra tutte le organizzazioni",
+    "GRANTS": "Autorizzazioni",
+    "ACTIONS": "Azioni",
+    "PRIVACY": "Informativa sulla privacy",
+    "TOS": "Termini di servizio",
+    "OPENSHORTCUTSTOOLTIP": "Premi ? per mostrare le scorciatoie da tastiera",
+    "SETTINGS": "Impostazioni",
+    "CUSTOMERPORTAL": "Customer Portal"
+  },
+  "QUICKSTART": {
+    "TITLE": "Integra ZITADEL nella tua applicazione",
+    "DESCRIPTION": "Integra ZITADEL nella tua applicazione o utilizza uno dei nostri esempi per iniziare in pochi minuti",
+    "BTN_START": "Crea applicazione",
+    "BTN_LEARNMORE": "Mostra di più",
+    "CREATEPROJECTFORAPP": "Crea progetto {{value}}",
+    "SELECT_FRAMEWORK": "Seleziona Framework",
+    "FRAMEWORK": "Framework",
+    "FRAMEWORK_OTHER": "Altro (OIDC, SAML, API)",
+    "ALMOSTDONE": "Hai quasi finito",
+    "REVIEWCONFIGURATION": "Controlla la configurazione",
+    "REVIEWCONFIGURATION_DESCRIPTION": "Abbiamo creato una configurazione base per le applicazioni {{value}}. Può adattare la configurazione alle proprie esigenze dopo la creazione.",
+    "REDIRECTS": "Configura i reindirizzamenti",
+    "DEVMODEWARN": "La modalità sviluppatore è abilitata per impostazione predefinita. È possibile aggiornare i valori per la produzione in un secondo momento.",
+    "GUIDE": "Guida",
+    "BROWSEEXAMPLES": "Esplora esempi e SDK",
+    "DUPLICATEAPPRENAME": "Un'app con lo stesso nome esiste già. Scegli un nome diverso.",
+    "DIALOG": {
+      "CHANGE": {
+        "TITLE": "Modifica framework",
+        "DESCRIPTION": "Scegliere uno dei framework disponibili per configurare rapidamente la propria applicazione"
+      }
+    }
+  },
+  "ACTIONS": {
+    "ACTIONS": "Azioni",
+    "FILTER": "Filtra",
+    "RENAME": "Rinomina",
+    "SET": "Salva",
+    "COPY": "Copia negli appunti",
+    "COPIED": "Copiato negli appunti.",
+    "RESET": "Ripristina",
+    "RESETDEFAULT": "Ripristino delle impostazioni predefinite",
+    "RESETTO": "Resettare a:",
+    "RESETCURRENT": "Ripristina",
+    "SHOW": "Mostra",
+    "HIDE": "Nascondi",
+    "SAVE": "Salva",
+    "SAVENOW": "Salva ora",
+    "NEW": "Nuovo",
+    "ADD": "Aggiungi",
+    "CREATE": "Crea",
+    "CONTINUE": "Continua",
+    "CONTINUEWITH": "Continue con {{value}}",
+    "BACK": "Indietro",
+    "CLOSE": "chiudi",
+    "CLEAR": "Resetta",
+    "CANCEL": "cancella",
+    "INFO": "Info",
+    "OK": "OK",
+    "SELECT": "Seleziona",
+    "VIEW": "Mostra",
+    "SELECTIONDELETE": "Elimina selezione",
+    "DELETE": "Elimina",
+    "REMOVE": "Rimuovi",
+    "VERIFY": "Verifica",
+    "FINISH": "Chiudi",
+    "FINISHED": "Chiudi",
+    "CHANGE": "Cambia",
+    "REACTIVATE": "Riattiva",
+    "ACTIVATE": "Attiva",
+    "DEACTIVATE": "Disattiva",
+    "REFRESH": "Aggiorna",
+    "LOGIN": "Accedi",
+    "EDIT": "Modifica",
+    "PIN": "Pin / Unpin",
+    "CONFIGURE": "Configurare",
+    "SEND": "Invia",
+    "NEWVALUE": "Nuovo valore",
+    "RESTORE": "Ripristina",
+    "CONTINUEWITHOUTSAVE": "Continua senza salvare",
+    "OF": "di",
+    "PREVIOUS": "Precedente",
+    "NEXT": "Avanti",
+    "MORE": "azioni",
+    "STEP": "Passo",
+    "UNSAVED": {
+      "DIALOG": {
+        "DESCRIPTION": "Sei sicuro di voler eliminare questa nuova azione? La tua azione andrà persa",
+        "CANCEL": "Cancella",
+        "DISCARD": "Continua comunque"
+      }
+    },
+    "TABLE": {
+      "SHOWUSER": "Mostra utente {{value}}"
+    },
+    "DOWNLOAD": "Scarica"
+  },
+  "MEMBERROLES": {
+    "IAM_OWNER": "Ha il controllo sull'intera istanza, comprese tutte le organizzazioni",
+    "IAM_OWNER_VIEWER": "Ha l'autorizzazione per esaminare l'intera istanza, comprese tutte le organizzazioni",
+    "IAM_ORG_MANAGER": "Ha il permesso di creare e gestire organizzazioni",
+    "IAM_USER_MANAGER": "Ha l'autorizzazione per creare e gestire utenti",
+    "IAM_ADMIN_IMPERSONATOR": "Dispone dell'autorizzazione per rappresentare l'amministratore e gli utenti finali di tutte le organizzazioni",
+    "IAM_END_USER_IMPERSONATOR": "Dispone dell'autorizzazione per rappresentare gli utenti finali di tutte le organizzazioni",
+    "ORG_OWNER": "Ha il permesso su tutta l'organizzazione",
+    "ORG_USER_MANAGER": "Ha l'autorizzazione per creare e gestire gli utenti dell'organizzazione",
+    "ORG_OWNER_VIEWER": "Ha il permesso di esaminare l'intera organizzazione",
+    "ORG_USER_PERMISSION_EDITOR": "Ha l'autorizzazione per gestire le autorizzazioni degli utenti",
+    "ORG_PROJECT_PERMISSION_EDITOR": "Ha il permesso di gestire le sovvenzioni di progetto (Project Grant)",
+    "ORG_PROJECT_CREATOR": "Ha il permesso di creare propri progetti e le impostazioni sottostanti",
+    "ORG_ADMIN_IMPERSONATOR": "Ha il permesso per rappresentare l'amministratore e gli utenti finali dell'organizzazione",
+    "ORG_END_USER_IMPERSONATOR": "Ha il permesso per rappresentare gli utenti finali dell'organizzazione",
+    "PROJECT_OWNER": "Ha il permesso per l'intero progetto",
+    "PROJECT_OWNER_VIEWER": "Ha il permesso di esaminare l'intero progetto",
+    "PROJECT_OWNER_GLOBAL": "Ha il permesso per l'intero progetto",
+    "PROJECT_OWNER_VIEWER_GLOBAL": "Ha il permesso di esaminare l'intero progetto",
+    "PROJECT_GRANT_OWNER": "Ha l'autorizzazione per gestire le sovvenzioni di progetto (Project Grant)",
+    "PROJECT_GRANT_OWNER_VIEWER": "Ha il permesso di esaminare le sovvenzioni di progetto (Project Grant)"
+  },
+  "OVERLAYS": {
+    "ORGSWITCHER": {
+      "TEXT": "Tutte le impostazioni e le tabelle dell'organizzazione si basano su un'organizzazione selezionata. Fai clic sul pulsante per cambiare organizzazione o crearne una nuova."
+    },
+    "INSTANCE": {
+      "TEXT": "Clicca qui per accedere alle impostazioni dell'istanza. Tieni presente che hai accesso solo se disponi di autorizzazioni avanzate."
+    },
+    "PROFILE": {
+      "TEXT": "Qui puoi passare da un account utente all'altro e gestire le sessioni e il profilo."
+    },
+    "NAV": {
+      "TEXT": "Questa navigazione cambia in base all' organizzazione impostata sopra e la tua istanza."
+    },
+    "CONTEXTCHANGED": {
+      "TEXT": "Attenzione! L'organizzazione è appena stata cambiata."
+    },
+    "SWITCHEDTOINSTANCE": {
+      "TEXT": "La visualizzazione è appena stata modificata in istanza!"
+    }
+  },
+  "FILTER": {
+    "TITLE": "Filter",
+    "STATE": "Status",
+    "DISPLAYNAME": "Utente Nome",
+    "EMAIL": "Email",
+    "USERNAME": "User Name",
+    "ORGNAME": "Nome organizzazione",
+    "PRIMARYDOMAIN": "Dominio primario",
+    "PROJECTNAME": "Nome del progetto",
+    "RESOURCEOWNER": "Resource Owner",
+    "METHODS": {
+      "5": "contiene",
+      "7": "finisce con",
+      "1": "equivale"
+    }
+  },
+  "KEYBOARDSHORTCUTS": {
+    "TITLE": "Tasti rapidi",
+    "UNDERORGCONTEXT": "All'interno delle pagine dell'organizzazione",
+    "SIDEWIDE": "Tasti rapidi globali",
+    "SHORTCUTS": {
+      "HOME": "Vai alla panoramica",
+      "INSTANCE": "Vai alla pagina dell' istanza",
+      "ORG": "Vai all'organizzazione",
+      "ORGSETTINGS": "Alle impostazioni dell'organizzazione",
+      "ORGSWITCHER": "Cambia organizzazione",
+      "ME": "Vai al profilo",
+      "PROJECTS": "Vai ai progetti",
+      "USERS": "Vai ai utenti",
+      "USERGRANTS": "Vai ai Autorizzazioni",
+      "ACTIONS": "Vai ai azioni e processi",
+      "DOMAINS": "Vai ai domini"
+    }
+  },
+  "RESOURCEID": "Resource ID",
+  "NAME": "Name",
+  "VERSION": "Versione",
+  "TABLE": {
+    "NOROWS": "Nessun dato"
+  },
+  "ERRORS": {
+    "REQUIRED": "Compilare questo campo.",
+    "ATLEASTONE": "Inserisci almeno un valore.",
+    "TOKENINVALID": {
+      "TITLE": "Il tuo Access Token è scaduto.",
+      "DESCRIPTION": "Clicca il pulsante per richiedere una nuova sessione."
+    },
+    "EXHAUSTED": {
+      "TITLE": "La tua istanza è bloccata.",
+      "DESCRIPTION": "Chiedi all'amministratore dell'istanza ZITADEL di aggiornare l'abbonamento."
+    },
+    "INVALID_FORMAT": "Il formato non è valido.",
+    "NOTANEMAIL": "Il valore dato non è un indirizzo e-mail.",
+    "MINLENGTH": "Deve essere lunga almeno {{requiredLength}} caratteri.",
+    "UPPERCASEMISSING": "Deve includere un carattere maiuscolo.",
+    "LOWERCASEMISSING": "Deve includere un carattere minuscolo.",
+    "SYMBOLERROR": "Deve includere un simbolo o un segno di punteggiatura.",
+    "NUMBERERROR": "Deve includere una cifra.",
+    "PWNOTEQUAL": "Le password fornite non corrispondono.",
+    "PHONE": "Il numero di telefono deve iniziare con +."
+  },
+  "USER": {
+    "SETTINGS": {
+      "TITLE": "Impostazioni",
+      "GENERAL": "Generale",
+      "IDP": "Fornitori di identità",
+      "SECURITY": "Password e sicurezza",
+      "KEYS": "Chiavi",
+      "PAT": "Personal Access Tokens",
+      "USERGRANTS": "Autorizzazioni",
+      "MEMBERSHIPS": "Memberships",
+      "METADATA": "Metadati"
+    },
+    "TITLE": "Informazioni personali",
+    "DESCRIPTION": "Gestisci le tue informazioni e le impostazioni di sicurezza.",
+    "PAGES": {
+      "TITLE": "Utente",
+      "DETAIL": "Dettagli",
+      "CREATE": "Crea",
+      "MY": "Le mie informazioni",
+      "LOGINNAMES": "Loginnames",
+      "LOGINMETHODS": "Metodi di accesso",
+      "LOGINNAMESDESC": "Questi sono i nomi di accesso:",
+      "NOUSER": "Nessun utente associato.",
+      "REACTIVATE": "Riattiva",
+      "DEACTIVATE": "Disattiva",
+      "FILTER": "Filtro",
+      "STATE": "Stato",
+      "DELETE": "Elimina utente",
+      "UNLOCK": "Sblocca utente",
+      "GENERATESECRET": "Genera Client Secret",
+      "REMOVESECRET": "Elimina Client Secret",
+      "LOCKEDDESCRIPTION": "Questo utente è stato bloccato a causa del superamento dei tentativi massimi di accesso e deve essere sbloccato per essere utilizzato di nuovo.",
+      "DELETEACCOUNT": "Elimina account personale",
+      "DELETEACCOUNT_DESC": "Se esegui questa azione, sarai disconnesso e non avrai più accesso al tuo account. Questa azione non può essere invertita.",
+      "DELETEACCOUNT_BTN": "Elimina",
+      "DELETEACCOUNT_SUCCESS": "Account eliminato con successo!"
+    },
+    "DETAILS": {
+      "DATECREATED": "Creato",
+      "DATECHANGED": "Cambiato"
+    },
+    "DIALOG": {
+      "DELETE_TITLE": "Elimina utente",
+      "DELETE_SELF_TITLE": "Elimina Account",
+      "DELETE_DESCRIPTION": "Stai per eliminare definitivamente un utente. Sei sicuro?",
+      "DELETE_SELF_DESCRIPTION": "Stai per eliminare definitivamente il tuo account. Questo ti disconnetterà ed eliminerà il tuo utente. Questa azione non può essere annullata!",
+      "DELETE_AUTH_DESCRIPTION": "Stai per eleminare il tuo account personale in modo permanente. Vuoi continuare?",
+      "TYPEUSERNAME": "Ripeti '{{value}}' per confermare ed eliminare l'utente.",
+      "USERNAME": "Nome utente",
+      "DELETE_BTN": "Elimina"
+    },
+    "SENDEMAILDIALOG": {
+      "TITLE": "Invia una notifica via e-mail",
+      "DESCRIPTION": "Clicca il pulsante qui sotto per inviare una notifica all'indirizzo email corrente o cambiare l'indirizzo email nel campo.",
+      "NEWEMAIL": "Nuovo indirizzo e-mail"
+    },
+    "SECRETDIALOG": {
+      "CLIENTSECRET": "Client Secret",
+      "CLIENTSECRET_DESCRIPTION": "Salvate il Client Secret in un luogo sicuro, perché non sarà più disponibile dopo aver chiuso la finestra di dialogo"
+    },
+    "TABLE": {
+      "DEACTIVATE": "Disattiva",
+      "ACTIVATE": "Attiva",
+      "CHANGEDATE": "Ultima modifica",
+      "CREATIONDATE": "creato",
+      "FILTER": {
+        "0": "Filtro per DisplayName",
+        "1": "Filtro per nome utente",
+        "2": "filtro per DisplayName",
+        "3": "filtro per nome utente",
+        "4": "filtro per email",
+        "5": "filtro per DisplayName",
+        "10": "filtro per il nome organizzazione",
+        "12": "filtro per il nome progetto"
+      },
+      "EMPTY": "Nessuna voce"
+    },
+    "PASSWORDLESS": {
+      "SEND": "Invia il link di registrazione",
+      "TABLETYPE": "Tipo",
+      "TABLESTATE": "Stato",
+      "NAME": "Nome",
+      "EMPTY": "Nessun dispositivo impostato",
+      "TITLE": "Autenticazione passwordless",
+      "DESCRIPTION": "Aggiungi i metodi di autenticazione basati su WebAuthn per accedere a ZITADEL senza password.",
+      "MANAGE_DESCRIPTION": "Gestisci i metodi del secondo fattore dei vostri utenti.",
+      "U2F": "Aggiungi metodo",
+      "U2F_DIALOG_TITLE": "Verifica autenticatore",
+      "U2F_DIALOG_DESCRIPTION": "Inserisci un nome per il tuo authenticatore o dispositivo usato.",
+      "U2F_SUCCESS": "Autorizzazione passwordless creata con successo!",
+      "U2F_ERROR": "Si è verificato un errore durante la configurazione!",
+      "U2F_NAME": "Nome dell'autenticatore",
+      "TYPE": {
+        "0": "Nessun MFA definito",
+        "1": "One Time Password (OTP)",
+        "2": "Impronta digitale, chiave di sicurezza, Face ID e altri"
+      },
+      "STATE": {
+        "0": "Nessuno Stato",
+        "1": "Non pronto",
+        "2": "Pronto",
+        "3": "Cancellato"
+      },
+      "DIALOG": {
+        "DELETE_TITLE": "Rimuovere l'autenticazione passwordless",
+        "DELETE_DESCRIPTION": "Stai per rimuovere un metodo di autenticazione passwordless. Sei sicuro?",
+        "ADD_TITLE": "Autenticazione passwordless",
+        "ADD_DESCRIPTION": "Seleziona una delle opzioni disponibili per creare un metodo di autenticazione passwordless.",
+        "SEND_DESCRIPTION": "Inviati un link di registrazione al tuo indirizzo e-mail.",
+        "SEND": "Invia il link di registrazione",
+        "SENT": "L'e-mail è stata consegnata con successo. Controlla la tua casella di posta per continuare con la configurazione.",
+        "QRCODE_DESCRIPTION": "Genera un codice QR per la scansione con un altro dispositivo.",
+        "QRCODE": "Genera un codice QR",
+        "QRCODE_SCAN": "Scannerizza questo codice QR per continuare la configurazione sul tuo dispositivo.",
+        "NEW_DESCRIPTION": "Usa questo dispositivo per impostare Passwordless.",
+        "NEW": "Aggiungi nuovo"
+      }
+    },
+    "MFA": {
+      "TABLETYPE": "Tipo",
+      "TABLESTATE": "Stato",
+      "NAME": "Nome",
+      "EMPTY": "nessun fattore aggiuntivo",
+      "TITLE": "Autenticazione a più fattori",
+      "DESCRIPTION": "Aggiungi un secondo fattore per garantire la sicurezza ottimale del tuo account.",
+      "MANAGE_DESCRIPTION": "Gestite i metodi del secondo fattore dei vostri utenti.",
+      "ADD": "Aggiungi fattore",
+      "OTP": "App di autenticazione per TOTP (Time-based One-Time Password)",
+      "OTP_DIALOG_TITLE": "Aggiungi TOTP",
+      "OTP_DIALOG_DESCRIPTION": "Scansiona il codice QR con un'app di autenticazione e inserisci il codice nel campo sottostante per verificare e attivare il metodo OTP.",
+      "U2F": "Impronta digitale, chiave di sicurezza, Face ID e altri",
+      "U2F_DIALOG_TITLE": "Verifica Fattore",
+      "U2F_DIALOG_DESCRIPTION": "Inserisci un nome per il tuo methodo o dispositivo.",
+      "U2F_SUCCESS": "Fattore aggiunto con successo!",
+      "U2F_ERROR": "Si è verificato un errore durante la configurazione!",
+      "U2F_NAME": "Nome dell'autenticatore",
+      "OTPSMS": "OTP (One-Time Password) con SMS",
+      "OTPEMAIL": "OTP (One-Time Password) with Email",
+      "SETUPOTPSMSDESCRIPTION": "Vuoi impostare questo numero di telefono come secondo fattore OTP (One-Time password)?",
+      "OTPSMSSUCCESS": "Fattore OTP impostato con successo.",
+      "OTPSMSPHONEMUSTBEVERIFIED": "Il tuo telefono deve essere verificato per utilizzare questo metodo.",
+      "OTPEMAILSUCCESS": "Fattore OTP impostato con successo.",
+      "TYPE": {
+        "0": "Nessun altro fattore definito",
+        "1": "One Time Password (OTP)",
+        "2": "Impronta digitale, chiave di sicurezza, Face ID e altri"
+      },
+      "STATE": {
+        "0": "Nessuno Stato",
+        "1": "Non pronto",
+        "2": "Pronto",
+        "3": "Cancellato"
+      },
+      "DIALOG": {
+        "MFA_DELETE_TITLE": "Rimuovi metodo a due fattori",
+        "MFA_DELETE_DESCRIPTION": "Stai per rimuovere un metodo a due fattori. Sei sicuro?",
+        "ADD_MFA_TITLE": "Aggiungere un metodo a due fattori?",
+        "ADD_MFA_DESCRIPTION": "Selezionare una delle seguenti opzioni."
+      }
+    },
+    "EXTERNALIDP": {
+      "TITLE": "IDP esterni",
+      "DESC": "",
+      "IDPCONFIGID": "IDP Config ID",
+      "IDPNAME": "Nome Idp",
+      "USERDISPLAYNAME": "Nome esterno",
+      "EXTERNALUSERID": "ID utente esterno",
+      "EMPTY": "Nessun IDP esterno trovato",
+      "DIALOG": {
+        "DELETE_TITLE": "Rimuovere l'IDP",
+        "DELETE_DESCRIPTION": "Stai per eliminare un fornitore di identità da un utente. Vuoi continuare?"
+      }
+    },
+    "CREATE": {
+      "TITLE": "Crea un nuovo utente",
+      "DESCRIPTION": "Si prega di fornirsi delle informazioni necessarie.",
+      "NAMEANDEMAILSECTION": "Nome ed e-mail",
+      "GENDERLANGSECTION": "Genere e linguaggio",
+      "PHONESECTION": "Phone numbers",
+      "PASSWORDSECTION": "Password iniziale",
+      "ADDRESSANDPHONESECTION": "Numero di telefono",
+      "INITMAILDESCRIPTION": "Se vengono selezionate entrambe le opzioni, non verrà inviata alcuna e-mail per l'inizializzazione. Se solo una delle opzioni viene selezionata, verrà inviata una mail per fornire/verificare i dati."
+    },
+    "CODEDIALOG": {
+      "TITLE": "Verificare il numero di telefono",
+      "DESCRIPTION": "Inserisci il codice che hai ricevuto via SMS per verificare il tuo numero di telefono.",
+      "CODE": "Codice"
+    },
+    "DATA": {
+      "STATE": "Stato",
+      "STATE0": "Sconosciuto",
+      "STATE1": "Attivo",
+      "STATE2": "Inattivo",
+      "STATE3": "Cancellato",
+      "STATE4": "Bloccato",
+      "STATE5": "sospeso",
+      "STATE6": "Iniziale"
+    },
+    "PROFILE": {
+      "TITLE": "Profilo",
+      "EMAIL": "E-mail",
+      "PHONE": "Numero di telefono",
+      "PHONE_HINT": "Utilizza il simbolo + seguito dal prefisso del paese, o seleziona il paese ed inserisci il numero di telefono",
+      "USERNAME": "Nome utente",
+      "CHANGEUSERNAME": "cambia",
+      "CHANGEUSERNAME_TITLE": "Cambia nome utente",
+      "CHANGEUSERNAME_DESC": "Inserisci il tuo nome desiderato nel campo.",
+      "FIRSTNAME": "Nome",
+      "LASTNAME": "Cognome",
+      "NICKNAME": "Soprannome",
+      "DISPLAYNAME": "DisplayName",
+      "PREFERREDLOGINNAME": "Nome di accesso preferito",
+      "PREFERRED_LANGUAGE": "Lingua",
+      "GENDER": "Genere",
+      "PASSWORD": "Password",
+      "AVATAR": {
+        "UPLOADTITLE": "Carica la tua immagine del profilo",
+        "UPLOADBTN": "Scegli tra i file",
+        "UPLOAD": "Carica",
+        "CURRENT": "Immagine attuale",
+        "PREVIEW": "Anteprima",
+        "DELETESUCCESS": "Rimosso con successo!",
+        "CROPPERERROR": "È successo un errore durante il caricamento del tuo file. Prova un formato e una dimensione diversi, se necessario."
+      },
+      "COUNTRY": "Paese"
+    },
+    "MACHINE": {
+      "TITLE": "Dettagli dell'utente del servizio",
+      "USERNAME": "Nome utente",
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrizione",
+      "KEYSTITLE": "Chiavi",
+      "KEYSDESC": "Definisci le tue chiavi e aggiungi una data di scadenza opzionale.",
+      "TOKENSTITLE": "Personal Access Tokens",
+      "TOKENSDESC": "Questi Token d'accesso personali funzionano come i Access Token per OAuth.",
+      "ID": "ID chiave",
+      "TYPE": "Tipo",
+      "EXPIRATIONDATE": "Data di scadenza",
+      "CHOOSEDATEAFTER": "Inserisci una scadenza valida",
+      "CHOOSEEXPIRY": "Seleziona una data di scadenza",
+      "CREATIONDATE": "Data di creazione",
+      "KEYDETAILS": "Dettagli chiave",
+      "ACCESSTOKENTYPE": "Tipo Access Token",
+      "ACCESSTOKENTYPES": {
+        "0": "Bearer",
+        "1": "JWT"
+      },
+      "ADD": {
+        "TITLE": "Aggiungi chiave",
+        "DESCRIPTION": "Seleziona il tuo tipo di chiave e scegli una data di scadenza opzionale."
+      },
+      "ADDED": {
+        "TITLE": "La chiave è stata creata",
+        "DESCRIPTION": "Scarica la chiave perché non sarà più visibile dopo aver chiuso questa finestra di dialogo!"
+      },
+      "KEYTYPES": {
+        "1": "JSON"
+      },
+      "DIALOG": {
+        "DELETE_KEY": {
+          "TITLE": "Elimina Chiave",
+          "DESCRIPTION": "Vuoi eliminare la chiave selezionata? Questa azione non può essere annullata."
+        }
+      }
+    },
+    "PASSWORD": {
+      "TITLE": "Password",
+      "LABEL": "Una password sicura aiuta a proteggere l'account",
+      "DESCRIPTION": "Inserisci la nuova password secondo i requisiti.",
+      "OLD": "Password attuale",
+      "NEW": "Nuova password",
+      "CONFIRM": "Conferma la nuova password",
+      "NEWINITIAL": "Password",
+      "CONFIRMINITIAL": "Conferma password",
+      "RESET": "Ripristina la password attuale",
+      "SET": "Imposta nuova password",
+      "RESENDNOTIFICATION": "Invia email per la reimpostazione",
+      "REQUIRED": "Mancano alcuni campi obbligatori.",
+      "MINLENGTHERROR": "Deve essere lunga almeno {{valore}} caratteri."
+    },
+    "ID": "ID",
+    "EMAIL": "E-mail",
+    "PHONE": "Numero di telefono",
+    "PHONEEMPTY": "Nessun numero di telefono definito",
+    "PHONEVERIFIED": "Numero di telefono verificato.",
+    "EMAILVERIFIED": "Email verificata",
+    "NOTVERIFIED": "non verificato",
+    "PREFERRED_LOGINNAME": "Loginname preferito",
+    "ISINITIAL": "L'utente non è ancora attivo.",
+    "LOGINMETHODS": {
+      "TITLE": "Informazioni di contatto",
+      "DESCRIPTION": "Le informazioni fornite sono utilizzate per inviare informazioni importanti, come le e-mail di reset della password.",
+      "EMAIL": {
+        "TITLE": "E-mail",
+        "VALID": "convalidato",
+        "ISVERIFIED": "Email Verificato",
+        "ISVERIFIEDDESC": "Se l'email viene indicata come verificata, non verrà inviata alcuna email di verificazione.",
+        "RESEND": "Invia di nuovo l'e-mail di verifica",
+        "EDITTITLE": "Cambiare l'e-mail",
+        "EDITDESC": "Inserisci la nuova email nel campo sottostante."
+      },
+      "PHONE": {
+        "TITLE": "Telefono",
+        "VALID": "convalidato",
+        "RESEND": "Reinvia il messaggio per la verifica",
+        "EDITTITLE": "Cambia il numero di telefono",
+        "EDITVALUE": "Numero di telefono",
+        "EDITDESC": "Inserisci il nuovo numero di telefono nel campo sottostante.",
+        "DELETETITLE": "Rimuovi il numero di telefono",
+        "DELETEDESC": "Vuoi davvero rimuovere il numero di telefono",
+        "OTPSMSREMOVALWARNING": "Questo account utilizza questo numero di telefono come secondo fattore. Non sarai in grado di usarlo dopo aver proceduto."
+      },
+      "RESENDCODE": "Reinvia il codice",
+      "ENTERCODE": "Verifica",
+      "ENTERCODE_DESC": "Verifica il codice"
+    },
+    "GRANTS": {
+      "TITLE": "User Grants",
+      "DESCRIPTION": "Concedere a questo utente l'accesso a certi progetti",
+      "CREATE": {
+        "TITLE": "Crea User Grant",
+        "DESCRIPTION": "Cerca l'organizzazione, il progetto e i ruoli di progetto corrispondenti."
+      },
+      "PROJECTNAME": "Nome del progretto",
+      "PROJECT-OWNED": "Progetto",
+      "PROJECT-GRANTED": "Progetto delegato",
+      "FILTER": {
+        "0": "filtro per utente",
+        "1": "filtro per il dominio",
+        "2": "filtro per projectname",
+        "3": "filtro per rolename"
+      }
+    },
+    "STATE": {
+      "0": "Sconosciuto",
+      "1": "Attivo",
+      "2": "Inattivo",
+      "3": "Rimosso",
+      "4": "Bloccato",
+      "5": "Sospeso",
+      "6": "Initializzato"
+    },
+    "SEARCH": {
+      "ADDITIONAL": "Nome (organizzazione corrente)",
+      "ADDITIONAL-EXTERNAL": "Loginname (organizzazione esterna)"
+    },
+    "TARGET": {
+      "SELF": "Se vuoi concedere l'accesso a un utente di un'altra organizzazione",
+      "EXTERNAL": "Per concedere l'accesso a un utente della tua organizzazione",
+      "CLICKHERE": "clicca qui"
+    },
+    "SIGNEDOUT": "Ti sei disconnesso. Clicca sul pulsante \"Accedi\" per accedere di nuovo.",
+    "SIGNEDOUT_BTN": "Accedi",
+    "EDITACCOUNT": "Modifica account",
+    "ADDACCOUNT": "Accedi con un altro account",
+    "RESENDINITIALEMAIL": "Invia nuovamente la mail di attivazione",
+    "RESENDEMAILNOTIFICATION": "Invia di nuovo la notifica via e-mail",
+    "TOAST": {
+      "CREATED": "Utente creato con successo.",
+      "SAVED": "Profilo salvato con successo.",
+      "USERNAMECHANGED": "Nome utente cambiato con successo.",
+      "EMAILSAVED": "E-mail salvata con successo.",
+      "INITEMAILSENT": "Email di inizializzazione inviata.",
+      "PHONESAVED": "Telefono salvato con successo.",
+      "PHONEREMOVED": "Il telefono è stato rimosso.",
+      "PHONEVERIFIED": "Telefono verificato con successo.",
+      "PHONEVERIFICATIONSENT": "Codice di verifica telefonica inviato.",
+      "EMAILVERIFICATIONSENT": "Codice di verifica e-mail inviato.",
+      "OTPREMOVED": "One Time Password (OTP) rimosso.",
+      "U2FREMOVED": "Fattore rimosso.",
+      "PASSWORDLESSREMOVED": "Rimosso senza password.",
+      "INITIALPASSWORDSET": "Password iniziale impostata.",
+      "PASSWORDNOTIFICATIONSENT": "Notifica di cambio password inviata.",
+      "PASSWORDCHANGED": "Password cambiata con successo.",
+      "REACTIVATED": "Utente riattivato.",
+      "DEACTIVATED": "Utente disattivato.",
+      "SELECTEDREACTIVATED": "Utenti selezionati riattivati.",
+      "SELECTEDDEACTIVATED": "Utenti selezionati disattivati.",
+      "SELECTEDKEYSDELETED": "Tasti selezionati cancellati.",
+      "KEYADDED": "Chiave aggiunta!",
+      "MACHINEADDED": "Utente di servizio creato!",
+      "DELETED": "Utente cancellato con successo!",
+      "UNLOCKED": "Utente sbloccato con successo!",
+      "PASSWORDLESSREGISTRATIONSENT": "Link per la registrazione inviato con successo.",
+      "SECRETGENERATED": "Secret generato con successo!",
+      "SECRETREMOVED": "Secret rimosso con successo!"
+    },
+    "MEMBERSHIPS": {
+      "TITLE": "Memberships di ZITADEL",
+      "DESCRIPTION": "Questi sono tutti i member grant dell'utente. Puoi modificarli anche nelle pagine di dettaglio dell'organizzazione, del progetto o di sistema.",
+      "ORGCONTEXT": "Vedi tutti i progetti che sono collegati all'organizzazione attualmente selezionata.",
+      "USERCONTEXT": "Vedi tutte le organizzazioni e i progetti a cui sei autorizzato. Comprese le altre organizzazioni.",
+      "CREATIONDATE": "Data di creazione",
+      "CHANGEDATE": "Ultima modifica",
+      "DISPLAYNAME": "DisplayName",
+      "REMOVE": "Rimuovi",
+      "TYPE": "Tipo",
+      "ORGID": "ID dell' organizzazione",
+      "UPDATED": "membership cambiato con successo.",
+      "NOPERMISSIONTOEDIT": "Non hai l'autorizzazione richiesta per cambiare i ruoli!",
+      "TYPES": {
+        "UNKNOWN": "Sconosciuto",
+        "ORG": "Organizzazione",
+        "PROJECT": "Progetto",
+        "GRANTEDPROJECT": "Progetto delegato"
+      }
+    },
+    "PERSONALACCESSTOKEN": {
+      "ID": "ID",
+      "TOKEN": "Token",
+      "ADD": {
+        "TITLE": "Genera un nuovo token",
+        "DESCRIPTION": "Definisci la data di scadenza del token",
+        "CHOOSEEXPIRY": "Seleziona una data di scadenza",
+        "CHOOSEDATEAFTER": "Inserisci una scadenza valida"
+      },
+      "ADDED": {
+        "TITLE": "Personal Access Token",
+        "DESCRIPTION": "Copia il tuo token di accesso. Non sarà possibile recuperarlo in seguito."
+      },
+      "DELETE": {
+        "TITLE": "Elimina Token",
+        "DESCRIPTION": "Stai per eliminare il token di accesso. Sei sicuro di voler continuare?"
+      },
+      "DELETED": "Token eliminato con successo."
+    }
+  },
+  "METADATA": {
+    "TITLE": "Metadati",
+    "KEY": "Chiave",
+    "VALUE": "Valore",
+    "ADD": "Nuova voce",
+    "SAVE": "Salva",
+    "EMPTY": "Nessun metadato",
+    "SETSUCCESS": "Salvato con successo",
+    "REMOVESUCCESS": "Rimosso con successo"
+  },
+  "FLOWS": {
+    "ID": "ID",
+    "NAME": "Nome",
+    "STATE": "Stato",
+    "STATES": {
+      "0": "Nessun stato",
+      "1": "inattivo",
+      "2": "attivo"
+    },
+    "ADDTRIGGER": "Aggiungi trigger",
+    "FLOWCHANGED": "Il processo è stato modificato con successo.",
+    "FLOWCLEARED": "Il processo è stato eliminato con successo.",
+    "TIMEOUT": "Timeout",
+    "TIMEOUTINSEC": "Timeout in secondi",
+    "ALLOWEDTOFAIL": "Può fallire",
+    "ALLOWEDTOFAILWARN": {
+      "TITLE": "Attenzione",
+      "DESCRIPTION": "Se disabiliti questa impostazione, potrebbe impedire agli utenti della tua organizzazione di accedere. Inoltre, non sarai più in grado di accedere alla console per disabilitare l'azione. Ti consigliamo di creare un utente amministratore in un'organizzazione separata o di testare gli script prima in un ambiente di sviluppo o in un'organizzazione di sviluppo."
+    },
+    "SCRIPT": "Script",
+    "FLOWTYPE": "Tipo processo",
+    "TRIGGERTYPE": "Tipo trigger",
+    "ACTIONS": "Azioni",
+    "ACTIONSMAX": "In base al tuo tier, hai a disposizione un numero limitato di azioni ({{value}}). Assicurati di disattivare quelli di cui non hai bisogno o considera di fare un upgrade.",
+    "DIALOG": {
+      "ADD": {
+        "TITLE": "Crea azione"
+      },
+      "UPDATE": {
+        "TITLE": "Modifica azione"
+      },
+      "DELETEACTION": {
+        "TITLE": "Elimina azione?",
+        "DESCRIPTION": "",
+        "DELETE_SUCCESS": "Azione rimossa con successo."
+      },
+      "CLEAR": {
+        "TITLE": "Elimina processo",
+        "DESCRIPTION": "Stai per eliminare un processo. Questa azione non può essere annullata. Vuoi continuare?"
+      },
+      "REMOVEACTIONSLIST": {
+        "TITLE": "Elimina le azioni selezionate?",
+        "DESCRIPTION": "Sei sicuro di voler eliminare le azioni selezionate dal processo?"
+      }
+    },
+    "TOAST": {
+      "ACTIONSSET": "Azioni salvate!",
+      "ACTIONREACTIVATED": "Azioni riattivati con successo",
+      "ACTIONDEACTIVATED": "Azioni disattivati con successo"
+    }
+  },
+  "IAM": {
+    "POLICIES": {
+      "TITLE": "Impostazioni del Sistema e impostazioni d'accesso",
+      "DESCRIPTION": "Gestisci le impostazioni del sistema e le impostazioni d'accesso."
+    },
+    "EVENTSTORE": {
+      "TITLE": "IAM Eventstore",
+      "DESCRIPTION": "Gestisci i view di ZITADEL e gli eventi falliti."
+    },
+    "MEMBER": {
+      "TITLE": "Manager",
+      "DESCRIPTION": "Questi manager possono modificare le impostazioni dell'istanza."
+    },
+    "PAGES": {
+      "STATE": "Stato",
+      "DOMAINLIST": "Domini personalizzati"
+    },
+    "STATE": {
+      "0": "Non specifico",
+      "1": "In fase di creazione",
+      "2": "Attiva",
+      "3": "In fase di arresto",
+      "4": "Arrestata"
+    },
+    "VIEWS": {
+      "VIEWNAME": "Nome",
+      "DATABASE": "Database",
+      "SEQUENCE": "Sequenza",
+      "EVENTTIMESTAMP": "Timestamp",
+      "LASTSPOOL": "ultimo Pool",
+      "ACTIONS": "Azioni",
+      "CLEAR": "ripristina",
+      "CLEARED": "View ripristinato con successo!",
+      "DIALOG": {
+        "VIEW_CLEAR_TITLE": "Ripristina View",
+        "VIEW_CLEAR_DESCRIPTION": "Stai per ripristinare un view. La cancellazione o ripristinazione di un view crea un processo durante il quale i dati potrebbero non essere disponibili per gli utenti. Sei davvero sicuro?"
+      }
+    },
+    "FAILEDEVENTS": {
+      "VIEWNAME": "Nome",
+      "DATABASE": "Database",
+      "FAILEDSEQUENCE": "Sequenza fallita",
+      "FAILURECOUNT": "Conteggio dei fallimenti",
+      "LASTFAILED": "L'ultimo fallimento a",
+      "ERRORMESSAGE": "Messaggio di errore",
+      "ACTIONS": "Azioni",
+      "DELETE": "Rimuovi",
+      "DELETESUCCESS": "Eventi falliti rimossi."
+    },
+    "EVENTS": {
+      "EDITOR": "Editore",
+      "EDITORID": "ID Editore",
+      "AGGREGATE": "Aggregato",
+      "AGGREGATEID": "ID aggregato",
+      "AGGREGATETYPE": "Tipo aggregato",
+      "RESOURCEOWNER": "Resouce owner",
+      "SEQUENCE": "Sequenza",
+      "CREATIONDATE": "Creato",
+      "TYPE": "Tipo",
+      "PAYLOAD": "Payload",
+      "FILTERS": {
+        "BTN": "Filtra",
+        "USER": {
+          "IDLABEL": "ID",
+          "CHECKBOX": "filtra per editore"
+        },
+        "AGGREGATE": {
+          "TYPELABEL": "Aggregate Type",
+          "IDLABEL": "ID",
+          "CHECKBOX": "filtra per aggregato"
+        },
+        "TYPE": {
+          "TYPELABEL": "Type",
+          "CHECKBOX": "Filtra per tipo"
+        },
+        "RESOURCEOWNER": {
+          "LABEL": "ID",
+          "CHECKBOX": "Filter per Resource Owner"
+        },
+        "SEQUENCE": {
+          "LABEL": "Sequence",
+          "CHECKBOX": "Filter per sequenza"
+        },
+        "SORT": "Ordina per",
+        "ASC": "Ascendente",
+        "DESC": "Discendente",
+        "CREATIONDATE": {
+          "RADIO_FROM": "Da",
+          "RADIO_RANGE": "Intervallo",
+          "LABEL_SINCE": "Da",
+          "LABEL_UNTIL": "A"
+        },
+        "OTHER": "altro",
+        "OTHERS": "altri"
+      },
+      "DIALOG": {
+        "TITLE": "Dettaglio dell'evento"
+      }
+    },
+    "TOAST": {
+      "MEMBERREMOVED": "Manager rimosso.",
+      "MEMBERSADDED": "I manager sono stati aggiunti con successo.",
+      "MEMBERADDED": "Il manager è stato aggiunto con successo.",
+      "MEMBERCHANGED": "Manager cambiato.",
+      "ROLEREMOVED": "Ruolo rimosso.",
+      "ROLECHANGED": "Ruolo cambiato.",
+      "REACTIVATED": "Riattivato",
+      "DEACTIVATED": "Disattivato",
+      "DELETED": "Organizzazione cancellata con successo"
+    }
+  },
+  "ORG": {
+    "PAGES": {
+      "NAME": "Nome",
+      "ID": "ID",
+      "CREATIONDATE": "Data di creazione",
+      "DATECHANGED": "Cambiato",
+      "FILTER": "Filtro",
+      "FILTERPLACEHOLDER": "Filtro per il nome",
+      "LIST": "Organizzazioni",
+      "LISTDESCRIPTION": "Scegli un'organizzazione.",
+      "ACTIVE": "Attivo",
+      "CREATE": "Creare un'organizzazione",
+      "DEACTIVATE": "Disattiva organizzazione",
+      "REACTIVATE": "Riattiva organizzazione",
+      "NOPERMISSION": "Non hai l'autorizzazione per accedere alle impostazioni dell'organizzazione.",
+      "USERSELFACCOUNT": "Usa il tuo account personale come proprietario dell'organizzazione",
+      "ORGDETAIL_TITLE": "Inserisci il nome e il dominio della tua nuova organizzazione.",
+      "ORGDETAIL_TITLE_WITHOUT_DOMAIN": "Inserisci il nome della tua nuova organizzazione.",
+      "ORGDETAILUSER_TITLE": "Configurare il proprietario dell'organizzazione",
+      "DELETE": "Elimina organizzazione",
+      "DEFAULTLABEL": "Standard",
+      "SETASDEFAULT": "Imposta come organizzazione predefinita",
+      "DEFAULTORGSET": "Organizzazione predefinita cambiata con successo",
+      "RENAME": {
+        "ACTION": "Rinomina",
+        "TITLE": "Rinomina organizzazione",
+        "DESCRIPTION": "Inserisci il nuovo nome per la tua organizzazione",
+        "BTN": "Rinomina"
+      },
+      "ORGDOMAIN": {
+        "TITLE": "Verifica la proprietà di {{value}}",
+        "VERIFICATION": "Ti offriamo due metodi per convalidare manualmente il tuo dominio:",
+        "VERIFICATION_HTML": "-HTTP. Ospita un file di verifica temporaneo sul tuo sito web",
+        "VERIFICATION_DNS": "-DNS. Crea una voce DNS del record TXT",
+        "VERIFICATION_DNS_DESC": "Se gestisci {{ value }} e hai accesso ai tuoi record DNS, puoi creare un nuovo record TXT con i seguenti valori:",
+        "VERIFICATION_DNS_HOST_LABEL": "Ospite:",
+        "VERIFICATION_DNS_CHALLENGE_LABEL": "Utilizza questo codice per il valore del record TXT:",
+        "VERIFICATION_HTTP_DESC": "Se hai accesso all'hosting del tuo sito web, scarica semplicemente il file di verifica e caricalo all'URL fornito",
+        "VERIFICATION_HTTP_URL_LABEL": "URL previsto:",
+        "VERIFICATION_HTTP_FILE_LABEL": "File di verifica:",
+        "VERIFICATION_SKIP": "Per ora puoi saltare la verifica e continuare a creare la tua organizzazione, ma per poter utilizzare il tuo dominio è necessario completare questo passaggio!",
+        "VERIFICATION_VALIDATION_DESC": "Non eliminare il codice di verifica, poiché ZITADEL ricontrollerà di tanto in tanto la proprietà del tuo dominio.",
+        "VERIFICATION_NEWTOKEN_TITLE": "Richiedi nuovo token",
+        "VERIFICATION_VALIDATION_ONGOING": "Il metodo {{ value }} è stato selezionato per verificare il tuo dominio. Fare clic sul pulsante per attivare un controllo di verifica o reimpostare il processo di verifica.",
+        "VERIFICATION_SUCCESSFUL": "Dominio verificato con successo!",
+        "RESETMETHOD": "Reimposta il metodo di verifica"
+      },
+      "DOWNLOAD_FILE": "Scaricare il file",
+      "SELECTORGTOOLTIP": "Seleziona questa organizzazione.",
+      "PRIMARYDOMAIN": "Dominio primario",
+      "STATE": "Stato",
+      "USEPASSWORD": "Imposta la password iniziale",
+      "USEPASSWORDDESC": "L'utente non deve impostare la password durante l'inizializzazione."
+    },
+    "LIST": {
+      "TITLE": "Organizzazioni",
+      "DESCRIPTION": "Queste sono le organizzazioni sulla tua istanza"
+    },
+    "DOMAINS": {
+      "NEW": "Aggiungi dominio",
+      "TITLE": "Domini verificati",
+      "DESCRIPTION": "Configura i tuoi domini. Questo dominio può essere utilizzato per accedere con i tuoi utenti.",
+      "SETPRIMARY": "Impostato come primario",
+      "DELETE": {
+        "TITLE": "Cancellare il dominio",
+        "DESCRIPTION": "Stai per eliminare uno dei tuoi domini. Nota che i tuoi utenti non possono più usare questo dominio per il loro login."
+      },
+      "ADD": {
+        "TITLE": "Aggiungi dominio",
+        "DESCRIPTION": "Stai per aggiungere un dominio per la tua organizzazione. Dopo che il processo ha avuto successo, i tuoi utenti saranno in grado di utilizzare il dominio per il loro login."
+      }
+    },
+    "STATE": {
+      "0": "Non definito",
+      "1": "Attivo",
+      "2": "Disattivato"
+    },
+    "MEMBER": {
+      "TITLE": "Manager dell'organizzazione",
+      "DESCRIPTION": "Definisci gli utenti che possono cambiare le preferenze delle tue organizzazioni."
+    },
+    "TOAST": {
+      "UPDATED": "L'organizzazione es stata aggiornata.",
+      "DEACTIVATED": "Organizzazione disattivata.",
+      "REACTIVATED": "Organizzazione riattivata.",
+      "DOMAINADDED": "Aggiunto dominio.",
+      "DOMAINREMOVED": "Dominio rimosso.",
+      "MEMBERADDED": "Manager aggiunto con successo",
+      "MEMBERREMOVED": "Manager rimosso con successo",
+      "MEMBERCHANGED": "Manager cambiato con successo",
+      "SETPRIMARY": "Dominio primario cambiato con successo",
+      "DELETED": "Organizzazione eliminata con successo",
+      "ORG_WAS_DELETED": "Organizzazione è stata eliminata"
+    },
+    "DIALOG": {
+      "DEACTIVATE": {
+        "TITLE": "Disattivare l'organizzazione",
+        "DESCRIPTION": "Stai per disattivate la tua organizzazione. Utenti dell' organizzazione non possono più accedere in seguito. Sei sicuro di procedere?"
+      },
+      "REACTIVATE": {
+        "TITLE": "Riattivare l'organizzazione",
+        "DESCRIPTION": "Stai per riattivare la tua organizzazione. Utenti dell' organizzazione possono accedere nuovamente dopo l'attivazione. Vuoi procedere?"
+      },
+      "DELETE": {
+        "TITLE": "Elimina organizzazione",
+        "DESCRIPTION": "Si sta per eliminare l'organizzazione. In questo modo si avvia un processo di eliminazione di tutti i dati relativi all'organizzazione. Per il momento non è possibile annullare questa azione.",
+        "TYPENAME": "Inserisci '{{value}}' nel campo, per cancellare l'organizzazione.",
+        "ORGNAME": "Nome",
+        "BTN": "Elimina"
+      }
+    }
+  },
+  "SETTINGS": {
+    "INSTANCE": {
+      "TITLE": "Impostazioni dell'istanza",
+      "DESCRIPTION": "Queste impostazioni si applicheranno a tutte le tue organizzazioni a meno che l'impostazione non venga sovrascritta."
+    },
+    "LIST": {
+      "ORGS": "Organizzazioni",
+      "FEATURESETTINGS": "Impostazioni delle funzionalità",
+      "LANGUAGES": "Lingue",
+      "LOGIN": "Comportamento login e sicurezza",
+      "LOCKOUT": "Meccanismi di bloccaggio",
+      "COMPLEXITY": "Complessità della password",
+      "NOTIFICATIONS": "Impostazioni di notifica",
+      "SMTP_PROVIDER": "Fornitore SMTP",
+      "SMS_PROVIDER": "Fornitore di servizi SMS/telefonici",
+      "NOTIFICATIONS_DESC": "Impostazioni SMTP e SMS",
+      "MESSAGETEXTS": "Testi di notifica",
+      "IDP": "Fornitori di identità",
+      "VERIFIED_DOMAINS": "Domini verificati",
+      "DOMAIN": "Impostazioni del dominio",
+      "LOGINTEXTS": "Testi dell'interfaccia login",
+      "BRANDING": "Branding",
+      "PRIVACYPOLICY": "Informativa sulla privacy e TOS",
+      "OIDC": "OIDC Token lifetime e scadenza",
+      "SECRETS": "Aspetto dei segreti",
+      "SECURITY": "Impostazioni di sicurezza",
+      "EVENTS": "Eventi",
+      "FAILEDEVENTS": "Eventi falliti",
+      "VIEWS": "Views"
+    },
+    "GROUPS": {
+      "GENERAL": "Generale",
+      "NOTIFICATIONS": "Notifiche",
+      "LOGIN": "Accesso e login",
+      "DOMAIN": "Dominio",
+      "TEXTS": "Testi e lingue",
+      "APPEARANCE": "Aspetto",
+      "OTHER": "Altro",
+      "STORAGE": "Dati"
+    }
+  },
+  "SETTING": {
+    "LANGUAGES": {
+      "DEFAULT": "Lingua predefinita",
+      "ALLOWED": "Lingue consentite",
+      "NOT_ALLOWED": "Lingue non consentite",
+      "ALLOW_ALL": "Consenti tutte le lingue",
+      "DISALLOW_ALL": "Non consentire tutte le lingue",
+      "SETASDEFAULT": "Imposta come lingua predefinita",
+      "DEFAULT_SAVED": "Lingua predefinita salvata",
+      "ALLOWED_SAVED": "Lingue consentite salvate",
+      "OPTIONS": {
+        "de": "Deutsch",
+        "en": "English",
+        "es": "Español",
+        "fr": "Français",
+        "it": "Italiano",
+        "ja": "日本語",
+        "pl": "Polski",
+        "zh": "简体中文",
+        "bg": "Български",
+        "pt": "Portuguese",
+        "mk": "Македонски",
+        "cs": "Čeština",
+        "ru": "Русский",
+        "nl": "Nederlands"
+      }
+    },
+    "SMTP": {
+      "TITLE": "Impostazioni SMTP",
+      "DESCRIPTION": "Descrizione",
+      "SENDERADDRESS": "Indirizzo email del mittente",
+      "SENDERNAME": "Nome del mittente",
+      "REPLYTOADDRESS": "Indirizzo Reply-to",
+      "HOSTANDPORT": "Host e porta",
+      "USER": "Utente",
+      "PASSWORD": "Password",
+      "SETPASSWORD": "Imposta SMTP Password",
+      "PASSWORDSET": "SMTP Password impostata con successo.",
+      "TLS": "Transport Layer Security (TLS)",
+      "SAVED": "Salvato con successo!",
+      "NOCHANGES": "Nessun cambiamento!",
+      "REQUIREDWARN": "Per inviare notifiche dal tuo dominio, devi inserire i tuoi dati SMTP."
+    },
+    "SMS": {
+      "PROVIDERS": "Fornitori",
+      "PROVIDER": "Fornitore SMS",
+      "ADDPROVIDER": "Aggiungi fornitore SMS",
+      "ADDPROVIDERDESCRIPTION": "Scegli uno dei provider disponibili e inserisci i dati richiesti.",
+      "REMOVEPROVIDER": "Elimina configurazione",
+      "REMOVEPROVIDER_DESC": "Stai per eliminare una configurazione. Vuoi continuare?",
+      "SMSPROVIDERSTATE": {
+        "0": "Non specificato",
+        "1": "Attivo",
+        "2": "Inattivo"
+      },
+      "ACTIVATED": "Fornitore attivato.",
+      "DEACTIVATED": "Fornitore disattivato.",
+      "TWILIO": {
+        "SID": "Sid",
+        "TOKEN": "Token",
+        "SENDERNUMBER": "Sender Number",
+        "ADDED": "Twilio aggiunto con successo.",
+        "UPDATED": "Twilio aggiornato correttamente.",
+        "REMOVED": "Twilio rimosso con successo.",
+        "CHANGETOKEN": "Cambia Token",
+        "SETTOKEN": "Cambia Token",
+        "TOKENSET": "Token cambiato con successo."
+      }
+    },
+    "SECRETS": {
+      "TYPES": "Tipi di segreti",
+      "TYPE": {
+        "1": "Initializzazione email",
+        "2": "Verificazione dell' email",
+        "3": "Verificazione del numero di telefono",
+        "4": "Ripristino Password",
+        "5": "Inizializzazione Passwordless",
+        "6": "Segreto dell'applicazione",
+        "7": "One Time Password (OTP) - SMS",
+        "8": "One Time Password (OTP) - email"
+      },
+      "ADDGENERATOR": "Imposta il generatore di password",
+      "GENERATORTYPE": "Tipo",
+      "EXPIRY": "Scadenza (in ore)",
+      "INCLUDEDIGITS": "Contiene numeri",
+      "INCLUDESYMBOLS": "Contiene simboli",
+      "INCLUDELOWERLETTERS": "Contiene lettere minuscole",
+      "INCLUDEUPPERLETTERS": "Contiene lettere maiuscole",
+      "LENGTH": "Lunghezza",
+      "UPDATED": "Impostazioni aggiornati"
+    },
+    "SECURITY": {
+      "IFRAMETITLE": "iFrame",
+      "IFRAMEDESCRIPTION": "Questa impostazione consente al CSP di consentire il framing da un insieme di domini consentiti. Si noti che abilitando l'uso di iFrames, si corre il rischio di consentire il clickjacking.",
+      "IFRAMEENABLED": "I Frame enabled",
+      "ALLOWEDORIGINS": "URL consentiti",
+      "IMPERSONATIONTITLE": "Impersonificazione",
+      "IMPERSONATIONENABLED": "Consenti la rappresentazione",
+      "IMPERSONATIONDESCRIPTION": "Questa impostazione consente in linea di principio di utilizzare la rappresentazione. Tieni presente che il sosia ha bisogno anche dei ruoli `*_IMPERSONATOR` appropriati assegnati."
+    },
+    "FEATURES": {
+      "LOGINDEFAULTORG": "Organizzazione predefinita per l'accesso",
+      "LOGINDEFAULTORG_DESCRIPTION": "L'interfaccia di accesso utilizzerà le impostazioni dell'organizzazione predefinita (e non dell'istanza) se non è impostato alcun contesto organizzativo.",
+      "OIDCLEGACYINTROSPECTION": "Introspezione legacy OIDC",
+      "OIDCLEGACYINTROSPECTION_DESCRIPTION": "Abbiamo recentemente ristrutturato il punto di introspezione per motivi di prestazioni. Questa funzionalità può essere utilizzata per tornare alla vecchia implementazione in caso di bug imprevisti.",
+      "OIDCTOKENEXCHANGE": "Scambio token OIDC",
+      "OIDCTOKENEXCHANGE_DESCRIPTION": "Abilita il tipo di concessione sperimentale urn:ietf:params:oauth:grant-type:token-exchange per il punto finale del token OIDC. Lo scambio di token può essere utilizzato per richiedere token con uno scopo inferiore o impersonare altri utenti. Consultare la policy di sicurezza per consentire l'impersonificazione su un'istanza.",
+      "OIDCTRIGGERINTROSPECTIONPROJECTIONS": "Proiezioni trigger OIDC per l'introspezione",
+      "OIDCTRIGGERINTROSPECTIONPROJECTIONS_DESCRIPTION": "Abilita i trigger di proiezione durante una richiesta di introspezione. Questo può agire come soluzione alternativa se ci sono problemi di coerenza evidenti nella risposta all'introspezione, ma può influire sulle prestazioni. Stiamo pianificando di rimuovere i trigger per le richieste di introspezione in futuro.",
+      "USERSCHEMA": "Schema utente",
+      "USERSCHEMA_DESCRIPTION": "Gli schemi utente consentono di gestire gli schemi di dati degli utenti. Se la flag è attivata, sarà possibile utilizzare la nuova API e le sue funzionalità.",
+      "ACTIONS": "Azioni",
+      "ACTIONS_DESCRIPTION": "Le azioni v2 consentono di gestire le esecuzioni e gli obiettivi dei dati. Se l'indicatore è abilitato, potrai utilizzare la nuova API e le sue funzionalità.",
+      "STATES": {
+        "INHERITED": "Predefinito",
+        "ENABLED": "Abilitato",
+        "DISABLED": "Disabilitato"
+      },
+      "INHERITED_DESCRIPTION": "Questa impostazione imposta il valore predefinito del sistema.",
+      "RESET": "Imposta tutto su predefinito"
+    },
+    "DIALOG": {
+      "RESET": {
+        "DEFAULTTITLE": "Ripristina impostazioni",
+        "DEFAULTDESCRIPTION": "Stai per ripristinare le impostazioni sulla configurazione predefinita della tua istanza. Sei sicuro di voler continuare?",
+        "LOGINPOLICY_DESCRIPTION": "Avviso: Se continui, anche le impostazioni del provider di identità verranno ripristinate sull'impostazione dell'istanza."
+      }
+    }
+  },
+  "POLICY": {
+    "APPLIEDTO": "Applicato a",
+    "PWD_COMPLEXITY": {
+      "TITLE": "Complessità della password",
+      "DESCRIPTION": "Assicura che tutte le password impostate corrispondano a un modello specifico",
+      "SYMBOLANDNUMBERERROR": "Deve essere composta da una cifra e un simbolo/segno di interpunzione.",
+      "SYMBOLERROR": "Deve includere un simbolo/segno di punteggiatura.",
+      "NUMBERERROR": "Deve includere una cifra.",
+      "PATTERNERROR": "La password non corrisponde al modello richiesto."
+    },
+    "NOTIFICATION": {
+      "TITLE": "Notifiche",
+      "DESCRIPTION": "Determina su quali modifiche verranno inviate le notifiche",
+      "PASSWORDCHANGE": "Cambiamento della password"
+    },
+    "PRIVATELABELING": {
+      "DESCRIPTION": "Dai al login il tuo stile personalizzato e modifica il suo comportamento.",
+      "PREVIEW_DESCRIPTION": "Le impostazioni saranno automaticamente disponibili al preview environment.",
+      "BTN": "Seleziona File",
+      "ACTIVATEPREVIEW": "Applica la configurazione",
+      "DARK": "Modo scuro",
+      "LIGHT": "Modo Light",
+      "CHANGEVIEW": "Cambia view",
+      "ACTIVATED": "Le impostazioni sono ora LIVE",
+      "THEME": "Tema",
+      "COLORS": "Colori",
+      "FONT": "Font",
+      "ADVANCEDBEHAVIOR": "Comportamento avanzato",
+      "DROP": "Rilascia qui l'immagine o",
+      "RELEASE": "Rilascia",
+      "DROPFONT": "Rilascia qui il file di font",
+      "RELEASEFONT": "Rilascia",
+      "USEOFLOGO": "Il tuo logo sarà usato nel login e nelle email, mentre l'icona è usata per gli elementi più piccoli dell'interfaccia, come il selettore di organizzazione nella console.",
+      "MAXSIZE": "La dimensione massima è limitata a 524kB",
+      "EMAILNOSVG": "Il formato di file SVG non è supportato nelle email. Perciò carica il tuo logo in PNG o in un altro formato supportato.",
+      "MAXSIZEEXCEEDED": "Dimensione massima di 524kB superata.",
+      "NOSVGSUPPORTED": "SVG non sono supportati",
+      "FONTINLOGINONLY": "Il carattere è attualmente visualizzato solo nell'interfaccia di accesso.",
+      "BACKGROUNDCOLOR": "Colore di sfondo",
+      "PRIMARYCOLOR": "Colore primario",
+      "WARNCOLOR": "Colore di avviso",
+      "FONTCOLOR": "Colore del testo",
+      "VIEWS": {
+        "PREVIEW": "Anteprima",
+        "CURRENT": "Configurazione attuale"
+      },
+      "PREVIEW": {
+        "TITLE": "Accesso",
+        "SECOND": "accedi con il tuo account ZITADEL.",
+        "ERROR": "L'utente non è stato trovato!",
+        "PRIMARYBUTTON": "Avanti",
+        "SECONDARYBUTTON": "Registra"
+      },
+      "THEMEMODE": {
+        "THEME_MODE_AUTO": "Modalità automatica",
+        "THEME_MODE_LIGHT": "Solo modalità luminosa",
+        "THEME_MODE_DARK": "Solo modalità oscura"
+      }
+    },
+    "PWD_AGE": {
+      "TITLE": "Impostazioni di validità della password",
+      "DESCRIPTION": "È possibile impostare una impostazone per la validità delle password. Questa emette un avviso dopo che il tempo di invecchiamento specifico è trascorso."
+    },
+    "PWD_LOCKOUT": {
+      "TITLE": "Impostazioni di blocco",
+      "DESCRIPTION": "Imposta un numero massimo di tentativi di password, dopo i quali gli account saranno bloccati."
+    },
+    "PRIVATELABELING_POLICY": {
+      "TITLE": "Branding",
+      "BTN": "Seleziona File",
+      "DESCRIPTION": "Personalizza l'aspetto del Login",
+      "ACTIVATEPREVIEW": "Attiva la configurazione"
+    },
+    "LOGIN_POLICY": {
+      "TITLE": "Impostazioni di accesso",
+      "DESCRIPTION": "Definisci come gli utenti possono essere autenticati e configura i fornitori di identità",
+      "DESCRIPTIONCREATEADMIN": "Gli utenti possono scegliere tra gli IDP disponibili qui sotto.",
+      "DESCRIPTIONCREATEMGMT": "Gli utenti possono scegliere tra gli IDP disponibili qui sotto. Nota: puoi usare i provider impostati nel sistema e quelli impostati della tua organizzazione.",
+      "LIFETIME_INVALID": "Login Lifetimes non sono validi",
+      "SAVED": "Salvato con successo!",
+      "PROVIDER_ADDED": "Fornitore di identità attivato."
+    },
+    "PRIVACY_POLICY": {
+      "DESCRIPTION": "Imposta i tuoi link all'informativa sulla privacy e ai termini di servizio",
+      "TOSLINK": "Link ai termini di servizio",
+      "POLICYLINK": "Link all'informativa sulla privacy",
+      "HELPLINK": "link per l'aiuto",
+      "SUPPORTEMAIL": "e-mail di supporto",
+      "SAVED": "Salvato con successo!",
+      "RESET_TITLE": "Ripristina i valori predefiniti",
+      "RESET_DESCRIPTION": "Stai per ripristinare i link predefiniti per i TOS e l'informativa sulla privacy. Vuoi davvero continuare?"
+    },
+    "LOGIN_TEXTS": {
+      "TITLE": "Testi dell'interfaccia login",
+      "DESCRIPTION": "Definisci i tuoi testi per le interfacce login. Se i testi sono vuoti, verrà utilizzato il valore predefinito mostrato come segnaposto.",
+      "DESCRIPTION_SHORT": "Imposta i tuoi testi per le interfacce login.",
+      "NEWERVERSIONEXISTS": "Esiste una versione più recente",
+      "CURRENTDATE": "Configurazione attuale",
+      "CHANGEDATE": "Versione più recente",
+      "KEYNAME": "Schermata login / interfaccia",
+      "RESET_TITLE": "Ripristina i valori predefiniti",
+      "RESET_DESCRIPTION": "Stai per ripristinare tutti i valori predefiniti. Tutte le modifiche che hai fatto saranno cancellate in modo permanente. Vuoi davvero continuare?",
+      "UNSAVED_TITLE": "Continuare senza salvare?",
+      "UNSAVED_DESCRIPTION": "Hai fatto delle modifiche senza salvare. Vuoi salvare ora?",
+      "ACTIVE_LANGUAGE_NOT_ALLOWED": "Hai selezionato una lingua non consentita. Puoi continuare a modificare i testi. Ma se vuoi che i tuoi utenti possano effettivamente utilizzare questa lingua, cambia le restrizioni delle tue istanze.",
+      "LANGUAGE": "Lingua",
+      "LANGUAGES_NOT_ALLOWED": "Non consentito:",
+      "LANGUAGES": {
+        "de": "Deutsch",
+        "en": "English",
+        "es": "Español",
+        "fr": "Français",
+        "it": "Italiano",
+        "ja": "日本語",
+        "pl": "Polski",
+        "zh": "简体中文",
+        "bg": "Български",
+        "pt": "Portuguese",
+        "mk": "Македонски",
+        "cs": "Čeština",
+        "ru": "Русский",
+        "nl": "Nederlands"
+      },
+      "KEYS": {
+        "emailVerificationDoneText": "Verifica dell'e-mail terminata con successo.",
+        "emailVerificationText": "Verificazione email",
+        "externalUserNotFoundText": "Utente esterno non trovato",
+        "footerText": "Footer",
+        "initMfaDoneText": "Inizializzazione MFA finita",
+        "initMfaOtpText": "Inizializzazione MFA",
+        "initMfaPromptText": "Richista di inizializzazione MFA",
+        "initMfaU2fText": "Inizializzazione di un secondo fattore universale",
+        "initPasswordDoneText": "Inizializzazione password finita",
+        "initPasswordText": "Inizializzazione della password",
+        "initializeDoneText": "Inizializzazione utente finita",
+        "initializeUserText": "Inizializzazione utente",
+        "linkingUserPromptText": "Testo di promemoria per collegare l'utente",
+        "linkingUserDoneText": "Collegamento dell'utente finito",
+        "loginText": "Accesso",
+        "logoutText": "Logout",
+        "mfaProvidersText": "Fornitori MFA",
+        "passwordChangeDoneText": "Cambio della password finito",
+        "passwordChangeText": "Cambio della password",
+        "passwordResetDoneText": "Reset della password finito",
+        "passwordText": "Password",
+        "registrationOptionText": "Opzioni per la registrazione",
+        "registrationOrgText": "Registrazione Organizzazione",
+        "registrationUserText": "Registrazione utente",
+        "selectAccountText": "Selezionamento dell'account",
+        "successLoginText": "Accesso con successo",
+        "usernameChangeDoneText": "Cambio di nome utente finito",
+        "usernameChangeText": "Cambio di nome utente",
+        "verifyMfaOtpText": "Verificazione OTP",
+        "verifyMfaU2fText": "Verificazione di un secondo fattore universale",
+        "passwordlessPromptText": "Richista inizializzazione autenticazione passwordless",
+        "passwordlessRegistrationDoneText": "Registrazione autenticazione passwordless finita",
+        "passwordlessRegistrationText": "Registrazione autenticazione passwordless",
+        "passwordlessText": "Autenticazione passwordless",
+        "externalRegistrationUserOverviewText": "Registrazione utente esterno"
+      }
+    },
+    "MESSAGE_TEXTS": {
+      "TYPE": "Notifica",
+      "TYPES": {
+        "INIT": "Inizializzazione",
+        "VE": "Verificazione l'e-mail",
+        "VP": "Verificazione del telefono",
+        "VSO": "Verifica OTP SMS",
+        "VEO": "Verifica OTP Email",
+        "PR": "Ripristino della password",
+        "DC": "Rivendicazione del dominio",
+        "PL": "Autenticazione Passwordless",
+        "PC": "Cambiamento della password"
+      },
+      "CHIPS": {
+        "firstname": "Nome",
+        "lastname": "Cognome",
+        "code": "Codice",
+        "preferredLoginName": "Nome di accesso preferito",
+        "displayName": "Displayname",
+        "nickName": "Soprannome",
+        "loginnames": "Nomi di accesso",
+        "domain": "Dominio",
+        "lastEmail": "Ultima email",
+        "lastPhone": "Ultimo telefono",
+        "verifiedEmail": "Email verificata",
+        "verifiedPhone": "Telefono verificato",
+        "changedate": "Cambia data",
+        "username": "Nome utente",
+        "tempUsername": "Nome utente temporaneo",
+        "otp": "Password monouso",
+        "verifyUrl": "URL per verificare la password monouso"
+      },
+      "TOAST": {
+        "UPDATED": "Testi personalizzati salvati."
+      }
+    },
+    "DEFAULTLABEL": "L'impostazione attuale corrisponde all'impostazione dell' istanza.",
+    "BTN_INSTALL": "Impostazione",
+    "BTN_EDIT": "Modifica",
+    "DATA": {
+      "DESCRIPTION": "Descrizione",
+      "MINLENGTH": "lunghezza minima",
+      "HASNUMBER": "ha numero",
+      "HASSYMBOL": "ha il simbolo",
+      "HASLOWERCASE": "ha la minuscola",
+      "HASUPPERCASE": "ha la maiuscola",
+      "SHOWLOCKOUTFAILURES": "mostra i fallimenti del blocco",
+      "MAXPASSWORDATTEMPTS": "Massimo numero di tentativi di password",
+      "MAXOTPATTEMPTS": "Massimo numero di tentativi di OTP",
+      "EXPIREWARNDAYS": "Avviso scadenza dopo il giorno",
+      "MAXAGEDAYS": "Lunghezza massima in giorni",
+      "USERLOGINMUSTBEDOMAIN": "Nome utente deve contenere il dominio dell' organizzazione",
+      "USERLOGINMUSTBEDOMAIN_DESCRIPTION": "Se abiliti questa impostazione, a tutti i nomi di accesso verrà aggiunto il suffisso del dominio dell'organizzazione. Se questa impostazione è disabilitata, devi assicurarti che i nomi utente siano univoci per tutte le organizzazioni.",
+      "VALIDATEORGDOMAINS": "Verifica del dominio dell'organizzazione richiesta (challenge DNS o HTTP)",
+      "SMTPSENDERADDRESSMATCHESINSTANCEDOMAIN": "L'indirizzo mittente SMTP corrisponde al dominio dell'istanza",
+      "ALLOWUSERNAMEPASSWORD_DESC": "Autenticazione classica con nome utente e password è permessa.",
+      "ALLOWEXTERNALIDP_DESC": "Il login è permesso per gli IDP sottostanti",
+      "ALLOWREGISTER_DESC": "Se l'opzione è selezionata, nel login apparirà un passo aggiuntivo per la registrazione di un utente.",
+      "FORCEMFA": "Forza MFA",
+      "FORCEMFALOCALONLY": "Forza MFA per gli utenti locali",
+      "FORCEMFALOCALONLY_DESC": "Se l'opzione è selezionata, gli utenti locali autenticati devono configurare un secondo fattore per l'accesso.",
+      "HIDEPASSWORDRESET_DESC": "Se l'opzione è selezionata, l'utente non può resettare la sua password nel interfaccia login.",
+      "HIDELOGINNAMESUFFIX": "Nascondi il suffisso del nome utente",
+      "HIDELOGINNAMESUFFIX_DESC": "Nasconde il suffisso del nome di accesso nell'interfaccia di accesso",
+      "IGNOREUNKNOWNUSERNAMES_DESC": "Se l'opzione è selezionata, l'inserimento della password viene mostrato anche se nessun utente è stato trovato. Nota che dopo il controllo della password, non viene mostrato se il nome utente o la password erano errati.",
+      "ALLOWDOMAINDISCOVERY_DESC": "Se l'opzione è selezionata, il suffisso (@domain.com) di un nome utente sconosciuto inserito nel login verrà confrontato con i domini organizzazione e, in caso di successo, verrà reindirizzato alla registrazione di tale organizzazione",
+      "DEFAULTREDIRECTURI": "Default Redirect URI",
+      "DEFAULTREDIRECTURI_DESC": "Definisce dove verrà reindirizzato l'utente se l'accesso è stato avviato senza un contesto dell'app (ad es. dall' email)",
+      "ERRORMSGPOPUP": "Mostra l'errore nella finestra di dialogo",
+      "DISABLEWATERMARK": "Nascondi la filigrana",
+      "DISABLEWATERMARK_DESC": "Nascondi filigrana Powered by ZITADEL nell'interfaccia di accesso"
+    },
+    "RESET": "Ripristina l'impostazione dell'istanza",
+    "CREATECUSTOM": "Crea un'impostazione personalizzata",
+    "TOAST": {
+      "SET": "Impostazione cambiata con successo!",
+      "RESETSUCCESS": "Impostazione ripristinata con successo!",
+      "UPLOADSUCCESS": "Caricato con successo!",
+      "DELETESUCCESS": "Cancellato con successo!",
+      "UPLOADFAILED": "Caricamento fallito!"
+    }
+  },
+  "ORG_DETAIL": {
+    "TITLE": "Organizzazione",
+    "DESCRIPTION": "Qui puoi modificare la configurazione della tua organizzazione e gestire le sue membri.",
+    "DETAIL": {
+      "TITLE": "Dettaglio",
+      "NAME": "Nome",
+      "DOMAIN": "Dominio",
+      "STATE": {
+        "0": "Non definito",
+        "1": "Attivo",
+        "2": "Inattivo"
+      }
+    },
+    "MEMBER": {
+      "TITLE": "Member",
+      "USERNAME": "Nome utente",
+      "DISPLAYNAME": "Display Name",
+      "LOGINNAME": "Nome di accesso",
+      "EMAIL": "E-mail",
+      "ROLES": "Ruoli",
+      "ADD": "Aggiungi member",
+      "ADDDESCRIPTION": "Inserisci gli indirizzi e-mail degli utenti da aggiungere."
+    },
+    "TABLE": {
+      "TOTAL": "Voci totali",
+      "SELECTION": "Elementi selezionati",
+      "DEACTIVATE": "Disattivare l'utente",
+      "ACTIVATE": "Attivare l'utente",
+      "DELETE": "Elimina utente",
+      "CLEAR": "Cancella la selezione"
+    }
+  },
+  "PROJECT": {
+    "PAGES": {
+      "TITLE": "Progetto",
+      "DESCRIPTION": "Qui puoi definire le applicazioni, gestire i ruoli e concedere ad altre organizzazioni di usare il tuo progetto.",
+      "DELETE": "Rimuovi progetto",
+      "DETAIL": "Dettagli",
+      "CREATE": "Crea un progetto",
+      "CREATE_DESC": "Inserisci il nome del tuo progetto.",
+      "ROLE": "Ruolo",
+      "NOITEMS": "Nessun progetto",
+      "ZITADELPROJECT": "Questo appartiene al progetto ZITADEL. Attenzione: se fai delle modifiche ZITADEL potrebbe non comportarsi come previsto.",
+      "TYPE": {
+        "OWNED": "Progetti proprietari",
+        "OWNED_SINGULAR": "Progetto proprietario",
+        "GRANTED_SINGULAR": "Progetto delegato"
+      },
+      "PRIVATELABEL": {
+        "TITLE": "Impostazione branding",
+        "0": {
+          "TITLE": "Non specificato",
+          "DESC": "Non appena l'utente viene identificato, viene mostrata l'impostazione branding dell'organizzazione, prima che venga mostrato il default del sistema."
+        },
+        "1": {
+          "TITLE": "Applica l'impostazione del progetto",
+          "DESC": "Branding dell'organizzazione del progetto sarà mostrata"
+        },
+        "2": {
+          "TITLE": "Applica l'impostazione dell' organizzazione dell' utente",
+          "DESC": "Verrà mostrata l'impostazione branding dell'organizzazione del progetto, ma non appena l'utente viene identificato, verrà mostrata l'impostazione dell'organizzazione dell'utente identificato."
+        },
+        "DIALOG": {
+          "TITLE": "Impostazione branding",
+          "DESCRIPTION": "Seleziona il comportamento del login, quando usi il progetto."
+        }
+      },
+      "PINNED": "Pinned",
+      "ALL": "Tutti",
+      "CREATEDON": "Creazione",
+      "LASTMODIFIED": "Ultima modifica",
+      "ADDNEW": "Crea un nuovo progetto",
+      "DIALOG": {
+        "REACTIVATE": {
+          "TITLE": "Riattivare il progetto",
+          "DESCRIPTION": "Vuoi davvero riattivare il tuo progetto?"
+        },
+        "DEACTIVATE": {
+          "TITLE": "Disattivare il progetto",
+          "DESCRIPTION": "Vuoi davvero disattivare il tuo progetto?"
+        },
+        "DELETE": {
+          "TITLE": "Rimuovere il progetto",
+          "DESCRIPTION": "Vuoi davvero rimuovere il tuo progetto?",
+          "TYPENAME": "Ripeti il nome del progetto per eliminarlo."
+        }
+      }
+    },
+    "SETTINGS": {
+      "TITLE": "Impostazioni",
+      "DESCRIPTION": ""
+    },
+    "STATE": {
+      "TITLE": "Stato",
+      "0": "Non definito",
+      "1": "Attivo",
+      "2": "Inattivo"
+    },
+    "TYPE": {
+      "TITLE": "Tipo",
+      "0": "Tipo sconosciuto",
+      "1": "Progetto proprio",
+      "2": "Progetto delegato"
+    },
+    "NAME": "Nome",
+    "NAMEDIALOG": {
+      "TITLE": "Rinomina il progetto",
+      "DESCRIPTION": "Inserisci il nuovo nome del tuo progetto",
+      "NAME": "Nuovo nome"
+    },
+    "MEMBER": {
+      "TITLE": "Manager",
+      "TITLEDESC": "I manager possono apportare modifiche a questo progetto in base al loro ruolo.",
+      "DESCRIPTION": "Questi manager potrebbero apportare modifiche al tuo progetto.",
+      "USERNAME": "Nome utente",
+      "DISPLAYNAME": "Display Name",
+      "LOGINNAME": "Nome di accesso",
+      "EMAIL": "E-mail",
+      "ROLES": "Ruoli",
+      "USERID": "ID utente"
+    },
+    "GRANT": {
+      "EMPTY": "Nessun organizzazione ammissibile.",
+      "TITLE": "Organizzazioni ammissibili",
+      "DESCRIPTION": "Permetti a un'altra organizzazione di usare il tuo progetto.",
+      "EDITTITLE": "Configura ruoli",
+      "CREATE": {
+        "TITLE": "Crea un org grant",
+        "SEL_USERS": "Seleziona gli utenti a cui vuoi concedere l'accesso",
+        "SEL_PROJECT": "Cerca un progetto",
+        "SEL_ROLES": "Seleziona i ruoli che vuoi aggiungere",
+        "SEL_USER": "Seleziona utenti",
+        "SEL_ORG": "Cerca un'organizzazione",
+        "SEL_ORG_DESC": "Cerca l'organizzazione da concedere.",
+        "ORG_DESCRIPTION": "Stai per concedere un utente per l'organizzazione {{name}}.",
+        "ORG_DESCRIPTION_DESC": "Cambia il contesto nell'intestazione qui sopra per concedere un utente per un'altra organizzazione.",
+        "SEL_ORG_FORMFIELD": "Organizzazione",
+        "FOR_ORG": "Org grant è creato per:"
+      },
+      "DETAIL": {
+        "TITLE": "Organizzazione ammissibile",
+        "DESC": "Puoi definire quali ruoli possono essere usati e gestire i manager",
+        "MEMBERTITLE": "Manager",
+        "MEMBERDESC": "Questi sono i manager dell'org grant. Aggiungi qui gli utenti che devono ottenere l'accesso per modificare i dati del progetto.",
+        "PROJECTNAME": "Nome del progetto",
+        "GRANTEDORG": "Organizzazione ammissibile",
+        "RESOURCEOWNER": "Resource owner"
+      },
+      "STATE": "Stato",
+      "STATES": {
+        "1": "Attivo",
+        "2": "Inattivo"
+      },
+      "ALL": "Tutti",
+      "SHOWDETAIL": "Mostra dettagli",
+      "USER": "Utente",
+      "MEMBERS": "Manager",
+      "ORG": "Organizzazione",
+      "PROJECTNAME": "Nome del progetto",
+      "GRANTEDORG": "Organizzazione ammissible",
+      "GRANTEDORGDOMAIN": "Dominio",
+      "RESOURCEOWNER": "Resource owner",
+      "GRANTEDORGNAME": "Nome dell'organizzazione",
+      "GRANTID": "Grant Id",
+      "CREATIONDATE": "Data di creazione",
+      "CHANGEDATE": "Ultima modifica",
+      "DATES": "Date",
+      "ROLENAMESLIST": "Ruoli",
+      "NOROLES": "Nessun ruolo",
+      "TYPE": "Tipo",
+      "TOAST": {
+        "PROJECTGRANTUSERGRANTADDED": "Project grant creato.",
+        "PROJECTGRANTADDED": "Project grant creato.",
+        "PROJECTGRANTCHANGED": "Project grant è stato cambiato.",
+        "PROJECTGRANTMEMBERADDED": "Grant manager aggiunto.",
+        "PROJECTGRANTMEMBERCHANGED": "Grant manager cambiato.",
+        "PROJECTGRANTMEMBERREMOVED": "Grant manager rimosso.",
+        "PROJECTGRANTUPDATED": "Project Grant cambiato."
+      },
+      "DIALOG": {
+        "DELETE_TITLE": "Rimuovere progetto delegato",
+        "DELETE_DESCRIPTION": "Stai per eliminare definitivamente un progetto delegato. La organizzazione ammissibile non potrà più usare il tuo progetto. Vuoi davvero continuare?"
+      },
+      "ROLES": "Ruoli del progetto"
+    },
+    "APP": {
+      "TITLE": "Applicazioni",
+      "NAME": "Nome",
+      "NAMEREQUIRED": "Il nome è necessario."
+    },
+    "ROLE": {
+      "EMPTY": "Nessun ruolo",
+      "ADDNEWLINE": "Aggiungi un altro ruolo",
+      "KEY": "Chiave",
+      "TITLE": "Ruoli",
+      "DESCRIPTION": "Crea ruoli che possono essere usati per il project grant.",
+      "NAME": "Nome",
+      "DISPLAY_NAME": "Displayname",
+      "GROUP": "Gruppo",
+      "ACTIONS": "Azioni",
+      "ADDTITLE": "Crea un ruolo",
+      "ADDDESCRIPTION": "Inserisci i dati per il nuovo ruolo.",
+      "EDITTITLE": "Modifica ruolo",
+      "EDITDESCRIPTION": "Inserisci i nuovi dati per il ruolo.",
+      "DELETE": "Rimuovi ruolo",
+      "CREATIONDATE": "Creato",
+      "CHANGEDATE": "Ultima modifica",
+      "SELECTGROUPTOOLTIP": "Seleziona tutti i ruoli del gruppo {{group}}.",
+      "OPTIONS": "Opzioni",
+      "ASSERTION": "Includi ruoli con autenticazione",
+      "ASSERTION_DESCRIPTION": "Le informazioni sui ruoli sono inviate dall'endpoint Userinfo e a seconda delle impostazioni dell'applicazione in token.",
+      "CHECK": "Verifica l'autorizzazione durante l'autenticazione",
+      "CHECK_DESCRIPTION": "Se impostato, gli utenti possono autenticarsi solo se un qualsiasi ruolo è assegnato al loro account.",
+      "DIALOG": {
+        "DELETE_TITLE": "Elima ruolo",
+        "DELETE_DESCRIPTION": "Stai per eliminare un ruolo del progetto. Vuoi davvero continuare?"
+      }
+    },
+    "HAS_PROJECT": "Controlla project grant con l'autenticazione",
+    "HAS_PROJECT_DESCRIPTION": "Questa impostazione verifica il project grant dell'organizzazione. In caso di mancanza, l'utente non può essere autenticato.",
+    "TABLE": {
+      "TOTAL": "Voci totali:",
+      "SELECTION": "Elementi selezionati",
+      "DEACTIVATE": "Disattiva progetto",
+      "ACTIVATE": "Attiva progetto",
+      "DELETE": "Rimuovi progetto",
+      "ORGNAME": "Nome dell'organizzazione",
+      "ORGDOMAIN": "Dominio",
+      "STATE": "Stato",
+      "TYPE": "Tipo",
+      "CREATIONDATE": "Creato",
+      "CHANGEDATE": "Ultima modifica",
+      "RESOURCEOWNER": "Resouce owner",
+      "SHOWTABLE": "Mostra tabella",
+      "SHOWGRID": "Mostra la visualizzazione griglia",
+      "EMPTY": "Nessun progetto trovato"
+    },
+    "TOAST": {
+      "MEMBERREMOVED": "Manager rimosso con successo.",
+      "MEMBERSADDED": "Manager aggiunto con successo.",
+      "MEMBERADDED": "Manager aggiunto con successo.",
+      "MEMBERCHANGED": "Manager cambiato con successo.",
+      "ROLESCREATED": "Ruoli creati con successo.",
+      "ROLEREMOVED": "Ruolo rimosso con successo.",
+      "ROLECHANGED": "Ruolo cambiato con successo.",
+      "REACTIVATED": "Riattivato con successo.",
+      "DEACTIVATED": "Disattivato con successo.",
+      "CREATED": "Progetto creato con successo.",
+      "UPDATED": "Progetto cambiato con successo.",
+      "GRANTUPDATED": "Grant cambiato con successo.",
+      "DELETED": "Progetto eliminato con successo."
+    }
+  },
+  "ROLES": {
+    "DIALOG": {
+      "DELETE_TITLE": "Elima ruolo",
+      "DELETE_DESCRIPTION": "Stai per eliminare un ruolo. Vuoi davvero continuare?"
+    }
+  },
+  "NEXTSTEPS": {
+    "TITLE": "Passi successivi"
+  },
+  "IDP": {
+    "LIST": {
+      "ACTIVETITLE": "Fornitori di identità"
+    },
+    "CREATE": {
+      "TITLE": "Aggiungi provider",
+      "DESCRIPTION": "Seleziona uno dei seguenti provider.",
+      "STEPPERTITLE": "Create Provider",
+      "OIDC": {
+        "TITLE": "OIDC Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo provider OIDC."
+      },
+      "OAuth": {
+        "TITLE": "OAuth Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo provider OAuth."
+      },
+      "JWT": {
+        "TITLE": "JWT Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo provider JWT."
+      },
+      "GOOGLE": {
+        "TITLE": "Google Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo Google provider."
+      },
+      "GITLAB": {
+        "TITLE": "Gitlab Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo Gitlab provider."
+      },
+      "GITLABSELFHOSTED": {
+        "TITLE": "Gitlab Self Hosted Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo Gitlab Self Hosted provider."
+      },
+      "GITHUBES": {
+        "TITLE": "GitHub Enterprise Server Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo GitHub Enterprise Server provider."
+      },
+      "GITHUB": {
+        "TITLE": "Github Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo Github provider."
+      },
+      "AZUREAD": {
+        "TITLE": "Microsoft Provider",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo Microsoft provider."
+      },
+      "LDAP": {
+        "TITLE": "Active Directory / LDAP",
+        "DESCRIPTION": "Inserisci i dati necessari per il tuo provider LDAP."
+      }
+    },
+    "DETAIL": {
+      "TITLE": "Fornitore di identità",
+      "DESCRIPTION": "Aggiorna la configurazione del tuo fornitore di identità.",
+      "DATECREATED": "Creato",
+      "DATECHANGED": "Cambiato"
+    },
+    "OPTIONS": {
+      "ISAUTOCREATION": "Creazione automatica",
+      "ISAUTOCREATION_DESC": "Se selezionato, verrà creato un account se non esiste ancora.",
+      "ISAUTOUPDATE": "Aggiornamento automatico",
+      "ISAUTOUPDATE_DESC": "Se selezionato, gli account vengono aggiornati alla riautenticazione.",
+      "ISCREATIONALLOWED": "Creazione consentita",
+      "ISCREATIONALLOWED_DESC": "Determina se i conti possono essere creati.",
+      "ISLINKINGALLOWED": "Collegamento consentito",
+      "ISLINKINGALLOWED_DESC": "Determina se un'identità può essere collegata a un account esistente.",
+      "AUTOLINKING_DESC": "Determina se un'identità verrà invitata a essere collegata a un account esistente.",
+      "AUTOLINKINGTYPE": {
+        "0": "Disabilitato",
+        "1": "Verifica dell'esistenza del nome utente",
+        "2": "Verifica dell'esistenza dell'email"
+      }
+    },
+    "OWNERTYPES": {
+      "0": "sconosciuto",
+      "1": "Istanza",
+      "2": "Organizzazione"
+    },
+    "TYPES": {
+      "0": "sconosciuto",
+      "1": "OIDC",
+      "3": "JWT"
+    },
+    "STATES": {
+      "1": "attivo",
+      "2": "inattivo"
+    },
+    "AZUREADTENANTTYPES": {
+      "3": "Tenant ID",
+      "0": "Common",
+      "1": "Organizations",
+      "2": "Consumers"
+    },
+    "ADD": "Aggiungi fornitore di identità",
+    "AZUREADTENANTTYPE": "Tipo tenant",
+    "AZUREADTENANTID": "tenant ID",
+    "EMAILVERIFIED": "Email verificata",
+    "NAMEHINT": "Se specificato, verrà mostrato nell'interfaccia di accesso.",
+    "OPTIONAL": "opzionale",
+    "LDAPATTRIBUTES": "Attributi LDAP",
+    "UPDATEBINDPASSWORD": "aggiorna Bind Password",
+    "UPDATECLIENTSECRET": "Aggiorna secret",
+    "TYPE": "Tipo",
+    "OWNER": "Owner",
+    "ID": "ID",
+    "NAME": "Nome",
+    "AUTHORIZATIONENDPOINT": "Authorization Endpoint",
+    "TOKENENDPOINT": "Token Endpoint",
+    "USERENDPOINT": "User Endpoint",
+    "IDATTRIBUTE": "Attributo ID",
+    "AVAILABILITY": "Disponibilità",
+    "AVAILABLE": "disponibile",
+    "AVAILABLEBUTINACTIVE": "disponible ma inattivo",
+    "SETAVAILABLE": "Imposta come disponibile",
+    "SETUNAVAILABLE": "Imposta come non disponibile",
+    "CONFIG": "Configurazione",
+    "STATE": "Stato",
+    "ISSUER": "Issuer",
+    "SCOPESLIST": "Scope list",
+    "CLIENTID": "Client ID",
+    "CLIENTSECRET": "Client Secret",
+    "LDAPCONNECTION": "Connessione",
+    "LDAPUSERBINDING": "User binding",
+    "BASEDN": "BaseDn",
+    "BINDDN": "BindDn",
+    "BINDPASSWORD": "Bind Password",
+    "SERVERS": "Servers",
+    "STARTTLS": "Start TLS",
+    "TIMEOUT": "Timeout in seconds",
+    "USERBASE": "Userbase",
+    "USERFILTERS": "User filters",
+    "USEROBJECTCLASSES": "User Object Classes",
+    "REQUIRED": "necessario",
+    "LDAPIDATTRIBUTE": "ID attribute",
+    "AVATARURLATTRIBUTE": "Avatar Url attribute",
+    "DISPLAYNAMEATTRIBUTE": "Displayname attribute",
+    "EMAILATTRIBUTEATTRIBUTE": "Email attribute",
+    "EMAILVERIFIEDATTRIBUTE": "Email verified attribute",
+    "FIRSTNAMEATTRIBUTE": "Firstname attribute",
+    "LASTNAMEATTRIBUTE": "Lastname attribute",
+    "NICKNAMEATTRIBUTE": "Nickname attribute",
+    "PHONEATTRIBUTE": "Phone attribute",
+    "PHONEVERIFIEDATTRIBUTE": "Phone verified attribute",
+    "PREFERREDLANGUAGEATTRIBUTE": "Preferred language attribute",
+    "PREFERREDUSERNAMEATTRIBUTE": "Preferred username attribute",
+    "PROFILEATTRIBUTE": "Profile attribute",
+    "IDPDISPLAYNAMMAPPING": "Mapping del nome di visualizzazione IDP",
+    "USERNAMEMAPPING": "Mapping del nome utente",
+    "DATES": "Date",
+    "CREATIONDATE": "Creato",
+    "CHANGEDATE": "Ultima modifica",
+    "DEACTIVATE": "Disattiva",
+    "ACTIVATE": "Attiva",
+    "DELETE": "Rimuovi IDP",
+    "DELETE_TITLE": "Rimuovi IDP",
+    "DELETE_DESCRIPTION": "Stai per rimuovere un fornitore di identità. I cambiamenti risultanti sono irrevocabili. Vuoi davvero farlo?",
+    "REMOVE_WARN_TITLE": "Rimuovi IDP",
+    "REMOVE_WARN_DESCRIPTION": "Stai per rimuovere un provider di identità. Questo rimuoverà la selezione dell'IDP disponibile per i tuoi utenti e gli utenti già registrati non potranno accedere nuovamente. Sei sicuro di continuare?",
+    "DELETE_SELECTION_TITLE": "Rimuovere IDP",
+    "DELETE_SELECTION_DESCRIPTION": "Stai per rimuovere un fornitore di identità. I cambiamenti risultanti sono irrevocabili. Vuoi davvero farlo?",
+    "EMPTY": "Nessun IDP disponible",
+    "OIDC": {
+      "GENERAL": "Informazioni generali",
+      "TITLE": "Configurazione OIDC",
+      "DESCRIPTION": "Inserisci i dati per il OIDC Identity Provider."
+    },
+    "JWT": {
+      "TITLE": "Configurazione JWT",
+      "DESCRIPTION": "Inserisci i dati per il JWT Identity Provider.",
+      "HEADERNAME": "Header Name",
+      "JWTENDPOINT": "JWT Endpoint",
+      "JWTKEYSENDPOINT": "JWT Keys Endpoint"
+    },
+    "TOAST": {
+      "SAVED": "Salvato con successo.",
+      "REACTIVATED": "IDP riattivato.",
+      "DEACTIVATED": "IDP disattivato.",
+      "SELECTEDREACTIVATED": "IDP selezionati riattivati.",
+      "SELECTEDDEACTIVATED": "IDP selezionati disattivati.",
+      "SELECTEDKEYSDELETED": "IDP selezionati cancellati.",
+      "DELETED": "IDP rimosso con successo!",
+      "ADDED": "Aggiunto con successo.",
+      "REMOVED": "Rimosso con successo."
+    },
+    "ISIDTOKENMAPPING": "Mappatura dal token ID",
+    "ISIDTOKENMAPPING_DESC": "Se selezionato, le informazioni del provider vengono mappate dal token ID, non dal punto finale userinfo."
+  },
+  "MFA": {
+    "LIST": {
+      "MULTIFACTORTITLE": "Passwordless",
+      "MULTIFACTORDESCRIPTION": "Definisci qui i tuoi multifattori per l'autenticazione passwordless.",
+      "SECONDFACTORTITLE": "Autenticazione a più fattori",
+      "SECONDFACTORDESCRIPTION": "Definisci ulteriori possibili fattori con cui puoi proteggere l'autenticazione della tua password."
+    },
+    "CREATE": {
+      "TITLE": "Nuovo fattore",
+      "DESCRIPTION": "Seleziona il tuo nuovo tipo di fattore."
+    },
+    "DELETE": {
+      "TITLE": "Rimuovi fattore",
+      "DESCRIPTION": "Stai per rimuovere un fattore dal login. Sei sicuro?"
+    },
+    "TOAST": {
+      "ADDED": "Aggiunto con successo.",
+      "SAVED": "Salvato con successo.",
+      "DELETED": "Rimosso con successo"
+    },
+    "TYPE": "Tipo",
+    "MULTIFACTORTYPES": {
+      "0": "Sconosciuto",
+      "1": "Impronta digitale, chiave di sicurezza, Face ID e altri"
+    },
+    "SECONDFACTORTYPES": {
+      "0": "Sconosciuto",
+      "1": "One Time Password per Authenticator App (TOTP)",
+      "2": "Impronta digitale, chiave di sicurezza, Face ID e altri",
+      "3": "One Time Password per Email (Email OTP)",
+      "4": "One Time Password per SMS (SMS OTP)"
+    }
+  },
+  "LOGINPOLICY": {
+    "CREATE": {
+      "TITLE": "Impostazioni di accesso",
+      "DESCRIPTION": "Definisci come i tuoi utenti possono essere autenticati nella tua organizzazione."
+    },
+    "IDPS": "Fornitori di identità",
+    "ADDIDP": {
+      "TITLE": "Aggiungi un IDP",
+      "DESCRIPTION": "È possibile selezionare IDPs dell'organizzazione o del sistema.",
+      "SELECTIDPS": "Fornitori di identità"
+    },
+    "PASSWORDLESS": "Autenticazione passwordless",
+    "PASSWORDLESSTYPE": {
+      "0": "Non consentito",
+      "1": "Consentito"
+    }
+  },
+  "SMTP": {
+    "LIST": {
+      "TITLE": "Fornitore SMTP",
+      "DESCRIPTION": "Questi sono i provider SMTP per la tua istanza Zitadel. Attiva quello che desideri utilizzare per inviare notifiche ai tuoi utenti.",
+      "EMPTY": "Nessun provider SMTP disponibile",
+      "ACTIVATED": "Attivato",
+      "ACTIVATE": "Attiva fornitore",
+      "DEACTIVATE": "Disattiva fornitore",
+      "TYPE": "Tipo",
+      "DIALOG": {
+        "ACTIVATED": "La configurazione SMTP è stata attivata",
+        "ACTIVATE_WARN_TITLE": "Attiva la configurazione SMTP",
+        "ACTIVATE_WARN_DESCRIPTION": "Stai per attivare una configurazione SMTP. Per prima cosa disattiveremo il provider attualmente attivo e poi attiveremo questa configurazione. Sei sicuro?",
+        "DEACTIVATE_WARN_TITLE": "Disattiva la configurazione SMTP",
+        "DEACTIVATE_WARN_DESCRIPTION": "Stai per disattivare una configurazione SMTP. Sei sicuro?",
+        "DEACTIVATED": "La configurazione SMTP è stata disattivata",
+        "DELETE_TITLE": "Elimina configurazione SMTP",
+        "DELETE_DESCRIPTION": "Stai per eliminare una configurazione. Conferma questa azione digitando il nome del mittente",
+        "DELETED": "La configurazione SMTP è stata eliminata",
+        "SENDER": "Digita {{ value }} per eliminare questa configurazione SMTP."
+      }
+    },
+    "CREATE": {
+      "TITLE": "Aggiungi provider SMTP",
+      "DESCRIPTION": "Seleziona uno o più dei seguenti fornitori.",
+      "STEPS": {
+        "TITLE": "Aggiungi {{ value }} provider SMTP",
+        "CREATE_DESC_TITLE": "Inserisci le tue impostazioni SMTP {{ value }} passo dopo passo",
+        "CURRENT_DESC_TITLE": "Queste sono le tue impostazioni SMTP",
+        "PROVIDER_SETTINGS": "Impostazioni del provider SMTP",
+        "SENDER_SETTINGS": "Impostazioni mittente",
+        "TEST_SETTINGS": "Testare le impostazioni SMTP"
+      }
+    },
+    "DETAIL": {
+      "TITLE": "Impostazioni del provider SMTP"
+    },
+    "EMPTY": "Nessun provider SMTP disponibile",
+    "STEPS": {
+      "SENDGRID": {}
+    }
+  },
+  "APP": {
+    "LIST": "Applicazioni",
+    "COMPLIANCE": "Conformità con OIDC",
+    "URLS": "URLs",
+    "CONFIGURATION": "Configurazione",
+    "TOKEN": "Impostazioni Token",
+    "PAGES": {
+      "TITLE": "Applicazione",
+      "ID": "ID",
+      "DESCRIPTION": "Qui puoi modificare i dati della tua applicazione e la sua configurazione.",
+      "CREATE": "Crea Applicazione",
+      "CREATE_SELECT_PROJECT": "Seleziona il tuo progetto",
+      "CREATE_NEW_PROJECT": "o crea uno nuovo <a href='{{url}}' title='Crea progetto'>qui</a>.",
+      "CREATE_DESC_TITLE": "Inserisci i dettagli della tua applicazione passo dopo passo",
+      "CREATE_DESC_SUB": "Una configurazione raccomandata sarà generata automaticamente.",
+      "STATE": "Stato",
+      "DATECREATED": "Creato",
+      "DATECHANGED": "Cambiato",
+      "URLS": "URLs",
+      "DELETE": "Rimuovi App",
+      "JUMPTOPROJECT": "Per configurare ruoli, autorizzazioni e altro, vai al progetto.",
+      "DETAIL": {
+        "TITLE": "Dettagli",
+        "STATE": {
+          "0": "Non definito",
+          "1": "Attiva",
+          "2": "Inattiva"
+        }
+      },
+      "DIALOG": {
+        "CONFIG": {
+          "TITLE": "Configurazione OIDC"
+        },
+        "DELETE": {
+          "TITLE": "Rimuovere App",
+          "DESCRIPTION": "Vuoi davvero rimuovere questa applicazione?"
+        }
+      },
+      "NEXTSTEPS": {
+        "TITLE": "Passi successivi",
+        "0": {
+          "TITLE": "Aggiungi ruoli",
+          "DESC": "Inserisci i ruoli del tuo progetto"
+        },
+        "1": {
+          "TITLE": "Aggiungi utenti",
+          "DESC": "Aggiungi nuovi utenti della tua organizzazione"
+        },
+        "2": {
+          "TITLE": "Aiuto e supporto",
+          "DESC": "Leggi la nostra documentazione sulla creazione di applicazioni o contatta il nostro supporto"
+        }
+      }
+    },
+    "NAMEDIALOG": {
+      "TITLE": "Rinomina App",
+      "DESCRIPTION": "Inserisci il nuovo nome della tua app",
+      "NAME": "Nuovo nome"
+    },
+    "NAME": "Nome",
+    "TYPE": "Tipo di applicazione",
+    "AUTHMETHOD": "Authmethod",
+    "AUTHMETHODSECTION": "Metodo di autenticazione",
+    "GRANT": "Tipi di Grant",
+    "ADDITIONALORIGINS": "Origini aggiuntive",
+    "ADDITIONALORIGINSDESC": "Se vuoi aggiungere ulteriori Origini alla tua app che non è usata come reindirizzamento puoi farlo qui.",
+    "ORIGINS": "Origini",
+    "NOTANORIGIN": "Il valore inserito non è un'origine",
+    "PROSWITCH": "Sono un professionista. Salta questo passo.",
+    "NAMEANDTYPESECTION": "Nome e tipo",
+    "TITLEFIRST": "Nome dell' applicazione",
+    "TYPETITLE": "Che tipo di applicazione vuoi creare?",
+    "OIDC": {
+      "WELLKNOWN": "Per ulteriori informazioni, consultare il sito <a href='{{url}}' title='Discovery endpoint' target='_blank'>discovery endpoint</a>.",
+      "INFO": {
+        "ISSUER": "Issuer",
+        "CLIENTID": "Client ID"
+      },
+      "CURRENT": "Configurazione attuale",
+      "TOKENSECTIONTITLE": "Opzioni AuthToken",
+      "REDIRECTSECTIONTITLE": "Impostazioni di reindirizzamento",
+      "REDIRECTTITLE": "Specifica gli URI a cui il login sarà reindirizzato.",
+      "POSTREDIRECTTITLE": "Questo è l'URI di reindirizzamento dopo il logout.",
+      "REDIRECTDESCRIPTIONWEB": "Gli URI di reindirizzamento devono iniziare con https://. http:// è valido solo con la modalità di sviluppo abilitata (DEV Mode).",
+      "REDIRECTDESCRIPTIONNATIVE": "Gli URI di reindirizzamento devono iniziare con il proprio protocollo, http://127.0.0.1, http://[::1] o http://localhost.",
+      "REDIRECTNOTVALID": "Questo URI di reindirizzamento non è valido.",
+      "COMMAORENTERSEPERATION": "separare con ↵",
+      "TYPEREQUIRED": "Il tipo è necessario per completare.",
+      "TITLE": "Configurazione OIDC",
+      "CLIENTID": "Client ID",
+      "CLIENTSECRET": "Client Secret",
+      "CLIENTSECRET_NOSECRET": "Con il flusso di autenticazione scelto, non è richiesto alcun Client Secret e quindi non è disponibile.",
+      "CLIENTSECRET_DESCRIPTION": "Salvate il Client Secret in un luogo sicuro, perché non sarà più disponibile dopo aver chiuso la finestra di dialogo",
+      "REGENERATESECRET": "Rigenera il Client Secret",
+      "DEVMODE": "Modalità di sviluppo (DEV Mode)",
+      "DEVMODE_ENABLED": "Attivato",
+      "DEVMODE_DISABLED": "Disattivato",
+      "DEVMODEDESC": "Attenzione: Con la modalità di sviluppo abilitata, gli URI di reindirizzamento non saranno convalidati.",
+      "SKIPNATIVEAPPSUCCESSPAGE": "Salta la pagina di successo dopo il login",
+      "SKIPNATIVEAPPSUCCESSPAGE_DESCRIPTION": "Salta la pagina di successo dopo il login per questa applicazione nativa",
+      "REDIRECT": "URI per il reindrizzamento",
+      "REDIRECTSECTION": "Reindirizzamento",
+      "POSTLOGOUTREDIRECT": "URI post logout",
+      "RESPONSESECTION": "Tipi di risposta",
+      "GRANTSECTION": "Tipi di autorizzazione",
+      "GRANTTITLE": "Seleziona i tipi di autorizzazione. Nota: Implicit è disponibile solo per le applicazioni basate su browser.",
+      "APPTYPE": {
+        "0": "Web",
+        "1": "User agent",
+        "2": "Native"
+      },
+      "RESPONSETYPE": "Tipi di risposta",
+      "RESPONSE": {
+        "0": "Codice",
+        "1": "ID-Token",
+        "2": "Token ID-Token"
+      },
+      "REFRESHTOKEN": "Refresh Token",
+      "GRANTTYPE": "Tipi di autorizzazione",
+      "GRANT": {
+        "0": "Authorization Code",
+        "1": "Implicit",
+        "2": "Refresh Token",
+        "3": "Device Code",
+        "4": "Token Exchange"
+      },
+      "AUTHMETHOD": {
+        "0": "Basic",
+        "1": "Post",
+        "2": "None",
+        "3": "Private Key JWT"
+      },
+      "TOKENTYPE": "Tipo di token di autorizzazione",
+      "TOKENTYPE0": "Bearer Token",
+      "TOKENTYPE1": "JWT",
+      "UNSECUREREDIRECT": "Speriamo proprio che tu sappia cosa stai facendo.",
+      "OVERVIEWSECTION": "Sommario",
+      "OVERVIEWTITLE": "Configurazione finita. Rivedi le tue impostazioni.",
+      "ACCESSTOKENROLEASSERTION": "Aggiungere ruoli utente al Access Token",
+      "ACCESSTOKENROLEASSERTION_DESCRIPTION": "Se selezionato, i ruoli richiesti dall'utente autenticato sono aggiunti all'Access Token",
+      "IDTOKENROLEASSERTION": "Aggiungi ruoli nell'ID Token",
+      "IDTOKENROLEASSERTION_DESCRIPTION": "Se selezionato, i ruoli richiesti dall'utente autenticato sono aggiunti all'ID Token.",
+      "IDTOKENUSERINFOASSERTION": "Aggiungi le informazioni dell'utente nell'ID Token",
+      "IDTOKENUSERINFOASSERTION_DESCRIPTION": "Aggiungi le richieste di profilo, email, telefono o indirizzo nell'ID Token.",
+      "CLOCKSKEW": "Permette ai clienti di gestire lo skew di OP e client. La durata (0-5s) sarà aggiunta a exp claim e sottratta da iats, auth_time e nbf.",
+      "RECOMMENDED": "raccomandato",
+      "NOTRECOMMENDED": "non raccomandato",
+      "SELECTION": {
+        "APPTYPE": {
+          "WEB": {
+            "TITLE": "Web",
+            "DESCRIPTION": "Applicazioni web regolari come .net, PHP, Node.js, Java, ecc."
+          },
+          "NATIVE": {
+            "TITLE": "Native",
+            "DESCRIPTION": "App mobili, desktop, dispositivi intelligenti, ecc."
+          },
+          "USERAGENT": {
+            "TITLE": "User Agent",
+            "DESCRIPTION": "Single Page Applications (SPA) e in generale tutti i framework JS eseguiti nei browser"
+          }
+        }
+      }
+    },
+    "API": {
+      "INFO": {
+        "CLIENTID": "Client ID"
+      },
+      "REGENERATESECRET": "Rigenera il Client Secret",
+      "SELECTION": {
+        "TITLE": "API",
+        "DESCRIPTION": "API in generale"
+      },
+      "AUTHMETHOD": {
+        "0": "Basic",
+        "1": "Private Key JWT"
+      }
+    },
+    "SAML": {
+      "SELECTION": {
+        "TITLE": "SAML",
+        "DESCRIPTION": "Applicazioni SAMML"
+      },
+      "CONFIGSECTION": "Configurazione SAML",
+      "CHOOSEMETADATASOURCE": "Fornisci la tua configurazione SAML utilizzando una delle seguenti opzioni:",
+      "METADATAOPT1": "Opzione 1. Specificare l'URL in cui si trova il file di metadati",
+      "METADATAOPT2": "Opzione 2. Carica un file contenente il tuo XML di metadati",
+      "METADATAOPT3": "Opzione 3. Crea al volo un file di metadati minimo fornendo ENTITYID e URL ACS",
+      "UPLOAD": "Carica il file XML",
+      "METADATA": "Metadata",
+      "METADATAFROMFILE": "Metadati dal file",
+      "CERTIFICATE": "Certificato SAML",
+      "DOWNLOADCERT": "Scarica il certificato SAML",
+      "CREATEMETADATA": "Crea metadati",
+      "ENTITYID": "Entity ID",
+      "ACSURL": "ACS endpoint URL"
+    },
+    "AUTHMETHODS": {
+      "CODE": {
+        "TITLE": "Code",
+        "DESCRIPTION": "Scambia il codice di autorizzazione con il token"
+      },
+      "PKCE": {
+        "TITLE": "PKCE",
+        "DESCRIPTION": "Usa un hash casuale invece di un Client Secret statico per maggiore sicurezza"
+      },
+      "POST": {
+        "TITLE": "POST",
+        "DESCRIPTION": "Invia client_id e client_secret come parte della richista."
+      },
+      "PK_JWT": {
+        "TITLE": "Private Key JWT",
+        "DESCRIPTION": "Usa un Private Key per autorizzare la tua applicazione"
+      },
+      "BASIC": {
+        "TITLE": "Basic",
+        "DESCRIPTION": "Autenticazione con nome utente e password"
+      },
+      "IMPLICIT": {
+        "TITLE": "Implicit",
+        "DESCRIPTION": "Ottenere i token direttamente dall'endpoint di autorizzazione"
+      },
+      "DEVICECODE": {
+        "TITLE": "Device Code",
+        "DESCRIPTION": "Autorizza il dispositivo su un computer o uno smartphone."
+      },
+      "CUSTOM": {
+        "TITLE": "Custom",
+        "DESCRIPTION": "La tua impostazione non corrisponde a nessun'altra opzione."
+      }
+    },
+    "TOAST": {
+      "REACTIVATED": "Applicazione riattivata.",
+      "DEACTIVATED": "Applicazione disattivata.",
+      "OIDCUPDATED": "Applicazione aggiornata",
+      "APIUPDATED": "Applicazione aggiornata",
+      "UPDATED": "App aggiornata.",
+      "CREATED": "App creata.",
+      "CLIENTSECRETREGENERATED": "Client secret generato.",
+      "DELETED": "App rimossa con successo.",
+      "CONFIGCHANGED": "Modifiche alla configurazione rilevate"
+    }
+  },
+  "GENDERS": {
+    "0": "Sconosciuto",
+    "1": "Femminile",
+    "2": "Maschio",
+    "3": "Altro"
+  },
+  "LANGUAGES": {
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "it": "Italiano",
+    "ja": "日本語",
+    "pl": "Polski",
+    "zh": "简体中文",
+    "bg": "Български",
+    "pt": "Portuguese",
+    "mk": "Македонски",
+    "cs": "Čeština",
+    "ru": "Русский",
+    "nl": "Nederlands"
+  },
+  "MEMBER": {
+    "ADD": "Aggiungi un manager",
+    "CREATIONTYPE": "Tipo di creazione",
+    "CREATIONTYPES": {
+      "3": "IAM",
+      "2": "Organizzazione",
+      "0": "Progetto proprio",
+      "1": "Progetto delegato",
+      "4": "Progetto"
+    },
+    "EDITROLE": "Modifica ruoli",
+    "EDITFOR": "Modifica i ruoli per l'utente: {{value}}",
+    "DIALOG": {
+      "DELETE_TITLE": "Rimuovi manager",
+      "DELETE_DESCRIPTION": "Stai per rimuovere un manager. Vuoi davvero continuare?"
+    },
+    "SHOWDETAILS": "Clicca per mostrare i dettagli."
+  },
+  "ROLESLABEL": "Ruoli",
+  "GRANTS": {
+    "TITLE": "Autorizzazioni",
+    "DESC": "Qui puoi vedere tutte le autorizzazioni della tua organizzazione.",
+    "DELETE": "Cancellare l'autorizzazione",
+    "EMPTY": "Nessuna autorizzazione trovata",
+    "ADD": "Creare autorizzazione",
+    "ADD_BTN": "Nuovo",
+    "PROJECT": {
+      "TITLE": "Autorizzazione",
+      "DESCRIPTION": "Definisci le autorizzazioni per il progetto specificato. Nota che puoi vedere solo le voci dei progetti e degli utenti per i quali hai le autorizzazioni."
+    },
+    "USER": {
+      "TITLE": "Autorizzazioni",
+      "DESCRIPTION": "Definisci le autorizzazioni per l'utente specificato. Nota che puoi vedere solo le voci dei progetti e degli utenti per i quali hai le autorizzazioni."
+    },
+    "CREATE": {
+      "TITLE": "Creare autorizzazione",
+      "DESCRIPTION": "Cerca l'organizzazione, il progetto e i ruoli corrispondenti."
+    },
+    "EDIT": {
+      "TITLE": "Modifica autorizzazione"
+    },
+    "DETAIL": {
+      "TITLE": "Dettaglio dell'autorizzazione",
+      "DESCRIPTION": "Qui potete vedere tutti i dettagli dell'autorizzazione."
+    },
+    "TOAST": {
+      "UPDATED": "Autorizzazione aggiornata.",
+      "REMOVED": "Autorizzazione rimossa con successo.",
+      "BULKREMOVED": "Autorizzazioni rimossi con successo.",
+      "CANTSHOWINFO": "Non puoi visitare il profilo di questo utente poiché non sei un membro dell'organizzazione a cui appartiene questo utente"
+    },
+    "DIALOG": {
+      "DELETE_TITLE": "Elima autorizzazione",
+      "DELETE_DESCRIPTION": "Stai per eliminare un' autorizzazione. Vuoi continuare?",
+      "BULK_DELETE_TITLE": "Elimina autorizzazioni",
+      "BULK_DELETE_DESCRIPTION": "Stai per eliminare diverse autorizzazioni. Vuoi continuare?"
+    }
+  },
+  "CHANGES": {
+    "LISTTITLE": "Ultimi cambiamenti",
+    "BOTTOM": "Hai raggiunto la fine della lista.",
+    "LOADMORE": "Carica di più",
+    "ORG": {
+      "TITLE": "Attività",
+      "DESCRIPTION": "Qui puoi vedere gli ultimi eventi che hanno generato un cambio di organizzazione."
+    },
+    "PROJECT": {
+      "TITLE": "Attività",
+      "DESCRIPTION": "Qui puoi vedere gli ultimi eventi che hanno generato un cambiamento di progetto."
+    },
+    "USER": {
+      "TITLE": "Attività",
+      "DESCRIPTION": "Qui puoi vedere gli ultimi eventi che hanno generato un cambiamento dell'utente."
+    }
+  }
+}

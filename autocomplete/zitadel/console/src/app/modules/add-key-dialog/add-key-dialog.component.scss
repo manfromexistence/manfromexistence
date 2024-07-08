@@ -1,0 +1,22 @@
+.title {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+.add-key-form-field {
+  width: 100%;
+  position: relative;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+
+  .ok-button {
+    margin-left: 0.5rem;
+  }
+}

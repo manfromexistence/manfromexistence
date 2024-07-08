@@ -1,0 +1,112 @@
+.change-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .ch-header {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin changes-theme($theme) {
+  $is-dark-theme: map-get($theme, is-dark);
+  $foreground: map-get($theme, foreground);
+  $secondary-text: map-get($foreground, secondary-text);
+
+  .scroll-container {
+    border-bottom: 1px solid map-get($foreground, divider);
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 500px) {
+      border-bottom: none;
+    }
+
+    .date {
+      font-weight: 500;
+      font-size: 0.8rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .item {
+      display: block;
+      padding: 10px 0;
+      font-size: 0.8rem;
+      box-sizing: border-box;
+
+      .row {
+        display: flex;
+        flex-direction: row;
+
+        .spacer {
+          width: 32px;
+        }
+
+        .change-actions {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          margin-top: -0.25rem;
+          margin-left: 1rem;
+
+          .change-action {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex: 1;
+            padding: 0.25rem 0;
+            cursor: default;
+
+            span {
+              flex: 1;
+              font-weight: 500;
+              font-size: 0.8rem;
+              overflow-x: hidden;
+            }
+
+            .msg {
+              text-overflow: ellipsis;
+            }
+
+            .block {
+              display: block;
+              color: $secondary-text;
+            }
+          }
+        }
+      }
+    }
+
+    .ch-sp-wrapper {
+      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .load-more-button {
+      margin-bottom: 1rem;
+    }
+
+    .end-container {
+      margin: 1rem 0 1rem 0;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.card {
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  padding-top: 1rem;
+  min-width: 300px;
+
+  &.nomargin {
+    margin: 0;
+  }
+
+  .header {
+    margin-top: 0;
+
+    &.bottom-margin {
+      margin-bottom: 1rem;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .fill-space {
+        flex: 1;
+      }
+
+      .button {
+        margin-right: -0.5rem;
+      }
+    }
+
+    .desc {
+      font-size: 14px;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &.stretch {
+    height: 100%;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 500px) {
+    margin: 0.5rem 0;
+    padding: 1rem;
+  }
+}

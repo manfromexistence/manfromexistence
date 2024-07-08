@@ -1,0 +1,84 @@
+@mixin card-theme($theme) {
+  $primary: map-get($theme, primary);
+  $primary-color: map-get($primary, 500);
+  $background: map-get($theme, background);
+  $card-background-color: map-get($background, cards);
+  $is-dark-theme: map-get($theme, is-dark);
+  $border-color: if($is-dark-theme, rgba(#8795a1, 0.2), rgba(#8795a1, 0.2));
+  $border-selected-color: if($is-dark-theme, #fff, #000);
+
+  .card {
+    background-color: $card-background-color;
+    transition: background-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    outline: none;
+
+    &.warn {
+      border-color: var(--warn);
+    }
+
+    .selection-icon {
+      opacity: 0;
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      color: $border-color;
+    }
+
+    &.selected {
+      background-color: #ffffff25;
+      border: 1px solid $border-selected-color;
+
+      .text-part {
+        .icons {
+          opacity: 1;
+        }
+      }
+
+      .selection-icon {
+        color: $border-selected-color;
+        opacity: 1;
+      }
+    }
+
+    .iamuser {
+      color: $primary-color;
+    }
+
+    .edit-button {
+      &:hover {
+        color: $border-selected-color;
+      }
+    }
+  }
+
+  .cnsl-chip {
+    height: auto;
+    border: 1px solid $border-color;
+    background: if($is-dark-theme, map-get($background, state), #e4e7e4) !important;
+
+    .cnsl-chip-content {
+      display: flex;
+      align-items: center;
+      font-size: 14px !important;
+    }
+  }
+
+  .cnsl-chip-list {
+    padding: 0.5rem 0;
+    display: block;
+  }
+
+  .cnsl-chip-dot {
+    height: 1rem;
+    width: 1rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #cd5c5c;
+    margin-left: -4px;
+    margin-right: 8px;
+    box-shadow: 0 0 3px #0000001a;
+  }
+}

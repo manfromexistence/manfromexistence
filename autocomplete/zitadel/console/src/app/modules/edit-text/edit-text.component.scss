@@ -1,0 +1,115 @@
+@mixin edit-text-theme($theme) {
+  $primary: map-get($theme, primary);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $accent: map-get($theme, accent);
+  $primary-color: map-get($primary, 500);
+
+  $warn-color: map-get($warn, 500);
+  $accent-color: map-get($accent, 500);
+  $foreground: map-get($theme, foreground);
+  $is-dark-theme: map-get($theme, is-dark);
+  $back: map-get($background, background);
+
+  .edit-text-block {
+    display: block;
+
+    .edit-text-flex {
+      display: flex;
+
+      .edit-text-formfield {
+        flex: 1;
+
+        .edit-text-area {
+          min-height: 80px;
+
+          &.defaulttext {
+            color: if($is-dark-theme, #ffffff50, #00000050);
+          }
+        }
+
+        &.hovering {
+          background-color: red;
+        }
+
+        .edit-text-chips {
+          position: absolute;
+          display: flex;
+          flex-wrap: wrap;
+          visibility: hidden;
+          margin: 0 -0.25rem;
+          transition: all 0.2s ease;
+
+          .chip {
+            border-radius: 50vw;
+            padding: 4px 0.5rem;
+            font-size: 12px;
+            background: $primary-color;
+            color: map-get($primary, default-contrast);
+            margin: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+
+            * {
+              transition: all 0.2s ease;
+            }
+
+            i {
+              opacity: 0.5;
+              font-size: 1.1rem;
+              margin-left: 0.5rem;
+            }
+
+            .key {
+              display: inline-block;
+            }
+
+            .value {
+              display: none;
+            }
+
+            &:hover {
+              i {
+                opacity: 1;
+              }
+
+              .key {
+                display: none;
+              }
+
+              .value {
+                display: inline-block;
+              }
+            }
+          }
+        }
+
+        &.cnsl-focused {
+          .edit-text-chips {
+            visibility: visible;
+            cursor: copy;
+          }
+        }
+
+        .edit-text-chips:hover {
+          visibility: visible;
+        }
+      }
+
+      .edit-text-actions {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .edit-text-info {
+    display: block;
+    margin-right: 40px;
+    margin-bottom: 1.5rem;
+  }
+}

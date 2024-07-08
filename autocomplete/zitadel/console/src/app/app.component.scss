@@ -1,0 +1,57 @@
+@mixin main-theme($theme) {
+  $primary: map-get($theme, primary);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $accent: map-get($theme, accent);
+  $primary-color: map-get($primary, 500);
+
+  $warn-color: map-get($warn, 500);
+  $accent-color: map-get($accent, 500);
+  $is-dark-theme: map-get($theme, is-dark);
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+
+    .router-container {
+      padding: 0 2rem 50px 2rem;
+
+      @media only screen and (max-width: 500px) {
+        padding: 0 1rem;
+      }
+
+      .outlet {
+        margin: 0 auto;
+      }
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: map-get($background, toolbar);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid map-get($foreground, divider);
+      z-index: 50;
+      transform: all 0.2s ease;
+
+      @-moz-document url-prefix() {
+        background-color: map-get($background, moz-toolbar);
+        backdrop-filter: none;
+      }
+
+      &.shadow {
+        box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+      }
+    }
+
+    .fill-space {
+      flex: 1;
+    }
+  }
+}
