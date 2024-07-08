@@ -105,3 +105,5 @@ for n in ${repo[@]};
 do 
     git clone https://github.com/manfromexistence/$n.git && cd $n && rm -rf .git && cd ..
 done
+
+git add . && git commit -m "feat: automatically cloned all github repo's of my means manofexistene's github account" && git push
