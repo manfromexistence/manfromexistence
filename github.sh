@@ -1,6 +1,8 @@
-Inspiration branch of better repository.
+#!/bin/bash
 
-(
+echo "Hello World"
+
+repo=(
     "stocks"
     "test-new-stuffs"
     "infisical"
@@ -98,3 +100,8 @@ Inspiration branch of better repository.
     "Pendings"
     "snap-cloud"
 )
+
+for n in ${repo[@]};
+do 
+    git clone https://github.com/manfromexistence/$n.git
+done
