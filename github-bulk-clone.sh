@@ -5,14 +5,15 @@ echo "All, repos are being cloned..."
 cd WARNING
 
 repo=(
-  "dx-new-experiment"
+  "dx-experiment"
+
+  # "dx-new-experiment"
 
   # "snippets-mate"
   # "testing"
 
   # "dx-beta"
   # "dx-new"
-  # "dx-experiment"
   # "dx-latest"
   # "dx-depricated"
 
