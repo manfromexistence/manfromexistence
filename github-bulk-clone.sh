@@ -2,21 +2,24 @@
 
 echo "All, repos are being cloned..."
 
-mkdir WARNING &&  cd WARNING
+cd WARNING
 
 repo=(
-  "snippets-mate"
-  "testing"
+  "dx-new-experiment"
+
+  # "snippets-mate"
+  # "testing"
+
   # "dx-beta"
-  # "dx-new-experiment"
   # "dx-new"
   # "dx-experiment"
   # "dx-latest"
   # "dx-depricated"
-  "Vivo-y20"
-  "Pro-Component"
-  "Test"
-  "Pendings"
+
+  # "Vivo-y20"
+  # "Pro-Component"
+  # "Test"
+  # "Pendings"
 
 
 
