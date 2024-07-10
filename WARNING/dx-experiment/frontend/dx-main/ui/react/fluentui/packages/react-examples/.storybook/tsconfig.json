@@ -1,0 +1,11 @@
+{
+  "extends": "../../../tsconfig.base.v8.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["**/*.js"]
+}

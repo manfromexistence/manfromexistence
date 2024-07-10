@@ -1,0 +1,1 @@
+touch navbar.tsx main-info.tsx vertical-info.tsx horizental-info.tsx gradient-feature-one.tsx gradient-feature-two.tsx gradient-feature-three.tsx three-dimentional-card.tsx whitelist.tsx whitelistbar.tsx footer.tsx index.tsx

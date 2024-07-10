@@ -1,0 +1,5 @@
+git clone https://github.com/postcss/postcss.git && cd postcss && rm -rf .git && cd ..
+git clone https://github.com/sass/dart-sass.git sass && cd sass && rm -rf .git && cd ..
+git clone https://github.com/pacocoursey/next-themes.git && cd next-themes && rm -rf .git && cd ..
+git clone https://github.com/tailwindlabs/tailwindcss.git && cd tailwindcss && rm -rf .git && cd ..
+git clone https://github.com/styled-components/styled-components.git && cd styled-components && rm -rf .git && cd ..

@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.v8.json",
+  "compilerOptions": {
+    "outDir": "lib",
+    "target": "es5",
+    // ensure webpack can split async imports into separate chunks
+    "module": "esnext",
+    "jsx": "react",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "preserveConstEnums": true,
+    "noUnusedLocals": true,
+    "lib": ["ES2015", "DOM"],
+    "types": ["webpack-env", "custom-global", "node"]
+  },
+  "include": ["src"]
+}

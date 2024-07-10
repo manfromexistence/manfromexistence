@@ -1,0 +1,105 @@
+import {Hct} from '../hct/hct';
+
+import {TonalPalette} from './tonal_palette';
+
+/**
+ * Set of colors to generate a [CorePalette] from
+ */
+export interface CorePaletteColors {
+  primary: number;
+  secondary?: number;
+  tertiary?: number;
+  neutral?: number;
+  neutralVariant?: number;
+  error?: number;
+}
+
+/**
+ * An intermediate concept between the key color for a UI theme, and a full
+ * color scheme. 5 sets of tones are generated, all except one use the same hue
+ * as the key color, and all vary in chroma.
+ */
+export class CorePalette {
+  a1: TonalPalette;
+  a2: TonalPalette;
+  a3: TonalPalette;
+  n1: TonalPalette;
+  n2: TonalPalette;
+  error: TonalPalette;
+
+  /**
+   * @param argb ARGB representation of a color
+   */
+  static of(argb: number): CorePalette {
+    return new CorePalette(argb, false);
+  }
+
+  /**
+   * @param argb ARGB representation of a color
+   */
+  static contentOf(argb: number): CorePalette {
+    return new CorePalette(argb, true);
+  }
+
+  /**
+   * Create a [CorePalette] from a set of colors
+   */
+  static fromColors(colors: CorePaletteColors): CorePalette {
+    return CorePalette.createPaletteFromColors(false, colors);
+  }
+
+  /**
+   * Create a content [CorePalette] from a set of colors
+   */
+  static contentFromColors(colors: CorePaletteColors): CorePalette {
+    return CorePalette.createPaletteFromColors(true, colors);
+  }
+
+  private static createPaletteFromColors(
+      content: boolean,
+      colors: CorePaletteColors,
+  ) {
+    const palette = new CorePalette(colors.primary, content);
+    if (colors.secondary) {
+      const p = new CorePalette(colors.secondary, content);
+      palette.a2 = p.a1;
+    }
+    if (colors.tertiary) {
+      const p = new CorePalette(colors.tertiary, content);
+      palette.a3 = p.a1;
+    }
+    if (colors.error) {
+      const p = new CorePalette(colors.error, content);
+      palette.error = p.a1;
+    }
+    if (colors.neutral) {
+      const p = new CorePalette(colors.neutral, content);
+      palette.n1 = p.n1;
+    }
+    if (colors.neutralVariant) {
+      const p = new CorePalette(colors.neutralVariant, content);
+      palette.n2 = p.n2;
+    }
+    return palette;
+  }
+
+  private constructor(argb: number, isContent: boolean) {
+    const hct = Hct.fromInt(argb);
+    const hue = hct.hue;
+    const chroma = hct.chroma;
+    if (isContent) {
+      this.a1 = TonalPalette.fromHueAndChroma(hue, chroma);
+      this.a2 = TonalPalette.fromHueAndChroma(hue, chroma / 3);
+      this.a3 = TonalPalette.fromHueAndChroma(hue + 60, chroma / 2);
+      this.n1 = TonalPalette.fromHueAndChroma(hue, Math.min(chroma / 12, 4));
+      this.n2 = TonalPalette.fromHueAndChroma(hue, Math.min(chroma / 6, 8));
+    } else {
+      this.a1 = TonalPalette.fromHueAndChroma(hue, Math.max(48, chroma));
+      this.a2 = TonalPalette.fromHueAndChroma(hue, 16);
+      this.a3 = TonalPalette.fromHueAndChroma(hue + 60, 24);
+      this.n1 = TonalPalette.fromHueAndChroma(hue, 4);
+      this.n2 = TonalPalette.fromHueAndChroma(hue, 8);
+    }
+    this.error = TonalPalette.fromHueAndChroma(25, 84);
+  }
+}

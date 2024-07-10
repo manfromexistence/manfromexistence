@@ -1,0 +1,35 @@
+{
+  "name": "chakra-next-app",
+  "version": "2.0.14",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "workspace:*",
+    "@chakra-ui/theme-tools": "workspace:*",
+    "@chakra-ui/next-js": "workspace:*",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@types/node": "^20.5.2",
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.7",
+    "framer-motion": "^10.16.1",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chakra-ui/chakra-ui.git",
+    "directory": "examples/next-app"
+  },
+  "bugs": {
+    "url": "https://github.com/chakra-ui/chakra-ui/issues"
+  },
+  "license": "MIT"
+}

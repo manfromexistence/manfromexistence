@@ -1,0 +1,29 @@
+{
+  "name": "@fluentui/perf-test",
+  "description": "Perf tests for @fluentui/react.",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "bundle": "just-scripts bundle",
+    "lint": "just-scripts lint",
+    "just": "just-scripts",
+    "clean": "just-scripts clean",
+    "code-style": "just-scripts code-style",
+    "type-check": "tsc -p . --noEmit",
+    "test:perf": "just-scripts perf-test"
+  },
+  "devDependencies": {
+    "@fluentui/eslint-plugin": "*",
+    "@fluentui/scripts-tasks": "*",
+    "@fluentui/scripts-storybook": "*"
+  },
+  "dependencies": {
+    "@fluentui/scripts-perf-test-flamegrill": "*",
+    "@fluentui/example-data": "*",
+    "@fluentui/react": "*",
+    "@microsoft/load-themed-styles": "^1.10.26",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "tslib": "^2.1.0"
+  }
+}

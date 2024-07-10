@@ -1,0 +1,14 @@
+{
+  "name": "jest-expo-mock-generator",
+  "version": "0.0.0",
+  "author": "Expo",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "@expo/mux": "^1.0.7",
+    "expo": "~50.0.0-alpha.0",
+    "expo-clipboard": "~5.0.0",
+    "react": "18.2.0",
+    "react-native": "0.73.4"
+  }
+}

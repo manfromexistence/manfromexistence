@@ -1,0 +1,49 @@
+import { ArticleIconCard, createMetadata } from "@doc";
+import { WrenchIcon, BlocksIcon } from "lucide-react";
+
+export const metadata = createMetadata({
+	title: "Integrate a wallet provider | thirdweb Wallet SDK",
+	description: "Integrate a wallet provider using thirdweb's Wallet SDK",
+});
+
+# Integrate a wallet provider
+
+## Build a Wallet interface
+
+To use a wallet provider with thirdweb's TypeScript SDK, you have to create a wallet class which extends `AbstractClientWallet` class
+
+```javascript
+export class MyWallet extends AbstractClientWallet {
+	// ....
+}
+```
+
+<ArticleIconCard
+	href="/wallet-sdk/v2/build/connector"
+	icon={WrenchIcon}
+	title="Build a wallet interface"
+/>
+
+<br />
+
+## Integrate with ConnectWallet
+
+If you also want to integrate this wallet with [`ConnectWallet`](/connect/connect/ConnectWallet) component in [React SDK](/react/v4) or [React Native SDK](/react-native/v0), You have to create a Wallet Configurator function which can be passed to `ThirdwebProvider` component
+
+```ts
+function myWallet(): WalletConfig<MyWallet> {
+	// ...
+}
+```
+
+```tsx
+<ThirdwebProvider supportedWallets={[myWallet()]}>
+	<App />
+</ThirdwebProvider>
+```
+
+<ArticleIconCard
+	href="/wallet-sdk/v2/build/connect-wallet-integration"
+	icon={BlocksIcon}
+	title="Integrate with ConnectWallet"
+/>

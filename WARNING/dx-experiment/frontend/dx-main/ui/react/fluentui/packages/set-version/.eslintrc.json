@@ -1,0 +1,9 @@
+{
+  "extends": ["plugin:@fluentui/eslint-plugin/react"],
+  "root": true,
+  "rules": {
+    "deprecation/deprecation": "off",
+    "prefer-const": "off",
+    "no-restricted-globals": "off"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2021",
+    "verbatimModuleSyntax": false
+  },
+  "exclude": ["dist"]
+}

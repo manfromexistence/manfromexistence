@@ -1,0 +1,24 @@
+{
+  "$schema": "../docs/public/schema.json",
+  "extends": ["//"],
+  "pipeline": {
+    "build": {
+      "env": ["RUNNER_OS"],
+      "outputs": [
+        "../target/debug/turbo",
+        "../target/debug/turbo.exe",
+        "../target/release/turbo",
+        "../target/release/turbo.exe"
+      ],
+
+      "inputs": [
+        "../version.txt",
+        "../crates/turborepo*/**/*.rs", // Rust crates
+        "../crates/turborepo*/Cargo.toml",
+        "../Cargo.toml",
+        "../Cargo.lock",
+        "!../crates/**/target"
+      ]
+    }
+  }
+}
