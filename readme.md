@@ -1,4 +1,13 @@
 Inspiration branch of better repository.
+### C++ is fast!
+```
+sudo apt-get update
+sudo apt-get install libcurl4-openssl-dev
+g++ -o github-bulk-delete github-bulk-delete.cpp -lcurl
+./github-bulk-delete
+```
+
+
 
 (
     "stocks"
@@ -98,3 +107,60 @@ Inspiration branch of better repository.
     "Pendings"
     "snap-cloud"
 )
+
+
+
+<!-- 
+```
+#include <cstdlib> // Include the standard library header for getenv
+#include <iostream>
+#include <string>
+#include <vector>
+
+// Function to get an environment variable value
+std::string getEnvVar(const std::string& key) {
+    char* val = std::getenv(key.c_str()); // Retrieve the environment
+    variable
+
+    if (val != nullptr) {
+        return val; // Return the value as a string
+    } else {
+        return ""; // Return an empty string if the environment variable is
+        not set
+    }
+}
+
+// Function to delete a GitHub repository
+bool deleteRepository(const std::string& repoName) {
+    // Retrieve the GitHub access token from the environment variable
+    std::string accessToken = getEnvVar("GITHUB_ACCESS_TOKEN");
+
+    if (accessToken.empty()) {
+        std::cerr << "GitHub access token not found in environment
+        variables." << std::endl; return false;
+    }
+
+    // Rest of your deleteRepository logic...
+    // (Replace GITHUB_ACCESS_TOKEN and other placeholders with accessToken)
+
+    return true;
+}
+
+int main() {
+    // Replace with your repository names
+    std::vector<std::string> reposToDelete = {
+        "snap-project",
+        "aladdin-tm",
+    };
+
+    for (const auto& repo : reposToDelete) {
+        if (deleteRepository(repo)) {
+            std::cout << "Successfully deleted " << repo << std::endl;
+        } else {
+            std::cerr << "Failed to delete " << repo << std::endl;
+        }
+    }
+
+    return 0;
+}
+``` -->

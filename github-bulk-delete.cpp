@@ -25,6 +25,8 @@ bool deleteRepository(const std::string &repoName) {
   struct curl_slist *headers = nullptr;
   headers = curl_slist_append(
       headers, ("Authorization: token " + GITHUB_ACCESS_TOKEN).c_str());
+  headers = curl_slist_append(
+      headers, "User-Agent: MyGitHubDeleter"); // Add User-Agent header
 
   // Set the DELETE request
   curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "DELETE");
@@ -51,51 +53,8 @@ bool deleteRepository(const std::string &repoName) {
 int main() {
   // Replace with your repository names
   std::vector<std::string> reposToDelete = {
-      "stocks",
-      "infisical",
-      "react-native-reusables",
-      "snap",
-      "snap-cloud-latest",
-      "clerk-docs",
-      "hello-nav",
-      "npm-search",
-      "dolt",
-      "mindsdb",
-      "instantsearch",
-      "motion",
-      "awesome-testing",
-      "autocomplete",
-      "excalidraw",
-      "zx",
-      "Inquirer.js",
-      "ollama",
-      "zitadel",
-      "jan",
-      "ink",
-      "svgl",
-      "BlockNote",
-      "dub",
-      "plandex",
-      "prompts",
-      "MEDLAI-Mood-Based-Music-Composition-Using-AI",
-      "yargs",
-      "tailwindcss",
-      "xstream",
-      "rainbowkit",
-      "soltrade",
-      "vercel",
-      "youtube-dl",
-      "openvscode-server",
-      "enquirer",
-      "google-translate-2.0-clone-nextjs-14-ms-azure-clerk-openai-mongodb",
-      "javascript-millionaire",
-      "blessed-contrib",
-      "highstorm",
-      "TTS",
-      "use-sound",
-      "awesome-totally-open-chatgpt",
-      "google-translate",
-      "snap-cloud",
+      "snap-project",
+      "aladdin-tm",
   };
 
   for (const auto &repo : reposToDelete) {
