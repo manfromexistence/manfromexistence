@@ -2,29 +2,63 @@
 
 echo "All, repos are being cloned..."
 
-mkdir code && cd code
+mkdir WARNING && cd WARNING
 
 repo=(
-  "op"
-  "seyanet"
-  "seyaha-net-marketplace"
-  "xstream-website"
-  "xstream-dev-space"
-  "Jrzy"
-  "Cryto-Dragons"
-  "Flag-Network"
-  "Gung-Gang"
-  "youtube-automation"
-  "feild-manager-project"
-  "people-per-hour-project"
-  "Bitpanda"
-  "field-manager"
-  "Aladdin-template"
-  "Metaplex"
-  "Candy-machine"
-  "Doraemon"
-  "flutter"
-  "Metaplex-Store"
+  "dx",
+  "snippets-mate",
+  "testing",
+  "dx-new-experiment",
+  "dx-new",
+  "dx-experiment",
+  "dx-latest",
+  "Vivo-y20",
+  "Pro-Component",
+  "Test",
+  "Pendings",
+  "dx-beta",
+  "dx-depricated",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  # "op"
+  # "seyanet"
+  # "seyaha-net-marketplace"
+  # "xstream-website"
+  # "xstream-dev-space"
+  # "Jrzy"
+  # "Cryto-Dragons"
+  # "Flag-Network"
+  # "Gung-Gang"
+  # "youtube-automation"
+  # "feild-manager-project"
+  # "people-per-hour-project"
+  # "Bitpanda"
+  # "field-manager"
+  # "Aladdin-template"
+  # "Metaplex"
+  # "Candy-machine"
+  # "Doraemon"
+  # "flutter"
+  # "Metaplex-Store"
 
 
 
