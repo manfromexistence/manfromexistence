@@ -1,6 +1,21 @@
 const SOURCES = [
   // High important
   "better",
+  // "snippets-mate",
+  // "testing",
+  // "dx-beta",
+  // "dx-new-experiment",
+  // "dx-new",
+  // "dx-experiment",
+  // "dx-latest",
+  // "dx-depricated",
+  // "Vivo-y20",
+  // "Pro-Component",
+  // "Test",
+  // "Pendings",
+
+
+
   // "dx",
   // "snippets-mate",
   // "testing",
