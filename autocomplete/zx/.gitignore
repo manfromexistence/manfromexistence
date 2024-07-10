@@ -1,8 +1,0 @@
-node_modules/
-build/
-coverage/
-package/
-reports/
-yarn.lock
-test/fixtures/ts-project/package-lock.json
-test/fixtures/js-project/package-lock.json

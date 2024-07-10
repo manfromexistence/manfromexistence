@@ -1,1 +1,0 @@
-- Don’t enable a hover state. The most important value is displayed directly next to the chart.

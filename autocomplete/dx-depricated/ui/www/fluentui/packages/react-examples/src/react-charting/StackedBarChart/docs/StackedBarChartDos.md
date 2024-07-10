@@ -1,1 +1,0 @@
-- Use stacked horizontal bar chart if the length of labels is longer.

@@ -1,1 +1,0 @@
-export { StylePropsTable } from './StylePropsTable';

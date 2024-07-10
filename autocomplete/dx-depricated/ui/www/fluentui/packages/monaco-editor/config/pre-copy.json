@@ -1,5 +1,0 @@
-{
-  "copyTo": {
-    "esm": ["monaco-editor/esm/"]
-  }
-}

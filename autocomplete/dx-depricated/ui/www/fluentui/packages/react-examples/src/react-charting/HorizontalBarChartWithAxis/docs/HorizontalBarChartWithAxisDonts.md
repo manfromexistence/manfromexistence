@@ -1,1 +1,0 @@
-- Don't keep the bar values in random order. Horizontal bar chart is most effective if the bars are sorted in either ascending or descending order.

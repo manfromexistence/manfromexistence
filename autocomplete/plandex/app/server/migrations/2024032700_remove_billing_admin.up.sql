@@ -1,1 +1,0 @@
-DELETE FROM org_roles WHERE name = 'billing_admin';

@@ -1,1 +1,0 @@
-ALTER TABLE IF EXISTS projections.limits ADD COLUMN IF NOT EXISTS block BOOLEAN;

@@ -1,2 +1,0 @@
-## RoutedButton
-Deprecated

@@ -1,1 +1,0 @@
-export { MdxPageHeader } from './MdxPageHeader';

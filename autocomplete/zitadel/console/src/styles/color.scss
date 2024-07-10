@@ -1,8 +1,0 @@
-@mixin cnsl-color-theme($theme) {
-  $foreground: map-get($theme, foreground);
-  $secondary-text: map-get($foreground, secondary-text);
-
-  .cnsl-secondary-text {
-    color: $secondary-text;
-  }
-}

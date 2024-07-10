@@ -1,2 +1,0 @@
-## RoutedAnchor
-Deprecated

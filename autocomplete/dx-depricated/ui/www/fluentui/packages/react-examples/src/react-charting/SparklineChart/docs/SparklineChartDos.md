@@ -1,2 +1,0 @@
-- The most important value is displayed directly next to the chart.
-- Sparkline can be embedded within tables, paragraphs, lists and more.
