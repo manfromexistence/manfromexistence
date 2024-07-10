@@ -5,7 +5,7 @@
 
 // Replace with your GitHub access token
 const std::string GITHUB_ACCESS_TOKEN =
-    "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";
+    "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";
 const std::string GITHUB_USERNAME =
     "manfromexistence"; // Replace with your GitHub username
 
@@ -53,8 +53,25 @@ bool deleteRepository(const std::string &repoName) {
 int main() {
   // Replace with your repository names
   std::vector<std::string> reposToDelete = {
-      "snap-project",
-      "aladdin-tm",
+      // "snap-project",
+      // "aladdin-tm",
+      "llama3",
+      "Solana-cli",
+      "Aladdin-Template-1o1",
+      "Moralis-boilerplate",
+      "Aladdin-Template1o1",
+      "Nft-collections",
+      "must-be-polygon",
+      "Ninja",
+      "mint-polygon",
+      "Mint",
+      "Metaplex-candy",
+      "Solana",
+      "Pancake",
+      "Demo1o1",
+      "with-redux",
+      "Demo",
+      "React_Social_Login-Template",
   };
 
   for (const auto &repo : reposToDelete) {

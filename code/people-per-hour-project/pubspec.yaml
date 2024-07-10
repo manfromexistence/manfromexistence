@@ -1,0 +1,141 @@
+name: fieldmanager_hrms_flutter
+description: FieldManager HRMS mobile application
+
+# dart run build_runner build --delete-conflicting-outputs
+# dart run build_runner watch --delete-conflicting-outputs
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.6.0+4
+
+environment:
+  sdk: '>=3.1.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  #Animation
+  lottie: ^3.1.2
+
+  flutter_slidable: ^3.0.0 
+
+  open_settings: ^2.0.2
+  local_auth: ^2.1.6
+  maps_toolkit: ^3.0.0
+
+  #Permissions
+  permission_handler: ^11.3.1
+  device_uuid: ^0.0.4
+
+  uuid: ^4.4.0
+
+  infinite_scroll_pagination: ^4.0.0
+  webview_flutter: ^4.8.0
+
+  #Permission
+  disable_battery_optimization: ^1.1.1
+
+  #BackgroundService
+  background_location_tracker: ^1.4.1
+  flutter_background_service: ^5.0.1
+
+  #Device
+  device_info_plus: ^10.1.0
+  flutter_activity_recognition: ^3.1.0
+  battery_plus: ^6.0.1
+  connectivity_plus: ^6.0.3
+
+  #Base
+  cupertino_icons: ^1.0.5
+  google_fonts: ^6.2.1
+  font_awesome_flutter: ^10.5.0
+  nb_utils: ^7.0.3
+
+
+  #Validation
+  validators: ^3.0.0
+
+  # FIREBASE PACKAGES
+  firebase_core: ^3.0.0
+  firebase_messaging: ^15.0.0
+
+  # Common
+  share: ^2.0.4
+  url_launcher: ^6.1.12
+  http: ^1.0.0
+  html: ^0.15.4
+  package_info: ^2.0.2
+
+  # IMAGES
+  image_picker: ^1.0.2
+  file_picker: ^8.0.4
+  photo_view: ^0.15.0
+  flutter_svg: ^2.0.10+1
+
+  # STATE MANAGEMENT
+  mobx: ^2.2.0
+  flutter_mobx: ^2.0.6+5
+  provider: ^6.0.5
+
+  # MAP
+  google_maps_flutter: ^2.4.0
+  geolocator: ^12.0.0
+  geocoding: ^3.0.0
+  location: ^6.0.2
+
+  # UI
+  animations: ^2.0.7
+  otp_text_field: ^1.1.3
+  swipeable_button_view: ^0.0.2
+  shimmer: ^3.0.0
+  load_switch: ^2.0.6
+  iconsax: ^0.0.8
+  dotted_line: ^3.2.2
+
+  # NOTIFICATION
+  flutter_local_notifications: ^17.1.2
+
+  intl: ^0.18.1
+  local_auth_ios: any
+
+  local_auth_android: any
+  vector_math: any
+  flutter_background_service_android: any
+  google_maps_flutter_android: any
+  google_maps_flutter_platform_interface: any
+dev_dependencies:
+
+
+  flutter_test:
+    sdk: flutter
+
+  mobx_codegen: ^2.3.0
+  build_runner: ^2.4.6
+
+
+  flutter_lints: ^4.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "images/app_logo.png"
+
+
+flutter:
+
+  uses-material-design: true
+
+
+
+  assets:
+    - images/
+    - images/flag/
+    - images/chat/
+    - images/errors/
+    - images/attendance/
+    - images/device/
+    - images/maps/
+    - images/3d/
+    - assets/map_styles/
+    - assets/animations/

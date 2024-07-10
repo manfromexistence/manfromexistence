@@ -1,0 +1,87 @@
+    @mixin navbar2-pc{
+        /* The sidebar Top menu */
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /* The sidebar Left menu */
+        #pc_navbar_left {
+            
+            overflow-x: hidden;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            
+            
+            width: 10%;
+            height: 97%;
+            
+            /* position: relative; */
+            position: fixed;            
+            top: 2.5vh;
+            left: 0;
+            
+            
+            border-right: 2px solid #000000;
+            
+            
+            z-index: 1;
+        }
+        
+        
+        #pc_navbar_left ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        height: 150vh;
+        
+        margin: 0;
+        padding: 0;
+        
+        
+        }
+        
+        
+        #pc_navbar_left ul li{
+            
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+            position: relative;
+            /* right: 1rem; */
+            left: 0.5rem;
+            
+            width: 5.6rem;
+            
+            
+            margin-top: 2rem;
+            
+            text-decoration: none;
+            font-size: 3.4rem;
+            
+            
+            color: #818181;
+        }
+        #pc_navbar_left ul li:hover {
+            
+            
+            color: #000000;
+            border-right: 7px solid #26283D;
+            
+            font-size: 5rem;
+        }
+    }

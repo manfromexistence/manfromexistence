@@ -2,29 +2,65 @@
 
 echo "All, repos are being cloned..."
 
+mkdir code && cd code
+
 repo=(
-    "stocks"
-    "test-new-stuffs"
-    "infisical"
-    "react-native-reusables"
-    "spark-labs-website"
+  "op"
+  "seyanet"
+  "seyaha-net-marketplace"
+  "xstream-website"
+  "xstream-dev-space"
+  "Jrzy"
+  "Cryto-Dragons"
+  "Flag-Network"
+  "Gung-Gang"
+  "youtube-automation"
+  "feild-manager-project"
+  "people-per-hour-project"
+  "Bitpanda"
+  "field-manager"
+  "Aladdin-template"
+  "Metaplex"
+  "Candy-machine"
+  "Doraemon"
+  "flutter"
+  "Metaplex-Store"
+
+
+
+
+
+
+
+
+    # "stocks"
+    # "test-new-stuffs"
+    # "infisical"
+    # "react-native-reusables"
+    # "spark-labs-website"
+
     # "snap-project"
-    "feild-manager-project"
+
+    # "feild-manager-project"
+
     # "snap"
-    "people-per-hour-project"
-    "field-manager"
-    "dx-new"
-    "dx-experiment"
-    "dx-latest"
-    "flutter"
+
+    # "people-per-hour-project"
+    # "field-manager"
+    # "dx-new"
+    # "dx-experiment"
+    # "dx-latest"
+    # "flutter"
+
     # "snap-cloud-latest"
-    "clerk-docs"
-    "hello-nav"
-    "npm-search"
-    "dolt"
-    "mindsdb"
-    "instantsearch"
-    "motion"
+
+    # "clerk-docs"
+    # "hello-nav"
+    # "npm-search"
+    # "dolt"
+    # "mindsdb"
+    # "instantsearch"
+    # "motion"
     
     # "awesome-testing"
     # "autocomplete"
@@ -105,4 +141,4 @@ do
     git clone https://github.com/manfromexistence/$n.git && cd $n && rm -rf .git && cd ..
 done
 
-git add . && git commit -m "feat: automatically cloned all github repo's of my means manofexistene's github account" && git push
+# git add . && git commit -m "feat: automatically cloned all github repo's of my means manofexistene's github account" && git push

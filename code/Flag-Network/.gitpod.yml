@@ -1,0 +1,30 @@
+tasks:
+  - name: Django
+    command: cd django && sudo apt-get update && sudo apt-get install python3 && pip install -r requirements.txt && pip install channels && pip install pandas
+    init: cd django && sudo apt-get update && sudo apt-get install python3 && pip install -r requirements.txt 
+
+    
+    
+  - name: React native
+    command: npm i -g expo-cli
+      # init: npm run dev
+    
+    
+     
+  - name: Laravel 
+    command: cd laravel-crud-mysql
+      # init: npm run dev
+      
+    
+    
+  - name: Nextjs 
+    command: cd nextjs && npm i && npm run dev
+    
+    
+  - name: Express
+    command: cd express && npm i && npm run dev
+
+      
+      
+    
+                                                                                                                                                                                                                    

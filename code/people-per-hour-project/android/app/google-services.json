@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "725209334809",
+    "firebase_url": "https://hear-you.firebaseio.com",
+    "project_id": "hear-you",
+    "storage_bucket": "hear-you.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725209334809:android:ed3a94eb925b2e385ad688",
+        "android_client_info": {
+          "package_name": "com.fieldmanager_hrms.flutter.fieldmanager_hrms_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725209334809-8qdcadni2dplmqq68d7trmj4e9c8m3qb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjJTkZHEQmv7-edhzWcpg2lSHUtLeHTic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725209334809-8qdcadni2dplmqq68d7trmj4e9c8m3qb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

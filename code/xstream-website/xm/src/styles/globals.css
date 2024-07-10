@@ -1,0 +1,417 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@font-face {
+  font-family: "Die Nasty";
+  src: url("../../public/fonts/die-nasty.regular.otf");
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../../public/fonts/Rubik.ttf");
+}
+
+body {
+  background-color: #080808;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* Background 1 */
+.bg1 {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../assets/images/bgImages/img1.png");
+  background-size: 50%;
+  background-position: 90% 90%;
+}
+
+.bg1::after {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: linear-gradient(
+    91.26deg,
+    rgb(209, 75, 75) 5%,
+    rgb(132, 47, 47) 70%
+  );
+  filter: blur(200px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 20%; /* Set the initial position */
+  top: 45%; /* Set the initial position */
+}
+
+.bg1::before {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: radial-gradient(
+    circle,
+    rgb(132, 47, 47) 70%,
+    rgb(209, 75, 75) 5%
+  );
+  filter: blur(150px);
+  transform: matrix(-0.08, -0.99, 1, 0.05, 0, 0);
+  position: absolute;
+  left: 70%; /* Set the initial position */
+  top: 60%; /* Set the initial position */
+  transform: translate(-50%, -50%); /* Center the div */
+}
+
+/* Background 2 */
+.bg2 {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../assets/images/bgImages/img2.png");
+  background-size: 50%;
+  background-position: -20% 200%;
+  position: relative;
+}
+
+.bg2::after {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: linear-gradient(
+    91.26deg,
+    rgb(209, 75, 75) 5%,
+    rgb(132, 47, 47) 70%
+  );
+  filter: blur(200px);
+  transform: translate(-50%, -50%);
+  left: 10%; /* Set the initial position */
+  top: 65%; /* Set the initial position */
+  position: absolute;
+}
+
+.bg2::before {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: radial-gradient(
+    circle,
+    rgb(121, 113, 113) 70%,
+    rgb(237, 227, 227) 5%
+  );
+  filter: blur(150px);
+  left: 90%; /* Set the initial position */
+  top: 10%; /* Set the initial position */
+  transform: translate(-50%, -50%); /* Center the div */
+  position: absolute;
+}
+
+/* Background 3 */
+.bg3 {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../assets/images/bgImages/img3.png");
+  background-size: 50%;
+  background-position: 100% 100%;
+  position: relative;
+}
+
+.bg3::after {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: linear-gradient(
+    91.26deg,
+    rgb(209, 75, 75) 5%,
+    rgb(132, 47, 47) 70%
+  );
+  filter: blur(200px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 90%; /* Set the initial position */
+  top: 85%; /* Set the initial position */
+  position: absolute;
+}
+
+.bg3::before {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: radial-gradient(
+    circle,
+    rgb(121, 113, 113) 70%,
+    rgb(237, 227, 227) 5%
+  );
+  filter: blur(150px);
+  position: absolute;
+  left: 35%; /* Set the initial position */
+  top: 40%; /* Set the initial position */
+  transform: translate(-50%, -50%); /* Center the div */
+  position: absolute;
+}
+
+/* Background 4 */
+.bg4 {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../assets/images/bgImages/img4.png");
+  background-size: 20%;
+  background-position: 10% 100%;
+  position: relative;
+}
+
+.bg4::after {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: linear-gradient(
+    91.26deg,
+    rgb(209, 75, 75) 5%,
+    rgb(132, 47, 47) 70%
+  );
+  filter: blur(200px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 20%; /* Set the initial position */
+  top: 65%; /* Set the initial position */
+  position: absolute;
+}
+
+.bg4::before {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: radial-gradient(
+    circle,
+    rgb(121, 113, 113) 70%,
+    rgb(237, 227, 227) 5%
+  );
+  filter: blur(150px);
+  position: absolute;
+  left: 75%; /* Set the initial position */
+  top: 80%; /* Set the initial position */
+  transform: translate(-50%, -50%); /* Center the div */
+  position: absolute;
+}
+
+
+/* Background 5 */
+.bg5 {
+  width: 100%;
+  height: 200vh;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-image: url("../../assets/images/bgImages/img6.png"), url("../../assets/images/bgImages/img5.png");
+  background-size: 20%, 16%;
+  background-position: 0% 100%, 100% 0%;
+  position: relative;
+}
+
+.bg5::after {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: linear-gradient(
+    91.26deg,
+    rgb(209, 75, 75) 5%,
+    rgb(132, 47, 47) 70%
+  );
+  filter: blur(200px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 20%; /* Set the initial position */
+  top: 65%; /* Set the initial position */
+  position: absolute;
+}
+
+.bg5::before {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: radial-gradient(
+    circle,
+    rgb(121, 113, 113) 70%,
+    rgb(237, 227, 227) 5%
+  );
+  filter: blur(150px);
+  position: absolute;
+  left: 75%; /* Set the initial position */
+  top: 80%; /* Set the initial position */
+  transform: translate(-50%, -50%); /* Center the div */
+  position: absolute;
+}
+
+
+/* Background 1 */
+.bg6 {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.bg6::after {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: linear-gradient(
+    91.26deg,
+    rgb(209, 75, 75) 5%,
+    rgb(132, 47, 47) 70%
+  );
+  filter: blur(200px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 20%; /* Set the initial position */
+  top: 65%; /* Set the initial position */
+}
+
+.bg6::before {
+  content: "";
+  width: 15rem;
+  height: 12rem;
+  background: radial-gradient(
+    circle,
+    rgb(132, 47, 47) 70%,
+    rgb(209, 75, 75) 5%
+  );
+  filter: blur(150px);
+  transform: matrix(-0.08, -0.99, 1, 0.05, 0, 0);
+  position: absolute;
+  left: 80%; /* Set the initial position */
+  top: 160%; /* Set the initial position */
+  transform: translate(-50%, -50%); /* Center the div */
+}
+
+.linear-text {
+  background: linear-gradient(
+    190deg,
+    #fafafa 0%,
+    #8a0000 52.6%,
+    rgba(250, 250, 250, 0.2) 79.11%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Style for the custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent; /* Set the background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: #c20027; /* Set the color of the scrollbar thumb (the moving part) */
+  border-radius: 12px; /* Add soft edges to the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8a0000; /* Change the color on hover if desired */
+}
+
+.profile {
+  background: linear-gradient(45deg, #ff0000, #00ff00);
+}
+
+.border-shadow {
+  box-shadow: 0 0 30px 3px rgb(62, 16, 10, 0.5); /* Adjust the shadow color and spread as needed */
+}
+
+.parent-div {
+  position: relative;
+  height: 28rem;
+  width: 28rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.parent-div::before {
+  content: "";
+  background-image: url("../../assets/images/streamer.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+.parent-div:hover::before {
+  opacity: 1;
+}
+
+.parent-div2 {
+  position: relative;
+  height: 28rem;
+  width: 28rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.parent-div2::before {
+  content: "";
+  background-image: url("../../assets/images/user.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+.parent-div2:hover::before {
+  opacity: 1;
+}
+
+.glass-container {
+  background: rgba(211, 40, 40, 0.05);
+  border-radius: 2px;
+  backdrop-filter: blur(40px);
+  box-shadow: 1px 1px 5px rgba(236, 17, 9, 0.37);
+}
+

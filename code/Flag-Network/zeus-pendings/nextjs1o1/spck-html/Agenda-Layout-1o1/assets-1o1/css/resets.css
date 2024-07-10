@@ -1,0 +1,202 @@
+*,*::before,*::after{
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    color: hsla(283, 0%, 0%, 1) !important;
+}
+:root{
+    
+/*-----------------------------------*\
+  #Colors+Bg variables
+\*-----------------------------------*/
+    --pro-navbartop-bg_light: hsla(283, 100%, 87%, 1);
+    --pro-sidebar-left-bg_light:hsla(172, 100%, 82%, 1);
+    --pro-sidebar-right-bg_light:hsla(337, 0%, 73%, 1);
+    
+    --main-bg_light:hsla(337, 0%, 53%, 1);
+    --pro-left-container-bg_light:hsla(337, 100%, 91%, 1);
+    --pro-center-container-bg_light:hsla(257, 100%, 93%, 1);
+    --pro-right-container-bg_light:hsla(201, 100%, 85%, 1);
+/*-----------------------------------*\
+  #Colors+Bg variables
+\*-----------------------------------*/
+    --pro-navbartop-height: 5.56rem;
+    --sidebar-width-left: 10%;
+    --sidebar-width-right: 12%;
+    
+/*-----------------------------------*\
+  #Grid variables
+\*-----------------------------------*/
+    --pro-navbartop-grid: 1fr;
+    --pro-sidebar-left-grid:1fr;
+    --pro-sidebar-right-grid:1fr;
+    
+    --main-grid: 1fr 1.5fr 1fr;
+    
+    
+}
+html{
+    /* min-height: 100vh !important; */
+    /* min-height: 100%; */
+    width: 100% !important;
+}
+body{
+    /* min-height: 100%; */
+    min-height: 100vh !important;
+    width: 100% !important;
+    
+}
+
+/* .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+/*-----------------------------------*\
+  NavbarTop
+\*-----------------------------------*/
+#pro_navbar_top{
+    
+    background: hsla(283, 0%, 100%, 1);
+    display: grid;
+    grid-template-columns: 2fr 7fr 8fr 7fr 2fr;
+
+    padding: 1% 2%;
+    /* min-height: 5.56rem; */
+    width: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    min-height: var(--pro-navbartop-height);
+    width: 100%;
+    
+    z-index: 3;
+}
+
+.nav-toggle-btn {
+    background: #0F23FF;
+  border-radius: 8px;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     center;
+  gap: 6px;
+}
+
+.nav-toggle-btn span {
+  background: #FFFFFF;
+  width: 30px;
+  height: 2px;
+  transition: var(--default-transition);
+}
+
+.nav-toggle-btn.active .one { transform: rotate(45deg) translate(3px, 3px); } 
+
+.nav-toggle-btn.active .two { display: none; }
+
+.nav-toggle-btn.active .three { transform: rotate(-45deg) translate(2px, -2px); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------*\
+  SidebarLeft
+\*-----------------------------------*/
+#pro_sidebar_left{
+    
+    background: var(--pro-sidebar-left-bg_light);
+    /* background: hsla(139, 83%, 44%, 1); */
+    
+    position: fixed;
+    top: var(--pro-navbartop-height);
+    /* left: 0; */
+    
+    width: var(--sidebar-width-left);
+    /* min-height: 100%; */
+    min-height: 100vh;
+    z-index: 3;
+}
+/*-----------------------------------*\
+  SidebaRight
+\*-----------------------------------*/
+#pro_sidebar_right{
+    
+    background: transparent;
+    border: 1px solid hsla(337, 0%, 0%, 1);
+    
+    position: fixed;
+    top: var(--pro-navbartop-height);
+    right: 0;
+    
+    width: var(--sidebar-width-right);
+    /* min-height: 100%; */
+    min-height: 100vh;
+    
+    z-index: 3;
+}
+/*-----------------------------------*\
+  #MAIN
+\*-----------------------------------*/
+main{
+    
+    background: var(--main-bg_light);
+    /* background: hsla(160, 100%, 50%, 1); */
+    display: grid;
+    grid-template-columns: var(--main-grid);
+    
+    position: relative;
+    top: var(--pro-navbartop-height);
+    left: var(--sidebar-width-left);
+    /* left: 10%; */
+    
+    min-height: 100vh;
+    /* height: 100%; */
+    width: 90%;
+    
+    z-index: 2;
+}
+#pro_left_container{
+    
+    background: var(--pro-left-container-bg_light);
+    /* background: hsla(160, 100%, 44%, 1); */
+    text-align: center;
+}
+#pro_center_container{
+    
+    background: var(--pro-center-container-bg_light);
+    /* background: hsla(160, 100%, 32%, 1); */
+    text-align: center;
+    
+}
+#pro_right_container{
+    
+    background: var(--pro-right-container-bg_light);
+    /* background: hsla(160, 100%, 21%, 1); */
+    text-align: center;
+    
+}

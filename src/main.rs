@@ -5,7 +5,7 @@
 use curl::easy::{Easy, List};
 
 // Replace with your GitHub access token
-const GITHUB_ACCESS_TOKEN: &str = "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";
+const GITHUB_ACCESS_TOKEN: &str = "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";
 const GITHUB_USERNAME: &str = "manfromexistence"; // Replace with your GitHub username
 
 // Function to delete a GitHub repository
@@ -37,24 +37,26 @@ fn delete_repository(repo_name: &str) -> bool {
 fn main() {
     // Replace with your repository names
     let repos_to_delete = vec![
-        "snap-project",
-        "llama3",
-        "Solana-cli",
-        "Aladdin-Template-1o1",
-        "Moralis-boilerplate",
-        "Aladdin-Template1o1",
-        "Nft-collections",
-        "must-be-polygon",
-        "Ninja",
-        "mint-polygon",
-        "Mint",
-        "Metaplex-candy",
-        "Solana",
-        "Pancake",
-        "Demo1o1",
-        "with-redux",
-        "Demo",
-        "React_Social_Login-Template",
+        "op",
+        "seyanet",
+        "seyaha-net-marketplace",
+        "xstream-website",
+        "xstream-dev-space",
+        "Jrzy",
+        "Cryto-Dragons",
+        "Flag-Network",
+        "Gung-Gang",
+        "youtube-automation",
+        "feild-manager-project",
+        "people-per-hour-project",
+        "Bitpanda",
+        "field-manager",
+        "Aladdin-template",
+        "Metaplex",
+        "Candy-machine",
+        "Doraemon",
+        "flutter",
+        "Metaplex-Store",
     ];
 
     for repo in repos_to_delete {

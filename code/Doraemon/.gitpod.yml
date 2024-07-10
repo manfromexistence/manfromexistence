@@ -1,0 +1,9 @@
+tasks:
+  - name: Solana
+    command: sh -c "$(curl -sSfL https://release.solana.com/v1.10.8/install)" && export PATH=~/.local/share/solana/install/active_release/bin:$PATH 
+    
+    
+    
+  - name: Tsnode
+    command: ls
+    

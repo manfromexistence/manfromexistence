@@ -1,0 +1,8 @@
+{
+  "name": "Op",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "370566c2"
+}

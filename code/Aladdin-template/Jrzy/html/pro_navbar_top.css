@@ -1,0 +1,394 @@
+
+@import url(./variables.css);
+
+
+*{
+    
+    /* background: red; */
+}
+
+
+
+/* For Mobiles */
+    *{
+        /* background: #2A3BFF; */
+    }
+    .pro_navbar_top{
+        
+        background: #FFFFFF;
+        border-bottom: var(--border-color);
+        
+        height: 60px;
+        width: 100%;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        
+        /* padding: 0 5px !important; */
+        z-index: 10;
+    }
+    .pro_navbar_top img{
+        
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        height: 30px ;
+        width: 30px ;
+        
+        
+    }
+    
+    .pro_navbar_top_ul{
+        
+        
+        /* background: #DBDBDB; */
+        display: grid;
+        grid-template-columns: 50px auto 80px auto 50px;
+        /* column-gap: 1px; */
+        
+        height: inherit;
+        width: 100%;
+        
+        
+        
+    }
+    .pro_navbar_top_li{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    /* Guidelines */    
+    .pro_navbar_top_li2,.pro_navbar_top_li4{
+        
+        /* background: red; */
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        column-gap: 6px;
+        
+        width: 100%;
+        
+        /* padding-left: 30px; */
+        /* padding: 0 20px; */
+        
+    }
+    /* .pro_navbar_top_divs_mb-first{
+        
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+    } */
+    .pro_navbar_top_divs_mb-last{
+        
+        /* margin-right: 10px; */
+        
+    }
+    
+    .pro_navbar_top_li2{
+        
+        /* justify-content: left; */
+        
+    }
+    .pro_navbar_top_li4{
+        
+        /* justify-content: right; */
+        
+    }
+    
+    .pro_navbar_top_guidelines_divs,.pro_navbar_top_div{
+        
+        /* background: var(--primary-bg); */
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px -6.5px #000000;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        min-height: 25px;
+        min-width: 25px;
+        
+    }
+    .pro_navbar_top_div_left,.pro_navbar_top_div_right{
+        
+        min-height: 40px;
+        min-width: 40px;
+        
+    }
+    
+    .pro_navbar_top_div_right{
+        
+        /* background: red; */
+        
+        padding-right: 2.5px;
+        height: 40px;
+        width: 40px;
+        
+    }
+    .pro_navbar_top_logo{
+        
+        max-height: 45px;
+        max-width: 45px;
+    }
+    .pro_navbar_top_div_left{
+        
+        background: transparent;
+    }
+    .pro_navbar_top_li3 div{
+        
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .gboard{
+        
+        /* display: none; */
+        background: #FFFFFF;
+        height: 50px;
+        /* box-shadow: 0px 2.5px 10px -7px #696969; */
+        
+        /* box-shadow:  21px 21px 42px #cccccc,
+                    -21px -21px 42px #f4f4f4; */
+                    
+        /* box-shadow: 0px 0px 100px -10px rgba(0,0,0,0.53); */
+        /* border-bottom: var(--border-color); */
+        position: fixed;
+        top: 60px;
+        left: 0;
+        
+        
+        width: 100%;
+    }
+    .gboard .pro_mb_navbar_down_ul{
+        
+        display: grid;
+        grid-template-columns: 40px auto 50px;
+        place-items: center;
+        
+        
+        height: inherit;
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        
+        padding: 0 10px;
+    }  
+    .gboard .pro_mb_navbar_down_li{
+        
+        /* background: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        
+        height: 35px;
+        width: 100%;
+    }
+    .gboard .pro_mb_navbar_down_li2{
+        
+        /* background: #A7AEFF; */
+        width: 100%;
+        display: grid;
+        /* grid-template-columns: 10px auto 10px; */
+        grid-template-columns: 0fr 4.5fr 0fr;
+        /* place-items: center; */
+        /* align-items: center; */
+        /* justify-content: left; */
+        
+    }
+    .gboard .pro_mb_navbar_down_li2_center_div{
+        
+        /* background: red; */
+        overflow-x: auto;
+        overflow-y: hidden;
+        /* background: red; */
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: row; */
+        align-items: center;
+        /* justify-content: center; */
+        column-gap: 8px;
+        /* justify-content: space-evenly; */
+        
+        height: inherit;
+        width: 100%;
+        
+        /* padding-left: 15px; */
+        /* padding: 0 20px; */
+        
+    }
+    .gboard .pro_mb_navbar_down_li2_center_div > *{
+        
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        /* background: #1F31FF; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        min-width: 30px;
+        height: 30px;
+        
+    }
+    
+    .gboard .pro_mb_navbar_down_div_last,.gboard .pro_mb_navbar_down_div_first{
+        
+        background-color: #FAFAFF;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        height: 35px;
+        width: 35px;
+        
+    }
+    .gboard .pro_mb_navbar_down_li1{
+        
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        
+    }
+    
+    .gboard .pro_mb_navbar_down_li1 > *{
+        
+        /* background: #FFFFFF; */
+        border-radius: 50%;
+        background: transparent;
+        /* box-shadow:  50px 50px 100px #a8a8a8,
+                     -50px -50px 100px #ffffff; */
+             
+/* box-shadow:  50px 50px 100px #666666,
+             -50px -50px 100px #ffffff; */
+             
+             
+        box-shadow: 0px 0px 10px -5px #000000;
+    }
+    .gboard .pro_mb_navbar_down_li3{
+        
+        border-left: var(--border-color);
+        height: 30px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .playstore{
+        
+        display: none;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px -7px #000000;
+        border-radius: 6px;
+        border: var(--border-color-sm);
+        
+        position: fixed;
+        top: 70px;
+        left: 5%;
+        
+        width: 90%;
+        height: 50px;
+        
+        
+        /* margin-inline: auto !important; */
+    }
+    .playstore .pro_mb_navbar_down_ul{
+        
+        /* background: red; */
+        display: grid;
+        grid-template-columns: 40px auto 50px;
+        place-items: center;
+        
+        width: 100%;
+        height: inherit;
+        
+        
+        padding: 0 15px;
+        
+    }
+    .playstore .pro_mb_navbar_down_li{
+        
+        height: 50px;
+        width: 100%;
+    }
+    
+    .playstore #Playstore_Search{
+        
+        font-style: italic;
+        font-weight: 450;
+        background: transparent;
+        border: none;
+        outline: none;
+        
+        height: inherit;
+        width: 100%;
+        
+    }
+    .playstore .pro_mb_navbar_down_li3_2,.playstore .pro_mb_navbar_down_li3_2 > *{
+        
+        border: none;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        flex-direction: row;
+        column-gap: 5px;
+        
+        height: 30px;
+        /* width: 100%; */
+    }
+    .playstore .pro_mb_navbar_down_ul .pro_mb_navbar_down_li1{
+        
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    
+    .playstore .pro_mb_navbar_down_ul .pro_mb_navbar_down_li1 > *{
+        
+        /* background: red; */
+        box-shadow: 0px 0px 10px -7px #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        
+        height: 30px;
+        width: 30px;
+    }
+    
+
+
