@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    
+}
+
+
+
+#pc_navbar_top{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+    /* display: grid; */
+    /* place-items: center; */
+    /* grid-template-rows: 1fr; */
+    /* grid-template-columns: repeat(10,1fr); */
+    
+    
+    background: #38FF36;
+    
+    height: 6vh;
+    width: 100%;
+    
+    position: fixed;
+    top: 0;
+    
+    margin: 0;
+    padding: 0;
+    
+    
+    
+    
+    
+}
+
+
+
+#pc_navbar_top *{
+    
+    background: #366CFF;
+    
+    height: 3vh;
+    width: 6%;
+    
+    
+    
+}
+
+
+
+#pc_navbartop_item3{
+    
+    background: #36FFC3;
+    
+    width: 20%;
+    
+    
+}

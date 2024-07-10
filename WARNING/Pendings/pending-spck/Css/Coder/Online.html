@@ -1,0 +1,46 @@
+<html>
+ <head>
+  <style>
+   div{
+    position:fixed;
+    height:60px;
+    width:100%;
+    left:0px;
+    top:-60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.5s;
+    background:#f00;
+    color:#fff;
+   }
+  </style>
+ </head>
+ <body>
+  <div></div>
+  <script>
+   const div = document.querySelector('div');
+   
+   window.onload=()=>{
+    if(!navigator.onLine){
+     div.style.top="0px";
+     div.innerHTML="you are offline";
+    }
+   }
+   
+   window.ononline=()=>{
+    div.innerHTML="back online";
+    div.style.background="#00de74";
+    setTimeout(function(){
+     div.style.top="-60px";
+    },500);
+   }
+   
+   window.onoffline=()=>{
+    div.innerHTML="you are offline";
+    div.style.background="#f00";
+    div.style.top="0px";
+   }
+  </script>
+ </body>
+</html>

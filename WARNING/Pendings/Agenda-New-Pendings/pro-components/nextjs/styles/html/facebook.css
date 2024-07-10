@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: #E1E1E1;
+    
+}
+
+.op{
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    
+    width: 90%;
+    height: 90px;
+    background: #48FF2C;
+}
+
+.center{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    
+    width: 90%;
+    height: 90px;
+    background: #48FF2C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#add_btn{
+    width: 20%;
+    height: 10vh;
+    position: absolute;
+    left: 68%;
+    top: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    
+}
+
+
+
+.add{
+    font-size: 3rem;
+    
+    
+}

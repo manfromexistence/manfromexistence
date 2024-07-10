@@ -1,0 +1,78 @@
+@mixin  respons_lg_mb{
+                @media(min-width: 800px){
+                                body{
+                                    background: #fff;
+                                    min-width: 974px;
+                                    min-height: 430px;
+                                    margin: 0;
+                                    padding: 0;
+                                    .container{
+                                       background: #FF35A8;
+                                       padding: 0;
+                                       margin: 0;
+                                       min-width: 974px;
+                                       min-height: 472px;
+                                       height: 430px;
+                                       height: 100%;
+                                       display: grid;
+                                       grid-template-columns: 1fr 1fr;
+                                       grid-template-rows: 3.3rem 1fr;
+                                       .navbar_main{
+                                           z-index: 999;
+                                           grid-column: 1/-1;
+                                           grid-row:1;
+                                           display: grid;
+                                           grid-template-columns: 274px 1fr 1fr 1fr 1fr 1fr 274px;
+                                           .brand{
+                                               position: relative;
+                                               left: 4rem;
+                                               grid-column: 1;
+                                               font-size: 30px;
+                                               width: 170px;
+                                           }
+                                           .btn{
+                                               display: none;
+                                           }
+                                           ul{
+                                               display: none;
+                                           }
+                                           .item{
+                                               display: block;
+                                               margin: 0;
+                                               padding: 0;
+                                               text-align: center;
+                                               position: relative;
+                                               top: 0.3rem;     
+                                               .ancar{
+                                                   text-decoration: none;
+                                                   position: relative;
+                                                   top: 0.5rem;
+                                               }
+                                           }
+                                           .item:hover{
+                                               background: #C267FF;
+                                               color: rgb(107,145,155);
+                                               
+                                           }
+                                       }
+                                       .header_left{
+                                           background: #FF0084;
+                                           grid-column: 1;
+                                           grid-row:2;
+                                           height: 100%;
+                                           
+                                       }
+                                       .header_right{
+                                           background: #fff;
+                                           grid-column: 2;
+                                           grid-row:2;
+                                           height: 100%;
+                                           img{
+                                               height: 100%;
+                                           }
+                                           
+                                       }
+                                    }
+                                }
+                        }
+        }

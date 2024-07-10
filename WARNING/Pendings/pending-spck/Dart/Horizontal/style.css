@@ -1,0 +1,27 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+body{
+        min-height: 100vh;
+        width: 100%;
+        background: #FFFFFF;
+        display: grid;
+        place-items: center;
+}
+.wrapper{
+        max-height: 120px;
+        display: flex;
+        overflow-x: auto;
+        width: 95%;
+}
+.wrapper .item{
+        min-width: 110px;
+        height: 110px;
+        line-height: 110px;
+        text-align: center;
+        background: #00FF93;
+        border: 1px solid #000000; 
+        
+}

@@ -1,0 +1,18 @@
+tasks:
+  - name: Django
+    command: cd django && sudo apt-get update && sudo apt-get install python3 && pip install -r requirements.txt && pip install channels
+    init: cd django && sudo apt-get update && sudo apt-get install python3 && pip install -r requirements.txt 
+
+    
+    
+  - name: Nextjs
+    command: cd nextjs && npm i 
+    # init: npm run dev
+    
+    
+    
+    
+    
+    
+    
+                                                                                                                                                                                                                    

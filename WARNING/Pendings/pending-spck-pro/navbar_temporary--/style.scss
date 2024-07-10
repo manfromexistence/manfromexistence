@@ -1,0 +1,504 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+
+
+
+ .pro_navbar_main_container.active {
+                height: 100vh;
+
+                .pro_navbar_mb_sm {
+                        .pro_navbar_mb_main-content {
+                                height: 91vh;
+
+                                .form-control {
+                                        display: block;
+                                        position: relative;
+                                        left: 5%;
+                                        width: 90%;
+                                }
+
+                                .pro_navbar_page-menu_mb {
+                                        width: 100%;
+                                        height: 8vh;
+                                        border-radius: 0;
+                                        margin-bottom: 1rem;
+                                        border-bottom: 3px solid blue;
+                                        margin-top: 0;
+                                        display: block;
+                                        display: grid;
+                                        place-items: center;
+                                        grid-template-columns: repeat(5, 1fr);
+
+                                        li {
+                                                position: relative;
+                                                align-items: center;
+                                                justify-content: center;
+                                                width: 50%;
+
+                                        }
+                                }
+
+                                .pro_navbar_toggle-menu_mb {
+                                        height: 70vh;
+                                        margin-top: 1.5rem;
+                                        margin-bottom: 3.5rem;
+                                        display: block;
+                                        box-shadow: 0 0 2rem #784D68;
+
+                                        .wrapper {
+                                                position: relative;
+                                                top: 2rem;
+                                                right: 7%;
+                                                border-radius: 30px;
+                                                border-bottom-left-radius: 0;
+                                        }
+
+                                        .wrapper::before {
+                                                content: "";
+                                                position: absolute;
+                                                top: 46px;
+                                                height: 40px;
+                                                width: 25px;
+                                                background: #8045c6;
+                                                border-bottom-left-radius: 35px;
+                                                border-top-left-radius: 35px;
+                                                z-index: 2;
+
+                                        }
+
+                                        .wrapper::after {
+                                                content: "";
+                                                position: absolute;
+                                                top: 45px;
+                                                height: 40px;
+                                                width: 25px;
+                                                background: #af43f1;
+                                                border-bottom-left-radius: 35px;
+                                                z-index: 1;
+
+                                        }
+
+                                        li {
+                                                position: relative;
+                                                border-bottom: 1px solid black;
+                                                left: 10%;
+                                                display: flex;
+                                                top: 3rem;
+                                                align-items: left;
+                                                justify-content: left;
+                                                width: 80%;
+
+                                                .pro_toggle_navbar_mb {}
+                                        }
+                                }
+
+                        .pro_navbar_sub-menu_mb {
+                                display: none;
+                        }       
+
+                        }
+                }
+        }
+
+        .pro_navbar_mb_main-content.toggle {
+                .pro_navbar_mb_main-content.toggle:first-child {
+                        display: none;
+                }
+
+        }
+
+        .pro_navbar_main_container.active:nth-child(2) {
+                border: 3px solid #FF0050;
+        }
+
+        .pro_navbar_main_container.toggle {
+                height: 15vh;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+
+        }
+
+
+        /* ********************‡**********‡       End      ****************‡**************‡
+****************************************************************‡*************‡***/
+
+        .pro_navbar_main_container {
+                height: 20vh;
+                border-bottom-left-radius: 3rem;
+                border-bottom-right-radius: 3rem;
+                background: #FFFFFF;
+                width: 100%;
+                border: 3px solid #FF00A4;
+
+                .pro_navbar_mb_sm {
+                        .pro_navbar_mb_header {
+
+                                /* border: 3px solid #9F00FF; */
+                                display: grid;
+                                grid-template-columns: 85% 1fr;
+
+                                .pro_navbar_brand_mb {
+                                        /* padding-top: 10%; */
+                                        position: relative;
+                                        top: 0.3rem;
+                                        font-size: 2.7rem;
+                                        margin: 0;
+                                        padding: 0;
+                                }
+
+                                .pro_navbar_mb_btn {
+                                        margin-top: 0.4rem;
+                                        background: #fff;
+                                        border-radius: 0.8rem;
+                                        width: 3rem;
+                                        height: 3rem;
+                                        display: grid;
+                                        place-items: center;
+                                        /* position: sticky; */
+                                        box-shadow: 0 0 2rem black;
+
+                                        .icon_menu {
+                                                font-size: 2rem;
+
+                                        }
+
+                                        .icon_close {
+                                                font-size: 2rem;
+                                                display: none;
+                                        }
+                                }
+
+                                .pro_navbar_mb_btn.active {
+                                        .icon_menu {
+                                                display: none;
+                                        }
+
+                                        .icon_close {
+                                                display: block;
+                                        }
+                                }
+                        }
+
+                        .pro_navbar_mb_main-content {
+                                height: 8vh;
+                                /* border-bottom: 3px solid red; */
+
+                                .form-control {
+                                        display: none;
+                                }
+
+                                .pro_navbar_page-menu_mb {
+                                        border-bottom-left-radius: 3rem;
+                                        border-bottom-right-radius: 3rem;
+                                        border: 3px solid yellowgreen;
+                                        height: 8vh;
+                                        width: 100%;
+                                        display: grid;
+                                        grid-template-columns: repeat(5, 1fr);
+
+                                        li {
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+
+                                                .pro_toggle_navbar_mb {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        padding: 1.3rem;
+                                                        border-radius: 45%;
+                                                        box-shadow: 0 0 2rem #784D68;
+                                                        background: rgba(255, 255, 255, 0.5);
+                                                }
+
+                                                .mb_items {
+                                                        color: black;
+                                                        display: none;
+                                                }
+
+                                                .mb_icons {
+                                                        font-size: 1.0rem;
+                                                }
+                                        }
+                                }
+
+                                .pro_navbar_toggle-menu_mb {
+                                        display: none;
+                                        position: relative;
+                                        left: 13%;
+                                        width: 77%;
+                                        margin-top: 1.2rem;
+                                        margin-bottom: 1.2rem;
+                                        border-radius: 30px;
+
+                                        .wrapper {
+                                                background: #af43f1;
+                                                width: 90%;
+                                                height: 5vh;
+                                                margin: 0;
+                                                padding: 0;
+                                        }
+
+                                        li {
+                                                display: none;
+
+                                                .pro_toggle_navbar_mb {
+                                                        display: none;
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        padding: 1.3rem;
+                                                        border-radius: 45%;
+                                                        box-shadow: 0 0 2rem #784D68;
+                                                        background: rgba(255, 255, 255, 0.5);
+
+                                                }
+
+                                                /* list-style: none; */
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+
+                                                .mb_items {
+                                                        color: black;
+                                                        display: none;
+                                                }
+
+                                                .mb_icons {
+                                                        font-size: 1.0rem;
+                                                }
+                                        }
+                                }
+
+                                .pro_navbar_sub-menu_mb {
+                                        border: 3px solid #1BFF00;
+                                        position: relative;
+                                        left: 6%;
+                                        width: 87%;
+                                        display: grid;
+                                        grid-template-columns: 1fr 1fr 200px 1fr 1fr;
+                                        border-radius: 30px;
+
+                                        li {
+                                                list-style: none;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+
+                                                .pro_toggle_navbar_mb {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        padding: 0.8rem;
+                                                        border-radius: 45%;
+                                                        box-shadow: 0 0 2rem #784D68;
+                                                        background: rgba(255, 255, 255, 0.5);
+                                                }
+
+                                                .mb_items {
+                                                        color: black;
+                                                        display: none;
+                                                }
+
+                                                .mb_icons {
+                                                        font-size: 1.0rem;
+                                                }
+                                        }
+
+                                        li:nth-child(1) {}
+
+                                        li:nth-child(2) {}
+
+                                        li:nth-child(3) {
+                                                .pro_toggle_navbar_mb {
+                                                        display: none;
+                                                }
+                                        }
+
+                                        li:nth-child(4) {}
+
+                                        li:nth-child(5) {}
+
+                                }
+
+                                .pro_navbar_page-menu_mb.toggle {
+                                        background: red;
+                                        display: none;
+                                }
+
+                                .pro_navbar_sub-menu_mb.toggle {
+                                        border: 2px solid #FF0050;
+                                        top: 0.8rem;
+                                        left: 9.5%;
+                                        width: 80%;
+                                        bottom: 1.2rem;
+                                        grid-template-columns: 1fr 1fr 50% 1fr 1fr;
+                                }
+                        }
+                }
+        }
+
+        .pro_navbar_pc_lg {
+                display: none;
+        }
+
+
+
+
+
+
+/*         <nav class="pro_navbar_main_container">
+                <!--/////////////////////////  Pc  ///////////////////////////-->
+                <div class="pro_navbar_pc_sm pro_navbar_pc_lg pro_navbar_pc_xl">
+                        <h1 class="pro_navbar_brand_pc">Thapapay</h1>
+                        <div class="pc_item"><a href="#" class="ancar">Home</a></div>
+                        <div class="pc_item"><a href="#" class="ancar">Shorts</a></div>
+                        <div class="pc_item"><a href="#" class="ancar">Subscriptions</a></div>
+                        <div class="pc_item"><a href="#" class="ancar">Notifications</a></div>
+                        <div class="pc_item"><a href="#" class="ancar">Library</a></div>
+                        <div class="pc_item"></div>
+                </div>
+                <!--/////////////////////////  End  ///////////////////////////-->
+                <!--/////////////////////////  mb  ////////////////////////////-->
+                <div class="pro_navbar_mb_sm pro_navbar_mb_lg pro_navbar_mb_lg">
+                        <div class="pro_navbar_mb_header">
+                                <h1 class="pro_navbar_brand_mb">Thapapay</h1>
+                                <span class="pro_navbar_mb_btn">
+                                        <ion-icon class="icon_menu" name="menu-outline"></ion-icon>
+                                        <ion-icon class="icon_close" name="close-outline"></ion-icon>
+                                </span>
+                        </div>
+                        <div class="pro_navbar_mb_main-content">
+                                <ul class="pro_navbar_page-menu_mb">
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="home-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Home</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="logo-tiktok" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Sorts</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="chatbubbles-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Messages</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="notifications-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Notifications</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="library-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Library</span>
+                                                </div>
+                                        </li>
+                                </ul>
+                                <input type="text/submit/hidden/button/image" name="" id="" value="" class="form-control" placeholder="Search for Joy" />
+                                <ul class="pro_navbar_toggle-menu_mb">
+                                        <div class="wrapper"></div>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="home-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Home</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="logo-tiktok" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Sorts</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="chatbubbles-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Messages</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="notifications-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Notifications</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="library-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Library</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="albums-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Time</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="ellipsis-horizontal" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Menu</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="crop" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Crop</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb">
+                                                        <ion-icon name="move" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Move</span>
+                                                </div>
+                                        </li>
+                                </ul>
+                                <ul class="pro_navbar_sub-menu_mb">
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb mb_list1">
+                                                        <ion-icon name="home-outline" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Home</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb mb_list2">
+                                                        <ion-icon name="ellipsis-horizontal" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Menu</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb mb_list3">
+                                                        <span class="color">Colors</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb mb_list4">
+                                                        <ion-icon name="crop" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Crop</span>
+                                                </div>
+                                        </li>
+                                        <li>
+                                                <div class="pro_toggle_navbar_mb mb_list5">
+                                                        <ion-icon name="move" class="mb_icons"></ion-icon>
+                                                        <span class="mb_items">Move</span>
+                                                </div>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+                <!--/////////////////////////  End  ///////////////////////////-->
+        </nav>
+ */

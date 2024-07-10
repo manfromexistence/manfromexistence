@@ -1,0 +1,145 @@
+    @mixin respons_md_mb {   
+                    @media (min-width: 360px) {
+                        body{
+                            background: #FFFFFF;
+                            max-width: 974px;
+                            min-width: 360px;
+                            height: 90vh;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        .container{
+                            height: 90vh;
+                            min-width: 475px;
+                            max-width: 974px;
+                            width: 485px;
+                            display: grid;
+                            grid-template-rows: 3rem 1fr 1fr;
+                            /*////////////////   21rem  //////////////////*/
+                            margin: 0;
+                            padding: 0;
+                            .navbar_main{
+                                margin: 0;
+                                padding: 0;
+                                display: grid;
+                                z-index: 999;
+                                /* border-bottom-left-radius: 50px; */
+                                /* border-bottom-right-radius: 50px; */
+                                grid-template-columns: 200px 1fr 1fr 1fr 45px 7px;
+                                .mb_item{
+                                    margin: 0;
+                                    padding: 0;
+                                    height: 3rem;
+                                }
+                    /* ***************‡**********‡       waste      **************‡**************‡
+                    ***********************************************************‡*************‡***/
+                                ul{
+                                    display: none;
+                                    display: grid;
+                                    min-width: 430px;
+                                    position: relative;
+                                    left: 0rem;
+                                    bottom: 2rem;
+                                    li{
+                                        display: none;
+                                        width: 460px;
+                                        text-decoration: none;
+                                        list-style: none;
+                                        input{
+                                            position: relative;
+                                            left: 0.6rem;
+                                            width: 400px;
+                                        }
+                                        .ancor_mb{
+                                            display: none;
+                                            border-radius: 30px;
+                                            position: relative;
+                                            right: 0.8rem;
+                                            top: 3rem;
+                                            text-align: center;
+                                            height: 3rem;
+                                            width: 430px;
+                                            list-style: none;
+                                            text-decoration: none;
+                                            font-weight: 600;
+                                            font-size: 1rem;
+                                            font-family: sans-serif;
+                                        }
+                                    }
+                                }
+                    /* ***************‡**********‡       End      ****************‡**************‡
+                    ***********************************************************‡*************‡***/
+                                .brand{
+                                    font-size: 1.7rem;
+                                    text-decoration: none;
+                                    position: relative;
+                                    left: 2.5rem;
+                                    top: 0.2rem;
+                                }
+                                .btn{
+                                    background: #66FFD5;
+                                    padding: 3px 2px;
+                                    height: 2.5rem;
+                                    margin-top: 0.250rem;
+                                } 
+                    /* ***************‡**********‡ Menu and x button *************‡**************‡
+                    ***********************************************************‡*************‡***/
+                               /*.btn::before{
+                                    content: "";
+                                    position: relative;
+                                    left: 20vh;
+                                    width: 24px;
+                                    height: 2px;
+                                    background: #fff;
+                                    transform: translateY(12px);
+                                    transition: 0.2s;
+                                    box-shadow: 0 10px 0 #fff; 
+                                }
+                               .btn::after{
+                                    content: "";
+                                    padding-right: 0.3px;
+                                    position: relative;
+                                    left: 20vh;
+                                    width: 24px;
+                                    height: 2px;
+                                    background: #fff;
+                                    transform: translateY(22px);
+                                    transition: 0.2s;
+                                    box-shadow: 0 10px 0 #fff; 
+                                }
+                                .btn::before:hover{
+                                    transform: translateY() rotate(45deg);
+                                    box-shadow: 0 0 0 #fff;
+                                }
+                                .btn::after:hover{
+                                    transform: translateY() rotate(-45deg);
+                                    
+                                }
+                                .btn:hover{
+                                    background: #FF4375;
+                                } */
+                    /* ***************‡**********‡       End      ‡***************‡**************‡
+                    ***********************************************************‡*************‡***/
+                                .item{
+                                    display: none;
+                                }
+                            }
+                            .header_left{
+                                background: #FF00CE;
+                                margin: 0;
+                                padding: 10px;
+                            }
+                            .header_right{
+                                background: #fff;
+                                height: 30vh;
+                                margin: 0;
+                                padding: 20px;
+                            }
+                        }
+                        img{
+                            width: 100%;
+                            height: 30vh;
+                        }
+                 
+                }
+        }

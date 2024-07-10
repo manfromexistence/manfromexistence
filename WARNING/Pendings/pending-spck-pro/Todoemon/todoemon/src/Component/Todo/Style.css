@@ -1,0 +1,124 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+        @media (min-width: 767.98px) {
+            body {
+                background: #fff ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                width: 100%;
+            }
+            .better2{
+              display: none;
+            }
+            .span{
+                 display: none ;
+            }
+            .btn1 {
+                position:relative;
+                bottom:1rem;
+                left:1rem;
+                background-color: blue  ;
+            }
+            input{
+                    background: red;
+                    width: 40%;
+                    position: relative;
+                    left: 10rem;
+            }
+            .eachItem{
+                    left: 10rem;
+            }
+            
+            
+            
+        }
+        @media (max-width: 560.98px) {
+            body {
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width:  100%;
+            }
+            .better1 {
+              position: -webkit-sticky;
+              display: none;
+            }
+            .better2{
+              width: 100%;
+            }
+            /* .form-control{
+                max-width: 30rem;
+            } */
+        }
+    body{
+      min-height: 100vh;
+    }
+    input{
+      background-color: aliceblue;
+      width: 80%;
+      position: relative;
+      left: 2.8rem;
+    }
+    .hero{
+      position:relative;
+      top:0.3rem;
+      right:4rem;
+      max-width: 4rem;
+    }
+    .btn1 {
+      background: red;
+      position: relative;
+      left: 17.9em;
+      margin-top: 1em;
+    }
+    .span {
+      position: relative;
+      right: 6em;
+      bottom: 2em;
+      height: 40px;
+      padding: 12px;
+      margin: 0px;
+    }
+    .add_plus {
+      position: relative;
+      left: 0.9rem;
+      bottom: 0.01rem;
+    }
+    .eachItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 55px;
+      width: 90%;
+      position: relative;
+      left: 1.3rem;
+    }
+    .icon1 {
+      position: relative;
+      left:2rem;
+      top:0.3rem;
+    }
+    .icon2 {
+      position:relative; 
+      left:4rem;
+      top:0.3rem;
+    }
+    .zero {
+      width: 450px;
+      background: #7782FF;
+    }
+    .better2 {
+      text-align: center;
+      font-style: italic;
+    }
+    /* Hello */
+    
+    /*# sourceMappingURL=Style.css.map */

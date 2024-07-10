@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+        div {
+            height:100%;
+            width:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <script>
+        const div = document.querySelector('div');
+        
+        window.addEventListener('deviceorientation',function(){
+            var angle = window.orientation ;
+            switch(angle){
+                case 0 : div.innerHTML="PORTRAIT";
+                break;
+                case 90 : div.innerHTML="LANDSCAPE";
+                break;
+                case -90 : div.innerHTML="LANDSCAPE";
+                break;
+            }
+        });
+        </script>
+    </body>
+</html>

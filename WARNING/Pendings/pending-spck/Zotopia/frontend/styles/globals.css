@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+a{
+    position: relative;
+    top: 10rem;
+    padding: 0.5rem;
+    background: #FF0050;
+    color: #00FFA6;
+}
+
+
+
+pre{
+    position: relative;
+    top: 5rem;
+}
+
+
+.login-h1{
+    color: #0063FF;
+    position: relative;
+    top: 6rem;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "pro-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "next":"cd ./frontend && npm install && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harry1o1/pro-components.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harry1o1/pro-components/issues"
+  },
+  "homepage": "https://github.com/harry1o1/pro-components#readme"
+}

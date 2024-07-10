@@ -1,0 +1,24 @@
+body{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height: 100vh;
+        }
+    #dropbox{
+        height:100px;
+        width:100px;
+        border:1px solid #000;
+        border-radius:10px;
+        float:left; 
+        margin:10px;
+    }
+    
+    #dragbox{
+        height:50px;
+        width:50px;
+        border:1px solid #000;
+        border-radius:10px;
+        float:left;
+        margin:10px;
+        background:#31D2B1;
+    }

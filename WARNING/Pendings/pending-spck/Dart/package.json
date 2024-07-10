@@ -1,0 +1,23 @@
+{
+  "name": "dart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harry1o1/vino.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harry1o1/vino/issues"
+  },
+  "homepage": "https://github.com/harry1o1/vino#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}

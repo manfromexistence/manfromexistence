@@ -1,0 +1,87 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+
+
+.scroll {
+    padding: 4px;
+    height: 44px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: grid;
+    /* grid-template-columns: repeat(10, 1fr); */
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 35px 8px;
+    
+}
+
+
+
+.scroll * {
+    list-style: none;
+    display: grid;
+    place-items: center;
+    min-width: 5.8rem;
+    text-align: center;
+    height: 4vh;
+    
+    
+}
+
+
+
+.scroll li a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-style: bold;
+    font-weight: 700vh;
+    color: #000000;
+
+}
+
+
+.scroll li a:focus {
+    background: red;
+
+}
+
+
+#marker {
+    background: #000;
+    height: 7px;
+    position: relative;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    grid-row: 2;
+}
+
+
+
+
+#line {
+    background: #000;
+    height: 1px;
+    width: 100%;
+
+}

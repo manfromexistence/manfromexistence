@@ -1,0 +1,2 @@
+release: python manage.py migrate
+web: gunicorn aladdin_django_server.wsgi --log-file -

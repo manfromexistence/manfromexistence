@@ -1,0 +1,208 @@
+@mixin navbar {
+
+        @media (min-width: 360px) {
+                body {
+                        background: #FFFFFF;
+                        max-width: 974px;
+                        min-width: 360px;
+                        height: 90vh;
+                        padding: 0;
+                        margin: 0;
+                }
+
+                .container {
+                        height: 90vh;
+                        min-width: 475px;
+                        max-width: 974px;
+                        width: 485px;
+                        display: grid;
+                        grid-template-rows: 3rem;
+                        /*////////////////   21rem  //////////////////*/
+                        margin: 0;
+                        padding: 0;
+                }
+
+                .container .navbar_main {
+                        margin: 0;
+                        padding: 0;
+                        display: grid;
+                        z-index: 999;
+                        /* border-bottom-left-radius: 50px; */
+                        /* border-bottom-right-radius: 50px; */
+                        grid-template-columns: 200px 1fr 1fr 1fr 45px 7px;
+                        /*  ***************‡**********‡       End      ‡***************‡**************‡
+                        /*  ********************************************************‡*************‡***/
+                }
+
+                .container .navbar_main .mb_item {
+                        margin: 0;
+                        padding: 0;
+                        height: 3rem;
+                }
+
+                .container .navbar_main ul {
+                        display: none;
+                        display: grid;
+                        min-width: 430px;
+                        position: relative;
+                        left: 0rem;
+                        bottom: 2rem;
+                }
+
+                .container .navbar_main ul li {
+                        display: none;
+                        width: 460px;
+                        text-decoration: none;
+                        list-style: none;
+                }
+
+                .container .navbar_main ul li input {
+                        position: relative;
+                        left: 0.6rem;
+                        width: 400px;
+                }
+
+                .container .navbar_main ul li .ancor_mb {
+                        display: none;
+                        border-radius: 30px;
+                        position: relative;
+                        right: 0.8rem;
+                        top: 3rem;
+                        text-align: center;
+                        height: 3rem;
+                        width: 430px;
+                        list-style: none;
+                        text-decoration: none;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        font-family: sans-serif;
+                }
+
+                .container .navbar_main .brand {
+                        font-size: 1.7rem;
+                        text-decoration: none;
+                        position: relative;
+                        left: 2.5rem;
+                        top: 0.2rem;
+                }
+
+                .container .navbar_main .btn {
+                        background: #66FFD5;
+                        padding: 3px 2px;
+                        height: 2.5rem;
+                        margin-top: 0.25rem;
+                }
+
+                .container .navbar_main .item {
+                        display: none;
+                }
+        }
+
+        @media (min-width: 800px) {
+                body {
+                        background: #fff;
+                        min-width: 974px;
+                        min-height: 430px;
+                        margin: 0;
+                        padding: 0;
+                }
+
+                body .container {
+                        background: #fff;
+                        padding: 0;
+                        margin: 0;
+                        min-width: 974px;
+                        min-height: 472px;
+                        height: 430px;
+                        height: 100%;
+                        display: grid;
+                        grid-template-columns: 1fr 1;
+                        grid-template-rows: 3.3rem 1fr;
+                        /* ***************‡**********‡       3.3rem      ****************‡**************‡
+    **************************************************************‡*************‡***/
+                }
+
+                body .container .navbar_main {
+                        z-index: 999;
+                        min-height: 3.3rem;
+                        grid-column: 1/-1;
+                        grid-row: 1;
+                        display: grid;
+                        grid-template-columns: 274px 1fr 1fr 1fr 1fr 1fr 274px;
+                }
+
+                body .container .navbar_main .brand {
+                        position: relative;
+                        left: 4rem;
+                        grid-column: 1;
+                        font-size: 30px;
+                        width: 170px;
+                }
+
+                body .container .navbar_main .btn {
+                        display: none;
+                }
+
+                body .container .navbar_main ul {
+                        display: none;
+                }
+
+                body .container .navbar_main .item {
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                        position: relative;
+                        top: 0.3rem;
+                }
+
+                body .container .navbar_main .item .ancar {
+                        text-decoration: none;
+                        position: relative;
+                        top: 0.5rem;
+                }
+
+                body .container .navbar_main .item:hover {
+                        background: #C267FF;
+                        color: #6b919b;
+                }
+        }
+
+}
+
+
+/* ***************‡**********‡      HTML     ‡****************‡**************‡
+/* ***************‡**********‡***************‡****************‡**************‡
+******************‡**********‡***************‡****************‡**************/
+/* <div class="container">
+            <div class="navbar_main bg-light navbar_light">
+                     <a href="#" class="brand">ThapaPay</a>
+                      <!--/////////////////////////  Pc  ///////////////////////////-->
+                         <div class="item alert alert-primary"><a href="#" class="ancar">Home</a></div>
+                         <div class="item alert alert-primary"><a href="#" class="ancar">Shorts</a></div>
+                         <div class="item alert alert-primary"><a href="#" class="ancar">Subscriptions</a></div>
+                         <div class="item alert alert-primary"><a href="#" class="ancar">Notifications</a></div>
+                         <div class="item alert alert-primary"><a href="#" class="ancar">Library</a></div>
+                         <div class="item alert alert-danger"></div>
+                      <!--/////////////////////////  End  ///////////////////////////-->
+                      
+                      
+                      <!--/////////////////////////  mb  ////////////////////////////-->
+                         <div class="mb_item"></div>
+                         <div class="mb_item"></div>
+                         <div class="mb_item"></div>
+                         <div class="mb_item btn" id="btn">click</div>
+                         <div class="mb_item"></div>
+                             <ul>
+                                 <li><div class="ancor_mb">Home</div></li>
+                                 <li><div class="ancor_mb">Shorts</div></li>
+                                 <li><div class="ancor_mb">Subscriptions</div></li>
+                                 <li><div class="ancor_mb">Notifications</div></li>
+                                 <li><div class="ancor_mb">Library</div></li>
+                                 <li>
+                                     <input type="text/submit/hidden/button/image" name="" id="" value="" class="form-control" placeholder="Search for Joy"/>
+                                 </li>
+                             </ul>
+                       <!--/////////////////////////  End  ///////////////////////////-->
+                </div>
+    </div>*/

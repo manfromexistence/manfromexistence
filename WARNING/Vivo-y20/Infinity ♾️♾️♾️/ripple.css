@@ -1,0 +1,89 @@
+        .ripple-web3 span {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            /* To make it round */
+
+            background-color: rgba(0, 0, 0, 0.3);
+
+
+
+            width: 100px;
+
+            height: 100px;
+
+            margin-top: -50px;
+
+            /* for positioning */
+
+            margin-left: -50px;
+
+
+
+            animation: ripple 1s;
+
+            opacity: 0;
+
+        }
+
+
+
+        /* Add animation */
+
+        @keyframes ripple {
+
+            from {
+
+                opacity: 1;
+
+                transform: scale(0);
+
+            }
+
+
+
+            to {
+
+                opacity: 0;
+
+                transform: scale(10);
+
+            }
+
+        }
+
+        /* Adding styles to button */
+
+        .btn {
+
+            padding: 12px 50px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            background-color: #1abc9c;
+
+            color: #fff;
+
+            font-size: 18px;
+
+            outline: none;
+
+            cursor: pointer;
+
+
+
+            /* We need this to position 
+
+                span inside button */
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
+
+        }

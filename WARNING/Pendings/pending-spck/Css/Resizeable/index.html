@@ -1,0 +1,81 @@
+<html>
+ <head>
+  <style>
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  body{
+      width: 465px;
+      display: grid;
+      place-items: center;
+  }
+   #box{
+    position:relative;
+    height:15%;
+    width:50%;
+    background:#000;
+    border-radius:10px
+   }
+   #box2{
+   position:relative;
+   bottom: 30vh;
+   height:15%;
+   width:50%;
+   background:#000;
+   border-radius:10px
+   }
+   #handler{
+    position:absolute;
+    height:50px;
+    width:50px;
+    border:1px solid #000;
+    background:#fff;
+    border-radius:50%;
+    right:-25px;
+    bottom:-25px;
+   }
+  </style>
+ </head>
+ <body>
+  
+<div id="box">
+     <div id="handler"ontouchstart="ts(event)"ontouchmove="tm(event)">
+     </div>
+</div>
+<div id="box2">
+     <div id="handler"ontouchstart="ts(event)"ontouchmove="tm(event)">
+     </div>
+</div>
+
+  <script>
+   const box = document.querySelector('#box');
+   const box2 = document.querySelector('#box2');
+   
+   var x , y , h , w ;
+   
+   function ts(e){
+    x = e.touches[0].clientX;
+    y = e.touches[0].clientY;
+    
+    h = box.clientHeight;
+    w = box.clientWidth;
+   }
+   
+   function tm(e){
+    mx = e.touches[0].clientX;
+    my = e.touches[0].clientY;
+    
+    cx = mx - x ;
+    cy = my - y ;
+    
+    box.style.width=cx+w;
+    box.style.height=cy+h;
+    box2.style.width=cx+w;
+    box2.style.height=cy+h;
+    
+   }
+  </script>
+ </body>
+</html>

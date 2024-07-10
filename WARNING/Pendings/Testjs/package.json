@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.4.5"
+  },
+  "name": "testjs",
+  "description": "Op",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --watchAll --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harry1o1/Testjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harry1o1/Testjs/issues"
+  },
+  "homepage": "https://github.com/Harry1o1/Testjs#readme"
+}

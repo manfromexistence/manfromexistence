@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+<style>
+    .container {
+        overflow: hidden;
+        display: flex;
+        height: 500px;
+        width: 1500px;
+        margin: 0 auto;
+    }
+    
+    .container div {
+        height: 400px;
+        min-width: 300px;
+        margin-left: 100px;
+    }
+    
+    .pink {
+        background-color: pink;
+    }
+    
+    .blue {
+        background-color: blue;
+    }
+    
+    .yellow {
+        background-color: yellow;
+    }
+    
+    .orange {
+        background-color: orange;
+    }
+    
+    .purple {
+        background-color: purple;
+    }
+    
+    .aqua {
+        background-color: aqua;
+    }
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1500px, 0, 0); /* The image width */
+  }
+}
+
+.container div {
+  height: 400px;
+  min-width: 300px;
+  margin-left: 100px;
+  animation: slide 15s linear infinite;
+}
+
+</style>    
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="pink"></div>
+  <div class="blue"></div>
+  <div class="yellow"></div>
+  <div class="orange"></div>
+  <div class="purple"></div>
+  <div class="aqua"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

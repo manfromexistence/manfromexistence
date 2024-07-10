@@ -1,0 +1,35 @@
+<html>
+
+<head>
+        <style>
+                div {
+                        height: 100px;
+                        width: 100px;
+                        border-radius: 20px;
+                        background: #00de74;
+                        transition: .5s;
+                }
+        </style>
+</head>
+
+<body>
+        <div ontouchstart="touchstart(event,this)" ontouchend="touchend()"></div>
+        <script>
+                var i = 0;
+
+                function touchstart(evt, element) {
+                        i = 1;
+                        setTimeout(function() {
+                                if (i == 1) {
+                                        element.style.background = "#000";
+                                } else if (i == 0) {}
+                        }, 1000);
+                }
+
+                function touchend() {
+                        i = 0;
+                }
+        </script>
+</body>
+
+</html>

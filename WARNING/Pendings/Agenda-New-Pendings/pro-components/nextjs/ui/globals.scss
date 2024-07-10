@@ -1,0 +1,160 @@
+@import "./components/navbar1";
+@include navbar1;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+
+
+
+
+
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 360px) and (max-width: 700px) {
+
+    #navbar1 {
+        background: #FFFFFF;
+    }
+    .sidebar-sm{
+        background: #FFFFFF;
+        
+    }
+
+    #navbar2 {
+        display: none;
+        /* display: block; */
+        
+    }
+
+    body {
+        padding-top: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    * {
+        /* background: red; */
+    }
+
+}
+
+
+
+
+
+
+
+@media (min-width: 700px) and (max-width: 950px) {
+    .sidebar-sm,#circle,#banners{
+        display: none;
+    }
+    #navbar2{
+        display: block;
+    }
+    #navnar1{
+        display: none;
+    }
+    .pro_navbar_main_container{
+        display: none;
+    }
+    body{
+        padding-top: 5rem;
+        margin: 0;
+        background: #FFFFFF;
+    }
+    
+}
+
+
+@media (min-width: 960px) {
+    .sidebar-sm,#circle,#banners{
+        display: none;
+    }
+    #navbar2{
+        display: block;
+    }
+    #navnar1{
+        display: none;
+    }
+    .pro_navbar_main_container{
+        display: none;
+    }
+    body{
+        padding-top: 5rem;
+        margin: 0;
+        background: #FFFFFF;
+    }
+    .d-flex{
+        background: red;
+        position: relative;
+        left: 20rem;
+    }
+
+}
+
+
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FFFFFF;
+    /* height: 5rem; */
+}
+
+
+.sticky+#hero {
+    padding-top: 4rem;
+}
+
+#hero {
+    margin-top: 0.2rem;
+    min-height: 95vh;
+}
+
+.sidebar-sm {
+    background: #FFFFFF;
+}
+
+
+
+#menu{
+    height: 2rem;
+    width: 2rem;
+}
+/*  Sorry😈👿🤠 for now but update it later✅✅✅*/
+
+.width{
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+
+
+
+

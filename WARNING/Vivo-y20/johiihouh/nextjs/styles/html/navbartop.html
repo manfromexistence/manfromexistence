@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navbar Too</title>
+    <style type="text/css" media="all">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #pc_navbar_top {
+
+            background: #FF0073;
+
+            height: auto;
+            width: 100%;
+
+            /* display: flex; */
+            /* align-items: center; */
+            /* justify-content: space-around; */
+            
+            
+            display: grid;
+            place-items: center;
+            
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 300px;
+        }
+
+        .pc_navbartop_items {
+            
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            /* background: #00FF13; */
+            
+            
+            min-height: 3vh;
+            /* min-width: 30%; */
+            
+            
+        }
+
+        .op1 {
+
+            background: #8C20FF;
+
+            height: 5vh;
+            width: 90%;
+        }
+        .pc-navbartop-icons{
+            
+            background: #595A42;
+            
+            font-size: 5rem;
+            
+            /* width: 5rem; */
+            
+            
+        }
+        
+        /* #navbar-top-form{
+            
+            width: 300px;
+            flex-basis: 600px;
+        } */
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+    <center>
+        <nav id="pc_navbar_top">
+            <div class="pc_navbartop_items" id="pc_navbartop_item1">
+
+
+                <!-- Menu icon  will update soon...-->
+                <ion-icon name="menu-outline" class="pc-navbartop-icons" id="menu-icon" class="pc-navbartop-icons"></ion-icon>
+
+            </div>
+            <div class="pc_navbartop_items" id="pc_navbartop_item2">
+
+
+                <!-- Logo + Global-area or something  -->
+                <h1 id="pc-navbartop-brand">1thing</h1>
+
+            </div>
+            <div class="pc_navbartop_items" id="pc_navbartop_item3">
+
+
+                <!-- Searchbar from boostrap -->
+                <form id="navbar-top-form">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchbar" />
+                    <!-- <ion-icon name="search-outline" class="pc-navbartop-icons" id="search-icon"></ion-icon> -->
+
+                </form>
+            </div>
+            <div class="pc_navbartop_items" id="pc_navbartop_item4">
+
+                <!-- Voicesearch -->
+                <ion-icon name="mic-outline" class="pc-navbartop-icons" id="voicesearch-icon"></ion-icon>
+
+                <!-- Rocket -->
+                <ion-icon name="rocket-outline" class="pc-navbartop-icons" id="rocket-icon"></ion-icon>
+
+                <!-- All apps -->
+                <ion-icon name="apps-outline" class="pc-navbartop-icons" id="allapps-icon"></ion-icon>
+
+
+                <!-- Dropdown -->
+                <ion-icon name="caret-down-outline" class="pc-navbartop-icons" id="dropdown-icon"></ion-icon>
+
+
+
+                <!-- Profile -->
+                <ion-icon name="person-circle-outline" class="pc-navbartop-icons" id="profile-icon"></ion-icon>
+
+                <!-- Notifications -->
+                <ion-icon name="notifications-outline" class="pc-navbartop-icons" id="notifications-icon"></ion-icon>
+
+
+            </div>
+
+            </div>
+            <div class="pc_navbartop_items" id="pc_navbartop_item5">
+
+
+            </div>
+            <!-- <div class="pc_navbartop_items" id="pc_navbartop_item10">
+                
+            </div> -->
+        </nav>
+        <div class="op1"></div>
+    </center>
+
+
+
+
+
+
+    <!-- Tools -->
+    <!--  <div id="pc_navbartop_tools"> -->
+
+
+
+
+
+
+
+
+
+    <!--Icons-->    
+    <script type="module" 1 src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

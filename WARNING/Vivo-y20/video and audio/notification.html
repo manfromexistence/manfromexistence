@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notifications</title>
+</head>
+
+<body>
+
+
+
+
+    <button onclick="notifyMe()">Notify me!</button>
+
+<button id="enable">Enable notifications</button>
+
+<script>
+    Notification.requestPermission().then(function(result) {
+  console.log(result);
+  alert(result);
+  var img = '/to-do-notifications/img/icon-128.png';
+var text = 'HEY! Your task "' + title + '" is now overdue.';
+var notification = new Notification('To do list', { body: text, icon: img });
+
+
+
+
+function askNotificationPermission() {
+  // function to actually ask the permissions
+  function handlePermission(permission) {
+    // set the button to shown or hidden, depending on what the user answers
+    if(Notification.permission === 'denied' || Notification.permission === 'default') {
+      notificationBtn.style.display = 'block';
+    } else {
+      notificationBtn.style.display = 'none';
+    }
+  }
+
+  // Let's check if the browser supports notifications
+  if (!('Notification' in window)) {
+    console.log("This browser does not support notifications.");
+  } else {
+    if(checkNotificationPromise()) {
+      Notification.requestPermission()
+      .then((permission) => {
+        handlePermission(permission);
+      })
+    } else {
+      Notification.requestPermission(function(permission) {
+        handlePermission(permission);
+      });
+    }
+  }
+}
+
+
+var img = '/to-do-notifications/img/icon-128.png';
+var text = 'HEY! Your task "' + title + '" is now overdue.';
+var notification = new Notification('To do list', { body: text, icon: img });
+
+
+
+
+var n = new Notification('My Great Song');
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'visible') {
+    // The tab has become visible so clear the now-stale Notification.
+    n.close();
+  }
+});
+
+
+
+
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+    <script>
+        function notifyMe() {
+            // Let's check if the browser supports notifications
+            if (!("Notification" in window)) {
+                alert("This browser does not support desktop notification");
+            }
+
+            // Let's check whether notification permissions have already been granted
+            else if (Notification.permission === "granted") {
+                // If it's okay let's create a notification
+                var notification = new Notification("Hi there!");
+            }
+
+            // Otherwise, we need to ask the user for permission
+            else if (Notification.permission !== "denied") {
+                Notification.requestPermission().then(function(permission) {
+                    // If the user accepts, let's create a notification
+                    if (permission === "granted") {
+                        var notification = new Notification("Hi there!");
+                    }
+                });
+            }
+
+            // At last, if the user has denied notifications, and you
+            // want to be respectful there is no need to bother them any more.
+        }
+    </script>

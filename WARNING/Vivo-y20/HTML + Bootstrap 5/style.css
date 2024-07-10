@@ -1,0 +1,41 @@
+body{
+    
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    min-height: 100vh;
+    width: 100%;
+     
+}
+
+
+
+
+
+#op{
+    position: relative;
+    bottom: 30vh;
+}
+
+
+#op:hover{
+    
+    background: #64FF58;
+}
+
+
+
+#op1{
+    
+    background: #FF586F;
+    
+    min-height: 10vh;
+    width: 30%;
+    
+    
+    position: relative;
+    bottom: 44vh;    
+}

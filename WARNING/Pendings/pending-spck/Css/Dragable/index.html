@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <style>
+    body{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        }
+    #dropbox{
+        height:200px;
+        width:200px;
+        border:1px solid #000;
+        border-radius:10px;
+        float:left; re
+        margin:10px;
+    }
+    
+    #dragbox{
+        height:50px;
+        width:50px;
+        border:1px solid #000;
+        border-radius:10px;
+        float:left;
+        margin:10px;
+        background:#31D2B1;
+    }
+    </style>
+  </head>
+  <body ontouchstart="dragStart(event)"
+  ontouchmove="drag(event)"
+  ontouchend="drop(event)">
+  <div>
+  <div id="dropbox"></div>
+  <div id="dragbox" draggable="true"></div>
+  </div>
+  <script>
+  var dropbox = document.querySelector('#dropbox');
+  
+  
+      
+  var drg , drgT , drgL , drgB , drgR ;
+  
+  var el , avail ;
+
+  function dragStart(evt){
+      el = evt.target ;
+      if(el.getAttribute('draggable') == 'true'){
+          avail = 'available';
+      } else {
+          avail = '';
+      }
+  }
+  
+  function drag(evt){
+      if(avail == 'available'){
+          el.style.position="absolute";
+          el.style.left=evt.touches[0].clientX-el.clientWidth/2;
+           el.style.top=evt.touches[0].clientY-el.clientHeight/2;
+           
+           drg = el.getBoundingClientRect();
+           drgT = drg.top ;
+           drgB = drg.bottom ;
+           drgL = drg.left ;
+           drgR = drg.right ;
+      } else {}
+      evt.preventDefault();
+  }
+  
+  function drop(){
+      
+      // update on drop
+
+      var drp = dropbox.getBoundingClientRect();
+  
+  var drpT = drp.top ,
+      drpL = drp.left ,
+      drpB = drp.bottom ,
+      drpR = drp.right ;
+
+
+      if(avail == 'available'){
+          if(drpT < drgT &&
+             drpL < drgL &&
+             drpB > drgB &&
+             drpR > drgR){
+                 dropbox.appendChild(el);
+               
+                 el.style.position='';
+                 el.style.background='red';
+
+                 el.setAttribute('draggable','true');
+             }
+      } else {}
+      
+  }
+  </script>
+  </body>
+  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

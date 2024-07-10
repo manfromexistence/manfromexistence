@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.bannar {
+    background: linear-gradient(30deg, rgba(18, 82, 223, 1) 0%, rgba(109, 2, 219, 1) 97%);
+    height: 400px;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+
+}
+
+.navbar {
+    background: linear-gradient(30deg, rgba(18, 82, 223, 1) 0%, rgba(109, 2, 219, 1) 97%) !important;
+}
+
+.bannar h1 {
+    color: white;
+    font-weight: bold;
+    transform: translateY(90px)
+}
+
+.about {
+    margin-top: 40px;
+    height: 400px;
+}
+
+.services {
+    /* background-color: #4527A0; */
+    background: linear-gradient(30deg, rgba(18, 82, 223, 1) 0%, rgba(109, 2, 219, 1) 97%);
+
+    color: white;
+
+}
+
+.card .material-icons {
+    font-size: 50px;
+
+}
+
+.card {
+    border: none !important;
+    background-color: transparent;
+    background: linear-gradient(30deg, rgba(18, 82, 223, 1) 0%, rgba(109, 2, 219, 1) 97%);
+
+}
+
+.contact-me {
+    height: 300px;
+    display: flex;
+    width: 100%;
+    /* margin: 10px 20px; */
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: white;
+    margin: 10px;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.instgram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    margin: 10px;
+}
+
+.facebook {
+    margin: 10px;
+}
+
+.codepen {
+    color: white;
+    background: #333;
+    margin: 10px;
+}
+
+footer {
+    border-top: 1px solid black;
+
+    height: 30px;
+    margin-bottom: 0px;
+
+}
+
+
+
+
+
+.row {
+    display: grid;
+    place-items: center;
+}
+
+.footer {
+    background: linear-gradient(30deg, rgba(88, 82, 198, 1) 0%, rgba(109, 2, 219, 1) 97%);
+}

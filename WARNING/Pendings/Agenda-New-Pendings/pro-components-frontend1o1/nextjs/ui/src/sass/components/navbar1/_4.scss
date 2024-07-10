@@ -1,0 +1,13 @@
+@mixin navbar1-4 {
+    @media (min-width: 900px) and (max-width: 1500px) {
+        .pro_navbar_main_container {
+            display: none;
+        }
+    }
+
+    #nav2 {
+        display: block;
+    }
+
+
+}

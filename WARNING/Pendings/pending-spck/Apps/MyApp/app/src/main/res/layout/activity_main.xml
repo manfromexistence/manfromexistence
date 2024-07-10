@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="bottom"
+	android:layout_gravity="bottom"
+	android:orientation="vertical"
+	android:background="#FFEFFAFF">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="600dp"
+		android:layout_marginBottom="140dp"
+		android:gravity="bottom|center_horizontal">
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="550dp"
+			android:id="@+id/frameLayout"/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Fragment1"
+				android:id="@+id/bs1"
+				android:elevation="100dp"
+				android:ellipsize="marquee"
+				android:radius="500dp"
+				android:background="#FF0093FF"
+				android:textColor="#FFFFFFFF"
+				android:shadowRadius="10.0"/>
+
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="fragment2"
+				android:layout_marginLeft="100dp"
+				android:id="@+id/bs2"
+				android:background="#FF96FFDF"
+				android:elevation="1000dp"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:layout_marginBottom="50dp">
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/btn1"
+			android:text="activity1"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="activity2"
+			android:id="@+id/btn2"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="activity3"
+			android:id="@+id/btn3"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="activity4"
+			android:id="@+id/btn4"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="activity5"
+			android:id="@+id/btn5"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

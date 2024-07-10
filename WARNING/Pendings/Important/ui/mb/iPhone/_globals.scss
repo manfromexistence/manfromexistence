@@ -1,0 +1,130 @@
+/* @use "../../src/sass" as *; */
+
+
+
+@mixin iPhone-globals {
+    @media (min-width: 360px) and (max-width: 490px) {
+        body {
+            background: red;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* only for development🙄🙄🙄 */
+            /* border: 1.5px solid #30FFA7; */
+
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+
+        }
+
+
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: blue;
+            font-weight: 700;
+            font-size: 3rem;
+        }
+
+
+
+        img {
+            width: 95%;
+            height: 40vh;
+            position: relative;
+            left: 10%;
+
+        }
+
+
+
+        video {
+            width: 95%;
+            height: 50vh;
+            margin-inline: auto;
+
+
+        }
+
+        /* 🎉🎉🎉We will be back🎉🎉🎉 */
+        header {
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            background: #D7DBFF;
+            height: 100vh;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+
+            #pro-header-maincontent {
+                height: 85.8vh;
+                background: #64FFC9;
+                width: 100%;
+                display: grid;
+                place-items: center;
+
+                h1 {
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        nav {
+            min-height: 15.7vh;
+            width: 100%;
+            background: red;
+
+        }
+
+
+        #hero * {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            border: 1px solid #000000;
+            /* Typography */
+            text-align: center;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 4rem;
+            z-index: 2;
+
+        }
+
+
+        footer {
+            height: 68vh;
+            background: #0015FF;
+            width: 100%;
+        }
+
+        /* Testing */
+
+        .zero {
+            height: 40vh;
+            width: 90%;
+            background: #02FFBA;
+            margin-inline: auto;
+        }
+        
+        
+        
+        
+        
+    }
+}

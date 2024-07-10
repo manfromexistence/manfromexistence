@@ -1,0 +1,25 @@
+@use "./colors"as *;
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+        background: $red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+}
+
+h1 {
+        color: #00FF93;
+        font-family: 'Fruktur', cursive;
+        
+}
