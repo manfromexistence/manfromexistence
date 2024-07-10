@@ -2,21 +2,21 @@
 
 echo "All, repos are being cloned..."
 
-mkdir WARNING && cd WARNING
+mkdir WARNING &&  cd WARNING
 
 repo=(
-  "snippets-mate",
-  "testing",
-  "dx-beta",
-  "dx-new-experiment",
-  "dx-new",
-  "dx-experiment",
-  "dx-latest",
-  "dx-depricated",
-  "Vivo-y20",
-  "Pro-Component",
-  "Test",
-  "Pendings",
+  "snippets-mate"
+  "testing"
+  # "dx-beta"
+  # "dx-new-experiment"
+  # "dx-new"
+  # "dx-experiment"
+  # "dx-latest"
+  # "dx-depricated"
+  "Vivo-y20"
+  "Pro-Component"
+  "Test"
+  "Pendings"
 
 
 
@@ -33,19 +33,19 @@ repo=(
 
 
 
-  # "dx",
-  # "snippets-mate",
-  # "testing",
-  # "dx-new-experiment",
-  # "dx-new",
-  # "dx-experiment",
-  # "dx-latest",
-  # "Vivo-y20",
-  # "Pro-Component",
-  # "Test",
-  # "Pendings",
-  # "dx-beta",
-  # "dx-depricated",
+  # "dx"
+  # "snippets-mate"
+  # "testing"
+  # "dx-new-experiment"
+  # "dx-new"
+  # "dx-experiment"
+  # "dx-latest"
+  # "Vivo-y20"
+  # "Pro-Component"
+  # "Test"
+  # "Pendings"
+  # "dx-beta"
+  # "dx-depricated"
 
 
 
@@ -203,4 +203,4 @@ do
     git clone https://github.com/manfromexistence/$n.git && cd $n && rm -rf .git && cd ..
 done
 
-# git add . && git commit -m "feat: automatically cloned all github repo's of my means manofexistene's github account" && git push
+git add . && git commit -m "feat: automatically cloned all github repo's of my means manofexistene's github account" && git push
