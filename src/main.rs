@@ -37,7 +37,24 @@ fn delete_repository(repo_name: &str) -> bool {
 fn main() {
     // Replace with your repository names
     let repos_to_delete = vec![
-        
+        "snap-project",
+        "llama3",
+        "Solana-cli",
+        "Aladdin-Template-1o1",
+        "Moralis-boilerplate",
+        "Aladdin-Template1o1",
+        "Nft-collections",
+        "must-be-polygon",
+        "Ninja",
+        "mint-polygon",
+        "Mint",
+        "Metaplex-candy",
+        "Solana",
+        "Pancake",
+        "Demo1o1",
+        "with-redux",
+        "Demo",
+        "React_Social_Login-Template",
     ];
 
     for repo in repos_to_delete {
