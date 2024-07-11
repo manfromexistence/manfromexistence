@@ -1,1 +1,0 @@
-All the codes that don't require in main are gathered here.
