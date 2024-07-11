@@ -9,6 +9,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "youtube-playlist": "^1.0.4",
+    "youtube-playlist-download": "^1.0.0",
     "ytdl-core": "^4.11.5",
     "ytpl": "^2.3.0"
   }
