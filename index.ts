@@ -20,16 +20,16 @@ ytdl('https://www.youtube.com/watch?v=KqMg-euhyls&t=2443s')
 //    */
 // });
 
-var PLD = require('youtube-playlist-download');
+// var PLD = require('youtube-playlist-download');
 
 
-//usage node dl.js [playlist_id]
-//e.g.  node dl.js PL8BFA7E713C650560
-var output_dir    = "dl",
-     playlist_id  = process.argv[2];
-var pld       = new PLD("PL8BFA7E713C650560", output_dir);
+// //usage node dl.js [playlist_id]
+// //e.g.  node dl.js PL8BFA7E713C650560
+// var output_dir    = "dl",
+//      playlist_id  = process.argv[2];
+// var pld       = new PLD("PL8BFA7E713C650560", output_dir);
 
 
-pld.download(function(){
-  console.log("All done, have a great day !");
-});
+// pld.download(function(){
+//   console.log("All done, have a great day !");
+// });
