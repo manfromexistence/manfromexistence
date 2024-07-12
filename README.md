@@ -17,3 +17,7 @@ This project was created using `bun init` in bun v1.1.18. [Bun](https://bun.sh) 
 
 
 bash yt-dlp.sh "https://www.youtube.com/watch?v=188PrFLan_A&list=PL5rwmnIfA-Ijoufw-LD2eYBgzNRURq75a" --yes-playlist && cd .. && git add . && git commit -m "playlist downloaded" && git push
+
+```
+git config lfs.https://github.com/manfromexistence-better/better.git/info/lfs.locksverify false
+```

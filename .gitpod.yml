@@ -1,7 +1,7 @@
 tasks:
   - name: git
     before: |
-      echo "Hello Programmer, thanks for using better." && pip install pytube && pip install --upgrade pip
+      echo "Hello Programmer, thanks for using better." && pip install pytube && pip install --upgrade pip && git config lfs.https://github.com/manfromexistence-better/better.git/info/lfs.locksverify false
     command: |
       git status
   # - name: rust
