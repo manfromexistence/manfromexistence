@@ -2,8 +2,6 @@ tasks:
   - name: git
     before: |
       echo "Hello Sumon, how are you."
-    init: |
-      git pull
     command: |
       git status
   # - name: rust
