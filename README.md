@@ -1,5 +1,5 @@
-# manfromexistence
-This is a branch to put all of past confusion and it will help me just say the things I can learn from past and then let all past regrets and move on!
+# manfromexistence(PAST)
+“This is a branch to put all of your past confusions. After that, you will study your past and then you will figure out the things that you can learn from your past. Finally, you will let go of all the past regrets and move on!” 🌟
 
 ```
 bash yt-dlp.sh "https://www.youtube.com/watch?v=188PrFLan_A&list=PL5rwmnIfA-Ijoufw-LD2eYBgzNRURq75a" --yes-playlist && cd .. && git add . && git commit -m "playlist downloaded" && git push
