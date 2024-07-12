@@ -12,3 +12,10 @@ tasks:
   #     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && . "$HOME/.cargo/env"
   #   command: |
   #     rustc --version && cargo --version
+  # - name: c++
+  #   before: |
+  #     cd rust
+  #   init: |
+  #     gcc main.cpp -o main
+  #   command: |
+  #     echo "C++"
