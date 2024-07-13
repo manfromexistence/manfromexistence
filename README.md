@@ -1,8 +1,166 @@
+# manfromexistence 👋
+
 <div align="center">
-	<br>
-		<img src="good-times.svg" width="400px">
-	<br>
+<img hight="300" width="100%" alt="GIF" align="center" src="./assets/208593.gif">
 </div>
+</br>
+
+<!-- <div align="center">
+<img src="https://github.com/innng/innng/assets/26755058/5e0ce0fb-c544-4f8c-a307-5849165746d0" width="20%" align="right" />
+<img src="https://readme-typing-svg.demolab.com?font=Inconsolata&weight=500&size=50&duration=4000&pause=300&color=A7A459&center=true&vCenter=true&multiline=true&repeat=false&random=false&width=1300&height=140&lines=Hello+hello;I'm+Ing%2C+a+tech+goblin+and+magical+girl+wannabe+%E2%9C%A9" width="75%" />
+<br><br>
+<pre width="20%">
+    💼 BSC @ UFMG • Back-end dev • Platform Engineer
+    💻 System programming languages • DevOps 
+    📖 Software architecture • Distributed systems
+    🎮 Music • Games • Anime • Code • Art
+    🐾 Muffin 🐰 • Cake & Cookie & Pudim & Quindim 🐤🐥
+</pre>
+<br><br>
+<img src="https://raw.githubusercontent.com/innng/innng/master/assets/kyubey.gif" height="40" />
+<br><br><br>
+    
+[![](https://img.shields.io/badge/linkedin-0a66c2)](http://linkedin.com/in/ingridrosselis)
+[![](https://img.shields.io/badge/mastodon-6364ff)](https://tech.lgbt/@innng)
+[![](https://img.shields.io/badge/osu!-ff66ab)](https://osu.ppy.sh/users/4606212)
+[![](https://img.shields.io/badge/enka.network-69899c)](https://enka.network/u/Inng/1A4HU1/10000069/1985924/)
+</div> -->
+
+<div align="center">
+<!-- <img src="https://github.com/innng/innng/assets/26755058/5e0ce0fb-c544-4f8c-a307-5849165746d0" width="5%" align="right" /> -->
+<img src="https://readme-typing-svg.demolab.com?font=Inconsolata&weight=500&size=50&duration=4000&pause=300&color=A7A459&center=true&vCenter=true&multiline=true&repeat=false&random=false&width=1300&height=140&lines=Hello+there!;Its+manfromexistence%2C+a+problem+solver+%E2%9C%A9" width="70%" />
+
+<pre>
+    💼 No job @ POOR • Full-stack dev • All Platforms Engineer
+    💻 Ai • Blockchain 
+    📖 Currently doing my own projects
+    🎮 Music • Games • Anime • Code • Art
+    🐾 Love all animals 🐰 • Love Cake 🐤🐥
+</pre>
+
+<img src="./assets/kyubey.gif" height="50" />
+</div>
+
+# More about me 💬
+
+### - I'm 18 years old Self-Taught Programmer plus Machine Learning & Artificial Intelligence Enthusiast from Bangladesh.
+
+<img hight="400" width="500" alt="GIF" align="right" src="./assets/1936.gif">
+
+### - Learning :
+- ✨ Data Structures & Algorithms
+- ✨ Generative Adversarial Networks
+
+### - Hobbies : 
+- ✨ Gaming Addict
+- ✨ Watching Anime
+- ✨ Reading Light Novels
+- ✨ Badminton (Neighbourhood Professional XD)
+
+</br>
+
+---
+
+<h3 align="left">Latest YouTube Videos</h3>
+
+<!-- YOUTUBE:START -->
+- [Coping With Autism Comorbidities &lpar;Anxiety and Feeding &amp; Sleeping Disorders&rpar;](https://www.youtube.com/watch?v=4obovzV_nEk)
+- [Scrintal Course 5 | PowerUsage Features](https://www.youtube.com/watch?v=A_B5JU-lcSE)
+- [Scrintal Course 4 | Collaboration &amp; Teams](https://www.youtube.com/watch?v=V-7Aeb6CDBs)
+- [Scrintal Course 3 | Research Workflow](https://www.youtube.com/watch?v=lG6f184P9B4)
+- [Exploring the AI features in Document360](https://www.youtube.com/watch?v=4-uhOBb_ies)
+<!-- YOUTUBE:END -->
+
+<h3 align="left">Latest Medium Articles</h3>
+
+
+<!-- ARTICLES:START -->
+- [Manage Your Entire R Code Base With TODOr](https://towardsdatascience.com/manage-your-entire-r-code-base-with-todor-76dcd7abad9?source=rss-32e452bd16bd------2)
+- [How I Put My Mind Under Version Control](https://medium.com/analytics-vidhya/how-i-put-my-mind-under-version-control-24caea37b8a5?source=rss-32e452bd16bd------2)
+- [The Patchwork Package In R](https://medium.com/analytics-vidhya/the-patchwork-package-in-r-9468e4a7cd29?source=rss-32e452bd16bd------2)
+<!-- ARTICLES:END -->
+
+<h3 align="left">Blog</h3>
+
+<!-- BLOG-POST-LIST:START -->
+- [Y-Combinator en PHP](https://blog.darkwood.com/article/y-combinator-en-php)
+- [Changer de gestionnaire de mot de passe](https://blog.darkwood.com/article/changer-de-gestionnaire-de-mot-de-passe)
+- [NoCode avec le projet Capsule Corp](https://blog.darkwood.com/article/nocode-avec-le-projet-capsule-corp)
+- [Utiliser VSCode à distance](https://blog.darkwood.com/article/utiliser-vscode-a-distance)
+- [Crypto Tracker](https://blog.darkwood.com/article/crypto-tracker)
+<!-- BLOG-POST-LIST:END -->
+
+<h3 align="left">Latest Activity</h3>
+
+<!--START_SECTION:activity-->
+1. 🔒 Closed issue [#8](https://github.com/tallguyjenks/CV/issues/8) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
+2. 🔒 Closed issue [#7](https://github.com/tallguyjenks/CV/issues/7) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
+3. ❗ Opened issue [#1](https://github.com/CoveredCA/common-devops/issues/1) in [CoveredCA/common-devops](https://github.com/CoveredCA/common-devops)
+4. 🗣 Commented on [#7](https://github.com/tallguyjenks/CV/issues/7#issuecomment-2209712016) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
+5. 🗣 Commented on [#113](https://github.com/plankanban/planka/issues/113#issuecomment-1879172495) in [plankanban/planka](https://github.com/plankanban/planka)
+<!--END_SECTION:activity-->
+
+</br>
+
+# Languages & Tools 👨‍💻
+<p align="center">
+
+<!-- For more icons please follow  https://github.com/MikeCodesDotNET/ColoredBadges -->
+<img src="./assets/icons/python.png" alt="python" width="120" hight="50">
+<img src="./assets/icons/java.png" alt="java"  width="100" hight="50">
+<img src="./assets/icons/ai.png" alt="AI" width="90" hight="50">
+<img src="./assets/icons/bash.png" alt="bash" width="100" hight="50">
+<img src="./assets/icons/datascience.png" alt="datascience" width="180" hight="50">
+</br>
+<img src="./assets/icons/google_cloud_platform.png" alt="google_cloud_platform" width="270" hight="50">
+<img src="./assets/icons/visualstudio_code.png" alt="visualstudio_code" width="240" hight="50">
+</br>
+<img src="./assets/icons/pc.png" alt="pc" width="100" hight="50">
+<img src="./assets/icons/edge.png" alt="edge" width="100" hight="50">
+<img src="./assets/icons/playstation@3x.png" alt="playstation" width="150" hight="50">
+</p>
+
+
+# Wanna hang up with me?
+
+<p>
+<img hight="320" width="450" align="right" alt="GIF" src="./assets/93195.gif">
+
+
+If you want to reach out to me about anything, be it some doubt or just to hangout and talk or want to game together just ping me 😉.
+
+<a href="mailto:ashutosh.saxena.2001@gmail.com">
+ <img align="left" alt="Gmail" width="130" hight="100" src="./assets/icons/gmail.png" />
+</a>
+<a href="https://www.linkedin.com/in/ashutosh-saxena-7b326817b/">
+  <img align="left" alt="Linkedin" width="150" hight="100" src="./assets/icons/linkedin.png" />
+</br>
+</br>
+</br>
+</a>
+<a href="https://www.reddit.com/user/X_Ashutosh_X">
+  <img align="left" alt=" Reddit" width="130" hight="100" src="./assets/icons/reddit.png" />
+</a>
+<a href="https://steamcommunity.com/profiles/76561198182224539/">
+  <img align="left" alt="Steam" width="130" hight="100" src="./assets/icons/steam.png" />
+</a>
+ </p>
+ 
+
+</br>
+</br>
+</br>
+
+
+
+
+<!-- <p align="center" >  
+  <a href="https://github.com/anuraghazra/github-readme-stats"> 
+<img  src="https://github-readme-stats.vercel.app/api?username=Xx-Ashutosh-xX&&show_icons=true&theme=radical"/>
+  </a>
+  </p>
+
+************* -->
 
 <!-- <p align="center">
   <img src="https://github.com/matyo91/matyo91/raw/main/assets/github.gif" alt="Hi, I'm Mathieu 👋 I'm a 🚀 French developer 🚀 I ❤️ Happy Hardcore ❤️">
@@ -16,16 +174,6 @@ Then i recorded my screen to gif on Mac with Quicktime  and save result to [asse
 This [gist](https://gist.github.com/tskaggs/6394639) help me to create a dedicated command that convert MOV to GIF.
 Type this command `make generate-gif` to generate [assets/github.gif](assets/github.gif)
 -->
-
-## Blog
-
-<!-- BLOG-POST-LIST:START -->
-- [Y-Combinator en PHP](https://blog.darkwood.com/article/y-combinator-en-php)
-- [Changer de gestionnaire de mot de passe](https://blog.darkwood.com/article/changer-de-gestionnaire-de-mot-de-passe)
-- [NoCode avec le projet Capsule Corp](https://blog.darkwood.com/article/nocode-avec-le-projet-capsule-corp)
-- [Utiliser VSCode à distance](https://blog.darkwood.com/article/utiliser-vscode-a-distance)
-- [Crypto Tracker](https://blog.darkwood.com/article/crypto-tracker)
-<!-- BLOG-POST-LIST:END -->
 
 ## Links
 
@@ -116,6 +264,28 @@ Many thanks from people that referenced this repository here.
 <!-- MENTIONS-LIST:END -->
 </p>
 
+# Here is my GitHub contribution details for nerds
+
+<p align="center">
+  <img height="50%" width="auto" src ="https://github-readme-stats.vercel.app/api?username=aveek-saha&show_icons=true&count_private=true&theme=darcula&hide_border=true&hide=issues,contribs&bg_color=00000000">
+  <img height="50%" width="auto" src ="https://github-readme-stats.vercel.app/api/top-langs/?username=aveek-saha&layout=compact&hide_border=true&theme=darcula&bg_color=00000000&langs_count=6&hide=jupyter%20notebook,tex,css,php&exclude_repo=Pacman-AI">
+  <img src ="https://github-readme-streak-stats.herokuapp.com?user=aveek-saha&theme=darcula&hide_border=true&background=FFFFFF00">
+</p>
+
+<p align="center">
+  <a href="https://www.buymeacoffee.com/aveek.saha"> <img align="center" src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" height="50" width="210" alt="aveek.saha" /></a>
+  </p>
+
+<!-- <img src="./output.gif" alt="Here is a little bit about me!"> -->
+
+```
+🌞 Morning   471 commits  █████░░░░░░░░░░░░░░░░  24.2%
+🌆 Daytime   610 commits  ██████▌░░░░░░░░░░░░░░  31.4%
+🌃 Evening   581 commits  ██████▎░░░░░░░░░░░░░░  29.9%
+🌙 Night     281 commits  ███░░░░░░░░░░░░░░░░░░  14.5%
+```
+
+  
 <!-- * [Xx-Ashutosh-xX](https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX)
 * [xrkffgg](https://github.com/xrkffgg)
 * [RaghavK16](https://github.com/RaghavK16)
@@ -168,3 +338,9 @@ const LEGENDS = [
     { name: "DJPROGEN (NYC) stoweo112", url: "https://github.com/stoweo112" },
 ]
 ``` -->
+
+<div align="center">
+	<br>
+		<img src="good-times.svg" width="400px">
+	<br>
+</div>
