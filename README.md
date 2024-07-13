@@ -24,10 +24,12 @@
 [![](https://img.shields.io/badge/mastodon-6364ff)](https://tech.lgbt/@innng)
 [![](https://img.shields.io/badge/osu!-ff66ab)](https://osu.ppy.sh/users/4606212)
 [![](https://img.shields.io/badge/enka.network-69899c)](https://enka.network/u/Inng/1A4HU1/10000069/1985924/)
-</div> -->
+</div>
+
+<img src="./assets/kyubey.gif" height="50" />
+-->
 
 <div align="center">
-<!-- <img src="https://github.com/innng/innng/assets/26755058/5e0ce0fb-c544-4f8c-a307-5849165746d0" width="5%" align="right" /> -->
 <img src="https://readme-typing-svg.demolab.com?font=Inconsolata&weight=500&size=50&duration=4000&pause=300&color=A7A459&center=true&vCenter=true&multiline=true&repeat=false&random=false&width=1300&height=140&lines=Hello+there!;Its+manfromexistence%2C+a+problem+solver+%E2%9C%A9" width="70%" />
 
 <pre>
@@ -37,8 +39,6 @@
     🎮 Music • Games • Anime • Code • Art
     🐾 Love all animals 🐰 • Love Cake 🐤🐥
 </pre>
-
-<img src="./assets/kyubey.gif" height="50" />
 </div>
 
 # More about me 💬
@@ -272,11 +272,13 @@ Many thanks from people that referenced this repository here.
   <img src ="https://github-readme-streak-stats.herokuapp.com?user=aveek-saha&theme=darcula&hide_border=true&background=FFFFFF00">
 </p>
 
+
+<!--
+<img src="./output.gif" alt="Here is a little bit about me!">
 <p align="center">
   <a href="https://www.buymeacoffee.com/aveek.saha"> <img align="center" src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" height="50" width="210" alt="aveek.saha" /></a>
-  </p>
-
-<!-- <img src="./output.gif" alt="Here is a little bit about me!"> -->
+</p>
+-->
 
 ```
 🌞 Morning   471 commits  █████░░░░░░░░░░░░░░░░  24.2%
