@@ -341,6 +341,10 @@ const LEGENDS = [
 ]
 ``` -->
 
+# Things that I need to do ASAP
+* Have to update my logo
+* Have to updte current multeverse logo
+
 <div align="center">
 	<br>
 		<img src="good-times.svg" width="400px">
