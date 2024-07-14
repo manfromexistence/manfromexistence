@@ -8,6 +8,11 @@ I am a good human being.
 
 ```
 I love everything there is to love. All my life, I've tried to be good and avoid doing bad things. I haven't failed at anything I cared a lot about. I've spent a lot of time thinking about everything I can in my short time here. Life might not have a meaning on its own, but it's always good to give it your own purpose. My purpose comes from being good and having strong self-control. I care more about what's inside people than how they look. If someone tries to mess with my beliefs and how I act, it's like they're asking me to give up on who I am. That's super important to me. Society has always had problems, and it probably always will. That's why I focus on what I believe is right. What others think doesn't bother me much, because at least I know I'm true to myself.
+
+I belive in Islam and respect all other religions.
+
+Thouhout my whole life I never had a good physical condition cuase most of the time I was having fever.
+But, if you compare mental-power then I am like Saitama!
 ```
 
 "I have a love for all things. Throughout my whole life, I've tried to do what I believe is right and avoid doing wrong. So far, I haven't lost at anything I take seriously. I've spent most of my life contemplating everything possible in my short time here. Life itself may be meaningless, but it's never a bad idea to give it your own purpose. My purpose in life comes from my morals and discipline. I focus on a person's inner self; appearances don't interest me. Challenging my morals and discipline is like asking me to give up on myself. It's deeply important to me. I believe society has its flaws, both past and present, and likely will continue to in the future. That's why I focus on my own values. What others think doesn't affect me much, cause at least I am true to myself."
