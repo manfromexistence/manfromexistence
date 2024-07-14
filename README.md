@@ -1,7 +1,12 @@
 # manfromexistence 👋
 
+<!-- <div align="center">
+  <img hight="300" width="300" alt="manfromexistence" align="center" src="./manfromexistence.gif">
+</div>
+</br> -->
+
 <div align="center">
-<img hight="300" width="300" alt="manfromexistence" align="center" src="./manfromexistence.jpg">
+  <img hight="300" width="100%" alt="manfromexistence" align="center" src="./manfromexistence.jpg">
 </div>
 </br>
 
