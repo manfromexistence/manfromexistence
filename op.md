@@ -1,3 +1,45 @@
+
+<h3 align="left">Latest YouTube Videos</h3>
+
+<!-- YOUTUBE:START -->
+- [Coping With Autism Comorbidities &lpar;Anxiety and Feeding &amp; Sleeping Disorders&rpar;](https://www.youtube.com/watch?v=4obovzV_nEk)
+- [Scrintal Course 5 | PowerUsage Features](https://www.youtube.com/watch?v=A_B5JU-lcSE)
+- [Scrintal Course 4 | Collaboration &amp; Teams](https://www.youtube.com/watch?v=V-7Aeb6CDBs)
+- [Scrintal Course 3 | Research Workflow](https://www.youtube.com/watch?v=lG6f184P9B4)
+- [Exploring the AI features in Document360](https://www.youtube.com/watch?v=4-uhOBb_ies)
+<!-- YOUTUBE:END -->
+
+<h3 align="left">Latest Medium Articles</h3>
+
+
+<!-- ARTICLES:START -->
+- [Manage Your Entire R Code Base With TODOr](https://towardsdatascience.com/manage-your-entire-r-code-base-with-todor-76dcd7abad9?source=rss-32e452bd16bd------2)
+- [How I Put My Mind Under Version Control](https://medium.com/analytics-vidhya/how-i-put-my-mind-under-version-control-24caea37b8a5?source=rss-32e452bd16bd------2)
+- [The Patchwork Package In R](https://medium.com/analytics-vidhya/the-patchwork-package-in-r-9468e4a7cd29?source=rss-32e452bd16bd------2)
+<!-- ARTICLES:END -->
+
+<h3 align="left">Blog</h3>
+
+<!-- BLOG-POST-LIST:START -->
+- [Y-Combinator en PHP](https://blog.darkwood.com/article/y-combinator-en-php)
+- [Changer de gestionnaire de mot de passe](https://blog.darkwood.com/article/changer-de-gestionnaire-de-mot-de-passe)
+- [NoCode avec le projet Capsule Corp](https://blog.darkwood.com/article/nocode-avec-le-projet-capsule-corp)
+- [Utiliser VSCode à distance](https://blog.darkwood.com/article/utiliser-vscode-a-distance)
+- [Crypto Tracker](https://blog.darkwood.com/article/crypto-tracker)
+<!-- BLOG-POST-LIST:END -->
+
+<h3 align="left">Latest Activity</h3>
+
+<!--START_SECTION:activity-->
+1. 🔒 Closed issue [#8](https://github.com/tallguyjenks/CV/issues/8) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
+2. 🔒 Closed issue [#7](https://github.com/tallguyjenks/CV/issues/7) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
+3. ❗ Opened issue [#1](https://github.com/CoveredCA/common-devops/issues/1) in [CoveredCA/common-devops](https://github.com/CoveredCA/common-devops)
+4. 🗣 Commented on [#7](https://github.com/tallguyjenks/CV/issues/7#issuecomment-2209712016) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
+5. 🗣 Commented on [#113](https://github.com/plankanban/planka/issues/113#issuecomment-1879172495) in [plankanban/planka](https://github.com/plankanban/planka)
+<!--END_SECTION:activity-->
+
+</br>
+
 Hi Gemini,
 
 Let's get to know each other!

@@ -1,5 +1,11 @@
 # manfromexistence 👋
 
+<!-- 
+```
+git add . && git commit -m "feat: automated commit" && git push
+``` 
+-->
+
 <!-- https://docs.google.com/document/d/1Th4ZnhEVt3x6hx_bPHMMxAB_hHiHW6OOKq3pKlwanaU/edit?usp=sharing
 
 https://docs.google.com/document/d/1Th4ZnhEVt3x6hx_bPHMMxAB_hHiHW6OOKq3pKlwanaU/edit?usp=sharing
@@ -85,47 +91,6 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 
 ---
 
-<h3 align="left">Latest YouTube Videos</h3>
-
-<!-- YOUTUBE:START -->
-- [Coping With Autism Comorbidities &lpar;Anxiety and Feeding &amp; Sleeping Disorders&rpar;](https://www.youtube.com/watch?v=4obovzV_nEk)
-- [Scrintal Course 5 | PowerUsage Features](https://www.youtube.com/watch?v=A_B5JU-lcSE)
-- [Scrintal Course 4 | Collaboration &amp; Teams](https://www.youtube.com/watch?v=V-7Aeb6CDBs)
-- [Scrintal Course 3 | Research Workflow](https://www.youtube.com/watch?v=lG6f184P9B4)
-- [Exploring the AI features in Document360](https://www.youtube.com/watch?v=4-uhOBb_ies)
-<!-- YOUTUBE:END -->
-
-<h3 align="left">Latest Medium Articles</h3>
-
-
-<!-- ARTICLES:START -->
-- [Manage Your Entire R Code Base With TODOr](https://towardsdatascience.com/manage-your-entire-r-code-base-with-todor-76dcd7abad9?source=rss-32e452bd16bd------2)
-- [How I Put My Mind Under Version Control](https://medium.com/analytics-vidhya/how-i-put-my-mind-under-version-control-24caea37b8a5?source=rss-32e452bd16bd------2)
-- [The Patchwork Package In R](https://medium.com/analytics-vidhya/the-patchwork-package-in-r-9468e4a7cd29?source=rss-32e452bd16bd------2)
-<!-- ARTICLES:END -->
-
-<h3 align="left">Blog</h3>
-
-<!-- BLOG-POST-LIST:START -->
-- [Y-Combinator en PHP](https://blog.darkwood.com/article/y-combinator-en-php)
-- [Changer de gestionnaire de mot de passe](https://blog.darkwood.com/article/changer-de-gestionnaire-de-mot-de-passe)
-- [NoCode avec le projet Capsule Corp](https://blog.darkwood.com/article/nocode-avec-le-projet-capsule-corp)
-- [Utiliser VSCode à distance](https://blog.darkwood.com/article/utiliser-vscode-a-distance)
-- [Crypto Tracker](https://blog.darkwood.com/article/crypto-tracker)
-<!-- BLOG-POST-LIST:END -->
-
-<h3 align="left">Latest Activity</h3>
-
-<!--START_SECTION:activity-->
-1. 🔒 Closed issue [#8](https://github.com/tallguyjenks/CV/issues/8) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
-2. 🔒 Closed issue [#7](https://github.com/tallguyjenks/CV/issues/7) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
-3. ❗ Opened issue [#1](https://github.com/CoveredCA/common-devops/issues/1) in [CoveredCA/common-devops](https://github.com/CoveredCA/common-devops)
-4. 🗣 Commented on [#7](https://github.com/tallguyjenks/CV/issues/7#issuecomment-2209712016) in [tallguyjenks/CV](https://github.com/tallguyjenks/CV)
-5. 🗣 Commented on [#113](https://github.com/plankanban/planka/issues/113#issuecomment-1879172495) in [plankanban/planka](https://github.com/plankanban/planka)
-<!--END_SECTION:activity-->
-
-</br>
-
 # Languages & Tools 👨‍💻
 <p align="center">
 
@@ -151,7 +116,7 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 <img hight="320" width="450" align="right" alt="GIF" src="./assets/93195.gif">
 
 
-If you want to reach out to me about anything, be it some doubt or just to hangout and talk or want to game together just ping me 😉.
+(NOT WORKING) If you want to reach out to me about anything, be it some doubt or just to hangout and talk or want to game together just ping me 😉.
 
 <a href="mailto:ashutosh.saxena.2001@gmail.com">
  <img align="left" alt="Gmail" width="130" hight="100" src="./assets/icons/gmail.png" />
@@ -199,7 +164,7 @@ This [gist](https://gist.github.com/tskaggs/6394639) help me to create a dedicat
 Type this command `make generate-gif` to generate [assets/github.gif](assets/github.gif)
 -->
 
-## Links
+<!-- ## Links
 
 <p align="center">
   <a href="https://darkwood.com"><img src="https://img.icons8.com/fluent/96/000000/domain.png" alt="darkwood"/></a>
@@ -239,16 +204,15 @@ Type this command `make generate-gif` to generate [assets/github.gif](assets/git
   <a href="https://www.polywork.com/matyo91"><img src="https://img.icons8.com/fluency-systems-filled/96/add-bookmark.png" alt="polywork"/></a>
   <a href="https://opensea.io/matyo91"><img src="https://img.icons8.com/color/96/opensea.png" alt="opensea"/></a>
   <a href="https://huggingface.co/matyo91"><img src="https://img.icons8.com/emoji/96/hugging-face.png" alt="huggingface"/></a>
-</p>
+</p> -->
 
 <!-- Icons by [https://icons8.com](https://icons8.com) -->
 
-## Mentions
+<!-- ## Mentions
 
 Many thanks from people that referenced this repository here.
 
 <p align="center">
-<!-- MENTIONS-LIST:START -->
 <a href="https://github.com/18-RAJAT/18-RAJAT"><img src="https://github.com/18-RAJAT.png?size=96" alt="18-RAJAT" width="96px" height="96px" /></a>
 <a href="https://github.com/1998-sys/1998-sys"><img src="https://github.com/1998-sys.png?size=96" alt="1998-sys" width="96px" height="96px" /></a>
 <a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme"><img src="https://github.com/abhisheknaiidu.png?size=96" alt="abhisheknaiidu" width="96px" height="96px" /></a>
@@ -285,16 +249,15 @@ Many thanks from people that referenced this repository here.
 <a href="https://github.com/vngabriel/vngabriel"><img src="https://github.com/vngabriel.png?size=96" alt="vngabriel" width="96px" height="96px" /></a>
 <a href="https://github.com/Wendel-Andrade/Wendel-Andrade"><img src="https://github.com/Wendel-Andrade.png?size=96" alt="Wendel-Andrade" width="96px" height="96px" /></a>
 <a href="https://github.com/zacBkh/zacBkh"><img src="https://github.com/zacBkh.png?size=96" alt="zacBkh" width="96px" height="96px" /></a>
-<!-- MENTIONS-LIST:END -->
-</p>
+</p> -->
 
-# Here is my GitHub contribution details for nerds
+<!-- # Here is my GitHub contribution details for nerds
 
 <p align="center">
   <img height="50%" width="auto" src ="https://github-readme-stats.vercel.app/api?username=aveek-saha&show_icons=true&count_private=true&theme=darcula&hide_border=true&hide=issues,contribs&bg_color=00000000">
   <img height="50%" width="auto" src ="https://github-readme-stats.vercel.app/api/top-langs/?username=aveek-saha&layout=compact&hide_border=true&theme=darcula&bg_color=00000000&langs_count=6&hide=jupyter%20notebook,tex,css,php&exclude_repo=Pacman-AI">
   <img src ="https://github-readme-streak-stats.herokuapp.com?user=aveek-saha&theme=darcula&hide_border=true&background=FFFFFF00">
-</p>
+</p> -->
 
 
 <!--
@@ -305,10 +268,10 @@ Many thanks from people that referenced this repository here.
 -->
 
 ```
-🌞 Morning   471 commits  █████░░░░░░░░░░░░░░░░  24.2%
-🌆 Daytime   610 commits  ██████▌░░░░░░░░░░░░░░  31.4%
-🌃 Evening   581 commits  ██████▎░░░░░░░░░░░░░░  29.9%
-🌙 Night     281 commits  ███░░░░░░░░░░░░░░░░░░  14.5%
+🌞 Morning   6 commits    █████░░░░░░░░░░░░░░░░  24.2%
+🌆 Daytime   5 commits    ███░░░░░░░░░░░░░░░░░░  14.5%
+🌃 Evening   3 commits    ██████▎░░░░░░░░░░░░░░  29.9%
+🌙 Night infinity commits ██████▌░░░░░░░░░░░░░░  31.4% 
 ```
 
   
@@ -366,6 +329,7 @@ const LEGENDS = [
 ``` -->
 
 # Things that I need to do ASAP
+* Do this Github Profile
 * Have to update my logo
 * Have to updte current multeverse logo
 
