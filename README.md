@@ -84,8 +84,7 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 	<br>
 </div>
 
-### This is --> manfromexistence(Peace out + HACKING/Signing OUT + Sayonara)
+### This is --> manfromexistence(Peace out + HACKING/SIGNING OUT + Sayonara)
 <div align="center">
-		<img src="./inventory/manfromexistence.jpg" width="100%">
-	<br>
+	<img src="./inventory/manfromexistence.jpg" width="100%">
 </div>
