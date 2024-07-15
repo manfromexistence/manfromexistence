@@ -8,26 +8,15 @@
 git add . && git commit -m "feat: this is a automated commit made by manfromexitence from manfromexsitence02 account" && git push
 ``` -->
 
-<!-- ```
-      💼 No job @ POOR • Full-stack dev • All Platforms Engineer
-      💻 Ai • Blockchain
-      📖 Currently doing my own projects
-      🎮 Music • Games • Anime • Code • Art
-      🐾 Love all animals 🐰 • Love Cakes 🐤🐥
-``` -->
+</br>
 
-<pre>
+<pre align="center">
       💼 No job @ POOR • Full-stack dev • All Platforms Engineer
       💻 Ai • Blockchain
       📖 Currently doing my own projects
       🎮 Music • Games • Anime • Code • Art
       🐾 Love all animals 🐰 • Love Cakes 🐤🐥
 </pre>
-
-
-<div align="center">
-  <img hight="300" width="100%" alt="GIF" align="center" src="./inventory/208593.gif">
-</div>
 
 # More about me 💬
 
@@ -48,6 +37,10 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 </br>
 
 ---
+
+<div align="center">
+  <img hight="300" width="100%" alt="GIF" align="center" src="./inventory/208593.gif">
+</div>
 
 # Languages & Tools 👨‍💻
 <p align="center">
