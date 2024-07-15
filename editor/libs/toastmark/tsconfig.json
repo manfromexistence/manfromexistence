@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["src/**/*.ts", "src/**/*.js", "types/**/*", "../../types/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@t/*": ["types/*"]
+    },
+    "lib": ["esnext", "dom"]
+  }
+}

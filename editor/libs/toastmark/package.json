@@ -1,0 +1,34 @@
+{
+  "name": "@toast-ui/toastmark",
+  "version": "0.0.1-alpha.1",
+  "description": "ToastMark - Incremental markdown parser extended from CommonMark.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test:types": "tsc",
+    "test": "jest --watch",
+    "test:ci": "jest",
+    "serve": "snowpack dev",
+    "serve:ie": "webpack serve",
+    "build": "rollup -c && webpack build"
+  },
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "keywords": [
+    "markdown",
+    "parser"
+  ],
+  "author": "NHN",
+  "main": "dist/toastmark.js",
+  "module": "dist/esm/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/codemirror": "5.60.5",
+    "@types/mdurl": "^1.0.2",
+    "codemirror": "^5.51.0",
+    "entities": "^2.0.0",
+    "mdurl": "^1.0.1"
+  }
+}

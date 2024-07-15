@@ -1,0 +1,132 @@
+.toastui-editor-md-heading1 {
+  font-size: 24px;
+}
+
+.toastui-editor-md-heading2 {
+  font-size: 22px;
+}
+
+.toastui-editor-md-heading3 {
+  font-size: 20px;
+}
+
+.toastui-editor-md-heading4 {
+  font-size: 18px;
+}
+
+.toastui-editor-md-heading5 {
+  font-size: 16px;
+}
+
+.toastui-editor-md-heading6 {
+  font-size: 14px;
+}
+
+.toastui-editor-md-heading.toastui-editor-md-delimiter.setext {
+  line-height: 15px;
+}
+
+.toastui-editor-md-strong,
+.toastui-editor-md-heading,
+.toastui-editor-md-list-item-style,
+.toastui-editor-md-list-item .toastui-editor-md-meta {
+  font-weight: bold;
+}
+
+.toastui-editor-md-emph {
+  font-style: italic;
+}
+
+.toastui-editor-md-strike {
+  text-decoration: line-through;
+}
+
+.toastui-editor-md-strike.toastui-editor-md-delimiter {
+  text-decoration: none;
+}
+
+.toastui-editor-md-delimiter,
+.toastui-editor-md-thematic-break,
+.toastui-editor-md-link,
+.toastui-editor-md-table,
+.toastui-editor-md-block-quote {
+  color: #ccc;
+}
+
+.toastui-editor-md-code.toastui-editor-md-delimiter {
+  color: #aaa;
+}
+
+.toastui-editor-md-meta,
+.toastui-editor-md-html,
+.toastui-editor-md-link.toastui-editor-md-link-url.toastui-editor-md-marked-text {
+  color: #999;
+}
+
+.toastui-editor-md-block-quote .toastui-editor-md-marked-text,
+.toastui-editor-md-list-item .toastui-editor-md-meta {
+  color: #555;
+}
+
+.toastui-editor-md-table .toastui-editor-md-table-cell {
+  color: #222;
+}
+
+.toastui-editor-md-link.toastui-editor-md-link-desc.toastui-editor-md-marked-text,
+.toastui-editor-md-list-item-style.toastui-editor-md-list-item-odd {
+  color: #4b96e6;
+}
+
+.toastui-editor-md-list-item-style.toastui-editor-md-list-item-even {
+  color: #cb4848;
+}
+
+.toastui-editor-md-code.toastui-editor-md-marked-text {
+  color: #c1798b;
+}
+
+.toastui-editor-md-code {
+  background-color: rgba(243, 229, 233, 0.5);
+  padding: 2px 0;
+  letter-spacing: -0.3px;
+}
+
+.toastui-editor-md-code.toastui-editor-md-start {
+  padding-left: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.toastui-editor-md-code.toastui-editor-md-end {
+  padding-right: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.toastui-editor-md-code-block-line-background {
+  background-color: #f5f7f8;
+}
+
+.toastui-editor-md-code-block-line-background.start,
+.toastui-editor-md-custom-block-line-background.start {
+  margin-top: 2px;
+}
+
+.toastui-editor-md-code,
+.toastui-editor-md-code-block {
+  font-family: Consolas, Courier, 'Lucida Grande', '나눔바른고딕', 'Nanum Barun Gothic', '맑은고딕',
+    'Malgun Gothic', sans-serif;
+}
+
+.toastui-editor-md-custom-block {
+  color: #452d6b;
+}
+.toastui-editor-md-custom-block-line-background {
+  background-color: #f9f7fd;
+}
+.toastui-editor-md-custom-block .toastui-editor-md-delimiter {
+  color: #b8b3c0;
+}
+.toastui-editor-md-custom-block .toastui-editor-md-meta {
+  color: #5200d0;
+}
