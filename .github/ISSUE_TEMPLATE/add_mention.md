@@ -3,7 +3,7 @@ name: Add mention
 about: Add your reference link to this repository
 title: 'Add a new mention'
 labels: 'documentation'
-assignees: 'matyo91'
+assignees: 'manfromexistence'
 
 ---
 

@@ -1,2 +1,2 @@
 tasks:
-  - init: make
+  - init: echo "Thanks for visitiong my profile readme -> manfromexistence"
