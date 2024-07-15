@@ -4,9 +4,111 @@
 git add . && git commit -m "feat: this is a automated commit made by manfromexitence from manfromexsitence02 account" && git push
 ``` -->
 
+
+
 <div align="center">
   <img hight="300" width="100%" alt="manfromexistence" align="center" src="./inventory/manfromexistence.gif">
 </div>
+
+# Welcome to [Vrite](https://vrite.io)!
+
+![Vrite landing page](https://assets.vrite.io/65017ed7b0e627e259623b8a/-R7ZANANzebSVDyqVtB_K.png)
+
+Vrite is an [open-source](https://github.com/vriteio/vrite), collaborative, **developer content platform** for creating, managing, and deploying product documentation, knowledge bases, and technical blogs.
+
+With an extensible, collaborative editor, content management dashboard, and built-in features like semantic search, GitHub sync, and more — all accessible via [powerful API](https://docs.vrite.io/api/authentication) — Vrite aims to provide an all-in-one experience for creating, managing, and publishing all kinds of technical content.
+
+## Get to Know Vrite editor
+
+> Most options can be enabled/disabled in the settings (_Settings → Editor_) to tailor your experience.
+
+1. Various formatting options
+
+- **Bold** — `**markdown**` — `Ctrl B`/`⌘B`;
+- _Italic_ — `*markdown*` — `Ctrl I`/`⌘I`;
+- ~~Strikethrough~~ — `~~markdown~~` — `Ctrl Shift X`/`⌘ Shift X`;
+- `Inline code` — `markdown` — `Ctrl E`/`⌘E`;
+- Highlight — `==markdown==` — `Ctrl Shift H`/`⌘ Shift H`;
+- Underline — `Ctrl U`/`⌘U`;
+- Superscript — `Ctrl ,`/`⌘,`;
+- Subscript — `Ctrl .`/`⌘.`;
+- [Link](https://vrite.io/) — `[markdown](link)` — you can also `Ctrl V`/`⌘V` the URL to link the selected text fragment;
+
+  > **Tip**: Move you **inside a link** to see its preview!
+
+- Integrated [Monaco Editor](https://microsoft.github.io/monaco-editor/) and [Prettier](https://prettier.io/) for code blocks:
+
+```javascript
+const sayHello = () => {
+  console.log("Hello World!");
+};
+
+sayHello();
+```
+
+3. Tables
+
+| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Cell 1A  | Cell 1B  | Cell 1C  |
+| Cell 2A  | Cell 2B  | Cell 2C  |
+| Cell 3A  | Cell 3B  | Cell 3C  |
+
+3. Images
+
+![Vrite landing page](https://assets.vrite.io/65017ed7b0e627e259623b8a/-R7ZANANzebSVDyqVtB_K.png) 4. Custom elements
+
+Hello World from inside the `element`. 5. Other features
+
+- Built-in, interactive embeds ([CodePen](https://assets.vrite.io/65017ed7b0e627e259623b8a/-R7ZANANzebSVDyqVtB_K.png), [CodeSandbox](https://codesandbox.io/), YouTube)
+- Zen mode (in the toolbar, top-right corner);
+- MDX, MD, HTML, and JSON exports (easy to copy-paste);
+- Stats (in the bottom menu, bottom-right corner)
+- Real-time collaboration & commenting (select some text to add a comment)
+- …
+
+Full usage guide here: [https://docs.vrite.io/content-editor](https://docs.vrite.io/content-editor)
+
+## Content Management in Vrite
+
+Vrite provides multiple ways for you to manage your content.
+
+### Vrite dashboard
+
+The [dashboard](https://app.vrite.io/) is focused solely on content management. Here you can organize your content and edit metadata using one of two views:
+
+1. **Kanban** — great for working in teams and managing complex content production process
+
+![Vrite dashboard - kanban view](https://assets.vrite.io/65017ed7b0e627e259623b8a/FoiCt-qOuTEahp4qKJiIH.png) 2. **Table** — optimized for viewing all kinds of metadata at a glance
+
+![Vrite dashboard - table view](https://assets.vrite.io/65017ed7b0e627e259623b8a/KAts4bTozSr7mKaZ0nTca.png)
+
+### Explorer
+
+Aside from the dashboard, Vrite provides an **Explorer** panel, easily accessible on the right of both the dashboard and the editor.
+
+Explorer is your go-to when writing/managing “nested” content like **documentation**. Select a content group to view its contents in the dashboard or a content piece to open it immediately in the editor.
+
+![Vrite explorer panel](https://assets.vrite.io/65017ed7b0e627e259623b8a/XgzCLAMTGTNPl_Sk0Nnw6.png)
+
+## Many Other Features
+
+Check out the following resources to learn more:
+
+- 🌟 **Star Vrite on GitHub** — [https://github.com/vriteio/vrite](https://github.com/vriteio/vrite)
+- 🐞 **Report bugs** — [https://github.com/vriteio/vrite/issues](https://github.com/vriteio/vrite/issues)
+- 🐦 **Follow on Twitter** — [https://twitter.com/vriteio](https://twitter.com/vriteio)
+- 💬 **Join Vrite Discord** — [https://discord.gg/yYqDWyKnqE](https://discord.gg/yYqDWyKnqE)
+- ℹ️ **Learn more about Vrite** — [https://vrite.io](https://vrite.io)
+- 📕 **Vrite documentation** — [https://docs.vrite.io](https://docs.vrite.io)
+
+  GDFG
+
+- [ ] GHFH
+- [ ] HFH
+
+---
+
 
 <h1>Welcome to <a href="https://vrite.io">Vrite</a>!</h1>
 <img
