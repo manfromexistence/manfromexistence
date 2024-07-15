@@ -1,14 +1,16 @@
 # manfromexistence 👋
 
 <div align="center">
-  <img hight="300" width="100%" alt="manfromexistence" align="center" src="./inventory/manfromexistence.gif">
+  <img hight="300" width="100%" alt="manfromexistence" src="./inventory/manfromexistence.gif">
 </div>
 
 <!-- ```
 git add . && git commit -m "feat: this is a automated commit made by manfromexitence from manfromexsitence02 account" && git push
 ``` -->
 
-</br>
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Inconsolata&weight=500&size=50&duration=4000&pause=300&color=A7A459&center=true&vCenter=true&multiline=true&repeat=false&random=false&width=1300&height=140&lines=Hello+there!;I+am+a+good+human+being+and+a+problem+solver+%E2%9C%A9" width="70%" />
+</div>
 
 <pre align="center">
       💼 No job @ POOR • Full-stack dev • All Platforms Engineer
@@ -17,6 +19,10 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
       🎮 Music • Games • Anime • Code • Art
       🐾 Love all animals 🐰 • Love Cakes 🐤🐥
 </pre>
+
+<div align="center">
+  <img hight="300" width="100%" alt="GIF" src="./inventory/208593.gif">
+</div>
 
 # More about me 💬
 
@@ -37,10 +43,6 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 </br>
 
 ---
-
-<div align="center">
-  <img hight="300" width="100%" alt="GIF" align="center" src="./inventory/208593.gif">
-</div>
 
 # Languages & Tools 👨‍💻
 <p align="center">
