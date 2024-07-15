@@ -110,7 +110,7 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 </p>
 
 
-# Wanna hang up with me?
+<!-- # Wanna hang up with me?
 
 <p>
 <img hight="320" width="450" align="right" alt="GIF" src="./assets/93195.gif">
@@ -136,10 +136,7 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
  </p>
  
 
-</br>
-</br>
-</br>
-
+</br> -->
 
 
 
@@ -266,13 +263,15 @@ Many thanks from people that referenced this repository here.
   <a href="https://www.buymeacoffee.com/aveek.saha"> <img align="center" src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" height="50" width="210" alt="aveek.saha" /></a>
 </p>
 -->
+<!-- # Wanna hang up with me?
+
 
 ```
 🌞 Morning   6 commits    █████░░░░░░░░░░░░░░░░  24.2%
 🌆 Daytime   5 commits    ███░░░░░░░░░░░░░░░░░░  14.5%
 🌃 Evening   3 commits    ██████▎░░░░░░░░░░░░░░  29.9%
 🌙 Night infinity commits ██████▌░░░░░░░░░░░░░░  31.4% 
-```
+``` -->
 
   
 <!-- * [Xx-Ashutosh-xX](https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX)
@@ -327,6 +326,15 @@ const LEGENDS = [
     { name: "DJPROGEN (NYC) stoweo112", url: "https://github.com/stoweo112" },
 ]
 ``` -->
+
+
+```
+🌞 Morning   6 commits    █████░░░░░░░░░░░░░░░░  24.2%
+🌆 Daytime   5 commits    ███░░░░░░░░░░░░░░░░░░  14.5%
+🌃 Evening   3 commits    ██████▎░░░░░░░░░░░░░░  29.9%
+🌙 Night infinity commits ██████▌░░░░░░░░░░░░░░  31.4% 
+``` 
+
 
 # Things that I need to do ASAP
 * Do this Github Profile
