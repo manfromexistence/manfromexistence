@@ -20,7 +20,7 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 </br> -->
 
 <div align="center">
-  <img hight="300" width="100%" alt="manfromexistence" align="center" src="./manfromexistence-logo.gif">
+  <img hight="300" width="100%" alt="manfromexistence" align="center" src="./assets/manfromexistence.gif">
 </div>
 </br>
 
@@ -369,8 +369,16 @@ const LEGENDS = [
 * Have to update my logo
 * Have to updte current multeverse logo
 
+### If you already not having then I am hoping for your:
 <div align="center">
 	<br>
 		<img src="good-times.svg" width="400px">
+	<br>
+</div>
+
+### This is --> manfromexistence(Peace out + HACKING/Signing OUT + Sayonara)
+<div align="center">
+	<br>
+		<img src="manfromexistence.jpg" width="100%">
 	<br>
 </div>
