@@ -32,10 +32,12 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 <img hight="400" width="500" alt="GIF" align="right" src="./inventory/1936.gif">
 
 ### - Learning :
+
 - ✨ Data Structures & Algorithms
 - ✨ Generative Adversarial Networks
 
-### - Hobbies : 
+### - Hobbies :
+
 - ✨ Gaming Addict
 - ✨ Watching Anime
 - ✨ Reading Light Novels
@@ -46,6 +48,7 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 ---
 
 # Languages & Tools 👨‍💻
+
 <p align="center">
   <img src="./inventory/icons/python.png" alt="python" width="120" hight="50">
   <img src="./inventory/icons/java.png" alt="java"  width="100" hight="50">
@@ -65,16 +68,17 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 🌞 Morning   6 commits    █████░░░░░░░░░░░░░░░░  24.2%
 🌆 Daytime   5 commits    ███░░░░░░░░░░░░░░░░░░  14.5%
 🌃 Evening   3 commits    ██████▎░░░░░░░░░░░░░░  29.9%
-🌙 Night infinity commits ██████▌░░░░░░░░░░░░░░  31.4% 
-``` 
-
+🌙 Night infinity commits ██████▌░░░░░░░░░░░░░░  31.4%
+```
 
 # Things that I need to do ASAP
-* Do this Github Profile
-* Have to update my logo
-* Have to updte current multeverse logo
+
+- Do this Github Profile
+- Have to update my logo
+- Have to updte current multeverse logo
 
 ### If you already not having then I am hoping for your:
+
 <div align="center">
 	<br>
 		<img src="./inventory/good-times.svg" width="400px">
@@ -82,6 +86,7 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 </div>
 
 ### This is --> manfromexistence(Peace out + HACKING/SIGNING OUT + Sayonara)
+
 <div align="center">
 	<img src="./inventory/manfromexistence.jpg" width="100%">
 </div>
