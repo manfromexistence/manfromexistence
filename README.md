@@ -5,8 +5,8 @@
 </div>
 
 <!-- ```
-git add . && git commit -m "feat: this is a automated commit made by manfromexitence from manfromexsitence02 account" && git push
-git add . && git commit -m "feat: this is a automated commit made by manfromexitence from manfromexsitence04 account" && git push
+git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence02 account" && git push
+git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence04 account" && git push
 ``` -->
 
 <div align="center">
@@ -27,7 +27,7 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 
 # More about me 💬
 
-### - I'm 18 years old Self-Taught Programmer plus Machine Learning & Artificial Intelligence Enthusiast from Bangladesh.
+### - I'm an 18-year-old Self-Taught Programmer plus a Machine Learning & Artificial Intelligence Enthusiast.
 
 <img hight="400" width="500" alt="GIF" align="right" src="./inventory/1936.gif">
 
@@ -74,8 +74,8 @@ git add . && git commit -m "feat: this is a automated commit made by manfromexit
 # Things that I need to do ASAP
 
 - Do this Github Profile
-- Have to update my logo
-- Have to updte current multeverse logo
+I have to update my logo
+- Have to update the current multiverse logo
 
 ### If you already not having then I am hoping for your:
 
