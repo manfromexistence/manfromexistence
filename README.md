@@ -27,7 +27,7 @@ git add . && git commit -m "feat: this is an automated commit made by manfromexi
 
 # More about me 💬
 
-### - I'm an 18-year-old Self-Taught Programmer plus a Machine Learning & Artificial Intelligence Enthusiast.
+### - I'm an 19-year-old Self-Taught Programmer plus a Machine Learning & Artificial Intelligence Enthusiast.
 
 <img hight="400" width="500" alt="GIF" align="right" src="./inventory/1936.gif">
 
@@ -38,11 +38,9 @@ git add . && git commit -m "feat: this is an automated commit made by manfromexi
 
 ### - Hobbies :
 
-- ✨ Gaming Addict
 - ✨ Watching Anime
 - ✨ Reading Light Novels
-- ✨ Badminton (Neighbourhood Professional XD)
-
+- ✨ Football
 </br>
 
 ---
