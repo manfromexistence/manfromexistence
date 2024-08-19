@@ -1,4 +1,19 @@
 ```
+Visuals From "Deadpool & Wolverine directed by Shawn Levy"
+Music Used "Bye Bye by NSYNC"
+
+My Instagram - https://www.instagram.com/xcrossx03
+
+Copyright 
+
+Copyright Disclaimer: - Under section 107 of the copyright Act 1976, allowance is mad for FAIR USE for purpose such a as criticism, comment, news reporting, teaching, scholarship and research. Fair use is a use permitted by copyright statues that might otherwise be infringing. Non- Profit, educational or personal use tips the balance in favor of FAIR USE.
+
+
+Hashtags -:
+#viral #edit #deadpool #deadpool3 #LFG #wolverine #logan #movie #marvel #mcu #marvelcinematicuniverse #hughjackman #ryanreynolds #fyp #trending #4k #nsync
+```
+
+```
 Hello Everyone,
 If you play God of war or Minecraft or Fortnite or GTA5 or anything exiting games or will be exit in future then your are in right place & Also if you just live in Earth then you must subscribe to join with this channel(and being outer from earth is also allowed)!!!
 
