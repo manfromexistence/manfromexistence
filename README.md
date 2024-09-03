@@ -7,6 +7,11 @@
 <!-- ```
 git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence02 account" && git push
 git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence04 account" && git push
+# Things that I need to do ASAP
+
+- Do this Github Profile
+I have to update my logo
+- Have to update the current multiverse logo
 ``` -->
 
 <div align="center">
@@ -27,7 +32,7 @@ git add . && git commit -m "feat: this is an automated commit made by manfromexi
 
 # More about me 💬
 
-### - I'm an 19-year-old Self-Taught Programmer plus a Machine Learning & Artificial Intelligence Enthusiast.
+### - I'm a 19-year-old Self-Taught Programmer plus a Machine Learning & Artificial Intelligence Enthusiast.
 
 <img hight="400" width="500" alt="GIF" align="right" src="./inventory/1936.gif">
 
@@ -69,13 +74,8 @@ git add . && git commit -m "feat: this is an automated commit made by manfromexi
 🌙 Night infinity commits ██████▌░░░░░░░░░░░░░░  31.4%
 ```
 
-# Things that I need to do ASAP
 
-- Do this Github Profile
-I have to update my logo
-- Have to update the current multiverse logo
-
-### If you already not having then I am hoping for your:
+### If you are already not having then I am hoping for your:
 
 <div align="center">
 	<br>
