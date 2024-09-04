@@ -1,0 +1,73 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "wallhaven",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "os": {
+				"all": true
+			},
+			"globalShortcut": {
+				"all": true
+			},
+			"path": {
+				"all": true
+			},
+			"fs": {
+				"all": true,
+				"scope": ["**/*"]
+			},
+			"protocol": {
+				"asset": true,
+				"assetScope": ["**/*"]
+			},
+			"process": {
+				"relaunch": true
+			},
+			"dialog": {
+				"ask": true,
+				"open": true
+			},  
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "title": "wallhaven",
+        "hiddenTitle": true,
+        "titleBarStyle": "Overlay",
+        "transparent": true,
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.tauri.build",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "updater": {
+      "active": false
+    }
+  }
+}
