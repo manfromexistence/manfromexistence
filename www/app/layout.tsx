@@ -13,7 +13,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "manfromexistence",
-  description: "hello",
+  description: "Hello, Im a good human-being(just being honest) and a problem solver. I mostly live on my mind palace, at my home, GitHub, YouTube, X, Instagram. Does programming",
 };
 
 export default function RootLayout({
