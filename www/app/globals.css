@@ -1,7 +1,4 @@
 @import "tailwindcss/preflight" layer(base);
 @import "tailwindcss/utilities" layer(utilities);
 
-@theme {
-
-  --color-gray-50: #f8fafc;
-}
+@theme {}
