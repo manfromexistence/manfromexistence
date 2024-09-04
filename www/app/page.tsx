@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <div className="h-screen w-full bg-gray-50 text-[#000]">manfromexistence</div>
+    <div className="h-screen w-full bg-[#000] text-[#fff]">manfromexistence</div>
   );
 }
