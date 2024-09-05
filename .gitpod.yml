@@ -1,2 +1,3 @@
 tasks:
-  - init: npm install -g npm@10.8.3 && npm install -g bun && cd www && bun install && bun run dev && echo "Thanks for visitiong my profile readme -> manfromexistence"
+  - name: porfolio
+    init: npm install -g npm@10.8.3 && npm install -g bun && cd www && bun install && bun run dev && echo "Thanks for visitiong my profile readme -> manfromexistence"
