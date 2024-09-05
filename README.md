@@ -3,8 +3,7 @@
 bunx create-next-app@rc --turbo
 ls -l | grep -v "^\." | grep "^d" | wc -l
 npm install -g npm@10.8.3 && npm install -g bun
-bun pm trust --all
-bun install && bun run dev
+bun install && bun pm trust --all && bun run dev
 rm -rf .contentlayer .next node_modules
 git add . && git commit -m "feat: automated commit by manfromexistence" && git push
 ```
