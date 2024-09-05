@@ -23,10 +23,10 @@ git add . && git commit -m "feat: automated commit by manfromexistence" && git p
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.0-alpha.15",
+    "tailwindcss": "4.0.0-alpha.3",
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-f994737d14-20240522",
-    "react-dom": "19.0.0-rc-f994737d14-20240522",
-    "tailwindcss": "4.0.0-alpha.3"
+    "react-dom": "19.0.0-rc-f994737d14-20240522"
   },
   "devDependencies": {
     "typescript": "^5",
