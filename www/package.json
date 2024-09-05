@@ -132,7 +132,8 @@
     "unist-builder": "3.0.0",
     "unist-util-visit": "^4.1.2"
   },
-  "peerDependencies": {
-    "esbuild": "^0.17.3"
-  }
+  "trustedDependencies": [
+    "contentlayer2",
+    "protobufjs"
+  ]
 }
