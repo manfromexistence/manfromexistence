@@ -71,7 +71,7 @@ I have to update my logo
 
 # More about me 💬
 
-### - I'm a 19-year-old Self-Taught Programmer plus a Machine Learning & Artificial Intelligence Enthusiast.
+### - I'm a 19-year-old Programmer plus a Machine Learning & Artificial Intelligence Enthusiast.
 
 <img hight="400" width="500" alt="GIF" align="right" src="./inventory/1936.gif">
 
