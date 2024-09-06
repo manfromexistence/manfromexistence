@@ -42,7 +42,7 @@ export async function editInV0({
       description,
       code,
       source: {
-        title: "shadcn/ui",
+        title: "manfromexistence/ui",
         url,
       },
       meta: {

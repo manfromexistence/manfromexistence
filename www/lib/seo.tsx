@@ -9,7 +9,7 @@ const defaultkeywords = [
   'Tailwind',
   'Tailwindcss',
   'Boilerplate',
-  'shadcn/ui',
+  'manfromexistence/ui',
 ];
 
 /**
