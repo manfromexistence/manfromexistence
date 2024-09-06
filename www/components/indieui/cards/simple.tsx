@@ -53,7 +53,7 @@ const CardBody = ({ className = 'p-4' }) => (
       <Link href={"https://www.threads.net/@manfromexistence?xmt=AQGzX0O_Vpo7BfxG054NKG79SDenEBx2ZFmcE11qaGLN5uw"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <Threads />
       </Link>
-      <Link href={"mailto:ajju40959@gmail.com"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+      <Link target="_blank" href={"mailto:ajju40959@gmail.com"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <Gmail />
       </Link>
 
