@@ -17,7 +17,7 @@ export function RotateWords({
     }, 5000);
     // Clean up interval on unmount
     return () => clearInterval(interval);
-  }, []);
+  }, [words.length]);
   return (
     <div className="text-xl text-center sm:text-4xl font-bold tracking-tighter md:text-6xl md:leading-[4rem] w-fit flex items-center jusitfy-center mx-auto gap-1.5">
       {text}{' '}

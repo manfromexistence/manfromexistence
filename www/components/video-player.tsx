@@ -81,11 +81,12 @@ export const VideoPlayer: React.FC<CustomVideoPlayerProps> = ({ videoSrc }) => {
     return () => {
       if (playerRef.current) {
         playerRef.current.removeEventListener("mousemove", handleMouseMove);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         playerRef.current.removeEventListener("mouseleave", handleMouseLeave);
       }
       clearInterval(inactivityInterval);
     };
-  }, [isFullscreen, lastMouseMoveTime]);
+  }, [isFullscreen, isPlaying, lastMouseMoveTime]);
 
   useEffect(() => {
     if (!isFullscreen) {
