@@ -14,10 +14,10 @@ import { Info } from '@/components/bento-info';
 import { MoreInfo } from '@/components/expandable-more-info';
 import { CardBody, CardContainer, CardItem } from "@/components/accertinityui/3d-card";
 import { FlipWords } from "@/components/accertinityui/flip-words";
+import IOSDOCk from '@/components/dock';
 
 function FlipWordsDemo() {
   const words = ["better", "cute", "beautiful", "modern"];
-
   return (
     <div className="h-[40rem] flex justify-center items-center px-4">
       <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
@@ -298,6 +298,7 @@ export default function Home() {
       <FlipWordsDemo />
       <Info />
       <MoreInfo />
+      <IOSDOCk />
 
     </div>
   );
