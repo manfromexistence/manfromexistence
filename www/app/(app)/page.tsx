@@ -66,7 +66,7 @@ export default function Home() {
               <Icon className="-bottom-3 -right-3" />
               <div className={cn('flex flex-col p-4')}>
                 <div className='md:justify-evenly rounded-md hover:bg-primary-foreground hover:text-primary flex w-full justify-center space-x-4 items-center p-2'>
-                  <Image src='MANFROMEXISTENCE.jpg' alt='manfromexistnece' className='rounded-md h-full w-12' />
+                  <Image width={50} height={50} src='/MANFROMEXISTENCE.jpg' alt='manfromexistnece' className='rounded-md' />
                   <div className='flex flex-col'>
                     <span className='text-foreground'>manfromexistence</span>
                     <span>Human - Programmer</span>
