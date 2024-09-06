@@ -1,5 +1,19 @@
 # manfromexistence 👋
-```
+<div align="center">
+  <img hight="300" width="100%" alt="manfromexistence" src="./inventory/manfromexistence.gif">
+</div>
+
+<!-- ```
+git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence02 account" && git push
+git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence04 account" && git push
+# Things that I need to do ASAP
+
+- Do this Github Profile
+I have to update my logo
+- Have to update the current multiverse logo
+``` -->
+
+<!-- ```
 bunx create-next-app@rc --turbo
 ls -l | grep -v "^\." | grep "^d" | wc -l
 npm install -g npm@10.8.3 && npm install -g bun
@@ -37,20 +51,6 @@ git add . && git commit -m "feat: automated commit by manfromexistence" && git p
     "eslint-config-next": "15.0.0-rc.0"
   }
 }
-```
-
-<div align="center">
-  <img hight="300" width="100%" alt="manfromexistence" src="./inventory/manfromexistence.gif">
-</div>
-
-<!-- ```
-git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence02 account" && git push
-git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence04 account" && git push
-# Things that I need to do ASAP
-
-- Do this Github Profile
-I have to update my logo
-- Have to update the current multiverse logo
 ``` -->
 
 <div align="center">
