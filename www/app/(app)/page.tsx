@@ -296,8 +296,8 @@ export default function Home() {
       </CardContainer>
 
       <FlipWordsDemo />
-      <Info />
-      <MoreInfo />
+      {/* <Info />
+      <MoreInfo /> */}
       <IOSDOCk />
 
     </div>
