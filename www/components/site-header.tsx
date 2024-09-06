@@ -21,7 +21,8 @@ export function SiteHeader() {
           {/* <div className="w-full flex-1 md:w-auto md:flex-none">
             <CommandMenu />
           </div> */}
-          <nav className="flex items-center">
+          <nav className="flex items-center space-x-2">
+            <ModeToggle />
             <EyeCatchingButton_v1 className="text-sm">
               <Play className="h-4 w-4 mr-1" />
               Start a Project
@@ -60,7 +61,7 @@ export function SiteHeader() {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
-            <ModeToggle /> */}
+            */}
           </nav>
         </div>
       </div>
