@@ -1,10 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { cn } from '@/lib/utils';
-// import {
-//   Avatar,
-//   AvatarFallback,
-//   AvatarImage,
-// } from "@/registry/default/ui/avatar"
 import { Separator } from "@/registry/default/ui/separator"
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
