@@ -20,13 +20,13 @@ export default function Home() {
             <div className="h-full flex md:justify-end flex-col space-y-2">
               <div className="flex flex-col">
                 <span>Now</span>
-                <div className="flex text-foreground">
+                <div className="flex text-foreground items-center">
                   <CircleSlash2 className="h-4 w-4 mr-2" /> Product Designer at Niural Inc.
                 </div>
               </div>
               <div className="flex flex-col">
                 <span>Previously</span>
-                <div className="flex text-foreground">
+                <div className="flex text-foreground items-center">
                   <Briefcase className="h-4 w-4 mr-2" /> Freelancer at Fiverr & Upwork.
                 </div>
               </div>
