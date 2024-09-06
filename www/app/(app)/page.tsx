@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className="container flex max-w-screen-xl items-center flex-col">
       {/* Introduction */}
-      <div className="w-full mt-4 min-h-screen space-y-8">
+      <div className="w-full mt-4 space-y-8">
         <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Crafting Experiences with Pixels and Logic</span>
         <div className="w-full md:flex-row flex flex-col md:space-y-0 space-y-4 text-muted-foreground justify-between">
           <div className="md:w-[60%] flex flex-col space-y-2 md:max-h-[200px]">
@@ -105,14 +105,14 @@ export default function Home() {
 
         <div className='flex w-full md:flex-row flex-col md:gap-4 gap-8'>
           <div className='w-full lg:w-[30%]'>
-            <div className="min-h-full  border border-dashed border-zinc-400 dark:border-zinc-700 relative">
+            <div className="flex items-center justify-center min-h-full border border-dashed border-zinc-400 dark:border-zinc-700 relative">
               <Icon className="-top-3 -left-3" />
               <Icon className="-top-3 -right-3" />
               <Icon className="-bottom-3 -left-3" />
               <Icon className="-bottom-3 -right-3" />
               <div className={cn('flex flex-col p-4 space-y-4')}>
                 <span className='text-muted-foreground font-bold'>DESIGN, BUILD, INSPIRE.</span>
-                <span className='text-muted-foreground flex-1 min-h-full bg-red-500'>Branding, design, writing, product creation, development – I wear many hats, fueled by an insatiable passion for innovation. Think of me as your multi-faceted partner, bridging the gap between dream concepts and polished realities.</span>
+                <span className='text-muted-foreground'>Branding, design, writing, product creation, development – I wear many hats, fueled by an insatiable passion for innovation. Think of me as your multi-faceted partner, bridging the gap between dream concepts and polished realities.</span>
                 <Button variant={'secondary'}>Let&apos;s work togather</Button>
               </div>
             </div>

@@ -22,7 +22,7 @@ export function SiteHeader() {
             <CommandMenu />
           </div> */}
           <nav className="flex items-center">
-            <EyeCatchingButton_v1>
+            <EyeCatchingButton_v1 className="text-sm">
               <Play className="h-4 w-4 mr-1" />
               Start a Project
             </EyeCatchingButton_v1>
