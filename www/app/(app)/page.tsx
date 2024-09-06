@@ -21,7 +21,7 @@ export default function Home() {
               <div className="flex flex-col">
                 <span>Now</span>
                 <div className="flex text-foreground items-center">
-                  <CircleSlash2 className="h-4 w-4 mr-2" /> Product Designer at Niural Inc.
+                  <CircleSlash2 className="h-4 w-4 mr-2" /> Jobless, Working on my own projects.
                 </div>
               </div>
               <div className="flex flex-col">

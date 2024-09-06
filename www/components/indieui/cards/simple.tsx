@@ -38,22 +38,22 @@ const CardBody = ({ className = 'p-4' }) => (
     <Separator className="my-4" />
 
     <div className='flex space-x-2 items-center justify-center'>
-      <Link href={"https://github.com/manfromexstence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+      <Link href={"https://www.youtube.com/@manfromexistence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <YouTube />
       </Link>
-      <Link href={"https://github.com/manfromexstence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+      <Link href={"https://x.com/manfrexistence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <XformerlyTwitter />
       </Link>
-      <Link href={"https://github.com/manfromexstence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+      <Link href={"https://github.com/manfromexistence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <Github />
       </Link>
-      <Link href={"https://github.com/manfromexstence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+      <Link href={"https://www.linkedin.com/in/man-from-existence-a50180314/"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <LinkedIn />
       </Link>
-      <Link href={"https://github.com/manfromexstence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+      <Link href={"https://www.threads.net/@manfromexistence?xmt=AQGzX0O_Vpo7BfxG054NKG79SDenEBx2ZFmcE11qaGLN5uw"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <Threads />
       </Link>
-      <Link href={"https://github.com/manfromexstence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+      <Link href={"mailto:ajju40959@gmail.com"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <Gmail />
       </Link>
 
