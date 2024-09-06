@@ -1,5 +1,6 @@
 import BlogCardSection from "@/components/blog-card-section";
 import FloatingBadge from "@/components/floating-badge";
+import { SimpleCard_V3 } from "@/components/indieui/cards/simple";
 import { Separator } from "@/components/ui/separator";
 import { VideoPlayer } from "@/components/video-player";
 import PageWrapper from "@/components/wrapper/page-wrapper";
@@ -13,7 +14,7 @@ export default function Home() {
       <div className="w-full mt-4 min-h-screen space-y-4">
         <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Crafting Experiences with Pixels and Logic</span>
 
-        <div className="w-full border rounded-md h-64 md:flex-row flex flex-col md:space-x-2 text-muted-foreground">
+        <div className="w-full md:flex-row flex flex-col md:space-x-2 text-muted-foreground">
           <div className="md:w-[60%] flex flex-col">
             <span>Wild ideas? I turn them into reality. Imaginative designs + technical know-how = polished, functional products.</span>
             <div className="h-full flex justify-center md:flex-col space-y-2">
@@ -32,7 +33,7 @@ export default function Home() {
             </div>
           </div>
 
-          
+          <SimpleCard_V3 />
         </div>
       </div>
       <BlogCardSection />
