@@ -15,6 +15,18 @@ export const blogs = [
   },
   {
     id: 1,
+    name: "rendering articles using html",
+    description: "learn how to render a blog using html",
+    title: "Rendering Articles using HTML",
+    slug: "rendering-blog-html",
+    created_at: new Date("8/7/2024").toLocaleString(),
+    link: "/blog/rendering-blog-html",
+    article: html_article_rendering,
+    image: "https://utfs.io/f/05f9572b-60e1-4085-9634-aa91494b72a4-3s2kwh.png",
+    keywords: [],
+  },
+  {
+    id: 2,
     name: "data fetching in nextjs 14",
     description: "learn how to be fetch data in nextjs 14",
     title: "Data Fetching In Nextjs 14",
