@@ -15,7 +15,7 @@ import { MoreInfo } from '@/components/expandable-more-info';
 import { CardBody, CardContainer, CardItem } from "@/components/accertinityui/3d-card";
 import { FlipWords } from "@/components/accertinityui/flip-words";
 
-export function FlipWordsDemo() {
+function FlipWordsDemo() {
   const words = ["better", "cute", "beautiful", "modern"];
 
   return (
