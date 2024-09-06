@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from '@/registry/default/ui/button';
 
 export default function Component() {
   return (
@@ -18,5 +18,5 @@ export default function Component() {
         <Button className="mt-4">Add Product</Button>
       </div>
     </div>
-  )
+  );
 }

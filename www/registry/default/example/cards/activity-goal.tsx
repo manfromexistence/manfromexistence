@@ -1,12 +1,12 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import { Minus, Plus } from "lucide-react"
-import { useTheme } from "next-themes"
-import { Bar, BarChart, ResponsiveContainer } from "recharts"
+import * as React from 'react';
+import { Minus, Plus } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { Bar, BarChart, ResponsiveContainer } from 'recharts';
 
-import { useConfig } from "@/hooks/use-config"
-import { Button } from "@/registry/default/ui/button"
+import { useConfig } from '@/hooks/use-config';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
@@ -14,8 +14,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { baseColors } from "@/registry/registry-base-colors"
+} from '@/registry/default/ui/card';
+import { baseColors } from '@/registry/registry-base-colors';
 
 const data = [
   {
@@ -57,19 +57,19 @@ const data = [
   {
     goal: 349,
   },
-]
+];
 
 export function CardsActivityGoal() {
-  const { theme: mode } = useTheme()
-  const [config] = useConfig()
+  const { theme: mode } = useTheme();
+  const [config] = useConfig();
 
   const baseColor = baseColors.find(
-    (baseColor) => baseColor.name === config.theme
-  )
-  const [goal, setGoal] = React.useState(350)
+    (baseColor) => baseColor.name === config.theme,
+  );
+  const [goal, setGoal] = React.useState(350);
 
   function onClick(adjustment: number) {
-    setGoal(Math.max(200, Math.min(400, goal + adjustment)))
+    setGoal(Math.max(200, Math.min(400, goal + adjustment)));
   }
 
   return (
@@ -114,10 +114,10 @@ export function CardsActivityGoal() {
                 dataKey="goal"
                 style={
                   {
-                    fill: "var(--theme-primary)",
+                    fill: 'var(--theme-primary)',
                     opacity: 0.2,
-                    "--theme-primary": `hsl(${
-                      baseColor?.cssVars[mode === "dark" ? "dark" : "light"]
+                    '--theme-primary': `hsl(${
+                      baseColor?.cssVars[mode === 'dark' ? 'dark' : 'light']
                         .primary
                     })`,
                   } as React.CSSProperties
@@ -131,5 +131,5 @@ export function CardsActivityGoal() {
         <Button className="w-full">Set Goal</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

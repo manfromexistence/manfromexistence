@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { TrendingUp } from "lucide-react"
-import { Bar, BarChart, CartesianGrid, Cell, LabelList } from "recharts"
+import { TrendingUp } from 'lucide-react';
+import { Bar, BarChart, CartesianGrid, Cell, LabelList } from 'recharts';
 
 import {
   Card,
@@ -10,30 +10,30 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from '@/registry/new-york/ui/card';
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/new-york/ui/chart"
+} from '@/registry/new-york/ui/chart';
 
-export const description = "A bar chart with negative values"
+export const description = 'A bar chart with negative values';
 
 const chartData = [
-  { month: "January", visitors: 186 },
-  { month: "February", visitors: 205 },
-  { month: "March", visitors: -207 },
-  { month: "April", visitors: 173 },
-  { month: "May", visitors: -209 },
-  { month: "June", visitors: 214 },
-]
+  { month: 'January', visitors: 186 },
+  { month: 'February', visitors: 205 },
+  { month: 'March', visitors: -207 },
+  { month: 'April', visitors: 173 },
+  { month: 'May', visitors: -209 },
+  { month: 'June', visitors: 214 },
+];
 
 const chartConfig = {
   visitors: {
-    label: "Visitors",
+    label: 'Visitors',
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -57,8 +57,8 @@ export default function Component() {
                   key={item.month}
                   fill={
                     item.visitors > 0
-                      ? "hsl(var(--chart-1))"
-                      : "hsl(var(--chart-2))"
+                      ? 'hsl(var(--chart-1))'
+                      : 'hsl(var(--chart-2))'
                   }
                 />
               ))}
@@ -75,5 +75,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

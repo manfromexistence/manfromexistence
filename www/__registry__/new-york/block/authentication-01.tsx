@@ -1,4 +1,4 @@
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Card,
   CardContent,
@@ -6,17 +6,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from '@/registry/new-york/ui/card';
+import { Input } from '@/registry/new-york/ui/input';
+import { Label } from '@/registry/new-york/ui/label';
 
 export const description =
-  "A simple login form with email and password. The submit button says 'Sign in'."
+  "A simple login form with email and password. The submit button says 'Sign in'.";
 
-export const iframeHeight = "600px"
+export const iframeHeight = '600px';
 
 export const containerClassName =
-  "w-full h-screen flex items-center justify-center px-4"
+  'w-full h-screen flex items-center justify-center px-4';
 
 export default function LoginForm() {
   return (
@@ -41,5 +41,5 @@ export default function LoginForm() {
         <Button className="w-full">Sign in</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

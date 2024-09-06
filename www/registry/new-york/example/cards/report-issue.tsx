@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
-import * as React from "react"
+import * as React from 'react';
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Card,
   CardContent,
@@ -10,20 +10,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from '@/registry/new-york/ui/card';
+import { Input } from '@/registry/new-york/ui/input';
+import { Label } from '@/registry/new-york/ui/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+} from '@/registry/new-york/ui/select';
+import { Textarea } from '@/registry/new-york/ui/textarea';
 
 export function CardsReportIssue() {
-  const id = React.useId()
+  const id = React.useId();
 
   return (
     <Card>
@@ -86,5 +86,5 @@ export function CardsReportIssue() {
         <Button>Submit</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

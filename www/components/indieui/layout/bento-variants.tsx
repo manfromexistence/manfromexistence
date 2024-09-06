@@ -3,23 +3,23 @@ import {
   Bento_4_v2,
   Bento_4_v3,
   Bento_4_v4,
-} from '@/components/layout/bento-4';
+} from '@/components/indieui/layout/bento-4';
 
 import {
   Bento_5_v1,
   Bento_5_v2,
   Bento_5_v3,
   Bento_5_v4,
-} from '@/components/layout/bento-5';
+} from '@/components/indieui/layout/bento-5';
 import {
   Bento_6_v1,
   Bento_6_v2,
   Bento_6_v3,
   Bento_6_v4,
-} from '@/components/layout/bento-6';
-import { VariantsCard } from '@/components/variants-card';
+} from '@/components/indieui/layout/bento-6';
+import { VariantsCard } from '@/components/indieui/variants-card';
 import components from '@/constants/components.json';
-import { SwiperWrapper } from '@/components/swiper-wrapper';
+import { SwiperWrapper } from '@/components/indieui/swiper-wrapper';
 
 const bentos = {
   'bento-4': [Bento_4_v1, Bento_4_v2, Bento_4_v3, Bento_4_v4],

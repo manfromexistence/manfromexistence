@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   ChevronLeft,
   Home,
@@ -13,9 +13,9 @@ import {
   ShoppingCart,
   Upload,
   Users2,
-} from "lucide-react"
+} from 'lucide-react';
 
-import { Badge } from "@/registry/default/ui/badge"
+import { Badge } from '@/registry/default/ui/badge';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -23,8 +23,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
-import { Button } from "@/registry/default/ui/button"
+} from '@/registry/default/ui/breadcrumb';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
@@ -32,7 +32,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from '@/registry/default/ui/card';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -40,17 +40,17 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from '@/registry/default/ui/dropdown-menu';
+import { Input } from '@/registry/default/ui/input';
+import { Label } from '@/registry/default/ui/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/default/ui/select"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/default/ui/sheet"
+} from '@/registry/default/ui/select';
+import { Sheet, SheetContent, SheetTrigger } from '@/registry/default/ui/sheet';
 import {
   Table,
   TableBody,
@@ -58,24 +58,24 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/default/ui/table"
-import { Textarea } from "@/registry/default/ui/textarea"
+} from '@/registry/default/ui/table';
+import { Textarea } from '@/registry/default/ui/textarea';
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/default/ui/toggle-group"
+} from '@/registry/default/ui/toggle-group';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/default/ui/tooltip"
+} from '@/registry/default/ui/tooltip';
 
 export const description =
-  "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images."
+  'A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images.';
 
-export const iframeHeight = "1200px"
+export const iframeHeight = '1200px';
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = 'w-full h-full';
 
 export default function Dashboard() {
   return (
@@ -606,5 +606,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }

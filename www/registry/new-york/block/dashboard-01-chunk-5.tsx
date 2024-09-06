@@ -1,16 +1,16 @@
-"use client"
+'use client';
 
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from '@/registry/new-york/ui/card';
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york/ui/avatar"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/new-york/ui/card"
+} from '@/registry/new-york/ui/avatar';
 
 export default function Component() {
   return (
@@ -84,5 +84,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

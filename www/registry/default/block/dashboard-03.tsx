@@ -15,10 +15,10 @@ import {
   SquareUser,
   Triangle,
   Turtle,
-} from "lucide-react"
+} from 'lucide-react';
 
-import { Badge } from "@/registry/default/ui/badge"
-import { Button } from "@/registry/default/ui/button"
+import { Badge } from '@/registry/default/ui/badge';
+import { Button } from '@/registry/default/ui/button';
 import {
   Drawer,
   DrawerContent,
@@ -26,29 +26,29 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/default/ui/drawer"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from '@/registry/default/ui/drawer';
+import { Input } from '@/registry/default/ui/input';
+import { Label } from '@/registry/default/ui/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/default/ui/select"
-import { Textarea } from "@/registry/default/ui/textarea"
+} from '@/registry/default/ui/select';
+import { Textarea } from '@/registry/default/ui/textarea';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/default/ui/tooltip"
+} from '@/registry/default/ui/tooltip';
 
 export const description =
-  "An AI playground with a sidebar navigation and a main content area. The playground has a header with a settings drawer and a share button. The sidebar has navigation links and a user menu. The main content area shows a form to configure the model and messages."
+  'An AI playground with a sidebar navigation and a main content area. The playground has a header with a settings drawer and a share button. The sidebar has navigation links and a user menu. The main content area shows a form to configure the model and messages.';
 
-export const iframeHeight = "740px"
+export const iframeHeight = '740px';
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = 'w-full h-full';
 
 export default function Dashboard() {
   return (
@@ -206,7 +206,7 @@ export default function Dashboard() {
                             <Rabbit className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
-                                Neural{" "}
+                                Neural{' '}
                                 <span className="font-medium text-foreground">
                                   Genesis
                                 </span>
@@ -222,7 +222,7 @@ export default function Dashboard() {
                             <Bird className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
-                                Neural{" "}
+                                Neural{' '}
                                 <span className="font-medium text-foreground">
                                   Explorer
                                 </span>
@@ -238,7 +238,7 @@ export default function Dashboard() {
                             <Turtle className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
-                                Neural{" "}
+                                Neural{' '}
                                 <span className="font-medium text-foreground">
                                   Quantum
                                 </span>
@@ -325,7 +325,7 @@ export default function Dashboard() {
                           <Rabbit className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
+                              Neural{' '}
                               <span className="font-medium text-foreground">
                                 Genesis
                               </span>
@@ -341,7 +341,7 @@ export default function Dashboard() {
                           <Bird className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
+                              Neural{' '}
                               <span className="font-medium text-foreground">
                                 Explorer
                               </span>
@@ -357,7 +357,7 @@ export default function Dashboard() {
                           <Turtle className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
+                              Neural{' '}
                               <span className="font-medium text-foreground">
                                 Quantum
                               </span>
@@ -460,5 +460,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }

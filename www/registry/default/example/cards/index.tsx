@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/default/example/cards/activity-goal"
-import { CardsCalendar } from "@/registry/default/example/cards/calendar"
-import { CardsChat } from "@/registry/default/example/cards/chat"
-import { CardsCookieSettings } from "@/registry/default/example/cards/cookie-settings"
-import { CardsCreateAccount } from "@/registry/default/example/cards/create-account"
-import { CardsDataTable } from "@/registry/default/example/cards/data-table"
-import { CardsMetric } from "@/registry/default/example/cards/metric"
-import { CardsPaymentMethod } from "@/registry/default/example/cards/payment-method"
-import { CardsReportIssue } from "@/registry/default/example/cards/report-issue"
-import { CardsShare } from "@/registry/default/example/cards/share"
-import { CardsStats } from "@/registry/default/example/cards/stats"
-import { CardsTeamMembers } from "@/registry/default/example/cards/team-members"
+import { CardsActivityGoal } from '@/registry/default/example/cards/activity-goal';
+import { CardsCalendar } from '@/registry/default/example/cards/calendar';
+import { CardsChat } from '@/registry/default/example/cards/chat';
+import { CardsCookieSettings } from '@/registry/default/example/cards/cookie-settings';
+import { CardsCreateAccount } from '@/registry/default/example/cards/create-account';
+import { CardsDataTable } from '@/registry/default/example/cards/data-table';
+import { CardsMetric } from '@/registry/default/example/cards/metric';
+import { CardsPaymentMethod } from '@/registry/default/example/cards/payment-method';
+import { CardsReportIssue } from '@/registry/default/example/cards/report-issue';
+import { CardsShare } from '@/registry/default/example/cards/share';
+import { CardsStats } from '@/registry/default/example/cards/stats';
+import { CardsTeamMembers } from '@/registry/default/example/cards/team-members';
 
 export default function CardsDemo() {
   return (
@@ -59,5 +59,5 @@ export default function CardsDemo() {
         </div>
       </div>
     </div>
-  )
+  );
 }

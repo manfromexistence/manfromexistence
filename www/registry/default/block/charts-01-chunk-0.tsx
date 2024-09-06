@@ -1,20 +1,26 @@
-"use client"
-
-import { Bar, BarChart, Label, Rectangle, ReferenceLine, XAxis } from "recharts"
+'use client';
 
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
+  CardDescription,
   CardTitle,
-} from "@/registry/default/ui/card"
+  CardContent,
+  CardFooter,
+} from '@/registry/default/ui/card';
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/default/ui/chart"
+} from '@/registry/default/ui/chart';
+import {
+  BarChart,
+  ReferenceLine,
+  Bar,
+  Rectangle,
+  XAxis,
+  Label,
+} from 'recharts';
 
 export default function Component() {
   return (
@@ -22,7 +28,7 @@ export default function Component() {
       <CardHeader className="space-y-0 pb-2">
         <CardDescription>Today</CardDescription>
         <CardTitle className="text-4xl tabular-nums">
-          12,584{" "}
+          12,584{' '}
           <span className="font-sans text-sm font-normal tracking-normal text-muted-foreground">
             steps
           </span>
@@ -32,8 +38,8 @@ export default function Component() {
         <ChartContainer
           config={{
             steps: {
-              label: "Steps",
-              color: "hsl(var(--chart-1))",
+              label: 'Steps',
+              color: 'hsl(var(--chart-1))',
             },
           }}
         >
@@ -45,31 +51,31 @@ export default function Component() {
             }}
             data={[
               {
-                date: "2024-01-01",
+                date: '2024-01-01',
                 steps: 2000,
               },
               {
-                date: "2024-01-02",
+                date: '2024-01-02',
                 steps: 2100,
               },
               {
-                date: "2024-01-03",
+                date: '2024-01-03',
                 steps: 2200,
               },
               {
-                date: "2024-01-04",
+                date: '2024-01-04',
                 steps: 1300,
               },
               {
-                date: "2024-01-05",
+                date: '2024-01-05',
                 steps: 1400,
               },
               {
-                date: "2024-01-06",
+                date: '2024-01-06',
                 steps: 2500,
               },
               {
-                date: "2024-01-07",
+                date: '2024-01-07',
                 steps: 1600,
               },
             ]}
@@ -87,9 +93,9 @@ export default function Component() {
               axisLine={false}
               tickMargin={4}
               tickFormatter={(value) => {
-                return new Date(value).toLocaleDateString("en-US", {
-                  weekday: "short",
-                })
+                return new Date(value).toLocaleDateString('en-US', {
+                  weekday: 'short',
+                });
               }}
             />
             <ChartTooltip
@@ -98,11 +104,11 @@ export default function Component() {
                 <ChartTooltipContent
                   hideIndicator
                   labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString("en-US", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    })
+                    return new Date(value).toLocaleDateString('en-US', {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric',
+                    });
                   }}
                 />
               }
@@ -134,14 +140,14 @@ export default function Component() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-1">
         <CardDescription>
-          Over the past 7 days, you have walked{" "}
+          Over the past 7 days, you have walked{' '}
           <span className="font-medium text-foreground">53,305</span> steps.
         </CardDescription>
         <CardDescription>
-          You need <span className="font-medium text-foreground">12,584</span>{" "}
+          You need <span className="font-medium text-foreground">12,584</span>{' '}
           more steps to reach your goal.
         </CardDescription>
       </CardFooter>
     </Card>
-  )
+  );
 }

@@ -1,15 +1,14 @@
-"use client"
-
-import { Bar, BarChart, Rectangle, XAxis } from "recharts"
+'use client';
 
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york//ui/card"
-import { ChartContainer } from "@/registry/new-york//ui/chart"
+  CardDescription,
+  CardContent,
+} from '@/registry/new-york//ui/card';
+import { ChartContainer } from '@/registry/new-york//ui/chart';
+import { BarChart, Bar, Rectangle, XAxis } from 'recharts';
 
 export default function Component() {
   return (
@@ -31,8 +30,8 @@ export default function Component() {
         <ChartContainer
           config={{
             steps: {
-              label: "Steps",
-              color: "hsl(var(--chart-1))",
+              label: 'Steps',
+              color: 'hsl(var(--chart-1))',
             },
           }}
           className="ml-auto w-[72px]"
@@ -47,31 +46,31 @@ export default function Component() {
             }}
             data={[
               {
-                date: "2024-01-01",
+                date: '2024-01-01',
                 steps: 2000,
               },
               {
-                date: "2024-01-02",
+                date: '2024-01-02',
                 steps: 2100,
               },
               {
-                date: "2024-01-03",
+                date: '2024-01-03',
                 steps: 2200,
               },
               {
-                date: "2024-01-04",
+                date: '2024-01-04',
                 steps: 1300,
               },
               {
-                date: "2024-01-05",
+                date: '2024-01-05',
                 steps: 1400,
               },
               {
-                date: "2024-01-06",
+                date: '2024-01-06',
                 steps: 2500,
               },
               {
-                date: "2024-01-07",
+                date: '2024-01-07',
                 steps: 1600,
               },
             ]}
@@ -95,5 +94,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

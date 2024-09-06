@@ -1,15 +1,14 @@
-"use client"
-
-import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts"
+'use client';
 
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { ChartContainer } from "@/registry/default/ui/chart"
+  CardDescription,
+  CardContent,
+} from '@/registry/default/ui/card';
+import { ChartContainer } from '@/registry/default/ui/chart';
+import { BarChart, Bar, LabelList, YAxis, XAxis } from 'recharts';
 
 export default function Component() {
   return (
@@ -31,8 +30,8 @@ export default function Component() {
           <ChartContainer
             config={{
               steps: {
-                label: "Steps",
-                color: "hsl(var(--chart-1))",
+                label: 'Steps',
+                color: 'hsl(var(--chart-1))',
               },
             }}
             className="aspect-auto h-[32px] w-full"
@@ -48,7 +47,7 @@ export default function Component() {
               }}
               data={[
                 {
-                  date: "2024",
+                  date: '2024',
                   steps: 12435,
                 },
               ]}
@@ -82,8 +81,8 @@ export default function Component() {
           <ChartContainer
             config={{
               steps: {
-                label: "Steps",
-                color: "hsl(var(--muted))",
+                label: 'Steps',
+                color: 'hsl(var(--muted))',
               },
             }}
             className="aspect-auto h-[32px] w-full"
@@ -99,7 +98,7 @@ export default function Component() {
               }}
               data={[
                 {
-                  date: "2023",
+                  date: '2023',
                   steps: 10103,
                 },
               ]}
@@ -125,5 +124,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

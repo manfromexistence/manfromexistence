@@ -13,7 +13,7 @@ export default function TypographyDemo() {
         The King's Plan
       </h2>
       <p className="leading-7 [&:not(:first-child)]:mt-6">
-        The king thought long and hard, and finally came up with{" "}
+        The king thought long and hard, and finally came up with{' '}
         <a
           href="#"
           className="font-medium text-primary underline underline-offset-4"
@@ -115,5 +115,5 @@ export default function TypographyDemo() {
         and always be careful of bad ideas.
       </p>
     </div>
-  )
+  );
 }

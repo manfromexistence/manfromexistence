@@ -1,9 +1,9 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from 'react';
+import Link from 'next/link';
 
-import { useMediaQuery } from "@/hooks/use-media-query"
+import { useMediaQuery } from '@/hooks/use-media-query';
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -12,8 +12,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
-import { Button } from "@/registry/default/ui/button"
+} from '@/registry/default/ui/breadcrumb';
+import { Button } from '@/registry/default/ui/button';
 import {
   Drawer,
   DrawerClose,
@@ -23,27 +23,27 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/default/ui/drawer"
+} from '@/registry/default/ui/drawer';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from '@/registry/default/ui/dropdown-menu';
 
 const items = [
-  { href: "#", label: "Home" },
-  { href: "#", label: "Documentation" },
-  { href: "#", label: "Building Your Application" },
-  { href: "#", label: "Data Fetching" },
-  { label: "Caching and Revalidating" },
-]
+  { href: '#', label: 'Home' },
+  { href: '#', label: 'Documentation' },
+  { href: '#', label: 'Building Your Application' },
+  { href: '#', label: 'Data Fetching' },
+  { label: 'Caching and Revalidating' },
+];
 
-const ITEMS_TO_DISPLAY = 3
+const ITEMS_TO_DISPLAY = 3;
 
 export default function BreadcrumbResponsive() {
-  const [open, setOpen] = React.useState(false)
-  const isDesktop = useMediaQuery("(min-width: 768px)")
+  const [open, setOpen] = React.useState(false);
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   return (
     <Breadcrumb>
@@ -66,7 +66,7 @@ export default function BreadcrumbResponsive() {
                   <DropdownMenuContent align="start">
                     {items.slice(1, -2).map((item, index) => (
                       <DropdownMenuItem key={index}>
-                        <Link href={item.href ? item.href : "#"}>
+                        <Link href={item.href ? item.href : '#'}>
                           {item.label}
                         </Link>
                       </DropdownMenuItem>
@@ -89,7 +89,7 @@ export default function BreadcrumbResponsive() {
                       {items.slice(1, -2).map((item, index) => (
                         <Link
                           key={index}
-                          href={item.href ? item.href : "#"}
+                          href={item.href ? item.href : '#'}
                           className="py-1 text-sm"
                         >
                           {item.label}
@@ -129,5 +129,5 @@ export default function BreadcrumbResponsive() {
         ))}
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

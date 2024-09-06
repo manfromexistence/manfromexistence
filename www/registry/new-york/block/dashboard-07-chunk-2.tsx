@@ -1,19 +1,19 @@
-"use client"
+'use client';
 
 import {
   Card,
-  CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Label } from "@/registry/new-york/ui/label"
+  CardContent,
+} from '@/registry/new-york/ui/card';
+import { Label } from '@/registry/new-york/ui/label';
 import {
   Select,
+  SelectTrigger,
   SelectContent,
   SelectItem,
-  SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from '@/registry/new-york/ui/select';
 
 export default function Component() {
   return (
@@ -52,5 +52,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

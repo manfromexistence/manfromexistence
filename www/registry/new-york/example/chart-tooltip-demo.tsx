@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
-import * as React from "react"
+import * as React from 'react';
 
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils';
 
 export default function Component() {
   return (
@@ -34,8 +34,8 @@ export default function Component() {
         <TooltipDemo
           label="Page Views"
           payload={[
-            { name: "Desktop", value: 186, fill: "hsl(var(--chart-1))" },
-            { name: "Mobile", value: 80, fill: "hsl(var(--chart-2))" },
+            { name: 'Desktop', value: 186, fill: 'hsl(var(--chart-1))' },
+            { name: 'Mobile', value: 80, fill: 'hsl(var(--chart-2))' },
           ]}
           className="w-[8rem]"
         />
@@ -68,8 +68,8 @@ export default function Component() {
           label="Browser"
           hideLabel
           payload={[
-            { name: "Chrome", value: 1286, fill: "hsl(var(--chart-3))" },
-            { name: "Firefox", value: 1000, fill: "hsl(var(--chart-4))" },
+            { name: 'Chrome', value: 1286, fill: 'hsl(var(--chart-3))' },
+            { name: 'Firefox', value: 1000, fill: 'hsl(var(--chart-4))' },
           ]}
           indicator="dashed"
           className="w-[8rem]"
@@ -79,7 +79,7 @@ export default function Component() {
         <TooltipDemo
           label="Page Views"
           payload={[
-            { name: "Desktop", value: 12486, fill: "hsl(var(--chart-3))" },
+            { name: 'Desktop', value: 12486, fill: 'hsl(var(--chart-3))' },
           ]}
           className="w-[9rem]"
           indicator="line"
@@ -93,7 +93,7 @@ export default function Component() {
           label="Browser"
           hideLabel
           payload={[
-            { name: "Chrome", value: 1286, fill: "hsl(var(--chart-1))" },
+            { name: 'Chrome', value: 1286, fill: 'hsl(var(--chart-1))' },
           ]}
           indicator="dot"
           className="w-[8rem]"
@@ -120,84 +120,84 @@ export default function Component() {
         </svg>
       </div>
     </div>
-  )
+  );
 }
 
 function TooltipDemo({
-  indicator = "dot",
+  indicator = 'dot',
   label,
   payload,
   hideLabel,
   hideIndicator,
   className,
 }: {
-  label: string
-  hideLabel?: boolean
-  hideIndicator?: boolean
-  indicator?: "line" | "dot" | "dashed"
+  label: string;
+  hideLabel?: boolean;
+  hideIndicator?: boolean;
+  indicator?: 'line' | 'dot' | 'dashed';
   payload: {
-    name: string
-    value: number
-    fill: string
-  }[]
-  nameKey?: string
-  labelKey?: string
-} & React.ComponentProps<"div">) {
+    name: string;
+    value: number;
+    fill: string;
+  }[];
+  nameKey?: string;
+  labelKey?: string;
+} & React.ComponentProps<'div'>) {
   const tooltipLabel = hideLabel ? null : (
     <div className="font-medium">{label}</div>
-  )
+  );
 
   if (!payload?.length) {
-    return null
+    return null;
   }
 
-  const nestLabel = payload.length === 1 && indicator !== "dot"
+  const nestLabel = payload.length === 1 && indicator !== 'dot';
 
   return (
     <div
       className={cn(
-        "grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl transition-all ease-in-out hover:-translate-y-0.5",
-        className
+        'grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl transition-all ease-in-out hover:-translate-y-0.5',
+        className,
       )}
     >
       {!nestLabel ? tooltipLabel : null}
       <div className="grid gap-1.5">
         {payload.map((item, index) => {
-          const indicatorColor = item.fill
+          const indicatorColor = item.fill;
 
           return (
             <div
               key={index}
               className={cn(
-                "flex w-full items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5 [&>svg]:text-muted-foreground",
-                indicator === "dot" && "items-center"
+                'flex w-full items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5 [&>svg]:text-muted-foreground',
+                indicator === 'dot' && 'items-center',
               )}
             >
               <>
                 {!hideIndicator && (
                   <div
                     className={cn(
-                      "shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]",
+                      'shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]',
                       {
-                        "h-2.5 w-2.5": indicator === "dot",
-                        "w-1": indicator === "line",
-                        "w-0 border-[1.5px] border-dashed bg-transparent":
-                          indicator === "dashed",
-                        "my-0.5": nestLabel && indicator === "dashed",
-                      }
+                        'h-2.5 w-2.5': indicator === 'dot',
+                        'w-1': indicator === 'line',
+                        'w-0 border-[1.5px] border-dashed bg-transparent':
+                          indicator === 'dashed',
+                        'my-0.5': nestLabel && indicator === 'dashed',
+                      },
                     )}
                     style={
                       {
-                        "--color-bg": indicatorColor,
-                        "--color-border": indicatorColor,
+                        '--color-bg': indicatorColor,
+                        '--color-border': indicatorColor,
                       } as React.CSSProperties
                     }
                   />
                 )}
                 <div
                   className={cn(
-                    "flex flex-1 justify-between leading-none",
-                    nestLabel ? "items-end" : "items-center"
+                    'flex flex-1 justify-between leading-none',
+                    nestLabel ? 'items-end' : 'items-center',
                   )}
                 >
                   <div className="grid gap-1.5">
@@ -210,9 +210,9 @@ function TooltipDemo({
                 </div>
               </>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }

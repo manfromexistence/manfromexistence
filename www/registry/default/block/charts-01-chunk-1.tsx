@@ -1,19 +1,18 @@
-"use client"
-
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
+'use client';
 
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
+  CardDescription,
   CardTitle,
-} from "@/registry/default/ui/card"
+  CardContent,
+} from '@/registry/default/ui/card';
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/default/ui/chart"
+} from '@/registry/default/ui/chart';
+import { LineChart, CartesianGrid, YAxis, XAxis, Line } from 'recharts';
 
 export default function Component() {
   return (
@@ -42,8 +41,8 @@ export default function Component() {
         <ChartContainer
           config={{
             resting: {
-              label: "Resting",
-              color: "hsl(var(--chart-1))",
+              label: 'Resting',
+              color: 'hsl(var(--chart-1))',
             },
           }}
           className="w-full"
@@ -57,31 +56,31 @@ export default function Component() {
             }}
             data={[
               {
-                date: "2024-01-01",
+                date: '2024-01-01',
                 resting: 62,
               },
               {
-                date: "2024-01-02",
+                date: '2024-01-02',
                 resting: 72,
               },
               {
-                date: "2024-01-03",
+                date: '2024-01-03',
                 resting: 35,
               },
               {
-                date: "2024-01-04",
+                date: '2024-01-04',
                 resting: 62,
               },
               {
-                date: "2024-01-05",
+                date: '2024-01-05',
                 resting: 52,
               },
               {
-                date: "2024-01-06",
+                date: '2024-01-06',
                 resting: 62,
               },
               {
-                date: "2024-01-07",
+                date: '2024-01-07',
                 resting: 70,
               },
             ]}
@@ -92,16 +91,16 @@ export default function Component() {
               stroke="hsl(var(--muted-foreground))"
               strokeOpacity={0.5}
             />
-            <YAxis hide domain={["dataMin - 10", "dataMax + 10"]} />
+            <YAxis hide domain={['dataMin - 10', 'dataMax + 10']} />
             <XAxis
               dataKey="date"
               tickLine={false}
               axisLine={false}
               tickMargin={8}
               tickFormatter={(value) => {
-                return new Date(value).toLocaleDateString("en-US", {
-                  weekday: "short",
-                })
+                return new Date(value).toLocaleDateString('en-US', {
+                  weekday: 'short',
+                });
               }}
             />
             <Line
@@ -112,8 +111,8 @@ export default function Component() {
               strokeWidth={2}
               dot={false}
               activeDot={{
-                fill: "var(--color-resting)",
-                stroke: "var(--color-resting)",
+                fill: 'var(--color-resting)',
+                stroke: 'var(--color-resting)',
                 r: 4,
               }}
             />
@@ -122,11 +121,11 @@ export default function Component() {
                 <ChartTooltipContent
                   indicator="line"
                   labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString("en-US", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    })
+                    return new Date(value).toLocaleDateString('en-US', {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric',
+                    });
                   }}
                 />
               }
@@ -136,5 +135,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

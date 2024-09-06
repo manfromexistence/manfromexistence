@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import { TrendingUp } from "lucide-react"
-import { Label, Pie, PieChart } from "recharts"
+import * as React from 'react';
+import { TrendingUp } from 'lucide-react';
+import { Label, Pie, PieChart } from 'recharts';
 
 import {
   Card,
@@ -11,63 +11,63 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from '@/registry/new-york/ui/card';
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/new-york/ui/chart"
+} from '@/registry/new-york/ui/chart';
 
-export const description = "A pie chart with stacked sections"
+export const description = 'A pie chart with stacked sections';
 
 const desktopData = [
-  { month: "january", desktop: 186, fill: "var(--color-january)" },
-  { month: "february", desktop: 305, fill: "var(--color-february)" },
-  { month: "march", desktop: 237, fill: "var(--color-march)" },
-  { month: "april", desktop: 173, fill: "var(--color-april)" },
-  { month: "may", desktop: 209, fill: "var(--color-may)" },
-]
+  { month: 'january', desktop: 186, fill: 'var(--color-january)' },
+  { month: 'february', desktop: 305, fill: 'var(--color-february)' },
+  { month: 'march', desktop: 237, fill: 'var(--color-march)' },
+  { month: 'april', desktop: 173, fill: 'var(--color-april)' },
+  { month: 'may', desktop: 209, fill: 'var(--color-may)' },
+];
 
 const mobileData = [
-  { month: "january", mobile: 80, fill: "var(--color-january)" },
-  { month: "february", mobile: 200, fill: "var(--color-february)" },
-  { month: "march", mobile: 120, fill: "var(--color-march)" },
-  { month: "april", mobile: 190, fill: "var(--color-april)" },
-  { month: "may", mobile: 130, fill: "var(--color-may)" },
-]
+  { month: 'january', mobile: 80, fill: 'var(--color-january)' },
+  { month: 'february', mobile: 200, fill: 'var(--color-february)' },
+  { month: 'march', mobile: 120, fill: 'var(--color-march)' },
+  { month: 'april', mobile: 190, fill: 'var(--color-april)' },
+  { month: 'may', mobile: 130, fill: 'var(--color-may)' },
+];
 
 const chartConfig = {
   visitors: {
-    label: "Visitors",
+    label: 'Visitors',
   },
   desktop: {
-    label: "Desktop",
+    label: 'Desktop',
   },
   mobile: {
-    label: "Mobile",
+    label: 'Mobile',
   },
   january: {
-    label: "January",
-    color: "hsl(var(--chart-1))",
+    label: 'January',
+    color: 'hsl(var(--chart-1))',
   },
   february: {
-    label: "February",
-    color: "hsl(var(--chart-2))",
+    label: 'February',
+    color: 'hsl(var(--chart-2))',
   },
   march: {
-    label: "March",
-    color: "hsl(var(--chart-3))",
+    label: 'March',
+    color: 'hsl(var(--chart-3))',
   },
   april: {
-    label: "April",
-    color: "hsl(var(--chart-4))",
+    label: 'April',
+    color: 'hsl(var(--chart-4))',
   },
   may: {
-    label: "May",
-    color: "hsl(var(--chart-5))",
+    label: 'May',
+    color: 'hsl(var(--chart-5))',
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -91,7 +91,7 @@ export default function Component() {
                   labelFormatter={(_, payload) => {
                     return chartConfig[
                       payload?.[0].dataKey as keyof typeof chartConfig
-                    ].label
+                    ].label;
                   }}
                 />
               }
@@ -115,5 +115,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

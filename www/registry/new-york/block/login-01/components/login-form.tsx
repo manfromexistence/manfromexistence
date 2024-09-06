@@ -1,15 +1,15 @@
-import Link from "next/link"
+import Link from 'next/link';
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from '@/registry/new-york/ui/card';
+import { Input } from '@/registry/new-york/ui/input';
+import { Label } from '@/registry/new-york/ui/label';
 
 export function LoginForm() {
   return (
@@ -48,12 +48,12 @@ export function LoginForm() {
           </Button>
         </div>
         <div className="mt-4 text-center text-sm">
-          Don&apos;t have an account?{" "}
+          Don&apos;t have an account?{' '}
           <Link href="#" className="underline">
             Sign up
           </Link>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

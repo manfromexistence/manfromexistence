@@ -1,21 +1,21 @@
-"use client"
+'use client';
 
-import { Badge } from "@/registry/default/ui/badge"
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+  CardDescription,
+  CardContent,
+} from '@/registry/default/ui/card';
 import {
   Table,
-  TableBody,
-  TableCell,
-  TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/default/ui/table"
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@/registry/default/ui/table';
+import { Badge } from '@/registry/default/ui/badge';
 
 export default function Component() {
   return (
@@ -170,5 +170,5 @@ export default function Component() {
         </Table>
       </CardContent>
     </Card>
-  )
+  );
 }

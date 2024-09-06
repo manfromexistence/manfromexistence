@@ -1,6 +1,6 @@
-import { FontItalicIcon } from "@radix-ui/react-icons"
+import { FontItalicIcon } from '@radix-ui/react-icons';
 
-import { Toggle } from "@/registry/new-york/ui/toggle"
+import { Toggle } from '@/registry/new-york/ui/toggle';
 
 export default function ToggleWithText() {
   return (
@@ -8,5 +8,5 @@ export default function ToggleWithText() {
       <FontItalicIcon className="mr-2 h-4 w-4" />
       Italic
     </Toggle>
-  )
+  );
 }

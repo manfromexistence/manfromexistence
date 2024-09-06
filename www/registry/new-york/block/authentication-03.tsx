@@ -1,23 +1,23 @@
-import Link from "next/link"
+import Link from 'next/link';
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from '@/registry/new-york/ui/card';
+import { Input } from '@/registry/new-york/ui/input';
+import { Label } from '@/registry/new-york/ui/label';
 
 export const description =
-  "A sign up form with first name, last name, email and password inside a card. There's an option to sign up with GitHub and a link to login if you already have an account"
+  "A sign up form with first name, last name, email and password inside a card. There's an option to sign up with GitHub and a link to login if you already have an account";
 
-export const iframeHeight = "600px"
+export const iframeHeight = '600px';
 
 export const containerClassName =
-  "w-full h-screen flex items-center justify-center px-4"
+  'w-full h-screen flex items-center justify-center px-4';
 
 export default function LoginForm() {
   return (
@@ -61,12 +61,12 @@ export default function LoginForm() {
           </Button>
         </div>
         <div className="mt-4 text-center text-sm">
-          Already have an account?{" "}
+          Already have an account?{' '}
           <Link href="#" className="underline">
             Sign in
           </Link>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

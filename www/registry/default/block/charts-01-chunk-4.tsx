@@ -1,10 +1,9 @@
-"use client"
+'use client';
 
-import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts"
-
-import { Card, CardContent, CardFooter } from "@/registry/default/ui/card"
-import { ChartContainer } from "@/registry/default/ui/chart"
-import { Separator } from "@/registry/default/ui/separator"
+import { Card, CardContent, CardFooter } from '@/registry/default/ui/card';
+import { ChartContainer } from '@/registry/default/ui/chart';
+import { BarChart, Bar, XAxis, YAxis, LabelList } from 'recharts';
+import { Separator } from '@/registry/default/ui/separator';
 
 export default function Component() {
   return (
@@ -13,16 +12,16 @@ export default function Component() {
         <ChartContainer
           config={{
             move: {
-              label: "Move",
-              color: "hsl(var(--chart-1))",
+              label: 'Move',
+              color: 'hsl(var(--chart-1))',
             },
             stand: {
-              label: "Stand",
-              color: "hsl(var(--chart-2))",
+              label: 'Stand',
+              color: 'hsl(var(--chart-2))',
             },
             exercise: {
-              label: "Exercise",
-              color: "hsl(var(--chart-3))",
+              label: 'Exercise',
+              color: 'hsl(var(--chart-3))',
             },
           }}
           className="h-[140px] w-full"
@@ -36,22 +35,22 @@ export default function Component() {
             }}
             data={[
               {
-                activity: "stand",
+                activity: 'stand',
                 value: (8 / 12) * 100,
-                label: "8/12 hr",
-                fill: "var(--color-stand)",
+                label: '8/12 hr',
+                fill: 'var(--color-stand)',
               },
               {
-                activity: "exercise",
+                activity: 'exercise',
                 value: (46 / 60) * 100,
-                label: "46/60 min",
-                fill: "var(--color-exercise)",
+                label: '46/60 min',
+                fill: 'var(--color-exercise)',
               },
               {
-                activity: "move",
+                activity: 'move',
                 value: (245 / 360) * 100,
-                label: "245/360 kcal",
-                fill: "var(--color-move)",
+                label: '245/360 kcal',
+                fill: 'var(--color-move)',
               },
             ]}
             layout="vertical"
@@ -113,5 +112,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

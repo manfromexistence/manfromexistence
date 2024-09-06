@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { Icons } from "@/components/icons"
-import { Button } from "@/registry/default/ui/button"
+import { Icons } from '@/components/icons';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
@@ -9,9 +9,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from '@/registry/default/ui/card';
+import { Input } from '@/registry/default/ui/input';
+import { Label } from '@/registry/default/ui/label';
 
 export function CardsCreateAccount() {
   return (
@@ -56,5 +56,5 @@ export function CardsCreateAccount() {
         <Button className="w-full">Create account</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

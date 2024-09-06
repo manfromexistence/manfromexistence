@@ -1,33 +1,32 @@
-"use client"
+'use client';
 
-import Image from "next/image"
-import { MoreHorizontal } from "lucide-react"
-
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Button } from "@/registry/new-york/ui/button"
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/registry/new-york/ui/card';
 import {
   Table,
-  TableBody,
-  TableCell,
-  TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/new-york/ui/table"
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@/registry/new-york/ui/table';
+import { Badge } from '@/registry/new-york/ui/badge';
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuItem,
+} from '@/registry/new-york/ui/dropdown-menu';
+import { Button } from '@/registry/new-york/ui/button';
+import Image from 'next/image';
+import { MoreHorizontal } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -285,5 +284,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

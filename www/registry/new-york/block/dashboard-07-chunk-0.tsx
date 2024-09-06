@@ -1,15 +1,15 @@
-"use client"
+'use client';
 
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+  CardDescription,
+  CardContent,
+} from '@/registry/new-york/ui/card';
+import { Label } from '@/registry/new-york/ui/label';
+import { Input } from '@/registry/new-york/ui/input';
+import { Textarea } from '@/registry/new-york/ui/textarea';
 
 export default function Component() {
   return (
@@ -42,5 +42,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,19 +1,19 @@
-import * as React from "react"
+import * as React from 'react';
 
-import { Card, CardContent } from "@/registry/new-york/ui/card"
+import { Card, CardContent } from '@/registry/new-york/ui/card';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/new-york/ui/carousel"
+} from '@/registry/new-york/ui/carousel';
 
 export default function CarouselOrientation() {
   return (
     <Carousel
       opts={{
-        align: "start",
+        align: 'start',
       }}
       orientation="vertical"
       className="w-full max-w-xs"
@@ -34,5 +34,5 @@ export default function CarouselOrientation() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

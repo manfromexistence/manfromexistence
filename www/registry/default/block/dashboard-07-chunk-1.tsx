@@ -1,30 +1,29 @@
-"use client"
+'use client';
 
-import { PlusCircle } from "lucide-react"
-
-import { Button } from "@/registry/default/ui/button"
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/registry/default/ui/card';
 import {
   Table,
-  TableBody,
-  TableCell,
-  TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/default/ui/table"
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@/registry/default/ui/table';
+import { Label } from '@/registry/default/ui/label';
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/default/ui/toggle-group"
+} from '@/registry/default/ui/toggle-group';
+import { Button } from '@/registry/default/ui/button';
+import { Input } from '@/registry/default/ui/input';
+import { PlusCircle } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -122,5 +121,5 @@ export default function Component() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

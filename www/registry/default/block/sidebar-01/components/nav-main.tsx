@@ -1,28 +1,28 @@
-"use client"
+'use client';
 
-import Link from "next/link"
-import { ChevronRight, Search, type LucideIcon } from "lucide-react"
+import Link from 'next/link';
+import { ChevronRight, Search, type LucideIcon } from 'lucide-react';
 
-import { useIsMobile } from "@/registry/default/hooks/use-mobile"
-import { cn } from "@/registry/default/lib/utils"
-import { Button } from "@/registry/default/ui/button"
+import { useIsMobile } from '@/registry/default/hooks/use-mobile';
+import { cn } from '@/registry/default/lib/utils';
+import { Button } from '@/registry/default/ui/button';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/default/ui/collapsible"
+} from '@/registry/default/ui/collapsible';
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/registry/default/ui/drawer"
-import { Input } from "@/registry/default/ui/input"
+} from '@/registry/default/ui/drawer';
+import { Input } from '@/registry/default/ui/input';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/default/ui/popover"
-import { Separator } from "@/registry/default/ui/separator"
+} from '@/registry/default/ui/popover';
+import { Separator } from '@/registry/default/ui/separator';
 
 export function NavMain({
   className,
@@ -30,19 +30,19 @@ export function NavMain({
   searchResults,
 }: {
   items: {
-    title: string
-    url: string
-    icon: LucideIcon
-    isActive?: boolean
+    title: string;
+    url: string;
+    icon: LucideIcon;
+    isActive?: boolean;
     items?: {
-      title: string
-      url: string
-    }[]
-  }[]
-  searchResults: React.ComponentProps<typeof SidebarSearch>["results"]
-} & React.ComponentProps<"ul">) {
+      title: string;
+      url: string;
+    }[];
+  }[];
+  searchResults: React.ComponentProps<typeof SidebarSearch>['results'];
+} & React.ComponentProps<'ul'>) {
   return (
-    <ul className={cn("grid gap-0.5", className)}>
+    <ul className={cn('grid gap-0.5', className)}>
       <li>
         <SidebarSearch results={searchResults} />
       </li>
@@ -87,19 +87,19 @@ export function NavMain({
         </Collapsible>
       ))}
     </ul>
-  )
+  );
 }
 
 function SidebarSearch({
   results,
 }: {
   results: {
-    title: string
-    teaser: string
-    url: string
-  }[]
+    title: string;
+    teaser: string;
+    url: string;
+  }[];
 }) {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
 
   if (isMobile) {
     return (
@@ -143,7 +143,7 @@ function SidebarSearch({
           </div>
         </DrawerContent>
       </Drawer>
-    )
+    );
   }
 
   return (
@@ -192,5 +192,5 @@ function SidebarSearch({
         </div>
       </PopoverContent>
     </Popover>
-  )
+  );
 }

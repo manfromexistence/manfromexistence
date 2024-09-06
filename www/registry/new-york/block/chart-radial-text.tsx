@@ -1,13 +1,13 @@
-"use client"
+'use client';
 
-import { TrendingUp } from "lucide-react"
+import { TrendingUp } from 'lucide-react';
 import {
   Label,
   PolarGrid,
   PolarRadiusAxis,
   RadialBar,
   RadialBarChart,
-} from "recharts"
+} from 'recharts';
 
 import {
   Card,
@@ -16,24 +16,24 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { ChartConfig, ChartContainer } from "@/registry/new-york/ui/chart"
+} from '@/registry/new-york/ui/card';
+import { ChartConfig, ChartContainer } from '@/registry/new-york/ui/chart';
 
-export const description = "A radial chart with text"
+export const description = 'A radial chart with text';
 
 const chartData = [
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-]
+  { browser: 'safari', visitors: 200, fill: 'var(--color-safari)' },
+];
 
 const chartConfig = {
   visitors: {
-    label: "Visitors",
+    label: 'Visitors',
   },
   safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
+    label: 'Safari',
+    color: 'hsl(var(--chart-2))',
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -65,7 +65,7 @@ export default function Component() {
             <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
               <Label
                 content={({ viewBox }) => {
-                  if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                  if (viewBox && 'cx' in viewBox && 'cy' in viewBox) {
                     return (
                       <text
                         x={viewBox.cx}
@@ -88,7 +88,7 @@ export default function Component() {
                           Visitors
                         </tspan>
                       </text>
-                    )
+                    );
                   }
                 }}
               />
@@ -105,5 +105,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

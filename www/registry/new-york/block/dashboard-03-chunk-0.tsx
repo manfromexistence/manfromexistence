@@ -1,17 +1,16 @@
-"use client"
+'use client';
 
-import { Bird, Rabbit, Turtle } from "lucide-react"
-
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+import { Label } from '@/registry/new-york/ui/label';
 import {
   Select,
+  SelectTrigger,
   SelectContent,
   SelectItem,
-  SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+} from '@/registry/new-york/ui/select';
+import { Rabbit, Bird, Turtle } from 'lucide-react';
+import { Input } from '@/registry/new-york/ui/input';
+import { Textarea } from '@/registry/new-york/ui/textarea';
 
 export default function Component() {
   return (
@@ -37,7 +36,7 @@ export default function Component() {
                     <Rabbit className="size-5" />
                     <div className="grid gap-0.5">
                       <p>
-                        Neural{" "}
+                        Neural{' '}
                         <span className="font-medium text-foreground">
                           Genesis
                         </span>
@@ -53,7 +52,7 @@ export default function Component() {
                     <Bird className="size-5" />
                     <div className="grid gap-0.5">
                       <p>
-                        Neural{" "}
+                        Neural{' '}
                         <span className="font-medium text-foreground">
                           Explorer
                         </span>
@@ -69,7 +68,7 @@ export default function Component() {
                     <Turtle className="size-5" />
                     <div className="grid gap-0.5">
                       <p>
-                        Neural{" "}
+                        Neural{' '}
                         <span className="font-medium text-foreground">
                           Quantum
                         </span>
@@ -124,5 +123,5 @@ export default function Component() {
         </fieldset>
       </form>
     </div>
-  )
+  );
 }

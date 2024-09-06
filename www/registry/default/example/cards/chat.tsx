@@ -1,19 +1,19 @@
-import * as React from "react"
-import { Check, Plus, Send } from "lucide-react"
+import * as React from 'react';
+import { Check, Plus, Send } from 'lucide-react';
 
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils';
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
-import { Button } from "@/registry/default/ui/button"
+} from '@/registry/default/ui/avatar';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/registry/default/ui/card"
+} from '@/registry/default/ui/card';
 import {
   Command,
   CommandEmpty,
@@ -21,7 +21,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/default/ui/command"
+} from '@/registry/default/ui/command';
 import {
   Dialog,
   DialogContent,
@@ -29,69 +29,69 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/default/ui/dialog"
-import { Input } from "@/registry/default/ui/input"
+} from '@/registry/default/ui/dialog';
+import { Input } from '@/registry/default/ui/input';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/default/ui/tooltip"
+} from '@/registry/default/ui/tooltip';
 
 const users = [
   {
-    name: "Olivia Martin",
-    email: "m@example.com",
-    avatar: "/avatars/01.png",
+    name: 'Olivia Martin',
+    email: 'm@example.com',
+    avatar: '/avatars/01.png',
   },
   {
-    name: "Isabella Nguyen",
-    email: "isabella.nguyen@email.com",
-    avatar: "/avatars/03.png",
+    name: 'Isabella Nguyen',
+    email: 'isabella.nguyen@email.com',
+    avatar: '/avatars/03.png',
   },
   {
-    name: "Emma Wilson",
-    email: "emma@example.com",
-    avatar: "/avatars/05.png",
+    name: 'Emma Wilson',
+    email: 'emma@example.com',
+    avatar: '/avatars/05.png',
   },
   {
-    name: "Jackson Lee",
-    email: "lee@example.com",
-    avatar: "/avatars/02.png",
+    name: 'Jackson Lee',
+    email: 'lee@example.com',
+    avatar: '/avatars/02.png',
   },
   {
-    name: "William Kim",
-    email: "will@email.com",
-    avatar: "/avatars/04.png",
+    name: 'William Kim',
+    email: 'will@email.com',
+    avatar: '/avatars/04.png',
   },
-] as const
+] as const;
 
-type User = (typeof users)[number]
+type User = (typeof users)[number];
 
 export function CardsChat() {
-  const [open, setOpen] = React.useState(false)
-  const [selectedUsers, setSelectedUsers] = React.useState<User[]>([])
+  const [open, setOpen] = React.useState(false);
+  const [selectedUsers, setSelectedUsers] = React.useState<User[]>([]);
 
   const [messages, setMessages] = React.useState([
     {
-      role: "agent",
-      content: "Hi, how can I help you today?",
+      role: 'agent',
+      content: 'Hi, how can I help you today?',
     },
     {
-      role: "user",
+      role: 'user',
       content: "Hey, I'm having trouble with my account.",
     },
     {
-      role: "agent",
-      content: "What seems to be the problem?",
+      role: 'agent',
+      content: 'What seems to be the problem?',
     },
     {
-      role: "user",
+      role: 'user',
       content: "I can't log in.",
     },
-  ])
-  const [input, setInput] = React.useState("")
-  const inputLength = input.trim().length
+  ]);
+  const [input, setInput] = React.useState('');
+  const inputLength = input.trim().length;
 
   return (
     <>
@@ -130,10 +130,10 @@ export function CardsChat() {
               <div
                 key={index}
                 className={cn(
-                  "flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm",
-                  message.role === "user"
-                    ? "ml-auto bg-primary text-primary-foreground"
-                    : "bg-muted"
+                  'flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm',
+                  message.role === 'user'
+                    ? 'ml-auto bg-primary text-primary-foreground'
+                    : 'bg-muted',
                 )}
               >
                 {message.content}
@@ -144,16 +144,16 @@ export function CardsChat() {
         <CardFooter>
           <form
             onSubmit={(event) => {
-              event.preventDefault()
-              if (inputLength === 0) return
+              event.preventDefault();
+              if (inputLength === 0) return;
               setMessages([
                 ...messages,
                 {
-                  role: "user",
+                  role: 'user',
                   content: input,
                 },
-              ])
-              setInput("")
+              ]);
+              setInput('');
             }}
             className="flex w-full items-center space-x-2"
           >
@@ -194,16 +194,16 @@ export function CardsChat() {
                       if (selectedUsers.includes(user)) {
                         return setSelectedUsers(
                           selectedUsers.filter(
-                            (selectedUser) => selectedUser !== user
-                          )
-                        )
+                            (selectedUser) => selectedUser !== user,
+                          ),
+                        );
                       }
 
                       return setSelectedUsers(
                         [...users].filter((u) =>
-                          [...selectedUsers, user].includes(u)
-                        )
-                      )
+                          [...selectedUsers, user].includes(u),
+                        ),
+                      );
                     }}
                   >
                     <Avatar>
@@ -247,7 +247,7 @@ export function CardsChat() {
             <Button
               disabled={selectedUsers.length < 2}
               onClick={() => {
-                setOpen(false)
+                setOpen(false);
               }}
             >
               Continue
@@ -256,5 +256,5 @@ export function CardsChat() {
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from 'next/link';
 import {
   Activity,
   ArrowUpRight,
@@ -9,22 +9,22 @@ import {
   Package2,
   Search,
   Users,
-} from "lucide-react"
+} from 'lucide-react';
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
-import { Badge } from "@/registry/default/ui/badge"
-import { Button } from "@/registry/default/ui/button"
+} from '@/registry/default/ui/avatar';
+import { Badge } from '@/registry/default/ui/badge';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from '@/registry/default/ui/card';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -32,9 +32,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
-import { Input } from "@/registry/default/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/default/ui/sheet"
+} from '@/registry/default/ui/dropdown-menu';
+import { Input } from '@/registry/default/ui/input';
+import { Sheet, SheetContent, SheetTrigger } from '@/registry/default/ui/sheet';
 import {
   Table,
   TableBody,
@@ -42,14 +42,14 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/default/ui/table"
+} from '@/registry/default/ui/table';
 
 export const description =
-  "An application shell with a header and main content area. The header has a navbar, a search input and and a user nav dropdown. The user nav is toggled by a button with an avatar image."
+  'An application shell with a header and main content area. The header has a navbar, a search input and and a user nav dropdown. The user nav is toggled by a button with an avatar image.';
 
-export const iframeHeight = "825px"
+export const iframeHeight = '825px';
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = 'w-full h-full';
 
 export default function Dashboard() {
   return (
@@ -229,7 +229,9 @@ export default function Dashboard() {
           </Card>
         </div>
         <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
-          <Card className="xl:col-span-2" x-chunk="dashboard-01-chunk-4">
+          <Card
+            className="xl:col-span-2" x-chunk="dashboard-01-chunk-4"
+          >
             <CardHeader className="flex flex-row items-center">
               <div className="grid gap-2">
                 <CardTitle>Transactions</CardTitle>
@@ -451,5 +453,5 @@ export default function Dashboard() {
         </div>
       </main>
     </div>
-  )
+  );
 }

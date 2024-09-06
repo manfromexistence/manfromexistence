@@ -1,13 +1,12 @@
-"use client"
-
-import { Activity } from "lucide-react"
+'use client';
 
 import {
   Card,
-  CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+  CardContent,
+} from '@/registry/default/ui/card';
+import { Activity } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -21,5 +20,5 @@ export default function Component() {
         <p className="text-xs text-muted-foreground">+201 since last hour</p>
       </CardContent>
     </Card>
-  )
+  );
 }

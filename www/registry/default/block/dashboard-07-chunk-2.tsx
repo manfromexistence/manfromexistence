@@ -1,19 +1,19 @@
-"use client"
+'use client';
 
 import {
   Card,
-  CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Label } from "@/registry/default/ui/label"
+  CardContent,
+} from '@/registry/default/ui/card';
+import { Label } from '@/registry/default/ui/label';
 import {
   Select,
+  SelectTrigger,
   SelectContent,
   SelectItem,
-  SelectTrigger,
   SelectValue,
-} from "@/registry/default/ui/select"
+} from '@/registry/default/ui/select';
 
 export default function Component() {
   return (
@@ -52,5 +52,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

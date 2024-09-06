@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { TrendingUp } from "lucide-react"
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
+import { TrendingUp } from 'lucide-react';
+import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
 
 import {
   Card,
@@ -10,39 +10,39 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from '@/registry/new-york/ui/card';
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/new-york/ui/chart"
+} from '@/registry/new-york/ui/chart';
 
-export const description = "A stacked area chart with expand stacking"
+export const description = 'A stacked area chart with expand stacking';
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80, other: 45 },
-  { month: "February", desktop: 305, mobile: 200, other: 100 },
-  { month: "March", desktop: 237, mobile: 120, other: 150 },
-  { month: "April", desktop: 73, mobile: 190, other: 50 },
-  { month: "May", desktop: 209, mobile: 130, other: 100 },
-  { month: "June", desktop: 214, mobile: 140, other: 160 },
-]
+  { month: 'January', desktop: 186, mobile: 80, other: 45 },
+  { month: 'February', desktop: 305, mobile: 200, other: 100 },
+  { month: 'March', desktop: 237, mobile: 120, other: 150 },
+  { month: 'April', desktop: 73, mobile: 190, other: 50 },
+  { month: 'May', desktop: 209, mobile: 130, other: 100 },
+  { month: 'June', desktop: 214, mobile: 140, other: 160 },
+];
 
 const chartConfig = {
   desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
+    label: 'Desktop',
+    color: 'hsl(var(--chart-1))',
   },
   mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
+    label: 'Mobile',
+    color: 'hsl(var(--chart-2))',
   },
   other: {
-    label: "Other",
-    color: "hsl(var(--chart-3))",
+    label: 'Other',
+    color: 'hsl(var(--chart-3))',
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -117,5 +117,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

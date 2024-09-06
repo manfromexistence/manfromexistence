@@ -1,14 +1,14 @@
-import { useTheme } from "next-themes"
-import { Bar, BarChart, Line, LineChart, ResponsiveContainer } from "recharts"
+import { useTheme } from 'next-themes';
+import { Bar, BarChart, Line, LineChart, ResponsiveContainer } from 'recharts';
 
-import { useConfig } from "@/hooks/use-config"
+import { useConfig } from '@/hooks/use-config';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { baseColors } from "@/registry/registry-base-colors"
+} from '@/registry/new-york/ui/card';
+import { baseColors } from '@/registry/registry-base-colors';
 
 const data = [
   {
@@ -43,15 +43,15 @@ const data = [
     revenue: 26475,
     subscription: 189,
   },
-]
+];
 
 export function CardsStats() {
-  const { theme: mode } = useTheme()
-  const [config] = useConfig()
+  const { theme: mode } = useTheme();
+  const [config] = useConfig();
 
   const baseColor = baseColors.find(
-    (baseColor) => baseColor.name === config.theme
-  )
+    (baseColor) => baseColor.name === config.theme,
+  );
 
   return (
     <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
@@ -81,13 +81,13 @@ export function CardsStats() {
                   dataKey="revenue"
                   activeDot={{
                     r: 6,
-                    style: { fill: "var(--theme-primary)", opacity: 0.25 },
+                    style: { fill: 'var(--theme-primary)', opacity: 0.25 },
                   }}
                   style={
                     {
-                      stroke: "var(--theme-primary)",
-                      "--theme-primary": `hsl(${
-                        baseColor?.cssVars[mode === "dark" ? "dark" : "light"]
+                      stroke: 'var(--theme-primary)',
+                      '--theme-primary': `hsl(${
+                        baseColor?.cssVars[mode === 'dark' ? 'dark' : 'light']
                           .primary
                       })`,
                     } as React.CSSProperties
@@ -114,10 +114,10 @@ export function CardsStats() {
                   dataKey="subscription"
                   style={
                     {
-                      fill: "var(--theme-primary)",
+                      fill: 'var(--theme-primary)',
                       opacity: 1,
-                      "--theme-primary": `hsl(${
-                        baseColor?.cssVars[mode === "dark" ? "dark" : "light"]
+                      '--theme-primary': `hsl(${
+                        baseColor?.cssVars[mode === 'dark' ? 'dark' : 'light']
                           .primary
                       })`,
                     } as React.CSSProperties
@@ -129,5 +129,5 @@ export function CardsStats() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

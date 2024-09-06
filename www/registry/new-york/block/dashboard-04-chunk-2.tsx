@@ -1,16 +1,16 @@
-"use client"
+'use client';
 
-import { Button } from "@/registry/new-york/ui/button"
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Checkbox } from "@/registry/new-york/ui/checkbox"
-import { Input } from "@/registry/new-york/ui/input"
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/registry/new-york/ui/card';
+import { Button } from '@/registry/new-york/ui/button';
+import { Input } from '@/registry/new-york/ui/input';
+import { Checkbox } from '@/registry/new-york/ui/checkbox';
 
 export default function Component() {
   return (
@@ -39,5 +39,5 @@ export default function Component() {
         <Button>Save</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

@@ -2,12 +2,12 @@ import {
   FontBoldIcon,
   FontItalicIcon,
   UnderlineIcon,
-} from "@radix-ui/react-icons"
+} from '@radix-ui/react-icons';
 
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/new-york/ui/toggle-group"
+} from '@/registry/new-york/ui/toggle-group';
 
 export default function ToggleGroupDemo() {
   return (
@@ -22,5 +22,5 @@ export default function ToggleGroupDemo() {
         <UnderlineIcon className="h-4 w-4" />
       </ToggleGroupItem>
     </ToggleGroup>
-  )
+  );
 }

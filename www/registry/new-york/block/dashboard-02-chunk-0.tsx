@@ -1,13 +1,13 @@
-"use client"
+'use client';
 
-import { Button } from "@/registry/new-york/ui/button"
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+  CardDescription,
+  CardContent,
+} from '@/registry/new-york/ui/card';
+import { Button } from '@/registry/new-york/ui/button';
 
 export default function Component() {
   return (
@@ -24,5 +24,5 @@ export default function Component() {
         </Button>
       </CardContent>
     </Card>
-  )
+  );
 }

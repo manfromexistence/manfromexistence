@@ -1,15 +1,15 @@
-"use client"
+'use client';
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { CalendarIcon } from "@radix-ui/react-icons"
-import { format } from "date-fns"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { zodResolver } from '@hookform/resolvers/zod';
+import { CalendarIcon } from '@radix-ui/react-icons';
+import { format } from 'date-fns';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
-import { cn } from "@/lib/utils"
-import { toast } from "@/registry/new-york/hooks/use-toast"
-import { Button } from "@/registry/new-york/ui/button"
-import { Calendar } from "@/registry/new-york/ui/calendar"
+import { cn } from '@/lib/utils';
+import { toast } from '@/registry/new-york/hooks/use-toast';
+import { Button } from '@/registry/new-york/ui/button';
+import { Calendar } from '@/registry/new-york/ui/calendar';
 import {
   Form,
   FormControl,
@@ -18,33 +18,33 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/new-york/ui/form"
+} from '@/registry/new-york/ui/form';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from '@/registry/new-york/ui/popover';
 
 const FormSchema = z.object({
   dob: z.date({
-    required_error: "A date of birth is required.",
+    required_error: 'A date of birth is required.',
   }),
-})
+});
 
 export default function CalendarForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
-      title: "You submitted the following values:",
+      title: 'You submitted the following values:',
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    })
+    });
   }
 
   return (
@@ -60,14 +60,14 @@ export default function CalendarForm() {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-                      variant={"outline"}
+                      variant={'outline'}
                       className={cn(
-                        "w-[240px] pl-3 text-left font-normal",
-                        !field.value && "text-muted-foreground"
+                        'w-[240px] pl-3 text-left font-normal',
+                        !field.value && 'text-muted-foreground',
                       )}
                     >
                       {field.value ? (
-                        format(field.value, "PPP")
+                        format(field.value, 'PPP')
                       ) : (
                         <span>Pick a date</span>
                       )}
@@ -81,7 +81,7 @@ export default function CalendarForm() {
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) =>
-                      date > new Date() || date < new Date("1900-01-01")
+                      date > new Date() || date < new Date('1900-01-01')
                     }
                     initialFocus
                   />
@@ -97,5 +97,5 @@ export default function CalendarForm() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
+  );
 }

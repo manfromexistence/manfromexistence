@@ -1,21 +1,21 @@
-"use client"
+'use client';
 
-import { Badge } from "@/registry/new-york/ui/badge"
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+  CardDescription,
+  CardContent,
+} from '@/registry/new-york/ui/card';
 import {
   Table,
-  TableBody,
-  TableCell,
-  TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/new-york/ui/table"
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@/registry/new-york/ui/table';
+import { Badge } from '@/registry/new-york/ui/badge';
 
 export default function Component() {
   return (
@@ -174,5 +174,5 @@ export default function Component() {
         </Table>
       </CardContent>
     </Card>
-  )
+  );
 }

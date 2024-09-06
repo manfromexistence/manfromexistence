@@ -1,28 +1,28 @@
-"use client"
+'use client';
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
-import { Button } from "@/registry/default/ui/button"
+} from '@/registry/default/ui/avatar';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from '@/registry/default/ui/card';
+import { Input } from '@/registry/default/ui/input';
+import { Label } from '@/registry/default/ui/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/default/ui/select"
-import { Separator } from "@/registry/default/ui/separator"
+} from '@/registry/default/ui/select';
+import { Separator } from '@/registry/default/ui/separator';
 
 export function CardsShare() {
   return (
@@ -124,5 +124,5 @@ export function CardsShare() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

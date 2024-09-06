@@ -1,36 +1,35 @@
-"use client"
+'use client';
 
-import {
-  ChevronLeft,
-  ChevronRight,
-  Copy,
-  CreditCard,
-  MoreVertical,
-  Truck,
-} from "lucide-react"
-
-import { Button } from "@/registry/default/ui/button"
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/registry/default/ui/card';
+import { Button } from '@/registry/default/ui/button';
 import {
   DropdownMenu,
+  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from '@/registry/default/ui/dropdown-menu';
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
-} from "@/registry/default/ui/pagination"
-import { Separator } from "@/registry/default/ui/separator"
+} from '@/registry/default/ui/pagination';
+import {
+  Copy,
+  Truck,
+  MoreVertical,
+  CreditCard,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react';
+import { Separator } from '@/registry/default/ui/separator';
 
 export default function Component() {
   return (
@@ -185,5 +184,5 @@ export default function Component() {
         </Pagination>
       </CardFooter>
     </Card>
-  )
+  );
 }

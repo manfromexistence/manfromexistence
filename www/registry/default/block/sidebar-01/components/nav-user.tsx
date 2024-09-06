@@ -4,13 +4,13 @@ import {
   ChevronsUpDown,
   CreditCard,
   LogOut,
-} from "lucide-react"
+} from 'lucide-react';
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/default/ui/avatar"
+} from '@/registry/default/ui/avatar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,16 +19,16 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
+} from '@/registry/default/ui/dropdown-menu';
 
 export function NavUser({
   user,
 }: {
   user: {
-    name: string
-    email: string
-    avatar: string
-  }
+    name: string;
+    email: string;
+    avatar: string;
+  };
 }) {
   return (
     <DropdownMenu>
@@ -93,5 +93,5 @@ export function NavUser({
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

@@ -1,15 +1,15 @@
-import { useTheme } from "next-themes"
-import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts"
+import { useTheme } from 'next-themes';
+import { Line, LineChart, ResponsiveContainer, Tooltip } from 'recharts';
 
-import { useConfig } from "@/hooks/use-config"
+import { useConfig } from '@/hooks/use-config';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { baseColors } from "@/registry/registry-base-colors"
+} from '@/registry/new-york/ui/card';
+import { baseColors } from '@/registry/registry-base-colors';
 
 const data = [
   {
@@ -40,15 +40,15 @@ const data = [
     average: 349,
     today: 430,
   },
-]
+];
 
 export function CardsMetric() {
-  const { theme: mode } = useTheme()
-  const [config] = useConfig()
+  const { theme: mode } = useTheme();
+  const [config] = useConfig();
 
   const baseColor = baseColors.find(
-    (baseColor) => baseColor.name === config.theme
-  )
+    (baseColor) => baseColor.name === config.theme,
+  );
 
   return (
     <Card>
@@ -94,10 +94,10 @@ export function CardsMetric() {
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   }
 
-                  return null
+                  return null;
                 }}
               />
               <Line
@@ -106,14 +106,14 @@ export function CardsMetric() {
                 dataKey="average"
                 activeDot={{
                   r: 6,
-                  style: { fill: "var(--theme-primary)", opacity: 0.25 },
+                  style: { fill: 'var(--theme-primary)', opacity: 0.25 },
                 }}
                 style={
                   {
-                    stroke: "var(--theme-primary)",
+                    stroke: 'var(--theme-primary)',
                     opacity: 0.25,
-                    "--theme-primary": `hsl(${
-                      baseColor?.cssVars[mode === "dark" ? "dark" : "light"]
+                    '--theme-primary': `hsl(${
+                      baseColor?.cssVars[mode === 'dark' ? 'dark' : 'light']
                         .primary
                     })`,
                   } as React.CSSProperties
@@ -125,13 +125,13 @@ export function CardsMetric() {
                 strokeWidth={2}
                 activeDot={{
                   r: 8,
-                  style: { fill: "var(--theme-primary)" },
+                  style: { fill: 'var(--theme-primary)' },
                 }}
                 style={
                   {
-                    stroke: "var(--theme-primary)",
-                    "--theme-primary": `hsl(${
-                      baseColor?.cssVars[mode === "dark" ? "dark" : "light"]
+                    stroke: 'var(--theme-primary)',
+                    '--theme-primary': `hsl(${
+                      baseColor?.cssVars[mode === 'dark' ? 'dark' : 'light']
                         .primary
                     })`,
                   } as React.CSSProperties
@@ -142,5 +142,5 @@ export function CardsMetric() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

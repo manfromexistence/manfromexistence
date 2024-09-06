@@ -1,15 +1,14 @@
-"use client"
+'use client';
 
-import { CornerDownLeft, Mic, Paperclip } from "lucide-react"
-
-import { Button } from "@/registry/new-york/ui/button"
-import { Label } from "@/registry/new-york/ui/label"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+import { Label } from '@/registry/new-york/ui/label';
 import {
   Tooltip,
-  TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
+  TooltipContent,
+} from '@/registry/new-york/ui/tooltip';
+import { Button } from '@/registry/new-york/ui/button';
+import { Textarea } from '@/registry/new-york/ui/textarea';
+import { Paperclip, Mic, CornerDownLeft } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -50,5 +49,5 @@ export default function Component() {
         </Button>
       </div>
     </form>
-  )
+  );
 }

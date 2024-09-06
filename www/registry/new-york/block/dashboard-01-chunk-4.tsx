@@ -1,25 +1,24 @@
-"use client"
+'use client';
 
-import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
-
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Button } from "@/registry/new-york/ui/button"
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+  CardDescription,
+  CardContent,
+} from '@/registry/new-york/ui/card';
+import { Button } from '@/registry/new-york/ui/button';
+import Link from 'next/link';
 import {
   Table,
-  TableBody,
-  TableCell,
-  TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/new-york/ui/table"
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@/registry/new-york/ui/table';
+import { Badge } from '@/registry/new-york/ui/badge';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -146,5 +145,5 @@ export default function Component() {
         </Table>
       </CardContent>
     </Card>
-  )
+  );
 }

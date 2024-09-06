@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import Link from "next/link"
+import Link from 'next/link';
 
 export default function Component() {
   return (
@@ -17,5 +17,5 @@ export default function Component() {
       <Link href="#">Organizations</Link>
       <Link href="#">Advanced</Link>
     </nav>
-  )
+  );
 }

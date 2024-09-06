@@ -1,7 +1,7 @@
-import { Database } from "lucide-react"
+import { Database } from 'lucide-react';
 
-import { Card, CardContent } from "@/registry/new-york/ui/card"
-import { Progress } from "@/registry/new-york/ui/progress"
+import { Card, CardContent } from '@/registry/new-york/ui/card';
+import { Progress } from '@/registry/new-york/ui/progress';
 
 export function StorageCard() {
   return (
@@ -21,5 +21,5 @@ export function StorageCard() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

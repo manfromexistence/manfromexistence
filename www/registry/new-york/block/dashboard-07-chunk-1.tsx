@@ -1,30 +1,29 @@
-"use client"
+'use client';
 
-import { PlusCircle } from "lucide-react"
-
-import { Button } from "@/registry/new-york/ui/button"
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/registry/new-york/ui/card';
 import {
   Table,
-  TableBody,
-  TableCell,
-  TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/new-york/ui/table"
+  TableHead,
+  TableBody,
+  TableCell,
+} from '@/registry/new-york/ui/table';
+import { Label } from '@/registry/new-york/ui/label';
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/new-york/ui/toggle-group"
+} from '@/registry/new-york/ui/toggle-group';
+import { Button } from '@/registry/new-york/ui/button';
+import { Input } from '@/registry/new-york/ui/input';
+import { PlusCircle } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -122,5 +121,5 @@ export default function Component() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

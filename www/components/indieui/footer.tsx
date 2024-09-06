@@ -1,7 +1,7 @@
 import { configs } from '@/configs';
 import { FaDiscord, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { LogoLink } from '@/components/logo';
+import { LogoLink } from '@/components/indieui/logo';
 import { Button } from '@/components/indieui/buttons/button';
 
 //======================================

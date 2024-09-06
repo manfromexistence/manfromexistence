@@ -1,13 +1,12 @@
-"use client"
-
-import { Users } from "lucide-react"
+'use client';
 
 import {
   Card,
-  CardContent,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+  CardContent,
+} from '@/registry/default/ui/card';
+import { Users } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -21,5 +20,5 @@ export default function Component() {
         <p className="text-xs text-muted-foreground">+180.1% from last month</p>
       </CardContent>
     </Card>
-  )
+  );
 }

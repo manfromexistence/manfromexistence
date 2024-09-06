@@ -1,14 +1,14 @@
-import { VariantsCard } from '@/components/variants-card';
+import { VariantsCard } from '@/components/indieui/variants-card';
 import components from '@/constants/components.json';
-import { AnimationContainer } from '@/components/text/animation-container';
-import { GradualSpacing } from '@/components/text/gradual-spacing';
-import { TypingEffect } from '@/components/text/typing-effect';
-import { StaggeredFade } from '@/components/text/staggered-fade';
-import { RotateWords } from '@/components/text/rotate-words';
-import { LettersPullUp, WordsPullUp } from '@/components/text/pull-up';
-import { BlurIn } from '@/components/text/blur-in';
-import { TextFade } from '@/components/text/fade';
-import { Counter } from '@/components/text/counter';
+import { AnimationContainer } from '@/components/indieui/text/animation-container';
+import { GradualSpacing } from '@/components/indieui/text/gradual-spacing';
+import { TypingEffect } from '@/components/indieui/text/typing-effect';
+import { StaggeredFade } from '@/components/indieui/text/staggered-fade';
+import { RotateWords } from '@/components/indieui/text/rotate-words';
+import { LettersPullUp, WordsPullUp } from '@/components/indieui/text/pull-up';
+import { BlurIn } from '@/components/indieui/text/blur-in';
+import { TextFade } from '@/components/indieui/text/fade';
+import { Counter } from '@/components/indieui/text/counter';
 import { Button } from '@/components/indieui/buttons/button';
 
 //======================================

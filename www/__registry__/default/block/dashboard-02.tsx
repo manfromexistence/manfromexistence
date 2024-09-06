@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from 'next/link';
 import {
   Bell,
   CircleUser,
@@ -10,17 +10,17 @@ import {
   Search,
   ShoppingCart,
   Users,
-} from "lucide-react"
+} from 'lucide-react';
 
-import { Badge } from "@/registry/default/ui/badge"
-import { Button } from "@/registry/default/ui/button"
+import { Badge } from '@/registry/default/ui/badge';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from '@/registry/default/ui/card';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,16 +28,16 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
-import { Input } from "@/registry/default/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/default/ui/sheet"
+} from '@/registry/default/ui/dropdown-menu';
+import { Input } from '@/registry/default/ui/input';
+import { Sheet, SheetContent, SheetTrigger } from '@/registry/default/ui/sheet';
 
 export const description =
-  "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action."
+  'A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.';
 
-export const iframeHeight = "800px"
+export const iframeHeight = '800px';
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = 'w-full h-full';
 
 export default function Dashboard() {
   return (
@@ -78,7 +78,7 @@ export default function Dashboard() {
                 className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
               >
                 <Package className="h-4 w-4" />
-                Products{" "}
+                Products{' '}
               </Link>
               <Link
                 href="#"
@@ -227,8 +227,7 @@ export default function Dashboard() {
             <h1 className="text-lg font-semibold md:text-2xl">Inventory</h1>
           </div>
           <div
-            className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm"
-            x-chunk="dashboard-02-chunk-1"
+            className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1"
           >
             <div className="flex flex-col items-center gap-1 text-center">
               <h3 className="text-2xl font-bold tracking-tight">
@@ -243,5 +242,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }

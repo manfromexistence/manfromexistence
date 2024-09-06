@@ -1,15 +1,14 @@
-"use client"
-
-import Image from "next/image"
-import { Upload } from "lucide-react"
+'use client';
 
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+  CardDescription,
+  CardContent,
+} from '@/registry/new-york/ui/card';
+import Image from 'next/image';
+import { Upload } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -56,5 +55,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

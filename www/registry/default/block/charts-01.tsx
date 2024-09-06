@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import {
   Area,
@@ -17,7 +17,7 @@ import {
   ReferenceLine,
   XAxis,
   YAxis,
-} from "recharts"
+} from 'recharts';
 
 import {
   Card,
@@ -26,19 +26,19 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from '@/registry/default/ui/card';
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/default/ui/chart"
-import { Separator } from "@/registry/default/ui/separator"
+} from '@/registry/default/ui/chart';
+import { Separator } from '@/registry/default/ui/separator';
 
-export const description = "A collection of health charts."
+export const description = 'A collection of health charts.';
 
-export const iframeHeight = "900px"
+export const iframeHeight = '900px';
 
-export const containerClassName = "min-h-screen py-12"
+export const containerClassName = 'min-h-screen py-12';
 
 export default function Charts() {
   return (
@@ -51,7 +51,7 @@ export default function Charts() {
           <CardHeader className="space-y-0 pb-2">
             <CardDescription>Today</CardDescription>
             <CardTitle className="text-4xl tabular-nums">
-              12,584{" "}
+              12,584{' '}
               <span className="font-sans text-sm font-normal tracking-normal text-muted-foreground">
                 steps
               </span>
@@ -61,8 +61,8 @@ export default function Charts() {
             <ChartContainer
               config={{
                 steps: {
-                  label: "Steps",
-                  color: "hsl(var(--chart-1))",
+                  label: 'Steps',
+                  color: 'hsl(var(--chart-1))',
                 },
               }}
             >
@@ -74,31 +74,31 @@ export default function Charts() {
                 }}
                 data={[
                   {
-                    date: "2024-01-01",
+                    date: '2024-01-01',
                     steps: 2000,
                   },
                   {
-                    date: "2024-01-02",
+                    date: '2024-01-02',
                     steps: 2100,
                   },
                   {
-                    date: "2024-01-03",
+                    date: '2024-01-03',
                     steps: 2200,
                   },
                   {
-                    date: "2024-01-04",
+                    date: '2024-01-04',
                     steps: 1300,
                   },
                   {
-                    date: "2024-01-05",
+                    date: '2024-01-05',
                     steps: 1400,
                   },
                   {
-                    date: "2024-01-06",
+                    date: '2024-01-06',
                     steps: 2500,
                   },
                   {
-                    date: "2024-01-07",
+                    date: '2024-01-07',
                     steps: 1600,
                   },
                 ]}
@@ -116,9 +116,9 @@ export default function Charts() {
                   axisLine={false}
                   tickMargin={4}
                   tickFormatter={(value) => {
-                    return new Date(value).toLocaleDateString("en-US", {
-                      weekday: "short",
-                    })
+                    return new Date(value).toLocaleDateString('en-US', {
+                      weekday: 'short',
+                    });
                   }}
                 />
                 <ChartTooltip
@@ -127,11 +127,11 @@ export default function Charts() {
                     <ChartTooltipContent
                       hideIndicator
                       labelFormatter={(value) => {
-                        return new Date(value).toLocaleDateString("en-US", {
-                          day: "numeric",
-                          month: "long",
-                          year: "numeric",
-                        })
+                        return new Date(value).toLocaleDateString('en-US', {
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric',
+                        });
                       }}
                     />
                   }
@@ -163,11 +163,11 @@ export default function Charts() {
           </CardContent>
           <CardFooter className="flex-col items-start gap-1">
             <CardDescription>
-              Over the past 7 days, you have walked{" "}
+              Over the past 7 days, you have walked{' '}
               <span className="font-medium text-foreground">53,305</span> steps.
             </CardDescription>
             <CardDescription>
-              You need{" "}
+              You need{' '}
               <span className="font-medium text-foreground">12,584</span> more
               steps to reach your goal.
             </CardDescription>
@@ -201,8 +201,8 @@ export default function Charts() {
             <ChartContainer
               config={{
                 resting: {
-                  label: "Resting",
-                  color: "hsl(var(--chart-1))",
+                  label: 'Resting',
+                  color: 'hsl(var(--chart-1))',
                 },
               }}
               className="w-full"
@@ -216,31 +216,31 @@ export default function Charts() {
                 }}
                 data={[
                   {
-                    date: "2024-01-01",
+                    date: '2024-01-01',
                     resting: 62,
                   },
                   {
-                    date: "2024-01-02",
+                    date: '2024-01-02',
                     resting: 72,
                   },
                   {
-                    date: "2024-01-03",
+                    date: '2024-01-03',
                     resting: 35,
                   },
                   {
-                    date: "2024-01-04",
+                    date: '2024-01-04',
                     resting: 62,
                   },
                   {
-                    date: "2024-01-05",
+                    date: '2024-01-05',
                     resting: 52,
                   },
                   {
-                    date: "2024-01-06",
+                    date: '2024-01-06',
                     resting: 62,
                   },
                   {
-                    date: "2024-01-07",
+                    date: '2024-01-07',
                     resting: 70,
                   },
                 ]}
@@ -251,16 +251,16 @@ export default function Charts() {
                   stroke="hsl(var(--muted-foreground))"
                   strokeOpacity={0.5}
                 />
-                <YAxis hide domain={["dataMin - 10", "dataMax + 10"]} />
+                <YAxis hide domain={['dataMin - 10', 'dataMax + 10']} />
                 <XAxis
                   dataKey="date"
                   tickLine={false}
                   axisLine={false}
                   tickMargin={8}
                   tickFormatter={(value) => {
-                    return new Date(value).toLocaleDateString("en-US", {
-                      weekday: "short",
-                    })
+                    return new Date(value).toLocaleDateString('en-US', {
+                      weekday: 'short',
+                    });
                   }}
                 />
                 <Line
@@ -271,8 +271,8 @@ export default function Charts() {
                   strokeWidth={2}
                   dot={false}
                   activeDot={{
-                    fill: "var(--color-resting)",
-                    stroke: "var(--color-resting)",
+                    fill: 'var(--color-resting)',
+                    stroke: 'var(--color-resting)',
                     r: 4,
                   }}
                 />
@@ -281,11 +281,11 @@ export default function Charts() {
                     <ChartTooltipContent
                       indicator="line"
                       labelFormatter={(value) => {
-                        return new Date(value).toLocaleDateString("en-US", {
-                          day: "numeric",
-                          month: "long",
-                          year: "numeric",
-                        })
+                        return new Date(value).toLocaleDateString('en-US', {
+                          day: 'numeric',
+                          month: 'long',
+                          year: 'numeric',
+                        });
                       }}
                     />
                   }
@@ -318,8 +318,8 @@ export default function Charts() {
               <ChartContainer
                 config={{
                   steps: {
-                    label: "Steps",
-                    color: "hsl(var(--chart-1))",
+                    label: 'Steps',
+                    color: 'hsl(var(--chart-1))',
                   },
                 }}
                 className="aspect-auto h-[32px] w-full"
@@ -335,7 +335,7 @@ export default function Charts() {
                   }}
                   data={[
                     {
-                      date: "2024",
+                      date: '2024',
                       steps: 12435,
                     },
                   ]}
@@ -369,8 +369,8 @@ export default function Charts() {
               <ChartContainer
                 config={{
                   steps: {
-                    label: "Steps",
-                    color: "hsl(var(--muted))",
+                    label: 'Steps',
+                    color: 'hsl(var(--muted))',
                   },
                 }}
                 className="aspect-auto h-[32px] w-full"
@@ -386,7 +386,7 @@ export default function Charts() {
                   }}
                   data={[
                     {
-                      date: "2023",
+                      date: '2023',
                       steps: 10103,
                     },
                   ]}
@@ -433,8 +433,8 @@ export default function Charts() {
             <ChartContainer
               config={{
                 steps: {
-                  label: "Steps",
-                  color: "hsl(var(--chart-1))",
+                  label: 'Steps',
+                  color: 'hsl(var(--chart-1))',
                 },
               }}
               className="ml-auto w-[72px]"
@@ -449,31 +449,31 @@ export default function Charts() {
                 }}
                 data={[
                   {
-                    date: "2024-01-01",
+                    date: '2024-01-01',
                     steps: 2000,
                   },
                   {
-                    date: "2024-01-02",
+                    date: '2024-01-02',
                     steps: 2100,
                   },
                   {
-                    date: "2024-01-03",
+                    date: '2024-01-03',
                     steps: 2200,
                   },
                   {
-                    date: "2024-01-04",
+                    date: '2024-01-04',
                     steps: 1300,
                   },
                   {
-                    date: "2024-01-05",
+                    date: '2024-01-05',
                     steps: 1400,
                   },
                   {
-                    date: "2024-01-06",
+                    date: '2024-01-06',
                     steps: 2500,
                   },
                   {
-                    date: "2024-01-07",
+                    date: '2024-01-07',
                     steps: 1600,
                   },
                 ]}
@@ -505,16 +505,16 @@ export default function Charts() {
             <ChartContainer
               config={{
                 move: {
-                  label: "Move",
-                  color: "hsl(var(--chart-1))",
+                  label: 'Move',
+                  color: 'hsl(var(--chart-1))',
                 },
                 stand: {
-                  label: "Stand",
-                  color: "hsl(var(--chart-2))",
+                  label: 'Stand',
+                  color: 'hsl(var(--chart-2))',
                 },
                 exercise: {
-                  label: "Exercise",
-                  color: "hsl(var(--chart-3))",
+                  label: 'Exercise',
+                  color: 'hsl(var(--chart-3))',
                 },
               }}
               className="h-[140px] w-full"
@@ -528,22 +528,22 @@ export default function Charts() {
                 }}
                 data={[
                   {
-                    activity: "stand",
+                    activity: 'stand',
                     value: (8 / 12) * 100,
-                    label: "8/12 hr",
-                    fill: "var(--color-stand)",
+                    label: '8/12 hr',
+                    fill: 'var(--color-stand)',
                   },
                   {
-                    activity: "exercise",
+                    activity: 'exercise',
                     value: (46 / 60) * 100,
-                    label: "46/60 min",
-                    fill: "var(--color-exercise)",
+                    label: '46/60 min',
+                    fill: 'var(--color-exercise)',
                   },
                   {
-                    activity: "move",
+                    activity: 'move',
                     value: (245 / 360) * 100,
-                    label: "245/360 kcal",
-                    fill: "var(--color-move)",
+                    label: '245/360 kcal',
+                    fill: 'var(--color-move)',
                   },
                 ]}
                 layout="vertical"
@@ -644,16 +644,16 @@ export default function Charts() {
             <ChartContainer
               config={{
                 move: {
-                  label: "Move",
-                  color: "hsl(var(--chart-1))",
+                  label: 'Move',
+                  color: 'hsl(var(--chart-1))',
                 },
                 exercise: {
-                  label: "Exercise",
-                  color: "hsl(var(--chart-2))",
+                  label: 'Exercise',
+                  color: 'hsl(var(--chart-2))',
                 },
                 stand: {
-                  label: "Stand",
-                  color: "hsl(var(--chart-3))",
+                  label: 'Stand',
+                  color: 'hsl(var(--chart-3))',
                 },
               }}
               className="mx-auto aspect-square w-full max-w-[80%]"
@@ -667,19 +667,19 @@ export default function Charts() {
                 }}
                 data={[
                   {
-                    activity: "stand",
+                    activity: 'stand',
                     value: (8 / 12) * 100,
-                    fill: "var(--color-stand)",
+                    fill: 'var(--color-stand)',
                   },
                   {
-                    activity: "exercise",
+                    activity: 'exercise',
                     value: (46 / 60) * 100,
-                    fill: "var(--color-exercise)",
+                    fill: 'var(--color-exercise)',
                   },
                   {
-                    activity: "move",
+                    activity: 'move',
                     value: (245 / 360) * 100,
-                    fill: "var(--color-move)",
+                    fill: 'var(--color-move)',
                   },
                 ]}
                 innerRadius="20%"
@@ -718,8 +718,8 @@ export default function Charts() {
             <ChartContainer
               config={{
                 calories: {
-                  label: "Calories",
-                  color: "hsl(var(--chart-1))",
+                  label: 'Calories',
+                  color: 'hsl(var(--chart-1))',
                 },
               }}
               className="ml-auto w-[64px]"
@@ -734,31 +734,31 @@ export default function Charts() {
                 }}
                 data={[
                   {
-                    date: "2024-01-01",
+                    date: '2024-01-01',
                     calories: 354,
                   },
                   {
-                    date: "2024-01-02",
+                    date: '2024-01-02',
                     calories: 514,
                   },
                   {
-                    date: "2024-01-03",
+                    date: '2024-01-03',
                     calories: 345,
                   },
                   {
-                    date: "2024-01-04",
+                    date: '2024-01-04',
                     calories: 734,
                   },
                   {
-                    date: "2024-01-05",
+                    date: '2024-01-05',
                     calories: 645,
                   },
                   {
-                    date: "2024-01-06",
+                    date: '2024-01-06',
                     calories: 456,
                   },
                   {
-                    date: "2024-01-07",
+                    date: '2024-01-07',
                     calories: 345,
                   },
                 ]}
@@ -803,8 +803,8 @@ export default function Charts() {
             <ChartContainer
               config={{
                 time: {
-                  label: "Time",
-                  color: "hsl(var(--chart-2))",
+                  label: 'Time',
+                  color: 'hsl(var(--chart-2))',
                 },
               }}
             >
@@ -812,31 +812,31 @@ export default function Charts() {
                 accessibilityLayer
                 data={[
                   {
-                    date: "2024-01-01",
+                    date: '2024-01-01',
                     time: 8.5,
                   },
                   {
-                    date: "2024-01-02",
+                    date: '2024-01-02',
                     time: 7.2,
                   },
                   {
-                    date: "2024-01-03",
+                    date: '2024-01-03',
                     time: 8.1,
                   },
                   {
-                    date: "2024-01-04",
+                    date: '2024-01-04',
                     time: 6.2,
                   },
                   {
-                    date: "2024-01-05",
+                    date: '2024-01-05',
                     time: 5.2,
                   },
                   {
-                    date: "2024-01-06",
+                    date: '2024-01-06',
                     time: 8.1,
                   },
                   {
-                    date: "2024-01-07",
+                    date: '2024-01-07',
                     time: 7.0,
                   },
                 ]}
@@ -848,7 +848,7 @@ export default function Charts() {
                 }}
               >
                 <XAxis dataKey="date" hide />
-                <YAxis domain={["dataMin - 5", "dataMax + 2"]} hide />
+                <YAxis domain={['dataMin - 5', 'dataMax + 2']} hide />
                 <defs>
                   <linearGradient id="fillTime" x1="0" y1="0" x2="0" y2="1">
                     <stop
@@ -891,5 +891,5 @@ export default function Charts() {
         </Card>
       </div>
     </div>
-  )
+  );
 }

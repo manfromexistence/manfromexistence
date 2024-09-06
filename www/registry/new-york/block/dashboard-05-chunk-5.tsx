@@ -5,9 +5,9 @@ import {
   CreditCard,
   MoreVertical,
   Truck,
-} from "lucide-react"
+} from 'lucide-react';
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Card,
   CardContent,
@@ -15,20 +15,20 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from '@/registry/new-york/ui/card';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
+} from '@/registry/new-york/ui/dropdown-menu';
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
-} from "@/registry/new-york/ui/pagination"
-import { Separator } from "@/registry/new-york/ui/separator"
+} from '@/registry/new-york/ui/pagination';
+import { Separator } from '@/registry/new-york/ui/separator';
 
 export default function Component() {
   return (
@@ -183,5 +183,5 @@ export default function Component() {
         </Pagination>
       </CardFooter>
     </Card>
-  )
+  );
 }

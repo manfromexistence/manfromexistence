@@ -1,15 +1,15 @@
-import Link from "next/link"
+import Link from 'next/link';
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from '@/registry/default/ui/card';
+import { Input } from '@/registry/default/ui/input';
+import { Label } from '@/registry/default/ui/label';
 
 export function LoginForm() {
   return (
@@ -48,12 +48,12 @@ export function LoginForm() {
           </Button>
         </div>
         <div className="mt-4 text-center text-sm">
-          Don&apos;t have an account?{" "}
+          Don&apos;t have an account?{' '}
           <Link href="#" className="underline">
             Sign up
           </Link>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

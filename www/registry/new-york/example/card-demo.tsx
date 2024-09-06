@@ -1,7 +1,7 @@
-import { BellIcon, CheckIcon } from "@radix-ui/react-icons"
+import { BellIcon, CheckIcon } from '@radix-ui/react-icons';
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
+import { cn } from '@/lib/utils';
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Card,
   CardContent,
@@ -9,29 +9,29 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Switch } from "@/registry/new-york/ui/switch"
+} from '@/registry/new-york/ui/card';
+import { Switch } from '@/registry/new-york/ui/switch';
 
 const notifications = [
   {
-    title: "Your call has been confirmed.",
-    description: "1 hour ago",
+    title: 'Your call has been confirmed.',
+    description: '1 hour ago',
   },
   {
-    title: "You have a new message!",
-    description: "1 hour ago",
+    title: 'You have a new message!',
+    description: '1 hour ago',
   },
   {
-    title: "Your subscription is expiring soon!",
-    description: "2 hours ago",
+    title: 'Your subscription is expiring soon!',
+    description: '2 hours ago',
   },
-]
+];
 
-type CardProps = React.ComponentProps<typeof Card>
+type CardProps = React.ComponentProps<typeof Card>;
 
 export default function CardDemo({ className, ...props }: CardProps) {
   return (
-    <Card className={cn("w-[380px]", className)} {...props}>
+    <Card className={cn('w-[380px]', className)} {...props}>
       <CardHeader>
         <CardTitle>Notifications</CardTitle>
         <CardDescription>You have 3 unread messages.</CardDescription>
@@ -74,5 +74,5 @@ export default function CardDemo({ className, ...props }: CardProps) {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

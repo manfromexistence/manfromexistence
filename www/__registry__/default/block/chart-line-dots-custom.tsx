@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { GitCommitVertical, TrendingUp } from "lucide-react"
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
+import { GitCommitVertical, TrendingUp } from 'lucide-react';
+import { CartesianGrid, Line, LineChart, XAxis } from 'recharts';
 
 import {
   Card,
@@ -10,35 +10,35 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from '@/registry/default/ui/card';
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/default/ui/chart"
+} from '@/registry/default/ui/chart';
 
-export const description = "A line chart with custom dots"
+export const description = 'A line chart with custom dots';
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-]
+  { month: 'January', desktop: 186, mobile: 80 },
+  { month: 'February', desktop: 305, mobile: 200 },
+  { month: 'March', desktop: 237, mobile: 120 },
+  { month: 'April', desktop: 73, mobile: 190 },
+  { month: 'May', desktop: 209, mobile: 130 },
+  { month: 'June', desktop: 214, mobile: 140 },
+];
 
 const chartConfig = {
   desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
+    label: 'Desktop',
+    color: 'hsl(var(--chart-1))',
   },
   mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
+    label: 'Mobile',
+    color: 'hsl(var(--chart-2))',
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -75,7 +75,7 @@ export default function Component() {
               stroke="var(--color-desktop)"
               strokeWidth={2}
               dot={({ cx, cy, payload }) => {
-                const r = 24
+                const r = 24;
                 return (
                   <GitCommitVertical
                     key={payload.month}
@@ -86,7 +86,7 @@ export default function Component() {
                     fill="hsl(var(--background))"
                     stroke="var(--color-desktop)"
                   />
-                )
+                );
               }}
             />
           </LineChart>
@@ -101,5 +101,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

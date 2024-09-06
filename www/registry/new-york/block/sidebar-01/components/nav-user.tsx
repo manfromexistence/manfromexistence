@@ -4,13 +4,13 @@ import {
   ChevronsUpDown,
   CreditCard,
   LogOut,
-} from "lucide-react"
+} from 'lucide-react';
 
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york/ui/avatar"
+} from '@/registry/new-york/ui/avatar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,16 +19,16 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
+} from '@/registry/new-york/ui/dropdown-menu';
 
 export function NavUser({
   user,
 }: {
   user: {
-    name: string
-    email: string
-    avatar: string
-  }
+    name: string;
+    email: string;
+    avatar: string;
+  };
 }) {
   return (
     <DropdownMenu>
@@ -93,5 +93,5 @@ export function NavUser({
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

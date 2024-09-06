@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { Icons } from "@/components/icons"
-import { Button } from "@/registry/default/ui/button"
+import { Icons } from '@/components/icons';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
@@ -9,17 +9,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/registry/default/ui/radio-group"
+} from '@/registry/default/ui/card';
+import { Input } from '@/registry/default/ui/input';
+import { Label } from '@/registry/default/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/registry/default/ui/radio-group';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/default/ui/select"
+} from '@/registry/default/ui/select';
 
 export function CardsPaymentMethod() {
   return (
@@ -152,5 +152,5 @@ export function CardsPaymentMethod() {
         <Button className="w-full">Continue</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

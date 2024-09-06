@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
-import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york/ui/button"
+import { Icons } from '@/components/icons';
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Card,
   CardContent,
@@ -9,17 +9,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/registry/new-york/ui/radio-group"
+} from '@/registry/new-york/ui/card';
+import { Input } from '@/registry/new-york/ui/input';
+import { Label } from '@/registry/new-york/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/registry/new-york/ui/radio-group';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from '@/registry/new-york/ui/select';
 
 export function CardsPaymentMethod() {
   return (
@@ -150,5 +150,5 @@ export function CardsPaymentMethod() {
         <Button className="w-full">Continue</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

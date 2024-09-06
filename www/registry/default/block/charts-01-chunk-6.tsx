@@ -1,15 +1,14 @@
-"use client"
-
-import { Bar, BarChart, Rectangle, XAxis } from "recharts"
+'use client';
 
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { ChartContainer } from "@/registry/default/ui/chart"
+  CardDescription,
+  CardContent,
+} from '@/registry/default/ui/card';
+import { ChartContainer } from '@/registry/default/ui/chart';
+import { BarChart, Bar, Rectangle, XAxis } from 'recharts';
 
 export default function Component() {
   return (
@@ -30,8 +29,8 @@ export default function Component() {
         <ChartContainer
           config={{
             calories: {
-              label: "Calories",
-              color: "hsl(var(--chart-1))",
+              label: 'Calories',
+              color: 'hsl(var(--chart-1))',
             },
           }}
           className="ml-auto w-[64px]"
@@ -46,31 +45,31 @@ export default function Component() {
             }}
             data={[
               {
-                date: "2024-01-01",
+                date: '2024-01-01',
                 calories: 354,
               },
               {
-                date: "2024-01-02",
+                date: '2024-01-02',
                 calories: 514,
               },
               {
-                date: "2024-01-03",
+                date: '2024-01-03',
                 calories: 345,
               },
               {
-                date: "2024-01-04",
+                date: '2024-01-04',
                 calories: 734,
               },
               {
-                date: "2024-01-05",
+                date: '2024-01-05',
                 calories: 645,
               },
               {
-                date: "2024-01-06",
+                date: '2024-01-06',
                 calories: 456,
               },
               {
-                date: "2024-01-07",
+                date: '2024-01-07',
                 calories: 345,
               },
             ]}
@@ -94,5 +93,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

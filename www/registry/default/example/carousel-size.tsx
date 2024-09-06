@@ -1,19 +1,19 @@
-import * as React from "react"
+import * as React from 'react';
 
-import { Card, CardContent } from "@/registry/default/ui/card"
+import { Card, CardContent } from '@/registry/default/ui/card';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/default/ui/carousel"
+} from '@/registry/default/ui/carousel';
 
 export default function CarouselSize() {
   return (
     <Carousel
       opts={{
-        align: "start",
+        align: 'start',
       }}
       className="w-full max-w-sm"
     >
@@ -33,5 +33,5 @@ export default function CarouselSize() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

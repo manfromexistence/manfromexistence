@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   ChevronLeft,
   ChevronRight,
@@ -18,9 +18,9 @@ import {
   ShoppingCart,
   Truck,
   Users2,
-} from "lucide-react"
+} from 'lucide-react';
 
-import { Badge } from "@/registry/default/ui/badge"
+import { Badge } from '@/registry/default/ui/badge';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -28,8 +28,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/default/ui/breadcrumb"
-import { Button } from "@/registry/default/ui/button"
+} from '@/registry/default/ui/breadcrumb';
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
@@ -37,7 +37,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from '@/registry/default/ui/card';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -46,16 +46,16 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
-import { Input } from "@/registry/default/ui/input"
+} from '@/registry/default/ui/dropdown-menu';
+import { Input } from '@/registry/default/ui/input';
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
-} from "@/registry/default/ui/pagination"
-import { Progress } from "@/registry/default/ui/progress"
-import { Separator } from "@/registry/default/ui/separator"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/default/ui/sheet"
+} from '@/registry/default/ui/pagination';
+import { Progress } from '@/registry/default/ui/progress';
+import { Separator } from '@/registry/default/ui/separator';
+import { Sheet, SheetContent, SheetTrigger } from '@/registry/default/ui/sheet';
 import {
   Table,
   TableBody,
@@ -63,25 +63,25 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/default/ui/table"
+} from '@/registry/default/ui/table';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/default/ui/tabs"
+} from '@/registry/default/ui/tabs';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/default/ui/tooltip"
+} from '@/registry/default/ui/tooltip';
 
 export const description =
-  "An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information."
+  'An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information.';
 
-export const iframeHeight = "1112px"
+export const iframeHeight = '1112px';
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = 'w-full h-full';
 
 export default function Dashboard() {
   return (
@@ -722,5 +722,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }

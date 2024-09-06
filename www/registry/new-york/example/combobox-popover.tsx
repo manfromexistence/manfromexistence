@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
-import * as React from "react"
+import * as React from 'react';
 
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Command,
   CommandEmpty,
@@ -10,46 +10,46 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york/ui/command"
+} from '@/registry/new-york/ui/command';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from '@/registry/new-york/ui/popover';
 
 type Status = {
-  value: string
-  label: string
-}
+  value: string;
+  label: string;
+};
 
 const statuses: Status[] = [
   {
-    value: "backlog",
-    label: "Backlog",
+    value: 'backlog',
+    label: 'Backlog',
   },
   {
-    value: "todo",
-    label: "Todo",
+    value: 'todo',
+    label: 'Todo',
   },
   {
-    value: "in progress",
-    label: "In Progress",
+    value: 'in progress',
+    label: 'In Progress',
   },
   {
-    value: "done",
-    label: "Done",
+    value: 'done',
+    label: 'Done',
   },
   {
-    value: "canceled",
-    label: "Canceled",
+    value: 'canceled',
+    label: 'Canceled',
   },
-]
+];
 
 export default function ComboboxPopover() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
-    null
-  )
+    null,
+  );
 
   return (
     <div className="flex items-center space-x-4">
@@ -73,9 +73,9 @@ export default function ComboboxPopover() {
                     onSelect={(value) => {
                       setSelectedStatus(
                         statuses.find((priority) => priority.value === value) ||
-                          null
-                      )
-                      setOpen(false)
+                          null,
+                      );
+                      setOpen(false);
                     }}
                   >
                     {status.label}
@@ -87,5 +87,5 @@ export default function ComboboxPopover() {
         </PopoverContent>
       </Popover>
     </div>
-  )
+  );
 }

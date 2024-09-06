@@ -1,9 +1,8 @@
-"use client"
+'use client';
 
-import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts"
-
-import { Card, CardContent } from "@/registry/new-york//ui/card"
-import { ChartContainer } from "@/registry/new-york//ui/chart"
+import { Card, CardContent } from '@/registry/new-york//ui/card';
+import { ChartContainer } from '@/registry/new-york//ui/chart';
+import { RadialBarChart, PolarAngleAxis, RadialBar } from 'recharts';
 
 export default function Component() {
   return (
@@ -41,16 +40,16 @@ export default function Component() {
         <ChartContainer
           config={{
             move: {
-              label: "Move",
-              color: "hsl(var(--chart-1))",
+              label: 'Move',
+              color: 'hsl(var(--chart-1))',
             },
             exercise: {
-              label: "Exercise",
-              color: "hsl(var(--chart-2))",
+              label: 'Exercise',
+              color: 'hsl(var(--chart-2))',
             },
             stand: {
-              label: "Stand",
-              color: "hsl(var(--chart-3))",
+              label: 'Stand',
+              color: 'hsl(var(--chart-3))',
             },
           }}
           className="mx-auto aspect-square w-full max-w-[80%]"
@@ -64,19 +63,19 @@ export default function Component() {
             }}
             data={[
               {
-                activity: "stand",
+                activity: 'stand',
                 value: (8 / 12) * 100,
-                fill: "var(--color-stand)",
+                fill: 'var(--color-stand)',
               },
               {
-                activity: "exercise",
+                activity: 'exercise',
                 value: (46 / 60) * 100,
-                fill: "var(--color-exercise)",
+                fill: 'var(--color-exercise)',
               },
               {
-                activity: "move",
+                activity: 'move',
                 value: (245 / 360) * 100,
-                fill: "var(--color-move)",
+                fill: 'var(--color-move)',
               },
             ]}
             innerRadius="20%"
@@ -95,5 +94,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

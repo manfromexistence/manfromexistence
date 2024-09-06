@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import { Bar, BarChart, XAxis } from "recharts"
+import { Bar, BarChart, XAxis } from 'recharts';
 
 import {
   Card,
@@ -8,35 +8,35 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from '@/registry/new-york/ui/card';
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/new-york/ui/chart"
+} from '@/registry/new-york/ui/chart';
 
-export const description = "A stacked bar chart with a legend"
+export const description = 'A stacked bar chart with a legend';
 
 const chartData = [
-  { date: "2024-07-15", running: 450, swimming: 300 },
-  { date: "2024-07-16", running: 380, swimming: 420 },
-  { date: "2024-07-17", running: 520, swimming: 120 },
-  { date: "2024-07-18", running: 140, swimming: 550 },
-  { date: "2024-07-19", running: 600, swimming: 350 },
-  { date: "2024-07-20", running: 480, swimming: 400 },
-]
+  { date: '2024-07-15', running: 450, swimming: 300 },
+  { date: '2024-07-16', running: 380, swimming: 420 },
+  { date: '2024-07-17', running: 520, swimming: 120 },
+  { date: '2024-07-18', running: 140, swimming: 550 },
+  { date: '2024-07-19', running: 600, swimming: 350 },
+  { date: '2024-07-20', running: 480, swimming: 400 },
+];
 
 const chartConfig = {
   running: {
-    label: "Running",
-    color: "hsl(var(--chart-1))",
+    label: 'Running',
+    color: 'hsl(var(--chart-1))',
   },
   swimming: {
-    label: "Swimming",
-    color: "hsl(var(--chart-2))",
+    label: 'Swimming',
+    color: 'hsl(var(--chart-2))',
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -56,9 +56,9 @@ export default function Component() {
               tickMargin={10}
               axisLine={false}
               tickFormatter={(value) => {
-                return new Date(value).toLocaleDateString("en-US", {
-                  weekday: "short",
-                })
+                return new Date(value).toLocaleDateString('en-US', {
+                  weekday: 'short',
+                });
               }}
             />
             <Bar
@@ -84,7 +84,7 @@ export default function Component() {
                         className="h-2.5 w-2.5 shrink-0 rounded-[2px] bg-[--color-bg]"
                         style={
                           {
-                            "--color-bg": `var(--color-${name})`,
+                            '--color-bg': `var(--color-${name})`,
                           } as React.CSSProperties
                         }
                       />
@@ -119,5 +119,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

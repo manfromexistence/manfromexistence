@@ -1,19 +1,18 @@
-"use client"
-
-import { Area, AreaChart, XAxis, YAxis } from "recharts"
+'use client';
 
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
+  CardDescription,
   CardTitle,
-} from "@/registry/default/ui/card"
+  CardContent,
+} from '@/registry/default/ui/card';
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/default/ui/chart"
+} from '@/registry/default/ui/chart';
+import { AreaChart, XAxis, YAxis, Area } from 'recharts';
 
 export default function Component() {
   return (
@@ -35,8 +34,8 @@ export default function Component() {
         <ChartContainer
           config={{
             time: {
-              label: "Time",
-              color: "hsl(var(--chart-2))",
+              label: 'Time',
+              color: 'hsl(var(--chart-2))',
             },
           }}
         >
@@ -44,31 +43,31 @@ export default function Component() {
             accessibilityLayer
             data={[
               {
-                date: "2024-01-01",
+                date: '2024-01-01',
                 time: 8.5,
               },
               {
-                date: "2024-01-02",
+                date: '2024-01-02',
                 time: 7.2,
               },
               {
-                date: "2024-01-03",
+                date: '2024-01-03',
                 time: 8.1,
               },
               {
-                date: "2024-01-04",
+                date: '2024-01-04',
                 time: 6.2,
               },
               {
-                date: "2024-01-05",
+                date: '2024-01-05',
                 time: 5.2,
               },
               {
-                date: "2024-01-06",
+                date: '2024-01-06',
                 time: 8.1,
               },
               {
-                date: "2024-01-07",
+                date: '2024-01-07',
                 time: 7.0,
               },
             ]}
@@ -80,7 +79,7 @@ export default function Component() {
             }}
           >
             <XAxis dataKey="date" hide />
-            <YAxis domain={["dataMin - 5", "dataMax + 2"]} hide />
+            <YAxis domain={['dataMin - 5', 'dataMax + 2']} hide />
             <defs>
               <linearGradient id="fillTime" x1="0" y1="0" x2="0" y2="1">
                 <stop
@@ -121,5 +120,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,40 +1,40 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import { CalendarIcon } from "@radix-ui/react-icons"
-import { addDays, format } from "date-fns"
+import * as React from 'react';
+import { CalendarIcon } from '@radix-ui/react-icons';
+import { addDays, format } from 'date-fns';
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
-import { Calendar } from "@/registry/new-york/ui/calendar"
+import { cn } from '@/lib/utils';
+import { Button } from '@/registry/new-york/ui/button';
+import { Calendar } from '@/registry/new-york/ui/calendar';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
+} from '@/registry/new-york/ui/popover';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york/ui/select"
+} from '@/registry/new-york/ui/select';
 
 export default function DatePickerWithPresets() {
-  const [date, setDate] = React.useState<Date>()
+  const [date, setDate] = React.useState<Date>();
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant={"outline"}
+          variant={'outline'}
           className={cn(
-            "w-[240px] justify-start text-left font-normal",
-            !date && "text-muted-foreground"
+            'w-[240px] justify-start text-left font-normal',
+            !date && 'text-muted-foreground',
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, "PPP") : <span>Pick a date</span>}
+          {date ? format(date, 'PPP') : <span>Pick a date</span>}
         </Button>
       </PopoverTrigger>
       <PopoverContent
@@ -61,5 +61,5 @@ export default function DatePickerWithPresets() {
         </div>
       </PopoverContent>
     </Popover>
-  )
+  );
 }

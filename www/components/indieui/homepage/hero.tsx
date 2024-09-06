@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { Button } from '@/components/indieui/buttons/button';
-import { Header } from '@/components/homepage/header';
+import { Header } from '@/components/indieui/homepage/header';
 import { configs } from '@/configs';
 import { FaArrowRight, FaGithub } from 'react-icons/fa';
 import components from '@/constants/components.json';

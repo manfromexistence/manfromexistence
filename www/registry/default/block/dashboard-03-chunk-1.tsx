@@ -1,15 +1,14 @@
-"use client"
+'use client';
 
-import { CornerDownLeft, Mic, Paperclip } from "lucide-react"
-
-import { Button } from "@/registry/default/ui/button"
-import { Label } from "@/registry/default/ui/label"
-import { Textarea } from "@/registry/default/ui/textarea"
+import { Label } from '@/registry/default/ui/label';
 import {
   Tooltip,
-  TooltipContent,
   TooltipTrigger,
-} from "@/registry/default/ui/tooltip"
+  TooltipContent,
+} from '@/registry/default/ui/tooltip';
+import { Button } from '@/registry/default/ui/button';
+import { Textarea } from '@/registry/default/ui/textarea';
+import { Paperclip, Mic, CornerDownLeft } from 'lucide-react';
 
 export default function Component() {
   return (
@@ -50,5 +49,5 @@ export default function Component() {
         </Button>
       </div>
     </form>
-  )
+  );
 }

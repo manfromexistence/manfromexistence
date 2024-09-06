@@ -1,18 +1,18 @@
-import { AppSidebar } from "@/registry/default/block/sidebar-01/components/app-sidebar"
+import { AppSidebar } from '@/registry/default/block/sidebar-01/components/app-sidebar';
 import {
   SidebarLayout,
   SidebarTrigger,
-} from "@/registry/default/block/sidebar-01/ui/sidebar"
+} from '@/registry/default/block/sidebar-01/ui/sidebar';
 
-export const iframeHeight = "870px"
+export const iframeHeight = '870px';
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = 'w-full h-full';
 
 export default async function Page() {
-  const { cookies } = await import("next/headers")
+  const { cookies } = await import('next/headers');
   return (
     <SidebarLayout
-      defaultOpen={cookies().get("sidebar:state")?.value === "true"}
+      defaultOpen={cookies().get('sidebar:state')?.value === 'true'}
     >
       <AppSidebar />
       <main className="flex flex-1 flex-col p-2 transition-all duration-300 ease-in-out">
@@ -21,5 +21,5 @@ export default async function Page() {
         </div>
       </main>
     </SidebarLayout>
-  )
+  );
 }

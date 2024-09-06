@@ -1,8 +1,8 @@
-import Image from "next/image"
-import { MoreHorizontal } from "lucide-react"
+import Image from 'next/image';
+import { MoreHorizontal } from 'lucide-react';
 
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Button } from "@/registry/new-york/ui/button"
+import { Badge } from '@/registry/new-york/ui/badge';
+import { Button } from '@/registry/new-york/ui/button';
 import {
   Card,
   CardContent,
@@ -10,14 +10,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
+} from '@/registry/new-york/ui/card';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
+} from '@/registry/new-york/ui/dropdown-menu';
 import {
   Table,
   TableBody,
@@ -25,7 +25,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/new-york/ui/table"
+} from '@/registry/new-york/ui/table';
 
 export default function Component() {
   return (
@@ -283,5 +283,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

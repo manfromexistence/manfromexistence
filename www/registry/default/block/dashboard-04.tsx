@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { CircleUser, Menu, Package2, Search } from "lucide-react"
+import Link from 'next/link';
+import { CircleUser, Menu, Package2, Search } from 'lucide-react';
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from '@/registry/default/ui/button';
 import {
   Card,
   CardContent,
@@ -9,8 +9,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Checkbox } from "@/registry/default/ui/checkbox"
+} from '@/registry/default/ui/card';
+import { Checkbox } from '@/registry/default/ui/checkbox';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,16 +18,16 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/default/ui/dropdown-menu"
-import { Input } from "@/registry/default/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/default/ui/sheet"
+} from '@/registry/default/ui/dropdown-menu';
+import { Input } from '@/registry/default/ui/input';
+import { Sheet, SheetContent, SheetTrigger } from '@/registry/default/ui/sheet';
 
 export const description =
-  "A settings page. The settings page has a sidebar navigation and a main content area. The main content area has a form to update the store name and a form to update the plugins directory. The sidebar navigation has links to general, security, integrations, support, organizations, and advanced settings."
+  'A settings page. The settings page has a sidebar navigation and a main content area. The main content area has a form to update the store name and a form to update the plugins directory. The sidebar navigation has links to general, security, integrations, support, organizations, and advanced settings.';
 
-export const iframeHeight = "780px"
+export const iframeHeight = '780px';
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = 'w-full h-full';
 
 export default function Dashboard() {
   return (
@@ -220,5 +220,5 @@ export default function Dashboard() {
         </div>
       </main>
     </div>
-  )
+  );
 }

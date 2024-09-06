@@ -1,28 +1,28 @@
-import Link from "next/link"
-import { MoreHorizontal, PlusSquare, type LucideIcon } from "lucide-react"
+import Link from 'next/link';
+import { MoreHorizontal, PlusSquare, type LucideIcon } from 'lucide-react';
 
-import { cn } from "@/registry/new-york/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
+import { cn } from '@/registry/new-york/lib/utils';
+import { Button } from '@/registry/new-york/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/new-york/ui/dropdown-menu"
+} from '@/registry/new-york/ui/dropdown-menu';
 
 export function NavProjects({
   projects,
   className,
 }: {
   projects: {
-    name: string
-    url: string
-    icon: LucideIcon
-  }[]
-} & React.ComponentProps<"ul">) {
+    name: string;
+    url: string;
+    icon: LucideIcon;
+  }[];
+} & React.ComponentProps<'ul'>) {
   return (
-    <ul className={cn("grid gap-0.5", className)}>
+    <ul className={cn('grid gap-0.5', className)}>
       {projects.map((item) => (
         <li
           key={item.name}
@@ -65,5 +65,5 @@ export function NavProjects({
         </button>
       </li>
     </ul>
-  )
+  );
 }
