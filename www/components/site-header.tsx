@@ -8,6 +8,7 @@ import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 import { buttonVariants } from "@/registry/new-york/ui/button"
+import { EyeCatchingButton_v1, EyeCatchingButton_v2, EyeCatchingButton_v3 } from "./indieui/buttons/eye-catching-buttons"
 
 export function SiteHeader() {
   return (
@@ -16,10 +17,16 @@ export function SiteHeader() {
         <MainNav />
         <MobileNav />
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+
+          <EyeCatchingButton_v1 />
+
+          {/* <EyeCatchingButton_v2>
+            Hello
+          </EyeCatchingButton_v2> */}
           {/* <div className="w-full flex-1 md:w-auto md:flex-none">
             <CommandMenu />
           </div> */}
-          <nav className="flex items-center">
+          {/* <nav className="flex items-center">
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -55,7 +62,7 @@ export function SiteHeader() {
               </div>
             </Link>
             <ModeToggle />
-          </nav>
+          </nav> */}
         </div>
       </div>
     </header>
