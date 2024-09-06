@@ -94,7 +94,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Advice
+          Advices
         </Link>
       </nav>
     </div>

@@ -8,33 +8,53 @@ export interface DocsConfig {
 
 export const docsConfig: DocsConfig = {
   mainNav: [
+    // {
+    //   title: "Documentation",
+    //   href: "/docs",
+    // },
+    // {
+    //   title: "Components",
+    //   href: "/docs/components/accordion",
+    // },
+    // {
+    //   title: "Blocks",
+    //   href: "/blocks",
+    // },
+    // {
+    //   title: "Charts",
+    //   href: "/charts",
+    // },
+    // {
+    //   title: "Themes",
+    //   href: "/themes",
+    // },
+    // {
+    //   title: "Examples",
+    //   href: "/examples",
+    // },
+    // {
+    //   title: "Colors",
+    //   href: "/colors",
+    // },
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "Home",
+      href: "/home",
     },
     {
-      title: "Components",
-      href: "/docs/components/accordion",
+      title: "About",
+      href: "/about",
     },
     {
-      title: "Blocks",
-      href: "/blocks",
+      title: "Lists",
+      href: "/lists",
     },
     {
-      title: "Charts",
-      href: "/charts",
+      title: "Writings",
+      href: "/writings",
     },
     {
-      title: "Themes",
-      href: "/themes",
-    },
-    {
-      title: "Examples",
-      href: "/examples",
-    },
-    {
-      title: "Colors",
-      href: "/colors",
+      title: "Advices",
+      href: "/advices",
     },
   ],
   sidebarNav: [
