@@ -41,7 +41,7 @@ export default function Home() {
       {/* Introduction */}
       <div className="w-full mt-4 min-h-screen space-y-8">
         <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Crafting Experiences with Pixels and Logic</span>
-        <div className="w-full md:flex-row flex flex-col md:space-y-0 space-y-4 text-muted-foreground">
+        <div className="w-full md:flex-row flex flex-col md:space-y-0 space-y-4 text-muted-foreground justify-between">
           <div className="md:w-[60%] flex flex-col space-y-2 md:max-h-[200px]">
             <span>Wild ideas? I turn them into reality. Imaginative designs + technical know-how = polished, functional products.</span>
             <div className="h-full flex md:justify-end flex-col space-y-2">
@@ -103,30 +103,56 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex w-full md:flex-col flex-row gap-1'>
-          <div className='w-full md:w-[40%]'>
-            <div className="min-h-[200px] border border-dashed border-zinc-400 dark:border-zinc-700 relative">
+        <div className='flex w-full md:flex-row flex-col md:gap-4 gap-8'>
+          <div className='w-full lg:w-[30%]'>
+            <div className="min-h-full  border border-dashed border-zinc-400 dark:border-zinc-700 relative">
               <Icon className="-top-3 -left-3" />
               <Icon className="-top-3 -right-3" />
               <Icon className="-bottom-3 -left-3" />
               <Icon className="-bottom-3 -right-3" />
               <div className={cn('flex flex-col p-4 space-y-4')}>
                 <span className='text-muted-foreground font-bold'>DESIGN, BUILD, INSPIRE.</span>
-                <span className='text-muted-foreground'>Branding, design, writing, product creation, development – I wear many hats, fueled by an insatiable passion for innovation. Think of me as your multi-faceted partner, bridging the gap between dream concepts and polished realities.</span>
+                <span className='text-muted-foreground flex-1 min-h-full bg-red-500'>Branding, design, writing, product creation, development – I wear many hats, fueled by an insatiable passion for innovation. Think of me as your multi-faceted partner, bridging the gap between dream concepts and polished realities.</span>
                 <Button variant={'secondary'}>Let&apos;s work togather</Button>
               </div>
             </div>
           </div>
-          <div className='w-full md:w-[60%]'>
-            <div className="min-h-[200px] border border-dashed border-zinc-400 dark:border-zinc-700 relative">
+          <div className='w-full lg:w-[70%]'>
+            <div className="min-h-full border border-dashed border-zinc-400 dark:border-zinc-700 relative">
               <Icon className="-top-3 -left-3" />
               <Icon className="-top-3 -right-3" />
               <Icon className="-bottom-3 -left-3" />
               <Icon className="-bottom-3 -right-3" />
-              <div className={cn('flex flex-col p-4 space-y-4')}>
-                <span className='text-muted-foreground font-bold'>DESIGN, BUILD, INSPIRE.</span>
-                <span className='text-muted-foreground'>Branding, design, writing, product creation, development – I wear many hats, fueled by an insatiable passion for innovation. Think of me as your multi-faceted partner, bridging the gap between dream concepts and polished realities.</span>
-                <Button variant={'secondary'}>Let&apos;s work togather</Button>
+              <div className={cn('min-h-full grid md:grid-cols-3 xs:grid-cols-1')}>
+                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0'>
+                  <Icon className="-bottom-3 -right-3" />
+                  <span className='text-7xl'>6+</span>
+                  <span className='text-muted-foreground'>Products</span>
+                </div>
+                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0'>
+                  <Icon className="-bottom-3 -right-3" />
+                  <span className='text-7xl'>2+</span>
+                  <span className='text-muted-foreground'>Clients</span>
+                </div>
+                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0 border-r-0'>
+                  <span className='text-7xl'>1+</span>
+                  <span className='text-muted-foreground'>Facilitator</span>
+                </div>
+
+                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0 md:border-b-0'>
+                  <span className='text-7xl'>1+</span>
+                  <span className='text-muted-foreground'>Talks</span>
+                </div>
+                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0 md:border-b-0'>
+                  <span className='text-7xl'>0</span>
+                  <span className='text-muted-foreground'>Books</span>
+                </div>
+                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0 border-b-0'>
+                  <span className='text-7xl'>∞</span>
+                  <span className='text-muted-foreground'>Passion</span>
+                </div>
+
+
               </div>
             </div>
           </div>
