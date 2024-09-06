@@ -4,10 +4,31 @@ import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import * as React from "react";
 import type { SVGProps } from "react";
-import BlogCardSection from "@/components/blog-card-section";
+import { SocialMediasCardSection, ProjectsCardSection } from "@/components/blog-card-section";
 import { Briefcase, CircleSlash2 } from "lucide-react";
 import { Button } from '@/registry/default/ui/button';
 import Image from 'next/image';
+import { WobbleCard } from "@/components/accertinityui/wobble-card"
+import { EvervaultCard, Icon } from "@/components/accertinityui/evervault-card";
+import { Info } from '@/components/bento-info';
+import { MoreInfo } from '@/components/expandable-more-info';
+import { CardBody, CardContainer, CardItem } from "@/components/accertinityui/3d-card";
+import { FlipWords } from "@/components/accertinityui/flip-words";
+
+export function FlipWordsDemo() {
+  const words = ["better", "cute", "beautiful", "modern"];
+
+  return (
+    <div className="h-[40rem] flex justify-center items-center px-4">
+      <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+        Build
+        <FlipWords words={words} /> <br />
+        websites with Aceternity UI
+      </div>
+    </div>
+  );
+}
+
 
 const XformerlyTwitter = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 1200 1227" {...props}><path fill="#fff" d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z" /></svg>;
 const Github = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 256 250" width="1em" height="1em" fill="#fff" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" {...props}><path d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z" /></svg>;
@@ -17,25 +38,28 @@ const Gmail = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/
 const Threads = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" aria-label="Threads" viewBox="0 0 192 192" width="1em" height="1em" {...props}><path fill="#fff" d="M141.537 88.988a66.667 66.667 0 0 0-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.14-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 7.047 4.652 16.124 6.927 25.557 6.412 12.458-.683 22.231-5.436 29.049-14.127 5.178-6.6 8.453-15.153 9.899-25.93 5.937 3.583 10.337 8.298 12.767 13.966 4.132 9.635 4.373 25.468-8.546 38.376-11.319 11.308-24.925 16.2-45.488 16.351-22.809-.169-40.06-7.484-51.275-21.742C35.236 139.966 29.808 120.682 29.605 96c.203-24.682 5.63-43.966 16.133-57.317C56.954 24.425 74.204 17.11 97.013 16.94c22.975.17 40.526 7.52 52.171 21.847 5.71 7.026 10.015 15.86 12.853 26.162l16.147-4.308c-3.44-12.68-8.853-23.606-16.219-32.668C147.036 9.607 125.202.195 97.07 0h-.113C68.882.194 47.292 9.642 32.788 28.08 19.882 44.485 13.224 67.315 13.001 95.932L13 96v.067c.224 28.617 6.882 51.447 19.788 67.854C47.292 182.358 68.882 191.806 96.957 192h.113c24.96-.173 42.554-6.708 57.048-21.189 18.963-18.945 18.392-42.692 12.142-57.27-4.484-10.454-13.033-18.945-24.723-24.553ZM98.44 129.507c-10.44.588-21.286-4.098-21.82-14.135-.397-7.442 5.296-15.746 22.461-16.735 1.966-.114 3.895-.169 5.79-.169 6.235 0 12.068.606 17.371 1.765-1.978 24.702-13.58 28.713-23.802 29.274Z" className="x19hqcy" /></svg>;
 const LinkedIn = (props: SVGProps<SVGSVGElement>) => <svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256" {...props}><path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="#0A66C2" /></svg>;
 
-const Icon = ({ className, ...rest }: any) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      width={24}
-      height={24}
-      strokeWidth="1"
-      stroke="currentColor"
-      {...rest}
-      className={cn('dark:text-white text-black size-6 absolute', className)}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-    </svg>
-  );
-};
+
 
 export default function Home() {
+
+  const Icon = ({ className, ...rest }: any) => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        width={24}
+        height={24}
+        strokeWidth="1"
+        stroke="currentColor"
+        {...rest}
+        className={cn('dark:text-white text-black size-6 absolute', className)}
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+      </svg>
+    );
+  };
+
   return (
     <div className="container flex max-w-screen-xl items-center flex-col">
       <div className="w-full mt-4 space-y-8">
@@ -151,7 +175,130 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <BlogCardSection />
+
+      <ProjectsCardSection />
+      <SocialMediasCardSection />
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+        <WobbleCard
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+          className=""
+        >
+          <div className="max-w-xs">
+            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+              Gippity AI powers the entire universe
+            </h2>
+            <p className="mt-4 text-left  text-base/6 text-neutral-200">
+              With over 100,000 mothly active bot users, Gippity AI is the most
+              popular AI platform for developers.
+            </p>
+          </div>
+          <Image
+            src="/linear.webp"
+            width={500}
+            height={500}
+            alt="linear demo image"
+            className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          />
+        </WobbleCard>
+        <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+          <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            No shirt, no shoes, no weapons.
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+            If someone yells “stop!”, goes limp, or taps out, the fight is over.
+          </p>
+        </WobbleCard>
+        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+          <div className="max-w-sm">
+            <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+              Signup for blazing-fast cutting-edge state of the art Gippity AI
+              wrapper today!
+            </h2>
+            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+              With over 100,000 mothly active bot users, Gippity AI is the most
+              popular AI platform for developers.
+            </p>
+          </div>
+          <Image
+            src="/linear.webp"
+            width={500}
+            height={500}
+            alt="linear demo image"
+            className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+          />
+        </WobbleCard>
+      </div>
+
+
+      <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
+        <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+        <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+        <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+        <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+        <EvervaultCard text="hover" />
+        <h2 className="dark:text-white text-black mt-4 text-sm font-light">
+          Hover over this card to reveal an awesome effect. Running out of copy
+          here.
+        </h2>
+        <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
+          Watch me hover
+        </p>
+      </div>
+      <CardContainer className="inter-var">
+        <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+          <CardItem
+            translateZ="50"
+            className="text-xl font-bold text-neutral-600 dark:text-white"
+          >
+            Make things float in air
+          </CardItem>
+          <CardItem
+            as="p"
+            translateZ="60"
+            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          >
+            Hover over this card to unleash the power of CSS perspective
+          </CardItem>
+          <CardItem
+            translateZ="100"
+            rotateX={20}
+            rotateZ={-10}
+            className="w-full mt-4"
+          >
+            <Image
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              height="1000"
+              width="1000"
+              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+              alt="thumbnail"
+            />
+          </CardItem>
+          <div className="flex justify-between items-center mt-20">
+            <CardItem
+              translateZ={20}
+              translateX={-40}
+              as="button"
+              className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            >
+              Try now →
+            </CardItem>
+            <CardItem
+              translateZ={20}
+              translateX={40}
+              as="button"
+              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+            >
+              Sign up
+            </CardItem>
+          </div>
+        </CardBody>
+      </CardContainer>
+
+      <FlipWordsDemo />
+      <Info />
+      <MoreInfo />
+
     </div>
   );
 }
