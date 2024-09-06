@@ -1,5 +1,5 @@
 import { ThemeToggle } from '../toggle-theme';
-import { Button } from '@/components/buttons/button';
+import { Button } from '@/components/indieui/buttons/button';
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { MobileHeader } from './mobile-header';
@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 import { configs } from '@/configs';
 import { FaDiscord, FaGithub, FaXTwitter } from 'react-icons/fa6';
 import { LogoLink } from '@/components/logo';
-import { Button_v7 } from '@/components/buttons/button-variants';
+import { Button_v7 } from '@/components/indieui/buttons/button-variants';
 
 const headerVariants = cva('mx-auto', {
   variants: {

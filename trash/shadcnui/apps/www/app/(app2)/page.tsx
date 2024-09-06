@@ -11,7 +11,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { Button } from "@/registry/new-york/ui/button"
-import MailPage from "@/app/(app)/examples/mail/page"
+import MailPage from "@/app/(app2)/examples/mail/page"
 
 export default function IndexPage() {
   return (

@@ -94,7 +94,7 @@ export function CommandMenu({ ...props }: DialogProps) {
           </CommandGroup>
           {docsConfig.sidebarNav.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
-              {group.items.map((navItem) => (
+              {group.items.map((navItem:any) => (
                 <CommandItem
                   key={navItem.href}
                   value={navItem.title}
