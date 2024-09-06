@@ -57,7 +57,7 @@ export function V0Button({
   block: Pick<Block, "name" | "description" | "code" | "style">
   size?: Size
 } & ButtonProps) {
-  const [url, setUrl] = React.useState("https://ui.shadcn.com")
+  const [url, setUrl] = React.useState("https://ui.manfromexistence.com")
 
   React.useEffect(() => {
     setUrl(window.location.href)
