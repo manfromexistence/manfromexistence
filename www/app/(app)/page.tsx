@@ -60,7 +60,7 @@ export default function Home() {
   };
 
   return (
-    <div className="container flex max-w-screen-xl items-center flex-col">
+    <div className="container flex max-w-screen-xl items-center flex-col space-y-8">
       <IOSDOCk />
 
       <div className="w-full mt-4 space-y-8">
@@ -177,7 +177,7 @@ export default function Home() {
         </div>
       </div>
 
-      <ProjectsCardSection />
+      {/* <ProjectsCardSection /> */}
       <SocialMediasCardSection />
 
       {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">

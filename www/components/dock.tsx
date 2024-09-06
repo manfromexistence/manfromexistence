@@ -129,16 +129,70 @@ export default function IOSDOCk() {
     const { theme } = useTheme()
     
     return (
-        <div className="relative">
+        <div className="fixed bottom-0 left-0 z-50">
             <Dock magnification={65} distance={113}>
                 <DockIcon className="p-3 bg-primary-foreground rounded-full">
-                    <Image className={cn(theme === "dark" ? "" : "invert")} src={"/manfromexistence/ai-dark.svg"} height={75} width={75} alt="ai" />
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
                 <DockIcon className="p-3 bg-primary-foreground rounded-full">
-                    <Image className={cn(theme === "dark" ? "" : "invert")} src={"/manfromexistence/algorithm-dark.svg"} height={75} width={75} alt="ai" />
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/algorithm.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
                 <DockIcon className="p-3 bg-primary-foreground rounded-full">
-                    <Image className={cn(theme === "dark" ? "" : "invert")}  src={"/manfromexistence/auth-dark.svg"} height={75} width={75} alt="ai" />
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/auth.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/backend.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/blockchain.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/deployment.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/documentation.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/frontend.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/media.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/package.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/payment.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/privacy.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/test.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/theory.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/ui.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/ux.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/workspace.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/tool.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/benchmark.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/observerability.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
             </Dock>
         </div>
