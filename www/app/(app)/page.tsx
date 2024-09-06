@@ -14,10 +14,10 @@ export default function Home() {
       <div className="w-full mt-4 min-h-screen space-y-4">
         <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Crafting Experiences with Pixels and Logic</span>
 
-        <div className="w-full md:flex-row flex flex-col md:space-x-2 text-muted-foreground">
-          <div className="md:w-[60%] flex flex-col">
+        <div className="w-full md:flex-row flex flex-col md:space-y-0 space-y-4 text-muted-foreground">
+          <div className="md:w-[60%] flex flex-col space-y-2 md:max-h-[200px]">
             <span>Wild ideas? I turn them into reality. Imaginative designs + technical know-how = polished, functional products.</span>
-            <div className="h-full flex justify-center md:flex-col space-y-2">
+            <div className="h-full flex md:justify-end flex-col space-y-2">
               <div className="flex flex-col">
                 <span>Now</span>
                 <div className="flex text-foreground">
@@ -32,7 +32,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <SimpleCard_V3 />
         </div>
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { cn } from '@/lib/utils';
 // import {
 //   Avatar,
@@ -25,7 +26,8 @@ const cardContent = {
 };
 const CardBody = ({ className = 'p-4' }) => (
   <div className={cn('flex flex-col', className)}>
-    <div className='rounded-md hover:bg-primary-foreground hover:text-primary flex w-full space-x-2 items-center p-2'>
+    <div className='md:justify-evenly rounded-md hover:bg-primary-foreground hover:text-primary flex w-full justify-center space-x-4 items-center p-2'>
+      <img src='MANFROMEXISTENCE.jpg' alt='manfromexistnece' className='rounded-md h-full w-12' />
       <div className='flex flex-col'>
         <span className='text-foreground'>manfromexistence</span>
         <span>Human - Programmer</span>
@@ -35,7 +37,7 @@ const CardBody = ({ className = 'p-4' }) => (
 
     <Separator className="my-4" />
 
-    <div className='flex space-x-2'>
+    <div className='flex space-x-2 items-center justify-center'>
       <Link href={"https://github.com/manfromexstence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
         <YouTube />
       </Link>
@@ -141,7 +143,7 @@ export const SimpleCard_V3 = () => {
     );
   };
   return (
-    <div className='w-[360px]'>
+    <div className='w-full md:max-w-[400px]'>
       <div className="min-h-[200px] border border-dashed border-zinc-400 dark:border-zinc-700 relative">
         <Icon className="-top-3 -left-3" />
         <Icon className="-top-3 -right-3" />
