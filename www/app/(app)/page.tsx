@@ -42,7 +42,7 @@ export default function Home() {
         <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Crafting Experiences with Pixels and Logic</span>
         <div className="w-full md:flex-row flex flex-col md:space-y-0 space-y-4 text-muted-foreground justify-between">
           <div className="md:w-[60%] flex flex-col space-y-2 md:max-h-[200px]">
-            <span>Wild ideas? I turn them into reality. Imaginative designs + technical know-how = polished, functional products.</span>
+            <span>Delusions? I turn them into reality. Trying to solve as many problems as possible.</span>
             <div className="h-full flex md:justify-end flex-col space-y-2">
               <div className="flex flex-col">
                 <span>Now</span>
