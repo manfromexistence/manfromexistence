@@ -73,6 +73,7 @@
     "@trpc/react-query": "^10.44.1",
     "@trpc/server": "^10.44.1",
     "@types/react-html-parser": "^2.0.6",
+    "@types/three": "^0.168.0",
     "@typescript-eslint/parser": "^5.59.7",
     "@upstash/ratelimit": "^0.4.4",
     "@upstash/redis": "^1.24.2",
