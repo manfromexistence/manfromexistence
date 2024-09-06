@@ -9,6 +9,7 @@ import { MobileNav } from "@/components/mobile-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 import { buttonVariants } from "@/registry/new-york/ui/button"
 import { EyeCatchingButton_v1, EyeCatchingButton_v2, EyeCatchingButton_v3 } from "./indieui/buttons/eye-catching-buttons"
+import { Play } from "lucide-react"
 
 export function SiteHeader() {
   return (
@@ -16,18 +17,16 @@ export function SiteHeader() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <MainNav />
         <MobileNav />
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-
-          <EyeCatchingButton_v1 />
-
-          {/* <EyeCatchingButton_v2>
-            Hello
-          </EyeCatchingButton_v2> */}
+        <div className="flex flex-1 items-center space-x-2 justify-end">
           {/* <div className="w-full flex-1 md:w-auto md:flex-none">
             <CommandMenu />
           </div> */}
-          {/* <nav className="flex items-center">
-            <Link
+          <nav className="flex items-center">
+            <EyeCatchingButton_v1>
+              <Play className="h-4 w-4 mr-2" />
+              Start a Project
+            </EyeCatchingButton_v1>
+            {/* <Link
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
@@ -61,8 +60,8 @@ export function SiteHeader() {
                 <span className="sr-only">Twitter</span>
               </div>
             </Link>
-            <ModeToggle />
-          </nav> */}
+            <ModeToggle /> */}
+          </nav>
         </div>
       </div>
     </header>

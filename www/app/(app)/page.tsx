@@ -7,10 +7,10 @@ import { Github } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
-    return (
-        <PageWrapper>
-            <div className='flex flex-col flex-wrap items-center justify-center mt-[3rem] mb-[6rem] p-3 w-full max-w-[650px]'>
-                {/* <div className="flex justify-end items-center mb-1 w-full">
+  return (
+    <PageWrapper>
+      <div className='flex flex-col flex-wrap items-center justify-center mt-[3rem] mb-[6rem] w-full max-w-[1200px] p-5'>
+        {/* <div className="flex justify-end items-center mb-1 w-full">
           <Link
             href="https://github.com/michaelshimeles/html-blog-renderer"
             target='_blank'
@@ -20,18 +20,18 @@ export default function Home() {
             <Github className='w-5 h-5' aria-hidden="true" />
           </Link>
         </div> */}
-                {/* <div className='flex flex-col items-start justify-center w-full gap-2 mb-4 '>
+        {/* <div className='flex flex-col items-start justify-center w-full gap-2 mb-4 '>
           <h1 className='scroll-m-20 text-xl font-medium tracking-tight'>Render Your Blog Using HTML instead of Markdown</h1>
           <Separator />
         </div> */}
-                <div className='w-full'>
-                    <VideoPlayer videoSrc="https://utfs.io/f/45ce5f08-1c16-42f6-a9d2-9037a62018d1-fsqn4g.mp4" />
-                </div>
-                <BlogCardSection />
-            </div>
-            {/* <FloatingBadge /> */}
-        </PageWrapper>
-    );
+        {/* <div className='w-full'>
+          <VideoPlayer videoSrc="https://utfs.io/f/45ce5f08-1c16-42f6-a9d2-9037a62018d1-fsqn4g.mp4" />
+        </div> */}
+        <BlogCardSection />
+      </div>
+      {/* <FloatingBadge /> */}
+    </PageWrapper>
+  );
 }
 
 // export default function Home() {
