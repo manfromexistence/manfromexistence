@@ -6,7 +6,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 import type { SVGProps } from "react";
-
+import Image from "next/image"
 export interface DockProps extends VariantProps<typeof dockVariants> {
     className?: string;
     magnification?: number;
@@ -129,8 +129,14 @@ export default function IOSDOCk() {
     return (
         <div className="relative">
             <Dock magnification={60} distance={100}>
-                <DockIcon className="bg-black/10 dark:bg-white/10 p-3 text-red-500">
-                    <RaspberryPI className="h-4 w-4" />
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image src={"/manfromexistence/ai-dark.svg"} height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image src={"/manfromexistence/algorithm-dark.svg"} height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image src={"/manfromexistence/auth-dark.svg"} height={75} width={75} alt="ai" />
                 </DockIcon>
             </Dock>
         </div>
