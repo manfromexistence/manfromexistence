@@ -127,7 +127,8 @@ DockIcon.displayName = "DockIcon";
 export default function IOSDOCk() {
 
     const { theme } = useTheme()
-    
+    // 360:7,sm:12,md:14,lg:20,xl:23
+
     return (
         <div className="fixed bottom-4 left-0 z-50 flex items-center justify-center w-full !pb-100">
             <Dock magnification={65} distance={113}>
