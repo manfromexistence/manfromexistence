@@ -8,13 +8,13 @@ import { SocialMediasCardSection, ProjectsCardSection } from "@/components/blog-
 import { Briefcase, CircleSlash2 } from "lucide-react";
 import { Button } from '@/registry/default/ui/button';
 import Image from 'next/image';
-// import { WobbleCard } from "@/components/accertinityui/wobble-card"
-// import { EvervaultCard, Icon } from "@/components/accertinityui/evervault-card";
 import { Info } from '@/components/bento-info';
 import { MoreInfo } from '@/components/expandable-more-info';
+import IOSDOCk from '@/components/dock';
+// import { WobbleCard } from "@/components/accertinityui/wobble-card"
+// import { EvervaultCard, Icon } from "@/components/accertinityui/evervault-card";
 // import { CardBody, CardContainer, CardItem } from "@/components/accertinityui/3d-card";
 // import { FlipWords } from "@/components/accertinityui/flip-words";
-import IOSDOCk from '@/components/dock';
 
 // function FlipWordsDemo() {
 //   const words = ["better", "cute", "beautiful", "modern"];

@@ -5,9 +5,9 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 import { cn } from "@/lib/utils";
-import type { SVGProps } from "react";
 import Image from "next/image"
 import { useTheme } from "next-themes"
+import type { SVGProps } from "react";
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
     className?: string;
@@ -21,7 +21,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-    "mx-auto w-max mt-8 h-[58px] p-2 flex gap-2 rounded-2xl border supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md",
+    "max-w-[95%] xl:w-[1200px] mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border supports-backdrop-blur:bg-white/13 supports-backdrop-blur:dark:bg-black/13 backdrop-blur-md",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -129,7 +129,7 @@ export default function IOSDOCk() {
     const { theme } = useTheme()
     
     return (
-        <div className="fixed bottom-0 left-0 z-50">
+        <div className="fixed bottom-4 left-0 z-50 flex items-center justify-center w-full !pb-100">
             <Dock magnification={65} distance={113}>
                 <DockIcon className="p-3 bg-primary-foreground rounded-full">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
