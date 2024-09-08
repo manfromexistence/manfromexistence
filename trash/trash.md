@@ -1,4 +1,22 @@
+import { Info } from '@/components/bento-info';
+import { MoreInfo } from '@/components/expandable-more-info';
+// import { WobbleCard } from "@/components/accertinityui/wobble-card"
+// import { EvervaultCard, Icon } from "@/components/accertinityui/evervault-card";
+// import { CardBody, CardContainer, CardItem } from "@/components/accertinityui/3d-card";
+// import { FlipWords } from "@/components/accertinityui/flip-words";
 
+// function FlipWordsDemo() {
+//   const words = ["better", "cute", "beautiful", "modern"];
+//   return (
+//     <div className="h-[40rem] flex justify-center items-center px-4">
+//       <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+//         Build
+//         <FlipWords words={words} /> <br />
+//         websites with Aceternity UI
+//       </div>
+//     </div>
+//   );
+// }
 
 {/* <PageWrapper>
       <div className='flex flex-col flex-wrap items-center justify-center mt-[3rem] mb-[6rem] w-full max-w-[1200px] p-5'>

@@ -21,7 +21,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-    "max-w-[95%] xl:w-[1200px] mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border supports-backdrop-blur:bg-white/13 supports-backdrop-blur:dark:bg-black/13 backdrop-blur-md",
+    "max-w-[95%] lg:w-[1100px] mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border supports-backdrop-blur:bg-white/13 supports-backdrop-blur:dark:bg-black/13 backdrop-blur-md",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -133,6 +133,10 @@ export default function IOSDOCk() {
         <div className="fixed bottom-4 left-0 z-50 flex items-center justify-center w-full !pb-100">
             <Dock magnification={65} distance={113}>
                 <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    {/* <Home /> */}
+                    
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
                 <DockIcon className="p-3 bg-primary-foreground rounded-full">
@@ -191,6 +195,9 @@ export default function IOSDOCk() {
                 </DockIcon>
                 <DockIcon className="p-3 bg-primary-foreground rounded-full">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/benchmark.svg" height={75} width={75} alt="ai" />
+                </DockIcon>
+                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/observerability.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
                 <DockIcon className="p-3 bg-primary-foreground rounded-full">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/observerability.svg" height={75} width={75} alt="ai" />
