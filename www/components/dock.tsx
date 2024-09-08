@@ -21,7 +21,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-    "max-w-[95%] lg:w-[1100px] mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border supports-backdrop-blur:bg-white/13 supports-backdrop-blur:dark:bg-black/13 backdrop-blur-md",
+    "max-w-[95%] lg:w-[1000px] mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border supports-backdrop-blur:bg-white/13 supports-backdrop-blur:dark:bg-black/13 backdrop-blur-md",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -132,74 +132,67 @@ export default function IOSDOCk() {
     return (
         <div className="fixed bottom-4 left-0 z-50 flex items-center justify-center w-full !pb-100">
             <Dock magnification={65} distance={113}>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
-                    {/* <Home /> */}
-                    
-                </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/algorithm.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/auth.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/backend.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/blockchain.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/deployment.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/documentation.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/frontend.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/media.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/package.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/payment.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/privacy.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/test.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/theory.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/ui.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/ux.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/workspace.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/tool.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/benchmark.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
-                    <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/observerability.svg" height={75} width={75} alt="ai" />
-                </DockIcon>
-                <DockIcon className="p-3 bg-primary-foreground rounded-full">
+                <DockIcon className="p-3 bg-primary-foreground rounded-full hidden lg:block">
                     <Image className={cn(theme === "light" ? "" : "invert")} src="/manfromexistence/observerability.svg" height={75} width={75} alt="ai" />
                 </DockIcon>
             </Dock>
