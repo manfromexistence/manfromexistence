@@ -31,7 +31,7 @@ export function SocialMediasCardSection() {
   return (
     <div className='w-full'>
       <div className='flex flex-col items-start justify-center w-full mb-4 gap-2'>
-        <h1 className='text-xl font-medium tracking-tight'>Social Media</h1>
+        <h1 className='text-xl font-medium tracking-tight'>Contents</h1>
         <Separator />
       </div>
       <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
@@ -42,7 +42,7 @@ export function SocialMediasCardSection() {
         ))}
       </div>
       <Link className='border rounded-md flex w-full py-2 items-center justify-center my-4' target='_blank' href={'https://google.com'} >
-        See all social media contents
+        See all contents
       </Link>
     </div>
   )
@@ -61,7 +61,7 @@ export function ProjectsCardSection() {
             <BlogCard title={blog?.name} description={blog?.description} image={blog?.image} />
           </Link>
         ))} */}
-          {/* <div className="flex items-center justify-center w-full min-h-[500px] ml-10 bg-red-500">
+        {/* <div className="flex items-center justify-center w-full min-h-[500px] ml-10 bg-red-500">
             <PinContainer
               title="/ui.aceternity.com"
               href="https://twitter.com/mannupaaji"

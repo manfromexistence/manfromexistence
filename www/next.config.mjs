@@ -8,6 +8,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'youtu.be',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'assets.aceternity.com',
         port: '',
         pathname: '/**',

@@ -215,14 +215,14 @@ export default function IOSDOCk() {
                         <Image className={projectIconsClassName} src="/manfromexistence/theory.svg" height={75} width={75} alt="theory" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="dark:bg-primary-foreground bg-secondary rounded-full">
+                <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
                     <Link target="_blank" href="https://ui.manfromexistence.com">
-                        <Image className={cn(theme === "light" ? "invert" : "")} src="/manfromexistence/ui.png" height={100} width={100} alt="ui" />
+                        <Image className={cn(theme === "light" ? "invert" : "")} src="/manfromexistence/ui.png" height={75} width={75} alt="ui" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="dark:bg-primary-foreground bg-secondary rounded-full">
+                <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
                     <Link target="_blank" href="https://ux.manfromexistence.com">
-                        <Image className={cn(theme === "light" ? "invert" : "")} src="/manfromexistence/ux.png" height={100} width={100} alt="ux" />
+                        <Image className={cn(theme === "light" ? "invert" : "")} src="/manfromexistence/ux.png" height={75} width={75} alt="ux" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">

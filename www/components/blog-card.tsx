@@ -38,7 +38,7 @@ export default function BlogCard({ title, description, image }: {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{ scale: 1.03 }} // Slightly increase size on hover
-      className="relative w-full rounded-2xl border border-zinc-900 hover:cursor-pointer overflow-hidden"
+      className="relative w-full rounded-2xl border hover:cursor-pointer overflow-hidden"
     >
       {/* Radial gradient overlay that follows the mouse */}
       <div

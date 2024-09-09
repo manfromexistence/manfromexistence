@@ -30,11 +30,11 @@ export default function Home() {
     );
   };
   return (
-    <div className="container flex max-w-screen-xl items-center flex-col space-y-8">
+    <div className="container flex max-w-screen-xl items-center flex-col space-y-8 pb-[77.5px]">
       <IOSDOCk />
 
       <div className="w-full mt-4 space-y-8">
-        <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Crafting Experiences with Pixels and Logic</span>
+        <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Developing Solutions for Problems with Curiosity and Thoughts</span>
         <div className="w-full md:flex-row flex flex-col md:space-y-0 space-y-4 text-muted-foreground justify-between">
           <div className="md:w-[60%] flex flex-col space-y-2 md:max-h-[200px]">
             <span>Delusions? I turn them into reality. Trying to solve as many problems as possible.</span>
