@@ -29,7 +29,6 @@ export default function Home() {
       </svg>
     );
   };
-
   return (
     <div className="container flex max-w-screen-xl items-center flex-col space-y-8">
       <IOSDOCk />
