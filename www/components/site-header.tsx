@@ -1,14 +1,8 @@
 import Link from "next/link"
-
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { CommandMenu } from "@/components/command-menu"
-import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeToggle } from "@/components/mode-toggle"
-import { buttonVariants } from "@/registry/new-york/ui/button"
-import { EyeCatchingButton_v1, EyeCatchingButton_v2, EyeCatchingButton_v3 } from "./indieui/buttons/eye-catching-buttons"
+import { EyeCatchingButton_v1 } from "./indieui/buttons/eye-catching-buttons"
 import { Play } from "lucide-react"
 
 export function SiteHeader() {
@@ -18,9 +12,6 @@ export function SiteHeader() {
         <MainNav />
         <MobileNav />
         <div className="flex flex-1 items-center space-x-2 justify-end">
-          {/* <div className="w-full flex-1 md:w-auto md:flex-none">
-            <CommandMenu />
-          </div> */}
           <nav className="flex items-center space-x-2">
             <ModeToggle />
             <Link target="_blank" href={"https://www.upwork.com/freelancers/~01221bf135ed62b3b3"}>
@@ -29,42 +20,6 @@ export function SiteHeader() {
                 Start a Project
               </EyeCatchingButton_v1>
             </Link>
-
-            {/* <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "h-8 w-8 px-0"
-                )}
-              >
-                <Icons.gitHub className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({
-                    variant: "ghost",
-                  }),
-                  "h-8 w-8 px-0"
-                )}
-              >
-                <Icons.twitter className="h-3 w-3 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
-            */}
           </nav>
         </div>
       </div>
