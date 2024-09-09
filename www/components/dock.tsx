@@ -14,6 +14,7 @@ import {
     DrawerContent,
     DrawerTrigger,
 } from "@/registry/default/ui/drawer"
+import { ScrollArea } from "@/registry/default/ui/scroll-area"
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
     className?: string;
@@ -249,11 +250,78 @@ export default function IOSDOCk() {
                         <DrawerTrigger asChild>
                             <ListCollapse className="h-4 w-4" />
                         </DrawerTrigger>
-                        <DrawerContent >
-                            <Link className="flex flex-col bg-primary-foreground space-y-2 p-2" target="_blank" href="https://observerability.manfromexistence.com">
-                                <h2>Ai</h2>
-                                <span className="text-muted-foreground">Copy & Past some ai related code</span>
-                            </Link>
+                        <DrawerContent className="!min-h-1/2">
+                            <ScrollArea className="h-full w-full space-y-2 p-4 pt-2">
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://ai.manfromexistence.com">
+                                    <h2>Ai</h2>
+                                    <span className="text-muted-foreground">Copy & Past some ai related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://algorithm.manfromexistence.com">
+                                    <h2>Algorithm</h2>
+                                    <span className="text-muted-foreground">Copy & Past some algorithm related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://auth.manfromexistence.com">
+                                    <h2>Auth</h2>
+                                    <span className="text-muted-foreground">Copy & Past some auth related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://backend.manfromexistence.com">
+                                    <h2>Backend</h2>
+                                    <span className="text-muted-foreground">Copy & Past some backend related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://blockchain.manfromexistence.com">
+                                    <h2>Blockchain</h2>
+                                    <span className="text-muted-foreground">Copy & Past some auth blockchain code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://deployment.manfromexistence.com">
+                                    <h2>Deployment</h2>
+                                    <span className="text-muted-foreground">Copy & Past some backend deployment code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://design-pattern.manfromexistence.com">
+                                    <h2>Design Pattern</h2>
+                                    <span className="text-muted-foreground">Copy & Past some design-pattern related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://documentation.manfromexistence.com">
+                                    <h2>Documentation</h2>
+                                    <span className="text-muted-foreground">Copy & Past some documentation related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://frontend.manfromexistence.com">
+                                    <h2>Frontend</h2>
+                                    <span className="text-muted-foreground">Copy & Past some frontend related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://package.manfromexistence.com">
+                                    <h2>Package</h2>
+                                    <span className="text-muted-foreground">Copy & Past some package related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://privacy.manfromexistence.com">
+                                    <h2>Privacy</h2>
+                                    <span className="text-muted-foreground">Copy & Past some privacy related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://test.manfromexistence.com">
+                                    <h2>Test</h2>
+                                    <span className="text-muted-foreground">Copy & Past some test related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://theory.manfromexistence.com">
+                                    <h2>Theory</h2>
+                                    <span className="text-muted-foreground">Copy & Past some backend theory code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://workspace.manfromexistence.com">
+                                    <h2>Workspace</h2>
+                                    <span className="text-muted-foreground">Copy & Past some workspace related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://tool.manfromexistence.com">
+                                    <h2>Tool</h2>
+                                    <span className="text-muted-foreground">Copy & Past some tool related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://benchmark.manfromexistence.com">
+                                    <h2>Benchmark</h2>
+                                    <span className="text-muted-foreground">Copy & Past some benchmark related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://observeability.manfromexistence.com">
+                                    <h2>Observeability</h2>
+                                    <span className="text-muted-foreground">Copy & Past some observeability related code</span>
+                                </Link>
+
+                            </ScrollArea>
                         </DrawerContent>
                     </Drawer>
                 </DockIcon>
