@@ -75,16 +75,16 @@ export default function Home() {
                     <YouTube />
                   </Link>
                   <Link href={"https://x.com/manfrexistence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
-                    <XformerlyTwitter />
+                    <XformerlyTwitter className="invert dark:invert-0" />
                   </Link>
                   <Link href={"https://github.com/manfromexistence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
-                    <Github />
+                    <Github className="invert dark:invert-0" />
                   </Link>
                   <Link href={"https://www.linkedin.com/in/man-from-existence-a50180314/"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
                     <LinkedIn />
                   </Link>
                   <Link href={"https://www.threads.net/@manfromexistence?xmt=AQGzX0O_Vpo7BfxG054NKG79SDenEBx2ZFmcE11qaGLN5uw"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
-                    <Threads />
+                    <Threads className="invert dark:invert-0" />
                   </Link>
                   <Link target="_blank" href={"mailto:ajju40959@gmail.com"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
                     <Gmail />
