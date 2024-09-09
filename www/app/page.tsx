@@ -63,7 +63,7 @@ export default function Home() {
                   <Image width={50} height={50} src='/MANFROMEXISTENCE.jpg' alt='manfromexistnece' className='rounded-md' />
                   <div className='flex flex-col'>
                     <span className='text-foreground'>manfromexistence</span>
-                    <span>Now Exists</span>
+                    <span>Currently Exists</span>
                   </div>
                   <div className='rounded-full border p-1 h-10 w-10 flex items-center justify-center'>
                     ❤
@@ -104,7 +104,7 @@ export default function Home() {
               <div className={cn('flex flex-col p-4 space-y-4')}>
                 <span className='text-muted-foreground font-bold'>DESIGN, BUILD, INSPIRE.</span>
                 <span className='text-muted-foreground'>Branding, design, writing, product creation, development – I wear many hats, fueled by an insatiable passion for innovation. Think of me as your multi-faceted partner, bridging the gap between dream concepts and polished realities.</span>
-                <Button variant={'secondary'}>Let&apos;s not work togather currently, will work later😁</Button>
+                <Button variant={'secondary'}>Let&apos;s not work togather, will work later😁</Button>
               </div>
             </div>
           </div>
