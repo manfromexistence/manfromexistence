@@ -133,8 +133,8 @@ DockIcon.displayName = "DockIcon";
 
 export default function IOSDOCk() {
 
-    const { theme } = useTheme()
-    const projectIconsClassName = cn(theme === "light" ? "" : "invert");
+    // const { theme } = useTheme()
+    // const projectIconsClassName = cn(theme === "light" ? "" : "invert");
     // 360:7,sm:12,md:14,lg:20,xl:23
 
     return (
@@ -142,107 +142,107 @@ export default function IOSDOCk() {
             <Dock magnification={65} distance={113}>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden md:block">
                     <Link target="_blank" href="https://ai.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
                     <Link target="_blank" href="https://algorithm.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/algorithm.svg" height={75} width={75} alt="algorithm" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/algorithm.svg" height={75} width={75} alt="algorithm" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full">
                     <Link target="_blank" href="https://auth.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/auth.svg" height={75} width={75} alt="auth" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/auth.svg" height={75} width={75} alt="auth" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
                     <Link target="_blank" href="https://backend.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/backend.svg" height={75} width={75} alt="backend" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/backend.svg" height={75} width={75} alt="backend" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
                     <Link target="_blank" href="https://blockchain.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/blockchain.svg" height={75} width={75} alt="blockchain" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/blockchain.svg" height={75} width={75} alt="blockchain" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://deployment.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/deployment.svg" height={75} width={75} alt="deployment" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/deployment.svg" height={75} width={75} alt="deployment" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden md:block">
                     <Link target="_blank" href="https://design-pattern.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="design-pattern" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="design-pattern" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://documentation.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/documentation.svg" height={75} width={75} alt="documentation" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/documentation.svg" height={75} width={75} alt="documentation" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
                     <Link target="_blank" href="https://frontend.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/frontend.svg" height={75} width={75} alt="frontend" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/frontend.svg" height={75} width={75} alt="frontend" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full">
                     <Link target="_blank" href="https://media.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/media.svg" height={75} width={75} alt="media" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/media.svg" height={75} width={75} alt="media" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
                     <Link target="_blank" href="https://package.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/package.svg" height={75} width={75} alt="package" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/package.svg" height={75} width={75} alt="package" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://payment.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/payment.svg" height={75} width={75} alt="payment" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/payment.svg" height={75} width={75} alt="payment" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://privacy.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/privacy.svg" height={75} width={75} alt="privacy" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/privacy.svg" height={75} width={75} alt="privacy" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
                     <Link target="_blank" href="https://test.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/test.svg" height={75} width={75} alt="test" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/test.svg" height={75} width={75} alt="test" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://theory.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/theory.svg" height={75} width={75} alt="theory" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/theory.svg" height={75} width={75} alt="theory" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
                     <Link target="_blank" href="https://ui.manfromexistence.com">
-                        <Image className={cn(theme === "light" ? "invert" : "")} src="/manfromexistence/ui.png" height={75} width={75} alt="ui" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/ui.png" height={75} width={75} alt="ui" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
                     <Link target="_blank" href="https://ux.manfromexistence.com">
-                        <Image className={cn(theme === "light" ? "invert" : "")} src="/manfromexistence/ux.png" height={75} width={75} alt="ux" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/ux.png" height={75} width={75} alt="ux" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://workspace.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/workspace.svg" height={75} width={75} alt="workspace" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/workspace.svg" height={75} width={75} alt="workspace" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://tool.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/tool.svg" height={75} width={75} alt="tool" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/tool.svg" height={75} width={75} alt="tool" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://benchmark.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/benchmark.svg" height={75} width={75} alt="benchmark" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/benchmark.svg" height={75} width={75} alt="benchmark" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
                     <Link target="_blank" href="https://observerability.manfromexistence.com">
-                        <Image className={projectIconsClassName} src="/manfromexistence/observerability.svg" height={75} width={75} alt="observerability" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/observerability.svg" height={75} width={75} alt="observerability" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full lg:hidden">
