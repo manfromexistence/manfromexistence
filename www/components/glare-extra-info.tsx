@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { GlareCard } from "@/components/accertinityui/glare-card";
+import { GlareCard } from "./accertinityui/glare-card";
 
 export function GlareCardDemo() {
   return (

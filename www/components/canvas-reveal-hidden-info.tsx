@@ -2,7 +2,7 @@
 import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "@/components/accertinityui/canvas-reveal-effect";
+import { CanvasRevealEffect } from "./accertinityui/canvas-reveal-effect";
 
 export function CanvasRevealEffectDemo() {
   return (

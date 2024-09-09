@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "@/components/accertinityui/bento-grid";
+import { BentoGrid, BentoGridItem } from "./accertinityui/bento-grid";
 import {
   IconBoxAlignRightFilled,
   IconClipboardCopy,

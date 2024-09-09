@@ -30,6 +30,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "components/bento-info.tsx", "components/canvas-reveal-hidden-info.tsx", "components/glare-extra-info.tsx"  ],
   "exclude": ["node_modules", "./scripts/build-registry.mts", "__registry__"]
 }
