@@ -62,8 +62,8 @@ export default function BlogCard({ title, description, image }: {
         </div>
         {/* Text content */}
         <div className="flex flex-col gap-1 mt-2">
-          <p className="text-sm text-gray-300">{title}</p>
-          <p className="text-xs text-gray-400">{description}</p>
+          <p className="text-sm text-primary">{title}</p>
+          <p className="text-xs text-muted-foreground">{description}</p>
         </div>
       </div>
     </motion.div>
