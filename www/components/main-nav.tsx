@@ -28,40 +28,27 @@ export function MainNav() {
         >
           Home
         </Link>
-        {/* <Link
-          href="/docs/components"
+        <Link
+          href="/thoughts"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/components") &&
-              !pathname?.startsWith("/docs/component/chart")
+            pathname?.startsWith("/thoughts")
               ? "text-foreground"
               : "text-foreground/60"
           )}
         >
-          Components
+          Thoughts
         </Link>
         <Link
-          href="/blocks"
+          href="/works"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/blocks")
+            pathname?.startsWith("/works")
               ? "text-foreground"
               : "text-foreground/60"
           )}
         >
-          Blocks
-        </Link> */}
-        <Link
-          href="/about"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/component/chart") ||
-              pathname?.startsWith("/about")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          About
+          Works
         </Link>
         <Link
           href="/lists"
@@ -75,26 +62,15 @@ export function MainNav() {
           Lists
         </Link>
         <Link
-          href="/writings"
+          href="/gaming"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/writings")
+            pathname?.startsWith("/gaming")
               ? "text-foreground"
               : "text-foreground/60"
           )}
         >
-          Writings
-        </Link>
-        <Link
-          href="/advice"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/advice")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Advices
+          Gaming
         </Link>
       </nav>
     </div>

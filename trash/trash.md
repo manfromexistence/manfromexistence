@@ -1,3 +1,60 @@
+    // {
+    //   title: "Documentation",
+    //   href: "/docs",
+    // },
+    // {
+    //   title: "Components",
+    //   href: "/docs/components/accordion",
+    // },
+    // {
+    //   title: "Blocks",
+    //   href: "/blocks",
+    // },
+    // {
+    //   title: "Charts",
+    //   href: "/charts",
+    // },
+    // {
+    //   title: "Themes",
+    //   href: "/themes",
+    // },
+    // {
+    //   title: "Examples",
+    //   href: "/examples",
+    // },
+    // {
+    //   title: "Colors",
+    //   href: "/colors",
+    // },
+
+    
+        {/* <Link
+          href="/docs/components"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname?.startsWith("/docs/components") &&
+              !pathname?.startsWith("/docs/component/chart")
+              ? "text-foreground"
+              : "text-foreground/60"
+          )}
+        >
+          Components
+        </Link>
+        <Link
+          href="/blocks"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname?.startsWith("/blocks")
+              ? "text-foreground"
+              : "text-foreground/60"
+          )}
+        >
+          Blocks
+        </Link> */}
+
+
+
+
 import { Info } from '@/components/bento-info';
 import { MoreInfo } from '@/components/expandable-more-info';
 // import { WobbleCard } from "@/components/accertinityui/wobble-card"

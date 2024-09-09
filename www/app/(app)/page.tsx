@@ -29,8 +29,9 @@ export default function Home() {
       </svg>
     );
   };
+
   return (
-    <div className="container flex max-w-screen-xl items-center flex-col space-y-8 pb-[77.5px]">
+    <div className="container flex max-w-screen-xl items-center flex-col space-y-8 pb-[75px]">
       <IOSDOCk />
 
       <div className="w-full mt-4 space-y-8">
@@ -64,9 +65,13 @@ export default function Home() {
                   <Image width={50} height={50} src='/MANFROMEXISTENCE.jpg' alt='manfromexistnece' className='rounded-md' />
                   <div className='flex flex-col'>
                     <span className='text-foreground'>manfromexistence</span>
-                    <span>Human - Programmer</span>
+                    {/*  - Programmer */}
+                    <span>Currently Exists</span>
                   </div>
-                  <div className='rounded-full border p-1 h-10 w-10 flex items-center justify-center'><ChevronRight /></div>
+                  <div className='rounded-full border p-1 h-10 w-10 flex items-center justify-center'>
+                    {/* <ChevronRight /> 👊 */}
+                    ❤
+                  </div>
                 </div>
                 <Separator className="my-4" />
                 <div className='flex space-x-2 items-center justify-center'>
@@ -103,7 +108,7 @@ export default function Home() {
               <div className={cn('flex flex-col p-4 space-y-4')}>
                 <span className='text-muted-foreground font-bold'>DESIGN, BUILD, INSPIRE.</span>
                 <span className='text-muted-foreground'>Branding, design, writing, product creation, development – I wear many hats, fueled by an insatiable passion for innovation. Think of me as your multi-faceted partner, bridging the gap between dream concepts and polished realities.</span>
-                <Button variant={'secondary'}>Let&apos;s work togather</Button>
+                <Button variant={'secondary'}>Let&apos;s not work togather currently, will work later😁</Button>
               </div>
             </div>
           </div>
