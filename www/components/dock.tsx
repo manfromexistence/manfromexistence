@@ -222,7 +222,7 @@ export default function IOSDOCk() {
                 </DockIcon>
                 <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
                     <Link target="_blank" href="https://ux.manfromexistence.com">
-                        <Image className="darK:invert-0 invert" src="/manfromexistence/ux.png" height={75} width={75} alt="ux" />
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/ux.png" height={75} width={75} alt="ux" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
