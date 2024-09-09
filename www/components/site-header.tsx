@@ -23,10 +23,13 @@ export function SiteHeader() {
           </div> */}
           <nav className="flex items-center space-x-2">
             <ModeToggle />
-            <EyeCatchingButton_v1 className="text-sm">
-              <Play className="h-4 w-4 mr-1" />
-              Start a Project
-            </EyeCatchingButton_v1>
+            <Link target="_blank" href={"https://www.upwork.com/freelancers/~01221bf135ed62b3b3"}>
+              <EyeCatchingButton_v1 className="text-sm">
+                <Play className="h-4 w-4 mr-1" />
+                Start a Project
+              </EyeCatchingButton_v1>
+            </Link>
+
             {/* <Link
               href={siteConfig.links.github}
               target="_blank"
