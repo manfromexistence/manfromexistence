@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { useRef, useState } from "react"
+import { useTheme } from "next-themes"
 
 // Define the props for the BlogCard component
 export default function BlogCard({ title, description, image }: {
@@ -15,6 +16,7 @@ export default function BlogCard({ title, description, image }: {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   // State to track whether the card is being hovered
   const [isHovered, setIsHovered] = useState(false)
+  const { theme } = useTheme()
 
   // Function to handle mouse movement over the card
   function handleMouseMove(event: React.MouseEvent<HTMLDivElement>) {
@@ -44,7 +46,7 @@ export default function BlogCard({ title, description, image }: {
       <div
         className="absolute inset-0 z-0 transition-opacity duration-300 ease-in-out"
         style={{
-          background: `radial-gradient(circle 150px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.2), transparent 80%)`,
+          background: `radial-gradient(circle 150px at ${mousePosition.x}px ${mousePosition.y}px, ${theme === "light" ? "#b8b8b8" : "#424242"}, transparent 80%)`,
           opacity: isHovered ? 1 : 0,
           pointerEvents: 'none',
         }}
