@@ -1,5 +1,3 @@
-// import { data_fetching_article} from "./articles/data-fetching";
-// import { html_article_rendering } from "./articles/html-redering";
 export const blogs = [
   {
     id: 0,
@@ -8,8 +6,8 @@ export const blogs = [
     title: "Jujutsu Kaisan Anime",
     slug: "",
     created_at: new Date("13/10/2024").toLocaleString(),
-    link: "/blog/",
-    article: "https://youtu.be/-FXdZ5mX_ks?si=wX8RwOXqtZOPeOyy",
+    link: "https://youtu.be/-FXdZ5mX_ks?si=wX8RwOXqtZOPeOyy",
+    article: "",
     image: "/contents/manfromexistence.jpg",
     keywords: [],
   },

@@ -17,7 +17,7 @@ export function SocialMediasCardSection() {
           </Link>
         ))}
       </div>
-      <Link className='border rounded-md flex w-full py-2 items-center justify-center my-4' target='_blank' href="/thoughts">
+      <Link className='border rounded-md flex w-full py-2 items-center justify-center my-4' href="/thoughts">
         See all contents
       </Link>
     </div>
