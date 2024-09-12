@@ -124,10 +124,6 @@
 
 *::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: hsl(var(--primary-foreground));
-  border: 1px solid hsl(var(--border));
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(var(--secondary));
+  background-color: hsl(var(--border));
+  border: 1px solid hsl(var(--primary-foreground));
 }
