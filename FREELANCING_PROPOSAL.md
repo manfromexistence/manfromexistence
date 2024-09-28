@@ -2,7 +2,7 @@ ALL THE OTHERS
 ```
 PORTFOLIO: https://manfromexistence.vercel.app/
 GitHub: https://github.com/manfromexistence
-Hey, bro. So, I am 100% sure that I can do this project.
+Hello, I am 100% sure that I can do this project.
 I am an experienced fullstack software engineer who loves to learn new techs and make something useful from that. My skills list:
 
 
@@ -38,7 +38,7 @@ FREELANCER
 PORTFOLIO: https://manfromexistence.vercel.app/
 GITHUB: https://github.com/manfromexistence
 
-Hey, bro. So, I am 100% sure that I can do this project.
+Hello, I am 100% sure that I can do this project.
 I am an experienced fullstack software engineer who loves to learn new techs and make something useful from that. 
 
 Here is the list of some of my already created projects:
