@@ -251,7 +251,7 @@ export default function IOSDOCk() {
                             <ListCollapse className="h-4 w-4" />
                         </DrawerTrigger>
                         <DrawerContent className="h-[80%]">
-                            <div className="w-full flex flex-col overflow-auto p-4">
+                            <div className="w-full flex flex-col overflow-auto pl-4 pr-1 mt-4">
                                 <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md md:hidden" target="_blank" href="https://ai.manfromexistence.com">
                                     <h2>Ai</h2>
                                     <span className="text-muted-foreground">Copy & Past some ai related code</span>

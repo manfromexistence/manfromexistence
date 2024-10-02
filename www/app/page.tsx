@@ -8,6 +8,7 @@ import { Briefcase, CircleSlash2 } from "lucide-react";
 import { Button } from '@/registry/default/ui/button';
 import Image from 'next/image';
 import IOSDOCk from '@/components/dock';
+import { SiteFooter } from "@/components/site-footer";
 
 export default function Home() {
 
@@ -147,6 +148,9 @@ export default function Home() {
         </div>
       </div>
       <SocialMediasCardSection />
+      <SocialMediasCardSection />
+      <SocialMediasCardSection />
+      <SiteFooter />
     </div>
   );
 }
