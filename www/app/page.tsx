@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { Separator } from "@/registry/default/ui/separator"
 import Link from 'next/link';
 import type { SVGProps } from "react";
-import { SocialMediasCardSection } from "@/components/blog-card-section";
+import { BigProjects, ProductionGradeProjects, SocialMedias } from "@/components/blog-card-section";
 import { Briefcase, CircleSlash2 } from "lucide-react";
 import { Button } from '@/registry/default/ui/button';
 import Image from 'next/image';
@@ -147,9 +147,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <SocialMediasCardSection />
-      <SocialMediasCardSection />
-      <SocialMediasCardSection />
+      <BigProjects />
+      <ProductionGradeProjects />
+      <SocialMedias />
       <SiteFooter />
     </div>
   );
