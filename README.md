@@ -60,7 +60,7 @@ git add . && git commit -m "feat: automated commit by manfromexistence" && git p
 <pre align="center">
       💼 No job @ POOR • Full-stack dev • All Platforms Engineer
       💻 Ai • Blockchain
-      📖 Currently doing my own projects
+      📖 Currently working on my own projects
       🎮 Music • Games • Anime • Code • Art
       🐾 Love all animals 🐰 • Love Cakes 🐤🐥
 </pre>
@@ -109,7 +109,7 @@ git add . && git commit -m "feat: automated commit by manfromexistence" && git p
 ```
 🌞 Morning   6 commits    █████░░░░░░░░░░░░░░░░  24.2%
 🌆 Daytime   5 commits    ███░░░░░░░░░░░░░░░░░░  14.5%
-🌃 Evening   3 commits    ██████▎░░░░░░░░░░░░░░  29.9%
+🌃 Evening   3 commits    ██████░░░░░░░░░░░░░░░    29.9%
 🌙 Night infinity commits ██████▌░░░░░░░░░░░░░░  31.4%
 ```
 
