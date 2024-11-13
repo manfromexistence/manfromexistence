@@ -147,8 +147,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <BigProjects />
-      <ProductionGradeProjects />
+      {/* <BigProjects />
+      <ProductionGradeProjects /> */}
       <SocialMedias />
       <SiteFooter />
     </div>
