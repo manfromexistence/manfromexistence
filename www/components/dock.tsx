@@ -27,8 +27,12 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
 const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
+// const dockVariants = cva(
+//     "max-w-[95%] lg:w-[1000px] mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border bg-background",
+// );
+
 const dockVariants = cva(
-    "max-w-[95%] lg:w-[1000px] mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border bg-background",
+    "mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border bg-background",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -138,13 +142,59 @@ export default function IOSDOCk() {
     // 360:7,sm:12,md:14,lg:20,xl:23
 
     return (
-        <div className="fixed bottom-4 left-0 z-50 flex items-center justify-center w-full !pb-100">
+        <div className="fixed bottom-4 left-1/2 translate-x-[-50%] z-50 flex items-center justify-center w-full !pb-100">
             <Dock magnification={65} distance={113}>
+                <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
+                    <Link target="_blank" href="https://manfromexistence-ui.vercel.app">
+                        <Image className="dark:invert-0 invert" src="/manfromexistence/ui.png" height={75} width={75} alt="ui" />
+                    </Link>
+                </DockIcon>
+                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full">
+                    <Link target="_blank" href="https://ustudy-mahabub.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/auth.svg" height={75} width={75} alt="auth" />
+                    </Link>
+                </DockIcon>
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden md:block">
+                    <Link target="_blank" href="https://spark-labs-website.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
+                    </Link>
+                </DockIcon>
+                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
+                    <Link target="_blank" href="https://admin-panel-mahabub.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={75} width={75} alt="algorithm" />
+                    </Link>
+                </DockIcon>
+                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
+                    <Link target="_blank" href="https://manofexistence-professional-portfolio.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/backend.svg" height={75} width={75} alt="backend" />
+                    </Link>
+                </DockIcon>
+                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
+                    <Link target="_blank" href="https://manofexistence-brainwave.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/blockchain.svg" height={75} width={75} alt="blockchain" />
+                    </Link>
+                </DockIcon>
+                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
+                    <Link target="_blank" href="https://fiverr-rocket-krypt.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/deployment.svg" height={75} width={75} alt="deployment" />
+                    </Link>
+                </DockIcon>
+                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden md:block">
+                    <Link target="_blank" href="https://aladdin.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="design-pattern" />
+                    </Link>
+                </DockIcon>
+                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
+                    <Link target="_blank" href="https://lolgamer-xstream.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/documentation.svg" height={75} width={75} alt="documentation" />
+                    </Link>
+                </DockIcon>
+                {/* <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden md:block">
                     <Link target="_blank" href="https://ai.manfromexistence.com">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
                     </Link>
                 </DockIcon>
+
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
                     <Link target="_blank" href="https://algorithm.manfromexistence.com">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={75} width={75} alt="algorithm" />
@@ -214,13 +264,8 @@ export default function IOSDOCk() {
                     <Link target="_blank" href="https://theory.manfromexistence.com">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/theory.svg" height={75} width={75} alt="theory" />
                     </Link>
-                </DockIcon>
-                <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
-                    <Link target="_blank" href="https://ui.manfromexistence.com">
-                        <Image className="dark:invert-0 invert" src="/manfromexistence/ui.png" height={75} width={75} alt="ui" />
-                    </Link>
-                </DockIcon>
-                <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
+                </DockIcon> */}
+                {/* <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
                     <Link target="_blank" href="https://ux.manfromexistence.com">
                         <Image className="dark:invert-0 invert" src="/manfromexistence/ux.png" height={75} width={75} alt="ux" />
                     </Link>
@@ -244,7 +289,7 @@ export default function IOSDOCk() {
                     <Link target="_blank" href="https://observerability.manfromexistence.com">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/observerability.svg" height={75} width={75} alt="observerability" />
                     </Link>
-                </DockIcon>
+                </DockIcon> */}
                 <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full lg:hidden">
                     <Drawer>
                         <DrawerTrigger asChild>
