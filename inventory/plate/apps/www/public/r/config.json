@@ -1,0 +1,10 @@
+{
+  "name": "plate",
+  "style": "default",
+  "tailwind": {
+    "baseColor": "slate"
+  },
+  "aliases": {
+    "ui": "@/components/plate-ui"
+  }
+}

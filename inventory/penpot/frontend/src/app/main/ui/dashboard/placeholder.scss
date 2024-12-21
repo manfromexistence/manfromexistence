@@ -1,0 +1,103 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+//
+// Copyright (c) KALEIDOS INC
+
+@use "common/refactor/common-refactor.scss" as *;
+@use "./grid.scss" as g;
+@use "../ds/typography.scss" as t;
+
+.grid-empty-placeholder {
+  border-radius: $br-12;
+  display: grid;
+  padding: $s-12 0;
+
+  &.libs {
+    background-image: url(/images/ph-left.svg), url(/images/ph-right.svg);
+    background-position:
+      15% bottom,
+      85% top;
+    background-repeat: no-repeat;
+    align-items: center;
+    border: $s-1 solid var(--color-background-quaternary);
+    border-radius: $br-4;
+    display: flex;
+    flex-direction: column;
+    height: $s-200;
+    margin: $s-16;
+    padding: $s-48;
+    justify-content: center;
+
+    .text {
+      a {
+        color: var(--color-foreground-primary);
+      }
+      p {
+        max-width: $s-360;
+        text-align: center;
+        font-size: $fs-16;
+      }
+    }
+  }
+
+  .create-new {
+    background-color: var(--color-background-tertiary);
+    border-radius: $br-8;
+    color: var(--color-foreground-primary);
+    cursor: pointer;
+    height: $s-160;
+    margin: $s-8;
+    text-transform: uppercase;
+    border: $s-2 solid transparent;
+    width: var(--th-width, #{g.$thumbnail-default-width});
+    height: var(--th-height, #{g.$thumbnail-default-height});
+
+    svg {
+      width: $s-32;
+      height: $s-32;
+      stroke: var(--color-foreground-secondary);
+    }
+
+    &:hover {
+      border: $s-2 solid var(--color-accent-tertiary);
+      background-color: var(--color-background-quaternary);
+      color: var(--color-accent-primary);
+
+      svg {
+        stroke: var(--color-accent-tertiary);
+      }
+    }
+  }
+
+  .text {
+    margin-top: $s-12;
+    color: var(--color-foreground-secondary);
+    font-size: $fs-16;
+  }
+}
+
+.placeholder-loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: var(--sp-xxxl);
+  margin: var(--sp-xxxl) 0 var(--sp-m) 0;
+}
+
+.placeholder-text {
+  color: var(--color-foreground-secondary);
+  font-size: $fs-16;
+  text-align: center;
+}
+
+.placeholder-markdown {
+  @include t.use-typography("body-large");
+  a {
+    color: var(--color-accent-primary);
+  }
+}
+
+.empty-placeholder-libraries {
+  margin: $s-16;
+}

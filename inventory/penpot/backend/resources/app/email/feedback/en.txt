@@ -1,0 +1,9 @@
+{% if profile %}
+Feedback profile: {{profile.fullname}} <{{profile.email}}> / {{profile.id}}
+{% else %}
+Feedback from: {{email}}
+{% endif %}
+
+Subject: {{subject}}
+
+{{content}}

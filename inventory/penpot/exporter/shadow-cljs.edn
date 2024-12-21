@@ -1,0 +1,25 @@
+{:deps {:aliases [:dev]}
+ :source-paths ["src" "vendor" "../common"]
+
+ :builds
+ {:main
+  {:target :node-script
+   :main app.core/main
+   :output-to "target/app.js"
+   :output-dir "target/app/"
+   :devtools {:before-load-async app.core/stop
+              :after-load app.core/start}
+
+   :compiler-options
+   {:output-feature-set :es2020
+    :output-wrapper false}
+
+   :release
+   {:compiler-options
+    {:fn-invoke-direct true
+     :source-map true
+     :optimizations #shadow/env ["PENPOT_BUILD_OPTIMIZATIONS" :as :keyword :default :simple]
+     :pseudo-names true
+     :pretty-print true
+     :anon-fn-naming-policy :off
+     :source-map-detail-level :all}}}}}

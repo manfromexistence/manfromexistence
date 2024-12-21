@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Penpot - Design Freedom for Teams</title>
+
+    <meta name="description" content="The open-source solution for design and prototyping.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Penpot | Design Freedom for Teams">
+    <meta property="og:description" content="The open-source solution for design and prototyping">
+    <meta property="og:image" content="https://penpot.app/images/workspace-ui.jpg">
+    <meta name="twitter:title" content="Penpot | Design Freedom for Teams">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="The open-source solution for design and prototyping">
+    <meta name="twitter:image" content="https://penpot.app/images/workspace-ui.jpg">
+    <meta name="twitter:site" content="@penpotapp">
+    <meta name="twitter:creator" content="@penpotapp">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <link id="theme" href="css/main.css?ts={{& ts}}" rel="stylesheet" type="text/css" />
+    {{#isDebug}}
+    <link href="css/debug.css?ts={{& ts}}" rel="stylesheet" type="text/css" />
+    {{/isDebug}}
+
+    <link rel="icon" href="images/favicon.png" />
+    {{# manifest}}
+    <script>window.penpotWorkerURI="{{& worker_main}}"</script>
+    <script defer src="{{& config}}"></script>
+    <script defer src="{{& polyfills}}"></script>
+    {{/manifest}}
+
+    <script type="module" src="{{& pluginRuntimeUri}}"></script>
+
+    <script>
+      window.penpotTranslations = JSON.parse({{& translations}});
+      window.penpotVersion = "%version%";
+      window.penpotBuildDate = "%buildDate%";
+    </script>
+    <!--cookie-consent-->
+  </head>
+  <body>
+    {{> ../public/images/sprites/symbol/icons.svg }}
+    {{> ../public/images/sprites/symbol/cursors.svg }}
+    {{> ../public/images/sprites/assets.svg }}
+    <div id="app"></div>
+    <section id="modal"></section>
+
+    {{# manifest}}
+    <script defer src="js/libs.js?ts={{& ts}}"></script>
+    <script defer src="{{& shared}}"></script>
+    <script defer src="{{& main}}"></script>
+    {{/manifest}}
+  </body>
+</html>

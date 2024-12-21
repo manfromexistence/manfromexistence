@@ -1,0 +1,34 @@
+{
+  "name": "exporter",
+  "version": "1.0.0",
+  "license": "MPL-2.0",
+  "author": "Kaleidos INC",
+  "private": true,
+  "packageManager": "yarn@4.3.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/penpot/penpot"
+  },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "cookies": "^0.9.1",
+    "generic-pool": "^3.9.0",
+    "inflation": "^2.1.0",
+    "ioredis": "^5.4.1",
+    "luxon": "^3.5.0",
+    "playwright": "^1.48.1",
+    "raw-body": "^3.0.0",
+    "svgo": "penpot/svgo#v3",
+    "xml-js": "^1.6.11",
+    "xregexp": "^5.1.1"
+  },
+  "devDependencies": {
+    "shadow-cljs": "2.28.18",
+    "source-map-support": "^0.5.21"
+  },
+  "scripts": {
+    "fmt:clj:check": "cljfmt check --parallel=false src/",
+    "fmt:clj": "cljfmt fix --parallel=true src/",
+    "lint:clj": "clj-kondo --parallel --lint src/"
+  }
+}
