@@ -1,5 +1,17 @@
 # @udecode/plate-selection
 
+## 41.0.8
+
+### Patch Changes
+
+- [#3912](https://github.com/udecode/plate/pull/3912) by [@felixfeng33](https://github.com/felixfeng33) – Fix `selectedIds` has `undifinded`
+
+## 41.0.6
+
+### Patch Changes
+
+- [#3905](https://github.com/udecode/plate/pull/3905) by [@felixfeng33](https://github.com/felixfeng33) – Fix the BlockSelection.removeNodes issue that incorrectly removes all nodes.
+
 ## 41.0.0
 
 ### Patch Changes
