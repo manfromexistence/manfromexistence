@@ -127,14 +127,3 @@ git add . && git commit -m "feat: automated commit by manfromexistence" && git p
 <div align="center">
 	<img src="./inventory/manfromexistence.jpg" width="100%">
 </div>
-
-
-So, now you already know about all of my skills. Here is the list of some of my already created projects:
-New SparkLabs Website: https://spark-labs-website.vercel.app/
-New Admin Panel Website: https://admin-panel-mahabub.vercel.app/
-New Online Study Website: https://ustudy-mahabub.vercel.app/
-2. https://manofexistence-professional-portfolio.vercel.app/
-3. https://manofexistence-brainwave.vercel.app/
-4. https://fiverr-rocket-krypt.vercel.app/
-5. https://aladdin.vercel.app/
-6. https://lolgamer-xstream.vercel.app/
