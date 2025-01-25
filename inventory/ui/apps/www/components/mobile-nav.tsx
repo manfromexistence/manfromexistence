@@ -3,55 +3,68 @@
 import * as React from "react"
 import Link, { LinkProps } from "next/link"
 import { useRouter } from "next/navigation"
+import { ViewVerticalIcon } from "@radix-ui/react-icons"
 
 import { docsConfig } from "@/config/docs"
+import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { useMetaColor } from "@/hooks/use-meta-color"
+import { Icons } from "@/components/icons"
 import { Button } from "@/registry/new-york/ui/button"
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/registry/new-york/ui/drawer"
+import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
+import { Sheet, SheetContent, SheetTrigger } from "@/registry/new-york/ui/sheet"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
-  const { setMetaColor, metaColor } = useMetaColor()
-
-  const onOpenChange = React.useCallback(
-    (open: boolean) => {
-      setOpen(open)
-      setMetaColor(open ? "#09090b" : metaColor)
-    },
-    [setMetaColor, metaColor]
-  )
 
   return (
-    <Drawer open={open} onOpenChange={onOpenChange}>
-      <DrawerTrigger asChild>
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="-ml-2 mr-2 h-8 w-8 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
             strokeWidth="1.5"
-            stroke="currentColor"
-            className="!size-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
           >
             <path
+              d="M3 5H11"
+              stroke="currentColor"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M3.75 9h16.5m-16.5 6.75h16.5"
-            />
+            ></path>
+            <path
+              d="M3 12H16"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+            <path
+              d="M3 19H21"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
           </svg>
           <span className="sr-only">Toggle Menu</span>
         </Button>
-      </DrawerTrigger>
-      <DrawerContent className="max-h-[60svh] p-0">
-        <div className="overflow-auto p-6">
+      </SheetTrigger>
+      <SheetContent side="left" className="pr-0">
+        <MobileLink
+          href="/"
+          className="flex items-center"
+          onOpenChange={setOpen}
+        >
+          <Icons.logo className="mr-2 h-4 w-4" />
+          <span className="font-bold">{siteConfig.name}</span>
+        </MobileLink>
+        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col space-y-3">
             {docsConfig.mainNav?.map(
               (item) =>
@@ -66,7 +79,7 @@ export function MobileNav() {
                 )
             )}
           </div>
-          <div className="flex flex-col space-y-2">
+          {/* <div className="flex flex-col space-y-2">
             {docsConfig.sidebarNav.map((item, index) => (
               <div key={index} className="flex flex-col space-y-3 pt-6">
                 <h4 className="font-medium">{item.title}</h4>
@@ -94,10 +107,10 @@ export function MobileNav() {
                   ))}
               </div>
             ))}
-          </div>
-        </div>
-      </DrawerContent>
-    </Drawer>
+          </div> */}
+        </ScrollArea>
+      </SheetContent>
+    </Sheet>
   )
 }
 
@@ -122,7 +135,7 @@ function MobileLink({
         router.push(href.toString())
         onOpenChange?.(false)
       }}
-      className={cn("text-base", className)}
+      className={cn(className)}
       {...props}
     >
       {children}

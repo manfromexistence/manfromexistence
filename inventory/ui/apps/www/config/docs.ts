@@ -10,31 +10,23 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Home",
-      href: "/",
+      href: "/home",
     },
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "Thoughts",
+      href: "/thoughts",
     },
     {
-      title: "Components",
-      href: "/docs/components/accordion",
+      title: "Works",
+      href: "/works",
     },
     {
-      title: "Blocks",
-      href: "/blocks",
+      title: "Lists",
+      href: "/lists",
     },
     {
-      title: "Charts",
-      href: "/charts",
-    },
-    {
-      title: "Themes",
-      href: "/themes",
-    },
-    {
-      title: "Colors",
-      href: "/colors",
+      title: "Gaming",
+      href: "/gaming",
     },
   ],
   sidebarNav: [
@@ -69,17 +61,7 @@ export const docsConfig: DocsConfig = {
         {
           title: "CLI",
           href: "/docs/cli",
-          items: [],
-        },
-        {
-          title: "Monorepo",
-          href: "/docs/monorepo",
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Next.js 15 + React 19",
-          href: "/docs/react-19",
+          label: "Updated",
           items: [],
         },
         {
@@ -90,11 +72,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Open in v0",
           href: "/docs/v0",
-          items: [],
-        },
-        {
-          title: "Blocks",
-          href: "/docs/blocks",
           items: [],
           label: "New",
         },
@@ -341,11 +318,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Sheet",
           href: "/docs/components/sheet",
-          items: [],
-        },
-        {
-          title: "Sidebar",
-          href: "/docs/components/sidebar",
           items: [],
         },
         {

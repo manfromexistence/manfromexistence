@@ -33,9 +33,6 @@
     "tsx": {
       "type": "boolean"
     },
-    "iconLibrary": {
-      "type": "string"
-    },
     "aliases": {
       "type": "object",
       "properties": {
