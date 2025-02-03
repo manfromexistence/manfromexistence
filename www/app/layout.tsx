@@ -1,35 +1,114 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import "@/styles/globals.css"
+import { Metadata, Viewport } from "next"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { siteConfig } from "@/config/site"
+import { fontSans } from "@/lib/fonts"
+import { cn } from "@/lib/utils"
+// import { Analytics } from "@/components/analytics"
+import { ThemeProvider } from "@/components/providers"
+import { TailwindIndicator } from "@/components/tailwind-indicator"
+import { ThemeSwitcher } from "@/components/theme-switcher"
+import { Toaster as DefaultToaster } from "@/components/ui/toaster"
+import { Toaster as NewYorkSonner } from "@/components/ui/sonner"
+import { Toaster as NewYorkToaster } from "@/components/ui/toaster"
+import { SiteHeader } from "@/components/site-header"
 
 export const metadata: Metadata = {
-  title: "manfromexistence",
-  description: "...",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  metadataBase: new URL(siteConfig.url),
+  description: siteConfig.description,
+  keywords: [
+    "Multiverse",
+    "Friday",
+    "Hello",
+    "Aladdin",
+    "ManFromExistence",
+  ],
+  authors: [
+    {
+      name: "manfromexistence",
+      url: "https://manfromexistence.com",
+    },
+  ],
+  creator: "manfromexistence",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+    creator: "@manfromexistence",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: `${siteConfig.url}/site.webmanifest`,
 }
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+}
+
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  return (
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.variable
+          )}
+        >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div vaul-drawer-wrapper="">
+              <div className="relative flex min-h-screen flex-col bg-background">
+                {/* <SiteHeader /> */}
+                <main className="flex-1">{children}</main>
+              </div>
+            </div>
+            <TailwindIndicator />
+            <ThemeSwitcher />
+            {/* <Analytics /> */}
+            <NewYorkToaster />
+            <DefaultToaster />
+            <NewYorkSonner />
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
+  )
+}
+
