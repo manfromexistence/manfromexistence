@@ -26,6 +26,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { ScrollArea } from "../ui/scroll-area"
 
 // This is sample data.
 const data = {
@@ -263,7 +264,14 @@ export function SidebarLeft({
 }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar className="border-r-0" {...props}>
-      <SidebarHeader>
+      <ScrollArea className="h-full w-full pl-2 pr-4 py-2">
+        <TeamSwitcher teams={data.teams} />
+        <NavMain items={data.navMain} />
+        <NavFavorites favorites={data.favorites} />
+        <NavWorkspaces workspaces={data.workspaces} />
+        <NavSecondary items={data.navSecondary} className="mt-auto" />
+      </ScrollArea>
+      {/* <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
         <NavMain items={data.navMain} />
       </SidebarHeader>
@@ -271,8 +279,8 @@ export function SidebarLeft({
         <NavFavorites favorites={data.favorites} />
         <NavWorkspaces workspaces={data.workspaces} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
-      </SidebarContent>
-      <SidebarRail />
+      </SidebarContent> */}
+      {/* <SidebarRail /> */}
     </Sidebar>
   )
 }
