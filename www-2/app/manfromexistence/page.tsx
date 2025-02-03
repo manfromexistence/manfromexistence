@@ -32,8 +32,7 @@ export default function Home() {
   };
 
   return (
-    <>
-      <SiteHeader />
+
       <div className="container flex max-w-screen-xl items-center flex-col space-y-8 pb-[75px]">
         <IOSDOCk />
         <div className="w-full mt-2 space-y-8">
@@ -155,7 +154,7 @@ export default function Home() {
         <SocialMedias />
         <SiteFooter />
       </div>
-    </>
+
 
   );
 }
