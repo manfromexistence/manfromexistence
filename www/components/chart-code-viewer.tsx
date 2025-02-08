@@ -5,20 +5,20 @@ import { useMediaQuery } from "@/hooks/use-media-query"
 import { useThemesConfig } from "@/hooks/use-themes-config"
 import { BlockCopyButton } from "@/components/block-copy-button"
 import { V0Button } from "@/components/v0-button"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry-1/new-york/ui/button"
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/registry/new-york/ui/drawer"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/new-york/ui/sheet"
+} from "@/registry-1/new-york/ui/drawer"
+import { Sheet, SheetContent, SheetTrigger } from "@/registry-1/new-york/ui/sheet"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york/ui/tabs"
-import { Block } from "@/registry/schema"
+} from "@/registry-1/new-york/ui/tabs"
+import { Block } from "@/registry-1/schema"
 
 export function ChartCodeViewer({
   chart,

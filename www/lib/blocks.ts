@@ -8,8 +8,8 @@ import { Project, ScriptKind, SourceFile, SyntaxKind } from "ts-morph"
 import { z } from "zod"
 
 import { highlightCode } from "@/lib/highlight-code"
-import { Style } from "@/registry/registry-styles"
-import { BlockChunk, blockSchema, registryEntrySchema } from "@/registry/schema"
+import { Style } from "@/registry-1/registry-styles"
+import { BlockChunk, blockSchema, registryEntrySchema } from "@/registry-1/schema"
 
 const DEFAULT_BLOCKS_STYLE = "default" satisfies Style["name"]
 

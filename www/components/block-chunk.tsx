@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { useLiftMode } from "@/hooks/use-lift-mode"
 import { BlockCopyButton } from "@/components/block-copy-button"
 import { V0Button } from "@/components/v0-button"
-import { Block, type BlockChunk } from "@/registry/schema"
+import { Block, type BlockChunk } from "@/registry-1/schema"
 
 export function BlockChunk({
   block,

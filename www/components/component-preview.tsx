@@ -15,8 +15,8 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york/ui/tabs"
-import { styles } from "@/registry/registry-styles"
+} from "@/registry-1/new-york/ui/tabs"
+import { styles } from "@/registry-1/registry-styles"
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string

@@ -7,14 +7,14 @@ import { useFormStatus } from "react-dom"
 import { toast } from "sonner"
 
 import { cn } from "@/lib/utils"
-import { Button, ButtonProps } from "@/registry/new-york/ui/button"
+import { Button, ButtonProps } from "@/registry-1/new-york/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
-import { Style } from "@/registry/registry-styles"
-import { Block } from "@/registry/schema"
+} from "@/registry-1/new-york/ui/tooltip"
+import { Style } from "@/registry-1/registry-styles"
+import { Block } from "@/registry-1/schema"
 
 type Size = "default" | "icon"
 

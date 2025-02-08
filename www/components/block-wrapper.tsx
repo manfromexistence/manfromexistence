@@ -4,7 +4,7 @@ import * as React from "react"
 import { AnimatePresence, motion } from "framer-motion"
 
 import { useLiftMode } from "@/hooks/use-lift-mode"
-import { Block } from "@/registry/schema"
+import { Block } from "@/registry-1/schema"
 
 export function BlockWrapper({
   block,

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { cn } from '@/lib/utils';
-import { Separator } from "@/registry/default/ui/separator"
+import { Separator } from "@/registry-1/default/ui/separator"
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import * as React from "react";

@@ -1,11 +1,11 @@
 import * as React from "react";
 import { cn } from '@/lib/utils';
-import { Separator } from "@/registry/default/ui/separator"
+import { Separator } from "@/registry-1/default/ui/separator"
 import Link from 'next/link';
 import type { SVGProps } from "react";
 import { BigProjects, ProductionGradeProjects, SocialMedias } from "@/components/blog-card-section";
 import { Briefcase, CircleSlash2 } from "lucide-react";
-import { Button } from '@/registry/default/ui/button';
+import { Button } from '@/registry-1/default/ui/button';
 import Image from 'next/image';
 import IOSDOCk from '@/components/dock';
 import { SiteFooter } from "@/components/site-footer";

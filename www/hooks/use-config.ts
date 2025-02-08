@@ -1,8 +1,8 @@
 import { useAtom } from "jotai"
 import { atomWithStorage } from "jotai/utils"
 
-import { BaseColor } from "@/registry/registry-base-colors"
-import { Style } from "@/registry/registry-styles"
+import { BaseColor } from "@/registry-1/registry-base-colors"
+import { Style } from "@/registry-1/registry-styles"
 
 type Config = {
   style: Style["name"]

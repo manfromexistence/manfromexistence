@@ -23,20 +23,20 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/new-york/ui/accordion"
+} from "@/registry-1/new-york/ui/accordion"
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/registry/new-york/ui/alert"
-import { AspectRatio } from "@/registry/new-york/ui/aspect-ratio"
+} from "@/registry-1/new-york/ui/alert"
+import { AspectRatio } from "@/registry-1/new-york/ui/aspect-ratio"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york/ui/tabs"
-import { Style } from "@/registry/registry-styles"
+} from "@/registry-1/new-york/ui/tabs"
+import { Style } from "@/registry-1/registry-styles"
 
 const components = {
   Accordion,

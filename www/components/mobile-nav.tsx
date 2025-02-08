@@ -9,9 +9,9 @@ import { docsConfig } from "@/config/docs"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york/ui/button"
-import { ScrollArea } from "@/registry/new-york/ui/scroll-area"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/new-york/ui/sheet"
+import { Button } from "@/registry-1/new-york/ui/button"
+import { ScrollArea } from "@/registry-1/new-york/ui/scroll-area"
+import { Sheet, SheetContent, SheetTrigger } from "@/registry-1/new-york/ui/sheet"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)

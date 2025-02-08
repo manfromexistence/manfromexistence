@@ -3,8 +3,8 @@
 import { cn } from "@/lib/utils"
 import { BlockCopyButton } from "@/components/block-copy-button"
 import { ChartCodeViewer } from "@/components/chart-code-viewer"
-import { Separator } from "@/registry/new-york/ui/separator"
-import { Block } from "@/registry/schema"
+import { Separator } from "@/registry-1/new-york/ui/separator"
+import { Block } from "@/registry-1/schema"
 
 import "@/styles/mdx.css"
 import {

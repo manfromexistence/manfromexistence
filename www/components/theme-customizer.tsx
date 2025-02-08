@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { ThemeWrapper } from "@/components/theme-wrapper"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry-1/new-york/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -24,25 +24,25 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york/ui/dialog"
+} from "@/registry-1/new-york/ui/dialog"
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/registry/new-york/ui/drawer"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/registry-1/new-york/ui/drawer"
+import { Label } from "@/registry-1/new-york/ui/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
-import { Skeleton } from "@/registry/new-york/ui/skeleton"
+} from "@/registry-1/new-york/ui/popover"
+import { Skeleton } from "@/registry-1/new-york/ui/skeleton"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
-import { BaseColor, baseColors } from "@/registry/registry-base-colors"
+} from "@/registry-1/new-york/ui/tooltip"
+import { BaseColor, baseColors } from "@/registry-1/registry-base-colors"
 
 import "@/styles/mdx.css"
 
