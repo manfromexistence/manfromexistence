@@ -1,16 +1,20 @@
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
 
-import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
+import { META_THEME_COLORS, siteConfig } from "@/config/site"
+import { fontMono, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import { Toaster as NewYorkSonner } from "@/components/ui/sonner"
+import {
+  Toaster as DefaultToaster,
+  Toaster as NewYorkToaster,
+} from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeSwitcher } from "@/components/theme-switcher"
-import { Toaster as DefaultToaster } from "@/registry-1/default/ui/toaster"
-import { Toaster as NewYorkSonner } from "@/registry-1/new-york/ui/sonner"
-import { Toaster as NewYorkToaster } from "@/registry-1/new-york/ui/toaster"
+
+// import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 export const metadata: Metadata = {
   title: {
@@ -19,13 +23,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
-  keywords: [
-    "manfromexistence",
-    "Multiverse",
-    "Friday",
-    "Hello",
-    "Aladding",
-  ],
+  keywords: ["Friday", "Multiverse", "Hello", "Aladdin", "Dx"],
   authors: [
     {
       name: "manfromexistence",
@@ -65,10 +63,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  themeColor: META_THEME_COLORS.light,
 }
 
 interface RootLayoutProps {
@@ -79,11 +74,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              try {
+                if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+                }
+              } catch (_) {}
+            `,
+            }}
+          />
+        </head>
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
+            "bg-background min-h-svh font-sans antialiased",
+            fontSans.variable,
+            fontMono.variable
           )}
         >
           <ThemeProvider
@@ -91,12 +99,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
+            enableColorScheme
           >
+            {/* <AntdRegistry>
             <div vaul-drawer-wrapper="">
-              <div className="relative flex min-h-screen flex-col bg-background">
-                {/* <SiteHeader /> */}
-                <main className="flex-1">{children}</main>
+                <div className="relative flex min-h-svh flex-col bg-background">
+                  {children}
+                </div>
               </div>
+              <TailwindIndicator />
+              <ThemeSwitcher />
+              <Analytics />
+              <NewYorkToaster />
+              <DefaultToaster />
+              <NewYorkSonner />
+            </AntdRegistry> */}
+            <div vaul-drawer-wrapper="">
+              <div className="relative flex min-h-svh flex-col">{children}</div>
             </div>
             <TailwindIndicator />
             <ThemeSwitcher />
