@@ -1,0 +1,75 @@
+name: Templates
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/actions/**'
+      - '.github/workflows/sync-templates.yml'
+      - 'tooling/scripts/sync-templates.sh'
+      - 'templates/**'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        template:
+          - plate-template
+          - plate-playground-template
+    defaults:
+      run:
+        working-directory: templates/${{ matrix.template }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v2.4.1
+        with:
+          version: 8.6.1
+          run_install: false
+
+      - name: ♻️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+
+      - name: 🔄 Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: $(pnpm store path)
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: 📥 Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: 🏗 Build
+        run: pnpm build
+
+  sync:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ success() }}
+    strategy:
+      fail-fast: false
+      matrix:
+        template:
+          - plate-template
+          - plate-playground-template
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 🔄 Sync Templates
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        run: ./tooling/scripts/sync-templates.sh "templates/${{ matrix.template }}"
+        shell: bash

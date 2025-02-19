@@ -1,0 +1,92 @@
+name: Lint and typecheck
+
+on:
+  push:
+    branches:
+      - main
+      - next
+    paths:
+      - 'packages/**'
+      - '.github/actions/**'
+      - '.github/workflows/lint-typecheck.yml'
+      - '.yarnrc.yml'
+      - 'yarn.lock'
+      - '.prettier*'
+      - '.eslint*'
+      - 'jest.config.js'
+      - 'tsconfig.json'
+      - 'turbo.json'
+      - 'config'
+      - 'scripts'
+      - 'patches'
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    paths:
+      - 'packages/**'
+      - '.github/actions/**'
+      - '.github/workflows/**'
+      - '.yarnrc.yml'
+      - 'yarn.lock'
+      - '.prettier*'
+      - '.eslint*'
+      - 'jest.config.js'
+      - 'tsconfig.json'
+      - 'turbo.json'
+      - 'config'
+      - 'scripts'
+      - 'patches'
+
+# Add concurrency to cancel redundant runs
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-typecheck:
+    name: Lint and Typecheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 📥 Monorepo install
+        uses: ./.github/actions/yarn-nm-install
+
+      - name: ♻️ Restore packages cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ github.workspace }}/.cache
+            ${{ github.workspace }}/**/tsconfig.tsbuildinfo
+          key: packages-cache-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+
+      - name: 🏗 Build
+        run: yarn build
+
+      - name: 🔬 Lint
+        run: yarn lint
+
+      - name: 🕵️ Typecheck
+        run: yarn typecheck:all
+
+  notify-failure:
+    name: Discord Notification
+    runs-on: ubuntu-latest
+    needs: [lint-typecheck]
+    if: ${{ github.event_name == 'push' && failure() }}
+
+    steps:
+      - name: Send Discord Notification
+        uses: nobrayner/discord-webhook@v1
+        with:
+          github-token: ${{ secrets.X_GITHUB_READ_ACTIONS_TOKEN }}
+          discord-webhook: ${{ secrets.DISCORD_CI_WEBHOOK }}
+          description: ${{ github.event.number && format('https://github.com/udecode/plate/pull/{0}', github.event.number) || 'Push' }}

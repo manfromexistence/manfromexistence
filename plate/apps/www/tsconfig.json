@@ -1,0 +1,39 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"],
+      "@/plate/*": ["./lib/plate/*"],
+      "contentlayer/generated": ["../.contentlayer/generated"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "allowImportingTsExtensions": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "next.config.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cts",
+    "**/*.ctsx",
+    "**/*.mts",
+    "**/*.mtsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.cjs",
+    "**/*.cjsx",
+    "**/*.mjs",
+    "**/*.mjsx",
+    ".next/types/**/*.ts",
+    ".contentlayer/generated",
+    "./scripts/**/*.ts"
+  ],
+  "exclude": ["node_modules", "__registry__"]
+}
