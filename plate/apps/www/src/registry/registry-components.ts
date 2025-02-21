@@ -184,7 +184,7 @@ const plugins: Registry['items'] = [
     dependencies: ['@udecode/plate-selection'],
     files: [
       {
-        path: 'components/editor/plugins/block-selection-plugins.ts',
+        path: 'components/editor/plugins/block-selection-plugins.tsx',
         type: 'registry:component',
       },
     ],
@@ -235,6 +235,10 @@ const plugins: Registry['items'] = [
       },
       {
         path: 'plate-ui/suggestion-line-break.tsx',
+        type: 'registry:ui',
+      },
+      {
+        path: 'plate-ui/suggestion-toolbar-button.tsx',
         type: 'registry:ui',
       },
     ],

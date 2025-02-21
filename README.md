@@ -14,6 +14,10 @@ I have to update my logo
 ``` -->
 
 <!-- ```
+rm -rf excalidraw plate
+git clone https://github.com/excalidraw/excalidraw && cd excalidraw && rm -rf .git && cd ..
+git clone https://github.com/udecode/plate && cd plate && rm -rf .git && cd ..
+
 bunx create-next-app@rc --turbo
 ls -l | grep -v "^\." | grep "^d" | wc -l
 npm install -g npm@10.8.3 && npm install -g bun
