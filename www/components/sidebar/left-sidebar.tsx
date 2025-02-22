@@ -47,9 +47,9 @@ export interface ScrollAreaProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "manfromexistence",
+    email: "ajju40959@gmail.com",
+    avatar: "/user.png",
   },
   teams: [
     {
