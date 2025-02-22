@@ -14,9 +14,11 @@ I have to update my logo
 ``` -->
 
 <!-- ```
-rm -rf excalidraw plate
+rm -rf excalidraw plate react-bits ui
 git clone https://github.com/excalidraw/excalidraw && cd excalidraw && rm -rf .git && cd ..
 git clone https://github.com/udecode/plate && cd plate && rm -rf .git && cd ..
+git clone https://github.com/DavidHDev/react-bits.git && cd react-bits && rm -rf .git && cd ..
+git clone https://github.com/shadcn-ui/ui.git && cd ui && rm -rf .git && cd ..
 
 bunx create-next-app@rc --turbo
 ls -l | grep -v "^\." | grep "^d" | wc -l
