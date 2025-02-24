@@ -1,0 +1,12 @@
+{
+  "extends": "../../tooling/config/tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "paths": {
+      "@viselect/vanilla": [
+        "../../node_modules/@viselect/vanilla/dist/index.d.ts"
+      ]
+    }
+  },
+  "include": ["src"]
+}
