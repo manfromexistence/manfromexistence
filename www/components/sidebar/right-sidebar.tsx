@@ -360,6 +360,7 @@ export function RightSidebar() {
         <NavActions />
       </SidebarProvider>
 
+      {/* 
       <Popover open={aiOpen} onOpenChange={setAiOpen}>
         <PopoverTrigger asChild>
           <Button
@@ -401,6 +402,8 @@ export function RightSidebar() {
           </Command>
         </PopoverContent>
       </Popover>
+       */}
+
       <div className="hover:bg-primary-foreground mr-2 flex h-9 items-center justify-center gap-1 rounded-md border px-1.5">
         <div
           onClick={handleCategorySidebarToggle}

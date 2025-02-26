@@ -106,7 +106,7 @@ export function NavActions() {
   // }, [])
 
   return (
-    <div className="flex items-center text-sm">
+    <div className="flex items-center text-sm mr-2">
       {/* <div className="hidden font-medium text-muted-foreground md:inline-block">
         Edit Oct 08
       </div>
