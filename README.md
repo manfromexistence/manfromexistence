@@ -4,6 +4,8 @@
 </div>
 
 <!-- ```
+ npm install -g npm@11.1.0 && npm install -g bun && bun install && bun run dev
+
 git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence02 account" && git push
 git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence04 account" && git push
 # Things that I need to do ASAP
