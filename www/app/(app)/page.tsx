@@ -17,9 +17,8 @@ export default function Page() {
         <span className="text-xs font-mono flex items-center justify-center h-full w-max border-r px-4">Family</span>
         <span className="text-xs font-mono flex items-center justify-center h-full w-max border-r px-4">Friends</span>
         <span className="text-xs font-mono flex items-center justify-center h-full w-max border-r px-4">Journaling</span>
-        <span className="text-xs font-mono flex items-center justify-center h-full w-max px-4  flex-1">
-          Date
-        </span>
+        <span className="text-xs font-mono flex items-center justify-center h-full w-max px-4 flex-1">Date</span>
+        {/* Thursday, Fabruary - 27/02/2025 */}
       </div>
     </div>
   )
