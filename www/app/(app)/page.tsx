@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Clock, Sun, Sunrise, Sunset, Moon } from "lucide-react"
 
-function PrayerCards() {
+function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
   const [completed, setCompleted] = useState<Record<string, boolean>>({
     fajr: false,
     dhuhr: false,
@@ -66,10 +66,22 @@ function PrayerCards() {
   ]
 
   const handleCardClick = (id: string) => {
-    setCompleted((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }))
+    setCompleted((prev) => {
+      const newCompleted = {
+        ...prev,
+        [id]: !prev[id],
+      }
+      
+      // Calculate progress
+      const totalPrayers = Object.keys(newCompleted).length
+      const completedPrayers = Object.values(newCompleted).filter(Boolean).length
+      const progress = Math.round((completedPrayers / totalPrayers) * 100)
+      
+      // Update progress through callback
+      onProgressUpdate(progress)
+      
+      return newCompleted
+    })
   }
 
   return (
@@ -128,14 +140,8 @@ function PrayerCards() {
   )
 }
 
-
-
 export default function Page() {
-  const [progress, setProgress] = React.useState(13)
-  React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500)
-    return () => clearTimeout(timer)
-  }, [])
+  const [progress, setProgress] = React.useState(0)
 
   return (
     <main className="h-full w-full p-2 overflow-auto">
@@ -246,7 +252,7 @@ export default function Page() {
               <Progress value={progress} className="w-[250px]" />
             </div>
           </div>
-          <PrayerCards />
+          <PrayerCards onProgressUpdate={setProgress} />
         </div>
       </div>
     </main>
