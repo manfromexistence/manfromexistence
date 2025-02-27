@@ -335,10 +335,8 @@ export function SubCategoryRightSidebar() {
 export function RightSidebar() {
   const [aiOpen, setAiOpen] = React.useState(false)
   const [value, setValue] = React.useState("")
-  const { categorySidebarState, categorySidebarToggleSidebar } =
-    useCategorySidebar()
-  const { subCategorySidebarState, subCategorySidebarToggleSidebar } =
-    useSubCategorySidebar()
+  const { categorySidebarState, categorySidebarToggleSidebar } = useCategorySidebar()
+  const { subCategorySidebarState, subCategorySidebarToggleSidebar } = useSubCategorySidebar()
 
   const handleCategorySidebarToggle = () => {
     categorySidebarToggleSidebar()
