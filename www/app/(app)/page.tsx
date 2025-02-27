@@ -1,9 +1,21 @@
+"use client"
+
+import * as React from "react"
+
+import { Progress } from "@/components/ui/progress"
 import { Checkbox } from "@/components/ui/checkbox"
 
 export default function Page() {
+  const [progress, setProgress] = React.useState(13)
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setProgress(66), 500)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <main className="h-full w-full p-2">
-      {/* <div className="w-full border flex items-center justify-start h-20">
+    <main className="h-full w-full p-2 overflow-auto">
+      <div className="w-full border flex items-center justify-start h-20">
         <div className="flex flex-col">
           <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Prayer</span>
           <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
@@ -101,7 +113,15 @@ export default function Page() {
             Thursday, Fabruary - 27/02/2025
           </span>
         </div>
-      </div> */}
+      </div>
+      <div className="min-h-screen mt-4">
+        <div className="w-full flex flex-col">
+          <div className="flex items-start justify-between w-full h-20">
+            <span className="font-bold text-3xl">Prayer</span>
+            <Progress value={progress} className="w-[250px]" />
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
