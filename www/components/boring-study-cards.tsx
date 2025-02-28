@@ -36,7 +36,8 @@ SunFilled.displayName = 'SunFilled'
 
 
 export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
-  const [completed, setCompleted] = useState<Record<string, boolean>>({
+  // Initialize state with useMemo to avoid recreating the object on every render
+  const [completed, setCompleted] = useState<Record<string, boolean>>(() => ({
     higher_mathamethics_1st_paper: false,
     higher_mathamethics_2nd_paper: false,
     physics_1st_paper: false,
@@ -50,7 +51,15 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
     bangla_2nd_paper: false,
     english_1st_paper: false,
     english_2nd_paper: false,
-  })
+  }));
+
+  // Use useEffect to handle initial progress update
+  React.useEffect(() => {
+    const totalSubjects = Object.keys(completed).length;
+    const completedSubjects = Object.values(completed).filter(Boolean).length;
+    const progress = Math.round((completedSubjects / totalSubjects) * 100);
+    onProgressUpdate(progress);
+  }, []); // Run only once on mount
 
   const subjects = [
     {
