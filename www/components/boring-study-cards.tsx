@@ -11,7 +11,7 @@ import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 
-export const SunFilled: LucideIcon = forwardRef(({ 
+const SunFilled: LucideIcon = forwardRef(({ 
   size = 24, 
   color = 'currentColor', 
   strokeWidth = 2,
