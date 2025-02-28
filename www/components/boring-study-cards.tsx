@@ -6,7 +6,7 @@ import * as Portal from '@radix-ui/react-portal'
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Clock, BookOpen, Calculator, TestTube, Dna, Laptop, Languages, BookText, Info, Binary, BookMarked, Flask, FlaskConical, Microscope, Cells, ScrollText, PenTool, GraduationCap } from "lucide-react"
+import { Clock, BookOpen, Calculator, TestTube, Dna, Laptop, Languages, BookText, Info, Binary, BookMarked, Beaker, FlaskConical, Microscope, CircleDot, ScrollText, PenTool, GraduationCap } from "lucide-react"
 import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
@@ -86,7 +86,7 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
       name: "Chemistry (1st Paper)",
       time: "Afternoon - Monday, Thursday",
       duration: "1 hour",
-      icon: Flask,
+      icon: Beaker,
     },
     {
       id: "chemistry_2nd_paper",
@@ -107,7 +107,7 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
       name: "Biology (2nd Paper)",
       time: "Evening - Tuesday, Friday",
       duration: "1 hour",
-      icon: Cells,
+      icon: CircleDot,
     },
     {
       id: "ict",
