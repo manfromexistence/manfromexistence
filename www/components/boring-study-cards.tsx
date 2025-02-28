@@ -5,7 +5,7 @@ import * as React from "react"
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Clock, Sun, Sunrise, Sunset, Moon } from "lucide-react"
+import { Clock, BookOpen, Calculator, Flask, Dna, Laptop, Languages, BookText } from "lucide-react"
 import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
 
@@ -108,7 +108,7 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
   }
 
   return (
-    <div className="w-full mt-1">
+    <div className="w-full">
       <div className="flex flex-wrap gap-4 justify-start ">
         {prayers.map((prayer) => {
           const Icon = prayer.icon

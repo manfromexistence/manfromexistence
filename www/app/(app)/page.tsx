@@ -115,7 +115,7 @@ export default function Page() {
         </div>
       </div>
       <div className="min-h-screen mt-2 space-y-2 px-1">
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
             <span className="font-bold text-3xl h-full flex items-center">Prayer</span>
             <div className="h-full flex items-center justify-end ">
@@ -124,7 +124,7 @@ export default function Page() {
           </div>
           <PrayerCards onProgressUpdate={setPrayerProgress} />
         </div>
-        <div className="w-full flex flex-col  px-1">
+        <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
             <span className="font-bold text-3xl h-full flex items-center">Boring Study</span>
             <div className="h-full flex items-center justify-end ">
