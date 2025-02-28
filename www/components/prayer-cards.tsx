@@ -122,7 +122,7 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
                           ${completed[prayer.id] ? "bg-primary-foreground" : ""}`}
               onClick={() => handleCardClick(prayer.id)}
             >
-              <div className="relative z-10 p-5">
+              <div className="relative p-5">
                 <div className="flex items-center justify-between mb-3">
                   <div
                     className={`h-12 w-12 rounded-full transition-colors duration-300
