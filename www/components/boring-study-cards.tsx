@@ -34,7 +34,6 @@ export const SunFilled: LucideIcon = forwardRef(({
 
 SunFilled.displayName = 'SunFilled'
 
-
 export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
   // Initialize state with useMemo to avoid recreating the object on every render
   const [completed, setCompleted] = useState<Record<string, boolean>>(() => ({

@@ -1,13 +1,11 @@
 "use client"
 
 import * as React from "react"
-
 import { Progress } from "@/components/ui/progress"
 import { Checkbox } from "@/components/ui/checkbox"
 import PrayerCards from "@/components/prayer-cards"
 import BoringStudyCards from "@/components/boring-study-cards"
-
-
+import CalendarComponent from "@/components/calendar"
 
 export default function Page() {
   const [prayerProgress, setPrayerProgress] = React.useState(0)
@@ -15,6 +13,7 @@ export default function Page() {
 
   return (
     <main className="h-full w-full p-2 overflow-auto">
+      <CalendarComponent />
       <div className="w-full border flex items-center justify-start h-20">
         <div className="flex flex-col">
           <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Prayer</span>
