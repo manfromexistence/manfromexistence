@@ -6,7 +6,7 @@ import * as Portal from '@radix-ui/react-portal'
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Clock, BookOpen, Calculator, TestTube, Dna, Laptop, Languages, BookText, Info } from "lucide-react"
+import { Clock, BookOpen, Calculator, TestTube, Dna, Laptop, Languages, BookText, Info, Binary, BookMarked, Flask, FlaskConical, Microscope, Cells, ScrollText, PenTool, GraduationCap } from "lucide-react"
 import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
@@ -65,7 +65,7 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
       name: "Higher Math (2nd Paper)",
       time: "Morning - Tuesday, Thursday, Saturday",
       duration: "1.5 hours",
-      icon: Calculator,
+      icon: Binary,
     },
     {
       id: "physics_1st_paper",
@@ -79,70 +79,70 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
       name: "Physics (2nd Paper)",
       time: "Late Morning - Tuesday, Thursday, Saturday",
       duration: "1.5 hours",
-      icon: BookOpen,
+      icon: BookMarked,
     },
     {
       id: "chemistry_1st_paper",
       name: "Chemistry (1st Paper)",
       time: "Afternoon - Monday, Thursday",
       duration: "1 hour",
-      icon: TestTube,
+      icon: Flask,
     },
     {
       id: "chemistry_2nd_paper",
       name: "Chemistry (2nd Paper)",
       time: "Afternoon - Tuesday, Friday",
       duration: "1 hour",
-      icon: TestTube,
+      icon: FlaskConical,
     },
     {
       id: "biology_1st_paper",
       name: "Biology (1st Paper)",
       time: "Evening - Monday, Thursday",
       duration: "1 hour",
-      icon: Dna,
+      icon: Microscope,
     },
     {
       id: "biology_2nd_paper",
       name: "Biology (2nd Paper)",
       time: "Evening - Tuesday, Friday",
       duration: "1 hour",
-      icon: Dna,
+      icon: Cells,
     },
     {
       id: "ict",
       name: "ICT",
-      time: "Evening - Wednesday, Saturday",
-      duration: "45 minutes",
+      time: "Late Morning - Wednesday, Saturday",
+      duration: "1 hour",
       icon: Laptop,
     },
     {
       id: "bangla_1st_paper",
       name: "Bangla (1st Paper)",
-      time: "Early Morning - Monday, Thursday",
+      time: "Night - Monday, Thursday",
       duration: "45 minutes",
-      icon: BookText,
+      icon: ScrollText,
     },
     {
       id: "bangla_2nd_paper",
       name: "Bangla (2nd Paper)",
-      time: "Early Morning - Tuesday, Friday",
+      time: "Night - Tuesday, Friday",
       duration: "45 minutes",
-      icon: BookText,
+      icon: PenTool,
     },
     {
       id: "english_1st_paper",
       name: "English (1st Paper)",
-      time: "Night - Wednesday, Saturday",
+      time: "Night - Wednesday",
       duration: "45 minutes",
       icon: Languages,
     },
     {
       id: "english_2nd_paper",
       name: "English (2nd Paper)",
-      time: "Night - Monday, Thursday",
+      time: "Night - Saturday",
       duration: "45 minutes",
-      icon: Languages,
+      icon: GraduationCap,
     },
   ]
 
