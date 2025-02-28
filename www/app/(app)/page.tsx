@@ -5,11 +5,13 @@ import * as React from "react"
 import { Progress } from "@/components/ui/progress"
 import { Checkbox } from "@/components/ui/checkbox"
 import PrayerCards from "@/components/prayer-cards"
+import BoringStudyCards from "@/components/boring-study-cards"
 
 
 
 export default function Page() {
-  const [progress, setProgress] = React.useState(0)
+  const [prayerProgress, setPrayerProgress] = React.useState(0)
+  const [boringStudyProgress, setBoringStudyProgress] = React.useState(0)
 
   return (
     <main className="h-full w-full p-2 overflow-auto">
@@ -112,18 +114,26 @@ export default function Page() {
           </span>
         </div>
       </div>
-      <div className="min-h-screen mt-4">
+      <div className="min-h-screen mt-2 space-y-2 px-1">
         <div className="w-full flex flex-col">
           <div className="h-10 flex items-start justify-between w-full">
-            <span className="font-bold text-3xl">Prayer</span>
+            <span className="font-bold text-3xl h-full flex items-center">Prayer</span>
             <div className="h-full flex items-center justify-end ">
-              <Progress value={progress} className="w-[250px]" />
+              <Progress value={prayerProgress} className="w-[250px]" />
             </div>
           </div>
-          <PrayerCards onProgressUpdate={setProgress} />
+          <PrayerCards onProgressUpdate={setPrayerProgress} />
+        </div>
+        <div className="w-full flex flex-col  px-1">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-3xl h-full flex items-center">Boring Study</span>
+            <div className="h-full flex items-center justify-end ">
+              <Progress value={boringStudyProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
         </div>
       </div>
-
     </main>
   )
 }

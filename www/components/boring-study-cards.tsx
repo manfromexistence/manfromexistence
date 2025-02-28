@@ -33,13 +33,21 @@ export const SunFilled: LucideIcon = forwardRef(({
 SunFilled.displayName = 'SunFilled'
 
 
-export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
+export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
   const [completed, setCompleted] = useState<Record<string, boolean>>({
-    fajr: false,
-    dhuhr: false,
-    asr: false,
-    maghrib: false,
-    isha: false,
+    higher_mathamethics_1st_paper: false,
+    higher_mathamethics_2nd_paper: false,
+    physics_1st_paper: false,
+    physics_2nd_paper: false,
+    chemistry_1st_paper: false,
+    chemistry_2nd_paper: false,
+    biology_1st_paper: false,
+    biology_2nd_paper: false,
+    ict: false,
+    bangla_1st_paper: false,
+    bangla_2nd_paper: false,
+    english_1st_paper: false,
+    english_2nd_paper: false,
   })
 
   const prayers = [
@@ -49,8 +57,6 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
       time: "Dawn, before sunrise",
       duration: "Minimum 2 minutes",
       icon: Sunrise,
-      color: "bg-indigo-500",
-      hoverColor: "hover:bg-indigo-600",
     },
     {
       id: "dhuhr",
@@ -58,8 +64,6 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
       time: "After sun's zenith",
       duration: "Minimum 4 minutes",
       icon: SunFilled,
-      color: "bg-amber-500",
-      hoverColor: "hover:bg-amber-600",
     },
     {
       id: "asr",
@@ -67,8 +71,6 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
       time: "Midway between noon and sunset",
       duration: "Minimum 4 minutes",
       icon: Sun,
-      color: "bg-orange-500",
-      hoverColor: "hover:bg-orange-600",
     },
     {
       id: "maghrib",
@@ -76,8 +78,6 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
       time: "Just after sunset",
       duration: "Minimum 3 minutes",
       icon: Sunset,
-      color: "bg-red-500",
-      hoverColor: "hover:bg-red-600",
     },
     {
       id: "isha",
@@ -85,8 +85,6 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
       time: "After twilight disappears",
       duration: "Minimum 4 minutes",
       icon: Moon,
-      color: "bg-blue-500",
-      hoverColor: "hover:bg-blue-600",
     },
   ]
 
