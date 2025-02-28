@@ -5,9 +5,10 @@ import * as React from "react"
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Clock, BookOpen, Calculator, TestTube, Dna, Laptop, Languages, BookText } from "lucide-react"
+import { Clock, BookOpen, Calculator, TestTube, Dna, Laptop, Languages, BookText, Info } from "lucide-react"
 import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 
 export const SunFilled: LucideIcon = forwardRef(({ 
   size = 24, 
@@ -171,12 +172,12 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
           return (
             <Card
               key={subject.id}
-              className={`group relative overflow-hidden transition-all duration-300 ease-in-out 
-                          hover:scale-105 hover:shadow-lg cursor-pointer bg-background
+              className={`group relative transition-all duration-300 ease-in-out 
+                          hover:scale-105 hover:shadow-lg cursor-pointer bg-background h-[180px]
                           ${completed[subject.id] ? "bg-primary-foreground" : ""}`}
               onClick={() => handleCardClick(subject.id)}
             >
-              <div className="relative z-10 p-5">
+              <div className="relative p-5">
                 <div className="flex items-center justify-between mb-3">
                   <div
                     className={`h-12 w-12 rounded-full transition-colors duration-300
@@ -203,7 +204,23 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
                   <h3 className="text-xl font-bold mb-1 transition-colors duration-300 group-hover:text-primary">
                     {subject.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-2">{subject.time}</p>
+                  <div className="gap-1 flex items-center">
+                    <p className="text-sm text-muted-foreground mb-2 truncate max-w-[80%]">
+                      {subject.time}
+                    </p>
+                    <div className="mb-1">
+                      <HoverCard>
+                        <HoverCardTrigger asChild>
+                          <Info className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
+                        </HoverCardTrigger>
+                        <HoverCardContent 
+                          className="w-auto p-2" 
+                        >
+                          <p className="text-sm whitespace-nowrap">{subject.time}</p>
+                        </HoverCardContent>
+                      </HoverCard>
+                    </div>
+                  </div>
                   <div className="flex items-center text-xs text-muted-foreground">
                     <Clock className="h-3 w-3 mr-1 inline-block" />
                     <span>{subject.duration}</span>
