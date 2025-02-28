@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import * as Portal from '@radix-ui/react-portal'
 
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
@@ -199,33 +200,34 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
                     />
                   </div>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-bold mb-1 transition-colors duration-300 group-hover:text-primary">
                     {subject.name}
                   </h3>
-                  <div className="gap-1 flex items-center">
-                    <p className="text-sm text-muted-foreground mb-2 truncate max-w-[80%]">
-                      {subject.time}
-                    </p>
-                    <div className="mb-1">
-                      <HoverCard>
-                        <HoverCardTrigger asChild>
-                          <Info className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
-                        </HoverCardTrigger>
+                <div className="gap-1 flex items-center">
+                    
+                  <p className="text-sm text-muted-foreground mb-2 truncate max-w-[80%]">
+                    {subject.time}
+                  </p>
+                  <div className="mb-1">
+                    <HoverCard>
+                      <HoverCardTrigger asChild>
+                        <Info className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
+                      </HoverCardTrigger>
+                      <Portal.Root>
                         <HoverCardContent 
-                          className="w-auto p-2" 
+                          className="w-auto p-2 bg-popover text-popover-foreground shadow-md rounded-md relative z-[9999]" 
                         >
                           <p className="text-sm whitespace-nowrap">{subject.time}</p>
                         </HoverCardContent>
-                      </HoverCard>
-                    </div>
-                  </div>
-                  <div className="flex items-center text-xs text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1 inline-block" />
-                    <span>{subject.duration}</span>
+                      </Portal.Root>
+                    </HoverCard>
                   </div>
                 </div>
+                <div className="flex items-center text-xs text-muted-foreground">
+                  <Clock className="h-3 w-3 mr-1 inline-block" />
+                  <span>{subject.duration}</span>
+                  </div>                </div>
               </div>
             </Card>
           )
