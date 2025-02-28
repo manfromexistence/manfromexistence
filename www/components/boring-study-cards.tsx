@@ -5,7 +5,7 @@ import * as React from "react"
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Clock, BookOpen, Calculator, Flask, Dna, Laptop, Languages, BookText } from "lucide-react"
+import { Clock, BookOpen, Calculator, TestTube, Dna, Laptop, Languages, BookText } from "lucide-react"
 import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
 
@@ -50,41 +50,97 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
     english_2nd_paper: false,
   })
 
-  const prayers = [
+  const subjects = [
     {
-      id: "fajr",
-      name: "Fajr",
-      time: "Dawn, before sunrise",
-      duration: "Minimum 2 minutes",
-      icon: Sunrise,
+      id: "higher_mathamethics_1st_paper",
+      name: "Higher Math (1st Paper)",
+      time: "Morning - Monday, Wednesday, Friday",
+      duration: "1.5 hours",
+      icon: Calculator,
     },
     {
-      id: "dhuhr",
-      name: "Dhuhr",
-      time: "After sun's zenith",
-      duration: "Minimum 4 minutes",
-      icon: SunFilled,
+      id: "higher_mathamethics_2nd_paper",
+      name: "Higher Math (2nd Paper)",
+      time: "Morning - Tuesday, Thursday, Saturday",
+      duration: "1.5 hours",
+      icon: Calculator,
     },
     {
-      id: "asr",
-      name: "Asr",
-      time: "Midway between noon and sunset",
-      duration: "Minimum 4 minutes",
-      icon: Sun,
+      id: "physics_1st_paper",
+      name: "Physics (1st Paper)",
+      time: "Late Morning - Monday, Wednesday, Friday",
+      duration: "1.5 hours",
+      icon: BookOpen,
     },
     {
-      id: "maghrib",
-      name: "Maghrib",
-      time: "Just after sunset",
-      duration: "Minimum 3 minutes",
-      icon: Sunset,
+      id: "physics_2nd_paper",
+      name: "Physics (2nd Paper)",
+      time: "Late Morning - Tuesday, Thursday, Saturday",
+      duration: "1.5 hours",
+      icon: BookOpen,
     },
     {
-      id: "isha",
-      name: "Isha",
-      time: "After twilight disappears",
-      duration: "Minimum 4 minutes",
-      icon: Moon,
+      id: "chemistry_1st_paper",
+      name: "Chemistry (1st Paper)",
+      time: "Afternoon - Monday, Thursday",
+      duration: "1 hour",
+      icon: TestTube,
+    },
+    {
+      id: "chemistry_2nd_paper",
+      name: "Chemistry (2nd Paper)",
+      time: "Afternoon - Tuesday, Friday",
+      duration: "1 hour",
+      icon: TestTube,
+    },
+    {
+      id: "biology_1st_paper",
+      name: "Biology (1st Paper)",
+      time: "Evening - Monday, Thursday",
+      duration: "1 hour",
+      icon: Dna,
+    },
+    {
+      id: "biology_2nd_paper",
+      name: "Biology (2nd Paper)",
+      time: "Evening - Tuesday, Friday",
+      duration: "1 hour",
+      icon: Dna,
+    },
+    {
+      id: "ict",
+      name: "ICT",
+      time: "Evening - Wednesday, Saturday",
+      duration: "45 minutes",
+      icon: Laptop,
+    },
+    {
+      id: "bangla_1st_paper",
+      name: "Bangla (1st Paper)",
+      time: "Early Morning - Monday, Thursday",
+      duration: "45 minutes",
+      icon: BookText,
+    },
+    {
+      id: "bangla_2nd_paper",
+      name: "Bangla (2nd Paper)",
+      time: "Early Morning - Tuesday, Friday",
+      duration: "45 minutes",
+      icon: BookText,
+    },
+    {
+      id: "english_1st_paper",
+      name: "English (1st Paper)",
+      time: "Night - Wednesday, Saturday",
+      duration: "45 minutes",
+      icon: Languages,
+    },
+    {
+      id: "english_2nd_paper",
+      name: "English (2nd Paper)",
+      time: "Night - Monday, Thursday",
+      duration: "45 minutes",
+      icon: Languages,
     },
   ]
 
@@ -108,17 +164,17 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
   }
 
   return (
-    <div className="w-full">
-      <div className="flex flex-wrap gap-4 justify-start ">
-        {prayers.map((prayer) => {
-          const Icon = prayer.icon
+    <div className="w-full mt-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
+        {subjects.map((subject) => {
+          const Icon = subject.icon
           return (
             <Card
-              key={prayer.id}
-              className={`group relative w-full sm:w-[300px] overflow-hidden transition-all duration-300 ease-in-out 
+              key={subject.id}
+              className={`group relative overflow-hidden transition-all duration-300 ease-in-out 
                           hover:scale-105 hover:shadow-lg cursor-pointer bg-background
-                          ${completed[prayer.id] ? "bg-primary-foreground" : ""}`}
-              onClick={() => handleCardClick(prayer.id)}
+                          ${completed[subject.id] ? "bg-primary-foreground" : ""}`}
+              onClick={() => handleCardClick(subject.id)}
             >
               <div className="relative z-10 p-5">
                 <div className="flex items-center justify-between mb-3">
@@ -135,23 +191,22 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
                         }`}
                   >
                     <Checkbox
-                      id={prayer.id}
-                      checked={completed[prayer.id]}
+                      id={subject.id}
+                      checked={completed[subject.id]}
                       onCheckedChange={() => { }}
                       className="h-6 w-6 rounded-full"
                     />
                   </div>
-
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold mb-1 transition-colors duration-300 group-hover:text-primary">
-                    {prayer.name}
+                    {subject.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-2">{prayer.time}</p>
+                  <p className="text-sm text-muted-foreground mb-2">{subject.time}</p>
                   <div className="flex items-center text-xs text-muted-foreground">
                     <Clock className="h-3 w-3 mr-1 inline-block" />
-                    <span>{prayer.duration}</span>
+                    <span>{subject.duration}</span>
                   </div>
                 </div>
               </div>
