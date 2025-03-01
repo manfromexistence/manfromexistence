@@ -13,7 +13,7 @@ export default function Page() {
 
   return (
     <main className="h-full w-full p-2 overflow-auto">
-      
+
       <CalendarComponent />
 
       <div className="w-full border flex items-center justify-start h-20">
@@ -128,6 +128,42 @@ export default function Page() {
         <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
             <span className="font-bold text-3xl h-full flex items-center">Boring Study</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={boringStudyProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+        </div>
+        <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-3xl h-full flex items-center">Quran</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={boringStudyProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+        </div>
+        <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-3xl h-full flex items-center">Social Media Influencing</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={boringStudyProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+        </div>
+        <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-3xl h-full flex items-center">Chess</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={boringStudyProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+        </div>
+        <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-3xl h-full flex items-center">Leetcode</span>
             <div className="h-full flex items-center justify-end mt-2">
               <Progress value={boringStudyProgress} className="w-[250px]" />
             </div>

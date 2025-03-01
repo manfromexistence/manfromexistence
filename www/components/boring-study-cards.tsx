@@ -12,11 +12,11 @@ import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 
-const SunFilled: LucideIcon = forwardRef(({ 
-  size = 24, 
-  color = 'currentColor', 
+const SunFilled: LucideIcon = forwardRef(({
+  size = 24,
+  color = 'currentColor',
   strokeWidth = 2,
-  ...props 
+  ...props
 }, ref) => {
   return (
     <svg
@@ -61,7 +61,7 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
   }));
 
   const today = new Date()
-  
+
   const isSubjectForToday = (time: string) => {
     if (isMonday(today) && time.includes('Monday')) return true
     if (isTuesday(today) && time.includes('Tuesday')) return true
@@ -169,21 +169,19 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
   const todaySubjects = subjects.filter(subject => isSubjectForToday(subject.time))
 
   const handleCardClick = (id: string) => {
-    setCompleted((prev) => {
-      const newCompleted = {
-        ...prev,
-        [id]: !prev[id],
-      }
-      
-      const totalSubjects = todaySubjects.length
-      const completedSubjects = todaySubjects.filter(subject => newCompleted[subject.id]).length
-      const progress = totalSubjects > 0 ? Math.round((completedSubjects / totalSubjects) * 100) : 0
-      
-      onProgressUpdate(progress)
-      
-      return newCompleted
-    })
-  }
+    setCompleted((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
+  // Add this useEffect to handle progress updates
+  React.useEffect(() => {
+    const totalSubjects = todaySubjects.length;
+    const completedSubjects = todaySubjects.filter(subject => completed[subject.id]).length;
+    const progress = totalSubjects > 0 ? Math.round((completedSubjects / totalSubjects) * 100) : 0;
+    onProgressUpdate(progress);
+  }, [completed, todaySubjects, onProgressUpdate]);
 
   return (
     <div className="w-full mt-1">
@@ -224,30 +222,31 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
                   <h3 className="text-xl font-bold mb-1 transition-colors duration-300 group-hover:text-primary">
                     {subject.name}
                   </h3>
-                <div className="gap-1 flex items-center">
-                    
-                  <p className="text-sm text-muted-foreground mb-2 truncate max-w-[80%]">
-                    {subject.time}
-                  </p>
-                  <div className="mb-1">
-                    <HoverCard>
-                      <HoverCardTrigger asChild>
-                        <Info className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
-                      </HoverCardTrigger>
-                      <Portal.Root>
-                        <HoverCardContent 
-                          className="w-auto p-2 bg-popover text-popover-foreground shadow-md rounded-md relative z-[9999]" 
-                        >
-                          <p className="text-sm whitespace-nowrap">{subject.time}</p>
-                        </HoverCardContent>
-                      </Portal.Root>
-                    </HoverCard>
+                  <div className="gap-1 flex items-center">
+
+                    <p className="text-sm text-muted-foreground mb-2 truncate max-w-[80%]">
+                      {subject.time}
+                    </p>
+                    <div className="mb-1">
+                      <HoverCard>
+                        <HoverCardTrigger asChild>
+                          <Info className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
+                        </HoverCardTrigger>
+                        <Portal.Root>
+                          <HoverCardContent
+                            className="w-auto p-2 bg-popover text-popover-foreground shadow-md rounded-md relative z-[9999]"
+                          >
+                            <p className="text-sm whitespace-nowrap">{subject.time}</p>
+                          </HoverCardContent>
+                        </Portal.Root>
+                      </HoverCard>
+                    </div>
+                  </div>
+                  <div className="flex items-center text-xs text-muted-foreground">
+                    <Clock className="h-3 w-3 mr-1 inline-block" />
+                    <span>{subject.duration}</span>
                   </div>
                 </div>
-                <div className="flex items-center text-xs text-muted-foreground">
-                  <Clock className="h-3 w-3 mr-1 inline-block" />
-                  <span>{subject.duration}</span>
-                  </div>                </div>
               </div>
             </Card>
           )
