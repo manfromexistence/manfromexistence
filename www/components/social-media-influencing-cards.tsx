@@ -23,14 +23,14 @@ export default function SocialMediaCards({ onProgressUpdate }: { onProgressUpdat
         },
         {
             id: "thoughtsChannel",
-            name: "MFE Thoughts",
-            time: "Philosophy & Ideas",
+            name: "ManFromExistence Thoughts",
+            time: "Ideas & Entertainment",
             duration: "40 minutes",
             icon: Brain,
         },
         {
             id: "gamingChannel",
-            name: "MFE Gaming",
+            name: "ManFromExistence Gaming",
             time: "Gaming Content",
             duration: "40 minutes",
             icon: Gamepad,
