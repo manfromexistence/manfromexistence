@@ -7,6 +7,8 @@ import PrayerCards from "@/components/prayer-cards"
 import BoringStudyCards from "@/components/boring-study-cards"
 import CalendarComponent from "@/components/calendar"
 
+// Wukong/Tatsuya/Rydan + Hayato + Luna + Nikita
+
 export default function Page() {
   const [prayerProgress, setPrayerProgress] = React.useState(0)
   const [boringStudyProgress, setBoringStudyProgress] = React.useState(0)
