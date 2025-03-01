@@ -119,7 +119,7 @@ export default function Page() {
         <div className="w-full flex flex-col space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
             <span className="font-bold text-3xl h-full flex items-center">Prayer</span>
-            <div className="h-full flex items-center justify-end ">
+            <div className="h-full flex items-center justify-end mt-2">
               <Progress value={prayerProgress} className="w-[250px]" />
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function Page() {
         <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
             <span className="font-bold text-3xl h-full flex items-center">Boring Study</span>
-            <div className="h-full flex items-center justify-end ">
+            <div className="h-full flex items-center justify-end mt-2">
               <Progress value={boringStudyProgress} className="w-[250px]" />
             </div>
           </div>
