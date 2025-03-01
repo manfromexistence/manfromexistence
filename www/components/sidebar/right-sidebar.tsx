@@ -13,11 +13,11 @@ import {
   Home,
   LibraryBig,
   LoaderCircle,
-  MessageCircle,
+  Calendar,
   Mic,
   Search,
   Sparkles,
-  Type,
+  Mail,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -407,7 +407,7 @@ export function RightSidebar() {
           onClick={handleCategorySidebarToggle}
           className="hover:bg-background flex h-6 w-6 items-center justify-center rounded-md"
         >
-          <MessageCircle
+          <Calendar
             className={cn(
               categorySidebarState === "expanded"
                 ? "text-primary"
@@ -421,7 +421,7 @@ export function RightSidebar() {
           onClick={handleSubCategorySidebarToggle}
           className="hover:bg-background flex h-6 w-6 items-center justify-center rounded-md"
         >
-          <Type
+          <Mail
             className={cn(
               subCategorySidebarState === "expanded"
                 ? "text-primary"
