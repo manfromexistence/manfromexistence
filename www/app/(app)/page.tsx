@@ -6,17 +6,23 @@ import { Checkbox } from "@/components/ui/checkbox"
 import PrayerCards from "@/components/prayer-cards"
 import BoringStudyCards from "@/components/boring-study-cards"
 import CalendarComponent from "@/components/calendar"
-
-// Wukong/Tatsuya/Rydan + Hayato + Luna + Nikita
+import ChessCards from "@/components/chess-cards"
+import LeetcodeCards from "@/components/leetcode-cards"
+import QuranCards from "@/components/quran-cards"
+import SocialMediaCards from "@/components/social-media-influencing-cards"
 
 export default function Page() {
   const [prayerProgress, setPrayerProgress] = React.useState(0)
   const [boringStudyProgress, setBoringStudyProgress] = React.useState(0)
+  const [chessProgress, setChessProgress] = React.useState(0)
+  const [leetcodeProgress, setLeetcodeProgress] = React.useState(0)
+  const [socialMediaInfluencingCards, setSocialMediaInfluencingCards] = React.useState(0)
+  const [quranProgress, setQuranProgress] = React.useState(0)
 
   return (
     <main className="h-full w-full p-2 overflow-auto">
 
-      <CalendarComponent />
+      {/* <CalendarComponent /> */}
 
       <div className="w-full border flex items-center justify-start h-20">
         <div className="flex flex-col">
@@ -120,7 +126,7 @@ export default function Page() {
       <div className="min-h-screen mt-2 space-y-2 px-1">
         <div className="w-full flex flex-col space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
-            <span className="font-bold text-3xl h-full flex items-center">Prayer</span>
+            <span className="font-bold text-2xl h-full flex items-center">Prayer</span>
             <div className="h-full flex items-center justify-end mt-2">
               <Progress value={prayerProgress} className="w-[250px]" />
             </div>
@@ -129,7 +135,7 @@ export default function Page() {
         </div>
         <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
-            <span className="font-bold text-3xl h-full flex items-center">Boring Study</span>
+            <span className="font-bold text-2xl h-full flex items-center">Boring Study</span>
             <div className="h-full flex items-center justify-end mt-2">
               <Progress value={boringStudyProgress} className="w-[250px]" />
             </div>
@@ -138,39 +144,39 @@ export default function Page() {
         </div>
         <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
-            <span className="font-bold text-3xl h-full flex items-center">Quran</span>
+            <span className="font-bold text-2xl h-full flex items-center">Quran</span>
             <div className="h-full flex items-center justify-end mt-2">
-              <Progress value={boringStudyProgress} className="w-[250px]" />
+              <Progress value={quranProgress} className="w-[250px]" />
             </div>
           </div>
-          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+          <QuranCards onProgressUpdate={setQuranProgress} />
         </div>
         <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
-            <span className="font-bold text-3xl h-full flex items-center">Social Media Influencing</span>
+            <span className="font-bold text-2xl h-full flex items-center">Social Media Influencing</span>
             <div className="h-full flex items-center justify-end mt-2">
-              <Progress value={boringStudyProgress} className="w-[250px]" />
+              <Progress value={socialMediaInfluencingCards} className="w-[250px]" />
             </div>
           </div>
-          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+          <SocialMediaCards onProgressUpdate={setSocialMediaInfluencingCards} />
         </div>
         <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
-            <span className="font-bold text-3xl h-full flex items-center">Chess</span>
+            <span className="font-bold text-2xl h-full flex items-center">Chess</span>
             <div className="h-full flex items-center justify-end mt-2">
-              <Progress value={boringStudyProgress} className="w-[250px]" />
+              <Progress value={chessProgress} className="w-[250px]" />
             </div>
           </div>
-          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+          <ChessCards onProgressUpdate={setChessProgress} />
         </div>
         <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
-            <span className="font-bold text-3xl h-full flex items-center">Leetcode</span>
+            <span className="font-bold text-2xl h-full flex items-center">Leetcode</span>
             <div className="h-full flex items-center justify-end mt-2">
-              <Progress value={boringStudyProgress} className="w-[250px]" />
+              <Progress value={leetcodeProgress} className="w-[250px]" />
             </div>
           </div>
-          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+          <LeetcodeCards onProgressUpdate={setLeetcodeProgress} />
         </div>
       </div>
     </main>

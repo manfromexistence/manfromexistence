@@ -1,8 +1,7 @@
 "use client"
 
 import * as React from "react"
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Clock, Sun, Sunrise, Sunset, Moon } from "lucide-react"
@@ -33,7 +32,6 @@ export const SunFilled: LucideIcon = forwardRef(({
 
 SunFilled.displayName = 'SunFilled'
 
-
 export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
   const [completed, setCompleted] = useState<Record<string, boolean>>({
     fajr: false,
@@ -42,6 +40,17 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
     maghrib: false,
     isha: false,
   })
+
+  // Add useEffect to handle progress updates
+  useEffect(() => {
+    // Calculate progress
+    const totalPrayers = Object.keys(completed).length
+    const completedPrayers = Object.values(completed).filter(Boolean).length
+    const progress = Math.round((completedPrayers / totalPrayers) * 100)
+
+    // Update progress through callback
+    onProgressUpdate(progress)
+  }, [completed, onProgressUpdate])
 
   const isJumuahDay = isFriday(new Date())
 
@@ -94,22 +103,10 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
   ]
 
   const handleCardClick = (id: string) => {
-    setCompleted((prev) => {
-      const newCompleted = {
-        ...prev,
-        [id]: !prev[id],
-      }
-
-      // Calculate progress
-      const totalPrayers = Object.keys(newCompleted).length
-      const completedPrayers = Object.values(newCompleted).filter(Boolean).length
-      const progress = Math.round((completedPrayers / totalPrayers) * 100)
-
-      // Update progress through callback
-      onProgressUpdate(progress)
-
-      return newCompleted
-    })
+    setCompleted((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }))
   }
 
   return (
