@@ -1,0 +1,23 @@
+{
+  "title": "Open in v0",
+  "description": "Open components in v0 for customization.",
+  "published": true,
+  "featured": false,
+  "component": false,
+  "toc": true,
+  "body": {
+    "raw": "\nEvery component on ui.manfromexistence.com is editable on [v0 by Vercel](https://v0.dev). This allows you to easily customize the components in natural language and paste into your app.\n\n<a href=\"https://vercel.com/signup?utm_source=shad&utm_medium=web&utm_campaign=docs_cta_signup\">\n  <Image\n    src=\"/images/open-in-v0.png\"\n    width=\"716\"\n    height=\"420\"\n    alt=\"Open in v0\"\n    className=\"border dark:hidden shadow-sm rounded-lg overflow-hidden mt-6 w-full\"\n  />\n  <Image\n    src=\"/images/open-in-v0-dark.png\"\n    width=\"716\"\n    height=\"420\"\n    alt=\"Open in v0\"\n    className=\"border hidden dark:block shadow-sm rounded-lg overflow-hidden mt-6 w-full\"\n  />\n  <span class=\"sr-only\">Open in v0</span>\n</a>\n\nTo use v0, sign-up for a free [Vercel account here](https://vercel.com/signup?utm_source=shad&utm_medium=web&utm_campaign=docs_cta_signup). In addition to v0, this gives you free access to Vercel's frontend cloud platform by the creators of Next.js, where you can deploy and host your project for free.\n\nLearn more about getting started with [Vercel here](https://vercel.com/docs/getting-started-with-vercel?utm_source=manfromexistence_site&utm_medium=web&utm_campaign=docs_cta_about_vercel).\n\nLearn more about getting started with [v0 here](https://v0.dev/faq).\n",
+    "code": "var Component=(()=>{var h=Object.create;var i=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var v=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),_=(t,e)=>{for(var o in e)i(t,o,{get:e[o],enumerable:!0})},a=(t,e,o,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let r of p(e))!g.call(t,r)&&r!==o&&i(t,r,{get:()=>e[r],enumerable:!(s=l(e,r))||s.enumerable});return t};var w=(t,e,o)=>(o=t!=null?h(f(t)):{},a(e||!t||!t.__esModule?i(o,\"default\",{value:t,enumerable:!0}):o,t)),b=t=>a(i({},\"__esModule\",{value:!0}),t);var d=v((O,c)=>{c.exports=_jsx_runtime});var j={};_(j,{default:()=>u,frontmatter:()=>x});var n=w(d()),x={title:\"Open in v0\",description:\"Open components in v0 for customization.\"};function m(t){let e={a:\"a\",p:\"p\",...t.components},{Image:o}=e;return o||y(\"Image\",!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsxs)(e.p,{children:[\"Every component on ui.manfromexistence.com is editable on \",(0,n.jsx)(e.a,{href:\"https://v0.dev\",children:\"v0 by Vercel\"}),\". This allows you to easily customize the components in natural language and paste into your app.\"]}),`\n`,(0,n.jsxs)(\"a\",{href:\"https://vercel.com/signup?utm_source=shad&utm_medium=web&utm_campaign=docs_cta_signup\",children:[(0,n.jsx)(o,{src:\"/images/open-in-v0.png\",width:\"716\",height:\"420\",alt:\"Open in v0\",className:\"border dark:hidden shadow-sm rounded-lg overflow-hidden mt-6 w-full\"}),(0,n.jsx)(o,{src:\"/images/open-in-v0-dark.png\",width:\"716\",height:\"420\",alt:\"Open in v0\",className:\"border hidden dark:block shadow-sm rounded-lg overflow-hidden mt-6 w-full\"}),(0,n.jsx)(\"span\",{class:\"sr-only\",children:\"Open in v0\"})]}),`\n`,(0,n.jsxs)(e.p,{children:[\"To use v0, sign-up for a free\\xA0\",(0,n.jsx)(e.a,{href:\"https://vercel.com/signup?utm_source=shad&utm_medium=web&utm_campaign=docs_cta_signup\",children:\"Vercel account here\"}),\". In addition to v0, this gives you free access to Vercel's frontend cloud platform by the creators of Next.js, where you can deploy and host your project for free.\"]}),`\n`,(0,n.jsxs)(e.p,{children:[\"Learn more about getting started with \",(0,n.jsx)(e.a,{href:\"https://vercel.com/docs/getting-started-with-vercel?utm_source=manfromexistence_site&utm_medium=web&utm_campaign=docs_cta_about_vercel\",children:\"Vercel here\"}),\".\"]}),`\n`,(0,n.jsxs)(e.p,{children:[\"Learn more about getting started with \",(0,n.jsx)(e.a,{href:\"https://v0.dev/faq\",children:\"v0 here\"}),\".\"]})]})}function u(t={}){let{wrapper:e}=t.components||{};return e?(0,n.jsx)(e,{...t,children:(0,n.jsx)(m,{...t})}):m(t)}function y(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return b(j);})();\n;return Component;"
+  },
+  "_id": "docs/v0.mdx",
+  "_raw": {
+    "sourceFilePath": "docs/v0.mdx",
+    "sourceFileName": "v0.mdx",
+    "sourceFileDir": "docs",
+    "contentType": "mdx",
+    "flattenedPath": "docs/v0"
+  },
+  "type": "Doc",
+  "slug": "/docs/v0",
+  "slugAsParams": "v0"
+}
