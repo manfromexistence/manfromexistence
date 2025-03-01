@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import * as Portal from '@radix-ui/react-portal'
+import { isMonday, isTuesday, isWednesday, isThursday, isFriday, isSaturday } from 'date-fns'
 
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
@@ -34,8 +35,15 @@ const SunFilled: LucideIcon = forwardRef(({
 
 SunFilled.displayName = 'SunFilled'
 
+interface Subject {
+  id: string
+  name: string
+  time: string
+  duration: string
+  icon: LucideIcon
+}
+
 export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
-  // Initialize state with useMemo to avoid recreating the object on every render
   const [completed, setCompleted] = useState<Record<string, boolean>>(() => ({
     higher_mathamethics_1st_paper: false,
     higher_mathamethics_2nd_paper: false,
@@ -52,15 +60,19 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
     english_2nd_paper: false,
   }));
 
-  // Use useEffect to handle initial progress update
-  React.useEffect(() => {
-    const totalSubjects = Object.keys(completed).length;
-    const completedSubjects = Object.values(completed).filter(Boolean).length;
-    const progress = Math.round((completedSubjects / totalSubjects) * 100);
-    onProgressUpdate(progress);
-  }, []); // Run only once on mount
+  const today = new Date()
+  
+  const isSubjectForToday = (time: string) => {
+    if (isMonday(today) && time.includes('Monday')) return true
+    if (isTuesday(today) && time.includes('Tuesday')) return true
+    if (isWednesday(today) && time.includes('Wednesday')) return true
+    if (isThursday(today) && time.includes('Thursday')) return true
+    if (isFriday(today) && time.includes('Friday')) return true
+    if (isSaturday(today) && time.includes('Saturday')) return true
+    return false
+  }
 
-  const subjects = [
+  const subjects: Subject[] = [
     {
       id: "higher_mathamethics_1st_paper",
       name: "Higher Math (1st Paper)",
@@ -154,6 +166,8 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
     },
   ]
 
+  const todaySubjects = subjects.filter(subject => isSubjectForToday(subject.time))
+
   const handleCardClick = (id: string) => {
     setCompleted((prev) => {
       const newCompleted = {
@@ -161,12 +175,10 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
         [id]: !prev[id],
       }
       
-      // Calculate progress
-      const totalPrayers = Object.keys(newCompleted).length
-      const completedPrayers = Object.values(newCompleted).filter(Boolean).length
-      const progress = Math.round((completedPrayers / totalPrayers) * 100)
+      const totalSubjects = todaySubjects.length
+      const completedSubjects = todaySubjects.filter(subject => newCompleted[subject.id]).length
+      const progress = totalSubjects > 0 ? Math.round((completedSubjects / totalSubjects) * 100) : 0
       
-      // Update progress through callback
       onProgressUpdate(progress)
       
       return newCompleted
@@ -176,7 +188,7 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
   return (
     <div className="w-full mt-1">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
-        {subjects.map((subject) => {
+        {todaySubjects.map((subject) => {
           const Icon = subject.icon
           return (
             <Card

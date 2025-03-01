@@ -8,12 +8,13 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Clock, Sun, Sunrise, Sunset, Moon } from "lucide-react"
 import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
+import { isFriday } from 'date-fns'
 
-export const SunFilled: LucideIcon = forwardRef(({ 
-  size = 24, 
-  color = 'currentColor', 
+export const SunFilled: LucideIcon = forwardRef(({
+  size = 24,
+  color = 'currentColor',
   strokeWidth = 2,
-  ...props 
+  ...props
 }, ref) => {
   return (
     <svg
@@ -42,6 +43,8 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
     isha: false,
   })
 
+  const isJumuahDay = isFriday(new Date())
+
   const prayers = [
     {
       id: "fajr",
@@ -54,9 +57,9 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
     },
     {
       id: "dhuhr",
-      name: "Dhuhr",
-      time: "After sun's zenith",
-      duration: "Minimum 4 minutes",
+      name: isJumuahDay ? "Jumu'ah" : "Dhuhr",
+      time: isJumuahDay ? "Friday afternoon" : "After sun's zenith",
+      duration: isJumuahDay ? "Minimum 15 minutes" : "Minimum 4 minutes",
       icon: SunFilled,
       color: "bg-amber-500",
       hoverColor: "hover:bg-amber-600",
@@ -96,15 +99,15 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
         ...prev,
         [id]: !prev[id],
       }
-      
+
       // Calculate progress
       const totalPrayers = Object.keys(newCompleted).length
       const completedPrayers = Object.values(newCompleted).filter(Boolean).length
       const progress = Math.round((completedPrayers / totalPrayers) * 100)
-      
+
       // Update progress through callback
       onProgressUpdate(progress)
-      
+
       return newCompleted
     })
   }
