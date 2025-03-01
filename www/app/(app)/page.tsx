@@ -13,7 +13,9 @@ export default function Page() {
 
   return (
     <main className="h-full w-full p-2 overflow-auto">
+      
       <CalendarComponent />
+
       <div className="w-full border flex items-center justify-start h-20">
         <div className="flex flex-col">
           <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Prayer</span>
