@@ -18,6 +18,18 @@ export default function Page() {
   const [leetcodeProgress, setLeetcodeProgress] = React.useState(0)
   const [socialMediaInfluencingCards, setSocialMediaInfluencingCards] = React.useState(0)
   const [quranProgress, setQuranProgress] = React.useState(0)
+  const [currentDate, setCurrentDate] = React.useState<string>("")
+
+  React.useEffect(() => {
+    const date = new Date()
+    const options: Intl.DateTimeFormatOptions = { 
+      weekday: 'long', 
+      month: 'long', 
+      day: '2-digit',
+      year: 'numeric'
+    }
+    setCurrentDate(date.toLocaleDateString('en-US', options))
+  }, [])
 
   return (
     <main className="h-full w-full p-2 overflow-auto pb-12">
@@ -119,7 +131,7 @@ export default function Page() {
         <div className="flex flex-col flex-1">
           <span className="h-10 text-xs font-mono flex items-center justify-center px-4 border-b w-full">Date</span>
           <span className="h-10 text-xs font-mono flex items-center justify-center w-full px-4 hover:bg-primary-foreground hover:border-b">
-            Thursday, Fabruary - 27/02/2025
+            {currentDate}
           </span>
         </div>
       </div>
