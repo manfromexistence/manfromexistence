@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Separator } from "@/ui/apps/www/registry/new-york/ui/separator";
 
-type TimeLevel = 'minutes' | 'hours' | 'days';
+type TimeLevel = 'minutes' | 'hours';
 
 const Time = () => {
     const scrollRef = React.useRef<HTMLDivElement>(null);
@@ -43,10 +43,10 @@ const Time = () => {
             if (e.ctrlKey) {
                 if (e.key === '+' || e.key === '=') {
                     e.preventDefault();
-                    setTimeLevel(prev => prev === 'hours' ? 'minutes' : prev === 'days' ? 'hours' : 'minutes');
+                    setTimeLevel(prev => prev === 'hours' ? 'minutes' : 'minutes');
                 } else if (e.key === '-') {
                     e.preventDefault();
-                    setTimeLevel(prev => prev === 'minutes' ? 'hours' : prev === 'hours' ? 'days' : 'days');
+                    setTimeLevel(prev => prev === 'minutes' ? 'hours' : 'hours');
                 }
             }
         };
@@ -63,7 +63,7 @@ const Time = () => {
                         key={i}
                         id={`minute-${i}`}
                         className={cn(
-                            "flex min-w-[60px] flex-col items-center justify-center px-6 hover:bg-primary-foreground relative",
+                            "flex min-w-[60px] flex-col items-center justify-center px-6 hover:bg-primary-foreground relative h-full",
                             currentTime.getMinutes() === i && "bg-primary-foreground"
                         )}
                     >
@@ -71,7 +71,7 @@ const Time = () => {
                         <span className="text-xs font-medium">
                             {i.toString().padStart(2, "0")}m
                         </span>
-                        <div className="h-full w-[1px] bg-border absolute right-0" />
+                        <div className="h-[20px] w-[1px] bg-border absolute right-0" />
 
                     </div>
                 ));
@@ -82,7 +82,7 @@ const Time = () => {
                         key={i}
                         id={`hour-${i}`}
                         className={cn(
-                            "flex min-w-[100px] flex-col items-center justify-center px-6 hover:bg-primary-foreground relative",
+                            "flex min-w-[100px] flex-col items-center justify-center px-6 hover:bg-primary-foreground relative h-full",
                             currentTime.getHours() === i && "bg-primary-foreground"
                         )}
                     >
@@ -90,33 +90,10 @@ const Time = () => {
                         <span className="text-sm font-medium">
                             {i.toString().padStart(2, "0")}:00
                         </span>
-                        <div className="h-full w-[1px] bg-border absolute right-0" />
+                        <div className="h-[20px] w-[1px] bg-border absolute right-0" />
 
                     </div>
                 ));
-
-            case 'days':
-                return Array.from({ length: 7 }, (_, i) => {
-                    const day = new Date();
-                    day.setDate(day.getDate() - day.getDay() + i);
-                    return (
-                        <div
-                            key={i}
-                            id={`day-${i}`}
-                            className={cn(
-                                "flex min-w-[125px] flex-col items-center justify-center px-6 hover:bg-primary-foreground relative",
-                                day.getDate() === currentTime.getDate() && "bg-primary-foreground"
-                            )}
-                        >
-                            {/* <div className="h-full w-px bg-border" /> */}
-                            <span className="text-sm font-medium">
-                                {day.toLocaleDateString(undefined, { weekday: 'short' })}
-                            </span>
-                            {/* <Separator /> */}
-                            <div className="h-full w-[1px] bg-border absolute right-0" />
-                        </div>
-                    );
-                });
         }
     };
 
@@ -128,8 +105,6 @@ const Time = () => {
                     return `minute-${currentTime.getMinutes()}`;
                 case 'hours':
                     return `hour-${currentTime.getHours()}`;
-                case 'days':
-                    return `day-${currentTime.getDay()}`;
             }
         };
 
