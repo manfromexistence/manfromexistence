@@ -4,6 +4,7 @@ import LeftSidebar from "@/components/sidebar/left-sidebar"
 import { RightSidebar } from "@/components/sidebar/right-sidebar"
 import { SubCategorySidebarProvider } from "@/components/sidebar/sub-category-sidebar"
 import Main from "@/components/sidebar/main"
+import Time from "@/components/time"
 
 interface AppLayoutProps {
   children: React.ReactNode
@@ -28,6 +29,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
               {children}
             </Main>
           </div>
+          <Time />
         </SubCategorySidebarProvider>
       </CategorySidebarProvider>
     </SidebarProvider>
