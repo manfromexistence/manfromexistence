@@ -1,10 +1,34 @@
 "use client"
 
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Clock, CircleDot, Circle, CircleDashed } from "lucide-react"
+
+const activities = [
+    {
+        id: "easy",
+        name: "Easy Problems",
+        time: "Beginner Level",
+        duration: "30-45 min",
+        icon: CircleDot
+    },
+    {
+        id: "medium",
+        name: "Medium Problems",
+        time: "Intermediate Level",
+        duration: "45-60 min",
+        icon: Circle
+    },
+    {
+        id: "hard",
+        name: "Hard Problems",
+        time: "Advanced Level",
+        duration: "60+ min",
+        icon: CircleDashed
+    }
+]
 
 export default function LeetcodeCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
     const [completed, setCompleted] = useState<Record<string, boolean>>({
@@ -13,47 +37,19 @@ export default function LeetcodeCards({ onProgressUpdate }: { onProgressUpdate: 
         hard: false,
     })
 
-    const activities = [
-        {
-            id: "easy",
-            name: "Easy Problem",
-            time: "Morning session",
-            duration: "15 minutes",
-            icon: CircleDot,
-        },
-        {
-            id: "medium",
-            name: "Medium Problem",
-            time: "Afternoon session",
-            duration: "15 minutes",
-            icon: Circle,
-        },
-        {
-            id: "hard",
-            name: "Hard Problem",
-            time: "Evening session",
-            duration: "15 minutes",
-            icon: CircleDashed,
-        },
-    ]
+    // Move progress calculation to useEffect
+    useEffect(() => {
+        const totalActivities = Object.keys(completed).length
+        const completedActivities = Object.values(completed).filter(Boolean).length
+        const progress = Math.round((completedActivities / totalActivities) * 100)
+        onProgressUpdate(progress)
+    }, [completed, onProgressUpdate])
 
     const handleCardClick = (id: string) => {
-        setCompleted((prev) => {
-            const newCompleted = {
-                ...prev,
-                [id]: !prev[id],
-            }
-
-            // Calculate progress
-            const totalActivities = Object.keys(newCompleted).length
-            const completedActivities = Object.values(newCompleted).filter(Boolean).length
-            const progress = Math.round((completedActivities / totalActivities) * 100)
-
-            // Update progress through callback
-            onProgressUpdate(progress)
-
-            return newCompleted
-        })
+        setCompleted((prev) => ({
+            ...prev,
+            [id]: !prev[id],
+        }))
     }
 
     return (

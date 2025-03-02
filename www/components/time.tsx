@@ -63,16 +63,21 @@ const Time = () => {
                         key={i}
                         id={`minute-${i}`}
                         className={cn(
-                            "flex min-w-[60px] flex-col items-center justify-center px-6 hover:bg-primary-foreground relative h-full",
-                            currentTime.getMinutes() === i && "bg-primary-foreground"
+                            "flex min-w-[20px] flex-col items-center justify-center relative h-full hover:bg-primary-foreground",
+                            currentTime.getMinutes() === i && "bg-primary-foreground",
+                            i % 5 === 0 ? "min-w-[40px]" : "min-w-[12px]" // Wider space for numbered minutes
                         )}
                     >
-                        {/* <div className="h-full w-px bg-border" /> */}
-                        <span className="text-xs font-medium">
-                            {i.toString().padStart(2, "0")}m
-                        </span>
-                        <div className="h-[20px] w-[1px] bg-border absolute right-0" />
-
+                        {i % 5 === 0 ? (
+                            // Numbered minute markers (0, 5, 10, etc.)
+                            <span className="text-xs font-medium">
+                                {i === 0 ? '0' : i.toString()}
+                            </span>
+                        ) : (
+                            // Small border marks for in-between minutes
+                            <div className="h-4 w-[1px] bg-border" />
+                        )}
+                        {/* <div className="h-[20px] w-[1px] bg-border absolute right-0" /> */}
                     </div>
                 ));
 
@@ -208,7 +213,7 @@ const Time = () => {
                         onMouseLeave={handleScrollEnd}
                         onTouchStart={() => handleScrollStart('left')}
                         onTouchEnd={handleScrollEnd}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full w-6 h-6 p-0"
+                        className="absolute left-1 top-1/2 -translate-y-1/2 z-10 rounded-full w-6 h-6 p-0"
                         size="icon"
                     >
                         <ChevronLeft className="h-4 w-4" />
@@ -221,17 +226,17 @@ const Time = () => {
                         onMouseLeave={handleScrollEnd}
                         onTouchStart={() => handleScrollStart('right')}
                         onTouchEnd={handleScrollEnd}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full w-6 h-6 p-0"
+                        className="absolute right-1 top-1/2 -translate-y-1/2 z-10 rounded-full w-6 h-6 p-0"
                         size="icon"
                     >
                         <ChevronRight className="h-4 w-4" />
                     </Button>
                 )}
                 <div
-                    className="w-full overflow-x-hidden select-none transition-all duration-200 ease-in-out"
+                    className="w-full overflow-x-hidden select-none transition-all duration-200 ease-in-out flex items-center justify-center"
                     ref={scrollRef}
                 >
-                    <div className="flex h-8 items-center px-1">
+                    <div className="flex h-8 items-center">
                         {renderTimeMarkers()}
                     </div>
                 </div>
