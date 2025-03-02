@@ -87,16 +87,20 @@ const Time = () => {
                         key={i}
                         id={`hour-${i}`}
                         className={cn(
-                            "flex min-w-[100px] flex-col items-center justify-center px-6 hover:bg-primary-foreground relative h-full",
-                            currentTime.getHours() === i && "bg-primary-foreground"
+                            "flex min-w-[20px] flex-col items-center justify-center relative h-full hover:bg-primary-foreground",
+                            currentTime.getHours() === i && "bg-primary-foreground",
+                            i % 3 === 0 ? "min-w-[40px]" : "min-w-[12px]" // Wider space for numbered hours
                         )}
                     >
-                        {/* <div className="h-full w-px bg-border" /> */}
-                        <span className="text-sm font-medium">
-                            {i.toString().padStart(2, "0")}:00
-                        </span>
-                        <div className="h-[20px] w-[1px] bg-border absolute right-0" />
-
+                        {i % 3 === 0 ? (
+                            // Numbered hour markers (0, 3, 6, etc.)
+                            <span className="text-xs font-medium">
+                                {i === 0 ? '0' : i.toString()}
+                            </span>
+                        ) : (
+                            // Small border marks for in-between hours
+                            <div className="h-4 w-[1px] bg-border" />
+                        )}
                     </div>
                 ));
         }
