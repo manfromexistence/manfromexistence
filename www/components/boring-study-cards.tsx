@@ -44,21 +44,50 @@ interface Subject {
 }
 
 export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
-  const [completed, setCompleted] = useState<Record<string, boolean>>(() => ({
-    higher_mathamethics_1st_paper: false,
-    higher_mathamethics_2nd_paper: false,
-    physics_1st_paper: false,
-    physics_2nd_paper: false,
-    chemistry_1st_paper: false,
-    chemistry_2nd_paper: false,
-    biology_1st_paper: false,
-    biology_2nd_paper: false,
-    ict: false,
-    bangla_1st_paper: false,
-    bangla_2nd_paper: false,
-    english_1st_paper: false,
-    english_2nd_paper: false,
-  }));
+  // Load completed state from localStorage on component mount
+  const [completed, setCompleted] = useState<Record<string, boolean>>(() => {
+    const saved = localStorage.getItem('completedSubjects');
+    return saved ? JSON.parse(saved) : {
+      higher_mathamethics_1st_paper: false,
+      higher_mathamethics_2nd_paper: false,
+      physics_1st_paper: false,
+      physics_2nd_paper: false,
+      chemistry_1st_paper: false,
+      chemistry_2nd_paper: false,
+      biology_1st_paper: false,
+      biology_2nd_paper: false,
+      ict: false,
+      bangla_1st_paper: false,
+      bangla_2nd_paper: false,
+      english_1st_paper: false,
+      english_2nd_paper: false,
+    };
+  });
+
+  // Reset completed state at midnight
+  React.useEffect(() => {
+    const now = new Date();
+    const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    const timeToMidnight = tomorrow.getTime() - now.getTime();
+
+    const resetTimer = setTimeout(() => {
+      setCompleted(prev => {
+        const resetState = Object.keys(prev).reduce((acc, key) => ({
+          ...acc,
+          [key]: false
+        }), {});
+        localStorage.setItem('completedSubjects', JSON.stringify(resetState));
+        return resetState;
+      });
+    }, timeToMidnight);
+
+    return () => clearTimeout(resetTimer);
+  }, []);
+
+  // Save to localStorage whenever completed state changes
+  React.useEffect(() => {
+    localStorage.setItem('completedSubjects', JSON.stringify(completed));
+  }, [completed]);
 
   const today = new Date()
 
@@ -169,10 +198,13 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
   const todaySubjects = subjects.filter(subject => isSubjectForToday(subject.time))
 
   const handleCardClick = (id: string) => {
-    setCompleted((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
+    setCompleted((prev) => {
+      const newState = {
+        ...prev,
+        [id]: !prev[id],
+      };
+      return newState;
+    });
   };
 
   // Add this useEffect to handle progress updates

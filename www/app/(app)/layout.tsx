@@ -29,7 +29,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
               {children}
             </Main>
           </div>
-          <Time />
+          {/* <Time /> */}
         </SubCategorySidebarProvider>
       </CategorySidebarProvider>
     </SidebarProvider>
