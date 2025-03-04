@@ -23,9 +23,9 @@ export default function Page() {
 
   React.useEffect(() => {
     const date = new Date()
-    const options: Intl.DateTimeFormatOptions = { 
-      weekday: 'long', 
-      month: 'long', 
+    const options: Intl.DateTimeFormatOptions = {
+      weekday: 'long',
+      month: 'long',
       day: '2-digit',
       year: 'numeric'
     }
@@ -35,11 +35,9 @@ export default function Page() {
   return (
     <main className="h-full w-full p-2 overflow-auto pb-12">
 
-<PixelatedText
-        text="Hello World!"
-        fontSize={40}
-        pixelSize={6}
-      />
+<PixelatedText fontSize={32} pixelSize={4} position="left" className="w-full py-4">
+  Hello <PixelatedText.Rainbow>World!</PixelatedText.Rainbow>
+</PixelatedText>
 
       {/* <CalendarComponent /> */}
 

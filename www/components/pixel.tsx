@@ -1,39 +1,53 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 interface PixelatedTextProps {
-  text: string;
+  children: React.ReactNode;
+  className?: string;
   fontSize?: number;
   pixelSize?: number;
   textColor?: string;
+  position?: 'left' | 'center' | 'right';
 }
 
-const PixelatedText: React.FC<PixelatedTextProps> = ({
-  text,
-  fontSize = 30,
-  pixelSize = 4,
-  textColor = 'white',
+interface RainbowPixelatedTextProps {
+  children: string;
+  className?: string;
+}
+
+const PixelContext = React.createContext<{
+  fontSize: number;
+  pixelSize: number;
+}>({
+  fontSize: 30,
+  pixelSize: 4,
+});
+
+const measureText = (text: string, fontSize: number) => {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return { width: 0, height: 0 };
+  
+  ctx.font = `bold ${fontSize}px monospace`;
+  const metrics = ctx.measureText(text);
+  
+  return {
+    width: Math.ceil(metrics.width),
+    height: Math.ceil(fontSize * 1.5) // Gives enough height for the text
+  };
+};
+
+const BasePixelatedText: React.FC<RainbowPixelatedTextProps> = ({
+  children,
+  className,
 }) => {
+  const { fontSize, pixelSize } = React.useContext(PixelContext);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [canvasSize, setCanvasSize] = useState({ width: 300, height: 100 });
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const handleResize = () => {
-      const parentWidth = canvas.parentElement?.clientWidth || 300;
-      const parentHeight = Math.max(canvas.parentElement?.clientHeight || 100, 100);
-
-      if (parentWidth !== canvasSize.width || parentHeight !== canvasSize.height) {
-        setCanvasSize({ width: parentWidth, height: parentHeight });
-      }
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, [canvasSize]);
+  const textDimensions = measureText(children, fontSize);
+  const [canvasSize] = useState({
+    width: textDimensions.width,
+    height: textDimensions.height
+  });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -42,46 +56,150 @@ const PixelatedText: React.FC<PixelatedTextProps> = ({
     if (!ctx) return;
 
     ctx.clearRect(0, 0, canvasSize.width, canvasSize.height);
-    ctx.font = `${fontSize}px monospace`;
-    ctx.fillStyle = textColor;
-    ctx.fillText(text, 10, fontSize);
+    ctx.font = `bold ${fontSize}px monospace`;
+    ctx.textBaseline = 'middle';
+    
+    const textMetrics = ctx.measureText(children);
+    const x = 0;
+    const y = canvasSize.height / 2;
+    
+    ctx.fillText(children, x, y);
 
     const imageData = ctx.getImageData(0, 0, canvasSize.width, canvasSize.height);
     const data = imageData.data;
 
+    ctx.clearRect(0, 0, canvasSize.width, canvasSize.height);
+
     for (let y = 0; y < canvasSize.height; y += pixelSize) {
       for (let x = 0; x < canvasSize.width; x += pixelSize) {
         const index = y * canvasSize.width * 4 + x * 4;
-        const r = data[index];
-        const g = data[index + 1];
-        const b = data[index + 2];
-        const a = data[index + 3];
-
-        for (let py = 0; py < pixelSize; py++) {
-          for (let px = 0; px < pixelSize; px++) {
-            const blockIndex = (y + py) * canvasSize.width * 4 + (x + px) * 4;
-            if (blockIndex < data.length) {
-              data[blockIndex] = r;
-              data[blockIndex + 1] = g;
-              data[blockIndex + 2] = b;
-              data[blockIndex + 3] = a;
-            }
-          }
+        if (data[index + 3] > 0) {
+          ctx.fillStyle = 'white'; // Or use textColor from context if needed
+          ctx.fillRect(x, y, pixelSize - 1, pixelSize - 1);
         }
       }
     }
-
-    ctx.putImageData(imageData, 0, 0);
-  }, [text, fontSize, pixelSize, textColor, canvasSize]);
+  }, [children, fontSize, pixelSize, canvasSize]);
 
   return (
     <canvas
       ref={canvasRef}
       width={canvasSize.width}
       height={canvasSize.height}
-      style={{ width: '100%', height: '100%' }}
+      className={cn('inline-block align-middle', className)}
+      style={{ 
+        imageRendering: 'pixelated',
+        width: `${canvasSize.width}px`,
+        height: `${canvasSize.height}px`
+      }}
     />
   );
 };
+
+const RainbowPixelatedText: React.FC<RainbowPixelatedTextProps> = ({
+  children,
+  className,
+}) => {
+  const [hue, setHue] = useState(0);
+  const { fontSize, pixelSize } = React.useContext(PixelContext);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const textDimensions = measureText(children, fontSize);
+  const [canvasSize] = useState({
+    width: textDimensions.width,
+    height: textDimensions.height
+  });
+
+  // Rainbow animation effect
+  useEffect(() => {
+    let animationFrame: number;
+    const animate = () => {
+      setHue(prev => (prev + 1) % 360);
+      animationFrame = requestAnimationFrame(animate);
+    };
+    animate();
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+
+  // Canvas rendering effect
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    ctx.clearRect(0, 0, canvasSize.width, canvasSize.height);
+    ctx.font = `bold ${fontSize}px monospace`;
+    ctx.textBaseline = 'middle';
+    
+    const textMetrics = ctx.measureText(children);
+    const x = 0;
+    const y = canvasSize.height / 2;
+    
+    ctx.fillText(children, x, y);
+
+    const imageData = ctx.getImageData(0, 0, canvasSize.width, canvasSize.height);
+    const data = imageData.data;
+
+    ctx.clearRect(0, 0, canvasSize.width, canvasSize.height);
+
+    for (let y = 0; y < canvasSize.height; y += pixelSize) {
+      for (let x = 0; x < canvasSize.width; x += pixelSize) {
+        const index = y * canvasSize.width * 4 + x * 4;
+        if (data[index + 3] > 0) {
+          const pixelHue = (hue + (x / canvasSize.width) * 360) % 360;
+          ctx.fillStyle = `hsl(${pixelHue}, 100%, 50%)`;
+          ctx.fillRect(x, y, pixelSize - 1, pixelSize - 1);
+        }
+      }
+    }
+  }, [children, fontSize, pixelSize, hue, canvasSize]);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      width={canvasSize.width}
+      height={canvasSize.height}
+      className={cn('inline-block align-middle', className)}
+      style={{ 
+        imageRendering: 'pixelated',
+        width: `${canvasSize.width}px`,
+        height: `${canvasSize.height}px`
+      }}
+    />
+  );
+};
+
+const PixelatedText: React.FC<PixelatedTextProps> & {
+  Rainbow: typeof RainbowPixelatedText;
+} = ({
+  children,
+  className,
+  fontSize = 30,
+  pixelSize = 4,
+  textColor = 'white',
+  position = 'left',
+}) => {
+  return (
+    <PixelContext.Provider value={{ fontSize, pixelSize }}>
+      <div 
+        className={cn(
+          'flex items-center gap-0 flex-nowrap w-max', // Added w-max
+          position === 'center' && 'justify-center',
+          position === 'right' && 'justify-end',
+          className
+        )}
+      >
+        {React.Children.map(children, child => {
+          if (typeof child === 'string') {
+            return <BasePixelatedText>{child}</BasePixelatedText>;
+          }
+          return child;
+        })}
+      </div>
+    </PixelContext.Provider>
+  );
+};
+
+PixelatedText.Rainbow = RainbowPixelatedText;
 
 export default PixelatedText;
