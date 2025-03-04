@@ -18,6 +18,8 @@ import {
   Search,
   Sparkles,
   Mail,
+  Settings2,
+  Cog,
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -422,6 +424,20 @@ export function RightSidebar() {
           className="hover:bg-background flex h-6 w-6 items-center justify-center rounded-md"
         >
           <Mail
+            className={cn(
+              subCategorySidebarState === "expanded"
+                ? "text-primary"
+                : "text-muted-foreground",
+              "h-4 w-4"
+            )}
+          />
+        </div>
+        <Separator orientation="vertical" className="h-4" />
+        <div
+          onClick={handleSubCategorySidebarToggle}
+          className="hover:bg-background flex h-6 w-6 items-center justify-center rounded-md"
+        >
+          <Cog
             className={cn(
               subCategorySidebarState === "expanded"
                 ? "text-primary"

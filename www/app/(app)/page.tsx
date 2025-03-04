@@ -49,9 +49,9 @@ export default function Page() {
   return (
     <main className="h-full w-full p-2 overflow-auto pb-12">
 
-      <CalendarComponent />
+      {/* <CalendarComponent /> */}
 
-      <PixelatedText fontSize={32} pixelSize={3} position="left" className="py-6">
+      <PixelatedText fontSize={40} pixelSize={3} position="left" className="py-6">
         {getTimeBasedGreeting()}, <PixelatedText.Rainbow>manfromexistence</PixelatedText.Rainbow>. Level <PixelatedText.Rainbow>#19</PixelatedText.Rainbow> : Streak <PixelatedText.Rainbow>#1</PixelatedText.Rainbow>
       </PixelatedText>
 
