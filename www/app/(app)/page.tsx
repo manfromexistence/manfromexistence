@@ -23,7 +23,7 @@ export default function Page() {
 
   const getTimeBasedGreeting = () => {
     const hour = new Date().getHours()
-    
+
     if (hour >= 5 && hour < 12) {
       return "Good Morning"
     } else if (hour >= 12 && hour < 17) {
@@ -51,8 +51,8 @@ export default function Page() {
 
       <CalendarComponent />
 
-      <PixelatedText fontSize={35} pixelSize={4} position="left" className="py-4 h-10">
-        {getTimeBasedGreeting()}, <PixelatedText.Rainbow>manfromexistence.</PixelatedText.Rainbow> You are at LVL.<PixelatedText.Rainbow>#19</PixelatedText.Rainbow> Streak.<PixelatedText.Rainbow>#1</PixelatedText.Rainbow>
+      <PixelatedText fontSize={32} pixelSize={3} position="left" className="py-6">
+        {getTimeBasedGreeting()}, <PixelatedText.Rainbow>manfromexistence</PixelatedText.Rainbow>. Level <PixelatedText.Rainbow>#19</PixelatedText.Rainbow> : Streak <PixelatedText.Rainbow>#1</PixelatedText.Rainbow>
       </PixelatedText>
 
       <div className="w-full border flex items-center justify-start h-20">
