@@ -1,6 +1,4 @@
-"use client"
-
-// import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 interface PixelatedTextProps {
   text: string;

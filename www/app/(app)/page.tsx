@@ -1,89 +1,203 @@
-// components/PixelatedText.tsx
+"use client"
 
-import React, { useRef, useEffect, useState } from 'react';
+import * as React from "react"
+import { Progress } from "@/components/ui/progress"
+import { Checkbox } from "@/components/ui/checkbox"
+import PrayerCards from "@/components/prayer-cards"
+import BoringStudyCards from "@/components/boring-study-cards"
+import CalendarComponent from "@/components/calendar"
+import ChessCards from "@/components/chess-cards"
+import LeetcodeCards from "@/components/leetcode-cards"
+import QuranCards from "@/components/quran-cards"
+import SocialMediaCards from "@/components/social-media-influencing-cards"
+import PixelatedText from "@/components/pixel"
 
-interface PixelatedTextProps {
-  text: string;
-  fontSize?: number;
-  pixelSize?: number;
-  textColor?: string;
-}
+export default function Page() {
+  const [prayerProgress, setPrayerProgress] = React.useState(0)
+  const [boringStudyProgress, setBoringStudyProgress] = React.useState(0)
+  const [chessProgress, setChessProgress] = React.useState(0)
+  const [leetcodeProgress, setLeetcodeProgress] = React.useState(0)
+  const [socialMediaInfluencingCards, setSocialMediaInfluencingCards] = React.useState(0)
+  const [quranProgress, setQuranProgress] = React.useState(0)
+  const [currentDate, setCurrentDate] = React.useState<string>("")
 
-const PixelatedText: React.FC<PixelatedTextProps> = ({
-  text,
-  fontSize = 30,
-  pixelSize = 4,
-  textColor = 'white',
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [canvasSize, setCanvasSize] = useState({ width: 300, height: 100 });
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const handleResize = () => {
-      const parentWidth = canvas.parentElement?.clientWidth || 300;
-      const parentHeight = Math.max(canvas.parentElement?.clientHeight || 100, 100);
-
-      if (parentWidth !== canvasSize.width || parentHeight !== canvasSize.height) {
-        setCanvasSize({ width: parentWidth, height: parentHeight });
-      }
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, [canvasSize]);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    ctx.clearRect(0, 0, canvasSize.width, canvasSize.height);
-    ctx.font = `${fontSize}px monospace`;
-    ctx.fillStyle = textColor;
-    ctx.fillText(text, 10, fontSize);
-
-    const imageData = ctx.getImageData(0, 0, canvasSize.width, canvasSize.height);
-    const data = imageData.data;
-
-    for (let y = 0; y < canvasSize.height; y += pixelSize) {
-      for (let x = 0; x < canvasSize.width; x += pixelSize) {
-        const index = y * canvasSize.width * 4 + x * 4;
-        const r = data[index];
-        const g = data[index + 1];
-        const b = data[index + 2];
-        const a = data[index + 3];
-
-        for (let py = 0; py < pixelSize; py++) {
-          for (let px = 0; px < pixelSize; px++) {
-            const blockIndex = (y + py) * canvasSize.width * 4 + (x + px) * 4;
-            if (blockIndex < data.length) {
-              data[blockIndex] = r;
-              data[blockIndex + 1] = g;
-              data[blockIndex + 2] = b;
-              data[blockIndex + 3] = a;
-            }
-          }
-        }
-      }
+  React.useEffect(() => {
+    const date = new Date()
+    const options: Intl.DateTimeFormatOptions = { 
+      weekday: 'long', 
+      month: 'long', 
+      day: '2-digit',
+      year: 'numeric'
     }
-
-    ctx.putImageData(imageData, 0, 0);
-  }, [text, fontSize, pixelSize, textColor, canvasSize]);
+    setCurrentDate(date.toLocaleDateString('en-US', options))
+  }, [])
 
   return (
-    <canvas
-      ref={canvasRef}
-      width={canvasSize.width}
-      height={canvasSize.height}
-      style={{ width: '100%', height: '100%' }}
-    />
-  );
-};
+    <main className="h-full w-full p-2 overflow-auto pb-12">
 
-export default PixelatedText;
+<PixelatedText
+        text="Hello World!"
+        fontSize={40}
+        pixelSize={6}
+      />
+
+      {/* <CalendarComponent /> */}
+
+      <div className="w-full border flex items-center justify-start h-20">
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Prayer</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Boring Study</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Quran</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Programming</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Excercise</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Mathamatics</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Physics</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Chemistry</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Biology</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Social Media Influencing</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Chess</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Leetcode</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Family</span>
+
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Friends</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-max border-r px-4 border-b">Journaling</span>
+          <div className="h-10 text-xs font-mono flex items-center justify-center w-full border-r px-4 hover:bg-primary-foreground hover:border-b">
+            <Checkbox />
+          </div>
+        </div>
+        <div className="flex flex-col flex-1">
+          <span className="h-10 text-xs font-mono flex items-center justify-center px-4 border-b w-full">Date</span>
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-full px-4 hover:bg-primary-foreground hover:border-b">
+            {currentDate}
+          </span>
+        </div>
+      </div>
+      <div className="min-h-screen mt-2 space-y-2 px-1">
+        <div className="w-full flex flex-col space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-2xl h-full flex items-center">Prayer</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={prayerProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <PrayerCards onProgressUpdate={setPrayerProgress} />
+        </div>
+        {/* <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-2xl h-full flex items-center">Boring Study</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={boringStudyProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
+        </div> */}
+        <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-2xl h-full flex items-center">Quran</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={quranProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <QuranCards onProgressUpdate={setQuranProgress} />
+        </div>
+        <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-2xl h-full flex items-center">Social Media Influencing</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={socialMediaInfluencingCards} className="w-[250px]" />
+            </div>
+          </div>
+          <SocialMediaCards onProgressUpdate={setSocialMediaInfluencingCards} />
+        </div>
+        <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-2xl h-full flex items-center">Chess</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={chessProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <ChessCards onProgressUpdate={setChessProgress} />
+        </div>
+        <div className="w-full flex flex-col px-1 space-y-2">
+          <div className="h-10 flex items-start justify-between w-full">
+            <span className="font-bold text-2xl h-full flex items-center">Leetcode</span>
+            <div className="h-full flex items-center justify-end mt-2">
+              <Progress value={leetcodeProgress} className="w-[250px]" />
+            </div>
+          </div>
+          <LeetcodeCards onProgressUpdate={setLeetcodeProgress} />
+        </div>
+      </div>
+    </main>
+  )
+}
