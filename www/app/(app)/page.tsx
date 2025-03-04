@@ -21,6 +21,20 @@ export default function Page() {
   const [quranProgress, setQuranProgress] = React.useState(0)
   const [currentDate, setCurrentDate] = React.useState<string>("")
 
+  const getTimeBasedGreeting = () => {
+    const hour = new Date().getHours()
+    
+    if (hour >= 5 && hour < 12) {
+      return "Good Morning"
+    } else if (hour >= 12 && hour < 17) {
+      return "Good Afternoon"
+    } else if (hour >= 17 && hour < 21) {
+      return "Good Evening"
+    } else {
+      return "Good Night"
+    }
+  }
+
   React.useEffect(() => {
     const date = new Date()
     const options: Intl.DateTimeFormatOptions = {
@@ -35,11 +49,11 @@ export default function Page() {
   return (
     <main className="h-full w-full p-2 overflow-auto pb-12">
 
-      <PixelatedText fontSize={50} pixelSize={4} position="left" className="py-4 w-full">
-        Hello <PixelatedText.Rainbow>World!</PixelatedText.Rainbow>
-      </PixelatedText>
+      <CalendarComponent />
 
-      {/* <CalendarComponent /> */}
+      <PixelatedText fontSize={35} pixelSize={4} position="left" className="py-4 h-10">
+        {getTimeBasedGreeting()}, <PixelatedText.Rainbow>manfromexistence.</PixelatedText.Rainbow> You are at LVL.<PixelatedText.Rainbow>#19</PixelatedText.Rainbow> Streak.<PixelatedText.Rainbow>#1</PixelatedText.Rainbow>
+      </PixelatedText>
 
       <div className="w-full border flex items-center justify-start h-20">
         <div className="flex flex-col">
