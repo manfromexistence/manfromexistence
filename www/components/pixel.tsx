@@ -89,8 +89,8 @@ const BasePixelatedText: React.FC<RainbowPixelatedTextProps> = ({
       className={cn('inline-block align-middle', className)}
       style={{ 
         imageRendering: 'pixelated',
-        width: `${canvasSize.width}px`,
-        height: `${canvasSize.height}px`
+        width: 'min-content', // Changed from 100% to min-content
+        height: `${canvasSize.height}px` // Keep original text height
       }}
     />
   );
@@ -162,8 +162,8 @@ const RainbowPixelatedText: React.FC<RainbowPixelatedTextProps> = ({
       className={cn('inline-block align-middle', className)}
       style={{ 
         imageRendering: 'pixelated',
-        width: `${canvasSize.width}px`,
-        height: `${canvasSize.height}px`
+        width: 'min-content', // Changed from 100% to min-content
+        height: `${canvasSize.height}px` // Keep original text height
       }}
     />
   );
@@ -183,7 +183,7 @@ const PixelatedText: React.FC<PixelatedTextProps> & {
     <PixelContext.Provider value={{ fontSize, pixelSize }}>
       <div 
         className={cn(
-          'flex items-center gap-0 flex-nowrap w-max', // Added w-max
+          'inline-flex items-center gap-0 w-min', // Changed flex to inline-flex and added w-min
           position === 'center' && 'justify-center',
           position === 'right' && 'justify-end',
           className

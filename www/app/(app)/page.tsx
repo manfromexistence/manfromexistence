@@ -35,9 +35,9 @@ export default function Page() {
   return (
     <main className="h-full w-full p-2 overflow-auto pb-12">
 
-<PixelatedText fontSize={32} pixelSize={4} position="left" className="w-full py-4">
-  Hello <PixelatedText.Rainbow>World!</PixelatedText.Rainbow>
-</PixelatedText>
+      <PixelatedText fontSize={75} pixelSize={4} position="left" className="py-4 w-full">
+        Hello <PixelatedText.Rainbow>World!</PixelatedText.Rainbow>
+      </PixelatedText>
 
       {/* <CalendarComponent /> */}
 
