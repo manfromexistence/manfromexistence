@@ -43,11 +43,8 @@ const BasePixelatedText: React.FC<RainbowPixelatedTextProps> = ({
 }) => {
   const { fontSize, pixelSize } = React.useContext(PixelContext);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const textDimensions = measureText(children, fontSize);
-  const [canvasSize] = useState({
-    width: textDimensions.width,
-    height: textDimensions.height
-  });
+  // Calculate dimensions on each render
+  const canvasSize = measureText(children, fontSize);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -79,7 +76,7 @@ const BasePixelatedText: React.FC<RainbowPixelatedTextProps> = ({
         }
       }
     }
-  }, [children, fontSize, pixelSize, canvasSize]);
+  }, [children, fontSize, pixelSize, canvasSize.width, canvasSize.height]);
 
   return (
     <canvas
@@ -103,11 +100,8 @@ const RainbowPixelatedText: React.FC<RainbowPixelatedTextProps> = ({
   const [hue, setHue] = useState(0);
   const { fontSize, pixelSize } = React.useContext(PixelContext);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const textDimensions = measureText(children, fontSize);
-  const [canvasSize] = useState({
-    width: textDimensions.width,
-    height: textDimensions.height
-  });
+  // Calculate dimensions on each render
+  const canvasSize = measureText(children, fontSize);
 
   // Rainbow animation effect
   useEffect(() => {
