@@ -4,7 +4,7 @@ import * as React from "react"
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 
-export const PixelatedText = React.memo(({ children, fontSize = 30, pixelSize = 4, position = "left", className = "" }) => {
+export const PixelatedText = React.memo<PixelatedTextProps>(({ children, fontSize = 30, pixelSize = 4, position = "left", className = "" }) => {
   const [mounted, setMounted] = useState(false)
   const canvasRef = useRef<HTMLCanvasElement>(null)
 

@@ -12,8 +12,11 @@ import QuranCards from "@/components/quran-cards"
 import SocialMediaCards from "@/components/social-media-influencing-cards"
 import PixelatedText from "@/components/pixel"
 import { format } from 'date-fns'
+import { useEffect, useState } from "react"
+import { useRemoveGrammarly } from '@/hooks/use-remove-grammarly'
 
 export default function Page() {
+  useRemoveGrammarly()
   const [prayerProgress, setPrayerProgress] = React.useState(0)
   const [boringStudyProgress, setBoringStudyProgress] = React.useState(0)
   const [chessProgress, setChessProgress] = React.useState(0)
@@ -21,9 +24,9 @@ export default function Page() {
   const [socialMediaInfluencingCards, setSocialMediaInfluencingCards] = React.useState(0)
   const [quranProgress, setQuranProgress] = React.useState(0)
   const [currentDate, setCurrentDate] = React.useState<string>("")
-  const [mounted, setMounted] = React.useState(false)
+  const [mounted, setMounted] = useState(false)
 
-  React.useEffect(() => {
+  useEffect(() => {
     setMounted(true)
   }, [])
 
@@ -40,7 +43,7 @@ export default function Page() {
   }
 
   return (
-    <main className="h-full w-full p-2 overflow-auto pb-12">
+    <main className="h-full w-full p-2 overflow-auto pb-12" suppressHydrationWarning>
       <PixelatedText fontSize={40} pixelSize={3} position="left" className="py-6">
         {getTimeBasedGreeting()}, <PixelatedText.Rainbow>manfromexistence</PixelatedText.Rainbow>.Level<PixelatedText.Rainbow>#19</PixelatedText.Rainbow> : Streak <PixelatedText.Rainbow>#1</PixelatedText.Rainbow>
       </PixelatedText>
