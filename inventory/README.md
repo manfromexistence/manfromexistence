@@ -1,6 +1,6 @@
 1. Excalidraw - https://github.com/excalidraw/excalidraw.git
 2. Plate - https://github.com/udecode/plate.git
-3. Penpot - https://github.com/penpot/penpot
+<!-- 3. Penpot - https://github.com/penpot/penpot -->
 
 ```
 rm -rf excalidraw plate penpot

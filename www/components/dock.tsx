@@ -13,8 +13,8 @@ import {
     Drawer,
     DrawerContent,
     DrawerTrigger,
-} from "@/registry/default/ui/drawer"
-import { ScrollArea } from "@/registry/default/ui/scroll-area"
+} from "@/components/ui/drawer"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
     className?: string;

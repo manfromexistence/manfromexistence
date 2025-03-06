@@ -1,13 +1,17 @@
 export const siteConfig = {
-  name: "manfromexistence",
-  url: "https://manfromexistence.com",
-  ogImage: "https://manfromexistence.com/og.jpg",
-  description:
-    "manfromexistence",
+  name: "friday",
+  url: "https://manfromexistence-friday.vercel.app",
+  ogImage: "https://manfromexistence-friday.vercel.app/og.jpg",
+  description: "AI friend!",
   links: {
-    twitter: "https://twitter.com/manfrexistence",
-    github: "https://github.com/manfromexistence/manfromexistence",
+    twitter: "https://twitter.com/manfmexistence",
+    github: "https://github.com/manfromexistence",
   },
 }
 
 export type SiteConfig = typeof siteConfig
+
+export const META_THEME_COLORS = {
+  light: "#ffffff",
+  dark: "#09090b",
+}

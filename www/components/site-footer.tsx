@@ -12,7 +12,7 @@ export function SiteFooter() {
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            09/09/2024
+            06/03/2025
           </a>
           . Thanks for visiting my portfolio.
         </p>
