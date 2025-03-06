@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Separator } from "@/ui/apps/www/registry/new-york/ui/separator";
+import { Separator } from "@/components/ui/separator";
 
 type TimeLevel = 'minutes' | 'hours';
 

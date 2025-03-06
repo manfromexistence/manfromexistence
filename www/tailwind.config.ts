@@ -1,5 +1,6 @@
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -11,6 +12,7 @@ module.exports = {
         mono: ["var(--font-geist-mono)", ...fontFamily.mono],
       },
       colors: {
+        op: "hsl(var(--op))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
