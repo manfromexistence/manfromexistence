@@ -11,6 +11,7 @@ import LeetcodeCards from "@/components/leetcode-cards"
 import QuranCards from "@/components/quran-cards"
 import SocialMediaCards from "@/components/social-media-influencing-cards"
 import PixelatedText from "@/components/pixel"
+import { format } from 'date-fns'
 
 export default function Page() {
   const [prayerProgress, setPrayerProgress] = React.useState(0)
@@ -20,40 +21,29 @@ export default function Page() {
   const [socialMediaInfluencingCards, setSocialMediaInfluencingCards] = React.useState(0)
   const [quranProgress, setQuranProgress] = React.useState(0)
   const [currentDate, setCurrentDate] = React.useState<string>("")
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const getTimeBasedGreeting = () => {
     const hour = new Date().getHours()
-
-    if (hour >= 5 && hour < 12) {
-      return "Good Morning"
-    } else if (hour >= 12 && hour < 17) {
-      return "Good Afternoon"
-    } else if (hour >= 17 && hour < 21) {
-      return "Good Evening"
-    } else {
-      return "Good Night"
-    }
+    if (hour >= 5 && hour < 12) return "Good Morning"
+    if (hour >= 12 && hour < 17) return "Good Afternoon"
+    if (hour >= 17 && hour < 21) return "Good Evening"
+    return "Good Night"
   }
 
-  React.useEffect(() => {
-    const date = new Date()
-    const options: Intl.DateTimeFormatOptions = {
-      weekday: 'long',
-      month: 'long',
-      day: '2-digit',
-      year: 'numeric'
-    }
-    setCurrentDate(date.toLocaleDateString('en-US', options))
-  }, [])
+  if (!mounted) {
+    return null
+  }
 
   return (
     <main className="h-full w-full p-2 overflow-auto pb-12">
-
-      {/* <CalendarComponent /> */}
-
-      {/* <PixelatedText fontSize={40} pixelSize={3} position="left" className="py-6">
+      <PixelatedText fontSize={40} pixelSize={3} position="left" className="py-6">
         {getTimeBasedGreeting()}, <PixelatedText.Rainbow>manfromexistence</PixelatedText.Rainbow>.Level<PixelatedText.Rainbow>#19</PixelatedText.Rainbow> : Streak <PixelatedText.Rainbow>#1</PixelatedText.Rainbow>
-      </PixelatedText> */}
+      </PixelatedText>
 
       <div className="w-full border flex items-center justify-start h-20">
         <div className="flex flex-col">
@@ -149,8 +139,8 @@ export default function Page() {
         </div>
         <div className="flex flex-col flex-1">
           <span className="h-10 text-xs font-mono flex items-center justify-center px-4 border-b w-full">Date</span>
-          <span className="h-10 text-xs font-mono flex items-center justify-center w-full px-4 hover:bg-primary-foreground hover:border-b">
-            {currentDate}
+          <span className="h-10 text-xs font-mono flex items-center justify-center w-full px-4">
+            {format(new Date(), 'EEEE, MMMM dd, yyyy')}
           </span>
         </div>
       </div>

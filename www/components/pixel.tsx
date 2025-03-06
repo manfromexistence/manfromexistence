@@ -1,5 +1,39 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { cn } from '@/lib/utils';
+"use client"
+
+import * as React from "react"
+import { useEffect, useRef, useState } from "react"
+import { cn } from "@/lib/utils"
+
+export const PixelatedText = React.memo(({ children, fontSize = 30, pixelSize = 4, position = "left", className = "" }) => {
+  const [mounted, setMounted] = useState(false)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted || !canvasRef.current) return
+    
+    // Rest of your canvas logic here
+  }, [children, fontSize, pixelSize, mounted])
+
+  // Return null during SSR
+  if (!mounted) return null
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className={cn("inline-block", className)}
+      style={{ 
+        imageRendering: 'pixelated',
+        display: 'inline-block'
+      }}
+    />
+  )
+})
+
+PixelatedText.displayName = "PixelatedText"
 
 interface PixelatedTextProps {
   children: React.ReactNode;
@@ -25,24 +59,24 @@ const PixelContext = React.createContext<{
 
 const measureText = (text: string, fontSize: number) => {
   if (typeof window === 'undefined') {
-    // Return default dimensions during server-side rendering
+    // Return fixed dimensions for SSR
     return {
-      width: fontSize * text.length,
-      height: fontSize * 1.5
-    };
+      width: 0,
+      height: 0
+    }
   }
-
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return { width: 0, height: 0 };
   
-  ctx.font = `bold ${fontSize}px monospace`;
-  const metrics = ctx.measureText(text);
+  const canvas = document.createElement('canvas')
+  const ctx = canvas.getContext('2d')
+  if (!ctx) return { width: 0, height: 0 }
+  
+  ctx.font = `bold ${fontSize}px monospace`
+  const metrics = ctx.measureText(text)
   
   return {
     width: Math.ceil(metrics.width),
-    height: Math.ceil(fontSize * 1.5) // Gives enough height for the text
-  };
+    height: Math.ceil(fontSize)
+  }
 };
 
 const BasePixelatedText: React.FC<RainbowPixelatedTextProps> = ({
@@ -171,7 +205,7 @@ const RainbowPixelatedText: React.FC<RainbowPixelatedTextProps> = ({
   );
 };
 
-const PixelatedText: React.FC<PixelatedTextProps> & {
+const PixelatedTextComponent: React.FC<PixelatedTextProps> & {
   Rainbow: typeof RainbowPixelatedText;
 } = ({
   children,
@@ -181,6 +215,16 @@ const PixelatedText: React.FC<PixelatedTextProps> & {
   textColor = 'white',
   position = 'left',
 }) => {
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null // or a loading placeholder
+  }
+
   return (
     <PixelContext.Provider value={{ fontSize, pixelSize }}>
       <div 
@@ -202,6 +246,6 @@ const PixelatedText: React.FC<PixelatedTextProps> & {
   );
 };
 
-PixelatedText.Rainbow = RainbowPixelatedText;
+PixelatedTextComponent.Rainbow = RainbowPixelatedText;
 
-export default PixelatedText;
+export default PixelatedTextComponent;
