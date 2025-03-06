@@ -24,6 +24,14 @@ const PixelContext = React.createContext<{
 });
 
 const measureText = (text: string, fontSize: number) => {
+  if (typeof window === 'undefined') {
+    // Return default dimensions during server-side rendering
+    return {
+      width: fontSize * text.length,
+      height: fontSize * 1.5
+    };
+  }
+
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
   if (!ctx) return { width: 0, height: 0 };

@@ -12,6 +12,44 @@ import { forwardRef } from 'react'
 import { LucideIcon } from 'lucide-react'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 
+// Add this custom hook
+const useLocalStorage = <T,>(key: string, initialValue: T) => {
+  // State to store our value
+  // Pass initial state function to useState so logic is only executed once
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    try {
+      // Check if we're in the browser
+      if (typeof window === 'undefined') {
+        return initialValue;
+      }
+
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      console.log(error);
+      return initialValue;
+    }
+  });
+
+  // Return a wrapped version of useState's setter function that ...
+  // ... persists the new value to localStorage.
+  const setValue = (value: T | ((val: T) => T)) => {
+    try {
+      // Allow value to be a function so we have same API as useState
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return [storedValue, setValue] as const;
+};
+
 const SunFilled: LucideIcon = forwardRef(({
   size = 24,
   color = 'currentColor',
@@ -35,8 +73,13 @@ const SunFilled: LucideIcon = forwardRef(({
 
 SunFilled.displayName = 'SunFilled'
 
+type SubjectId = 'higher_mathamethics_1st_paper' | 'higher_mathamethics_2nd_paper' | 'physics_1st_paper' | 
+  'physics_2nd_paper' | 'chemistry_1st_paper' | 'chemistry_2nd_paper' | 'biology_1st_paper' | 
+  'biology_2nd_paper' | 'ict' | 'bangla_1st_paper' | 'bangla_2nd_paper' | 'english_1st_paper' | 
+  'english_2nd_paper';
+
 interface Subject {
-  id: string
+  id: SubjectId
   name: string
   time: string
   duration: string
@@ -44,24 +87,20 @@ interface Subject {
 }
 
 export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdate: (progress: number) => void }) {
-  // Load completed state from localStorage on component mount
-  const [completed, setCompleted] = useState<Record<string, boolean>>(() => {
-    const saved = localStorage.getItem('completedSubjects');
-    return saved ? JSON.parse(saved) : {
-      higher_mathamethics_1st_paper: false,
-      higher_mathamethics_2nd_paper: false,
-      physics_1st_paper: false,
-      physics_2nd_paper: false,
-      chemistry_1st_paper: false,
-      chemistry_2nd_paper: false,
-      biology_1st_paper: false,
-      biology_2nd_paper: false,
-      ict: false,
-      bangla_1st_paper: false,
-      bangla_2nd_paper: false,
-      english_1st_paper: false,
-      english_2nd_paper: false,
-    };
+  const [completed, setCompleted] = useLocalStorage('completedSubjects', {
+    higher_mathamethics_1st_paper: false,
+    higher_mathamethics_2nd_paper: false,
+    physics_1st_paper: false,
+    physics_2nd_paper: false,
+    chemistry_1st_paper: false,
+    chemistry_2nd_paper: false,
+    biology_1st_paper: false,
+    biology_2nd_paper: false,
+    ict: false,
+    bangla_1st_paper: false,
+    bangla_2nd_paper: false,
+    english_1st_paper: false,
+    english_2nd_paper: false,
   });
 
   // Reset completed state at midnight
@@ -71,23 +110,14 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
     const timeToMidnight = tomorrow.getTime() - now.getTime();
 
     const resetTimer = setTimeout(() => {
-      setCompleted(prev => {
-        const resetState = Object.keys(prev).reduce((acc, key) => ({
-          ...acc,
-          [key]: false
-        }), {});
-        localStorage.setItem('completedSubjects', JSON.stringify(resetState));
-        return resetState;
-      });
+      setCompleted(Object.keys(completed).reduce<typeof completed>((acc, key) => ({
+        ...acc,
+        [key]: false
+      }), {} as typeof completed));
     }, timeToMidnight);
 
     return () => clearTimeout(resetTimer);
   }, []);
-
-  // Save to localStorage whenever completed state changes
-  React.useEffect(() => {
-    localStorage.setItem('completedSubjects', JSON.stringify(completed));
-  }, [completed]);
 
   const today = new Date()
 
@@ -197,7 +227,7 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
 
   const todaySubjects = subjects.filter(subject => isSubjectForToday(subject.time))
 
-  const handleCardClick = (id: string) => {
+  const handleCardClick = (id: SubjectId) => {
     setCompleted((prev) => {
       const newState = {
         ...prev,

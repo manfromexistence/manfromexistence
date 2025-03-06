@@ -164,7 +164,7 @@ export default function Page() {
           </div>
           <PrayerCards onProgressUpdate={setPrayerProgress} />
         </div>
-        {/* <div className="w-full flex flex-col px-1 space-y-2">
+        <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
             <span className="font-bold text-2xl h-full flex items-center">Boring Study</span>
             <div className="h-full flex items-center justify-end mt-2">
@@ -172,7 +172,7 @@ export default function Page() {
             </div>
           </div>
           <BoringStudyCards onProgressUpdate={setBoringStudyProgress} />
-        </div> */}
+        </div>
         <div className="w-full flex flex-col px-1 space-y-2">
           <div className="h-10 flex items-start justify-between w-full">
             <span className="font-bold text-2xl h-full flex items-center">Quran</span>
