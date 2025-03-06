@@ -1,9 +1,9 @@
 import Link from "next/link"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
-import { ModeToggle } from "@/components/mode-toggle"
 import { EyeCatchingButton_v1 } from "@/components/eye-catching-buttons"
 import { Play } from "lucide-react"
+import { ModeSwitcher } from "./mode-switcher"
 
 export function SiteHeader() {
   return (
@@ -13,7 +13,7 @@ export function SiteHeader() {
         <MobileNav />
         <div className="flex flex-1 items-center space-x-2 justify-end">
           <nav className="flex items-center space-x-2">
-            <ModeToggle />
+            <ModeSwitcher />
             <Link target="_blank" href={"https://www.upwork.com/freelancers/~01221bf135ed62b3b3"}>
               <EyeCatchingButton_v1 className="text-sm">
                 <Play className="h-4 w-4 mr-1" />
