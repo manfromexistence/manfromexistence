@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Brain, Target, Swords, Clock } from "lucide-react"
@@ -12,6 +12,14 @@ export default function ChessCards({ onProgressUpdate }: { onProgressUpdate: (pr
         study: false,
         analysis: false,
     })
+
+    // Add useEffect to handle progress updates
+    useEffect(() => {
+        const totalActivities = Object.keys(completed).length
+        const completedActivities = Object.values(completed).filter(Boolean).length
+        const progress = Math.round((completedActivities / totalActivities) * 100)
+        onProgressUpdate(progress)
+    }, [completed, onProgressUpdate])
 
     const activities = [
         {
@@ -38,22 +46,10 @@ export default function ChessCards({ onProgressUpdate }: { onProgressUpdate: (pr
     ]
 
     const handleCardClick = (id: string) => {
-        setCompleted((prev) => {
-            const newCompleted = {
-                ...prev,
-                [id]: !prev[id],
-            }
-
-            // Calculate progress
-            const totalActivities = Object.keys(newCompleted).length
-            const completedActivities = Object.values(newCompleted).filter(Boolean).length
-            const progress = Math.round((completedActivities / totalActivities) * 100)
-
-            // Update progress through callback
-            onProgressUpdate(progress)
-
-            return newCompleted
-        })
+        setCompleted((prev) => ({
+            ...prev,
+            [id]: !prev[id],
+        }))
     }
 
     return (
