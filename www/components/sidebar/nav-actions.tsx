@@ -106,7 +106,7 @@ export function NavActions() {
   // }, [])
 
   return (
-    <div className="flex items-center text-sm mr-2">
+    <div className="mr-2 flex items-center text-sm">
       {/* <div className="hidden font-medium text-muted-foreground md:inline-block">
         Edit Oct 08
       </div>
@@ -118,7 +118,7 @@ export function NavActions() {
           <Button
             variant="ghost"
             size="icon"
-            className="data-[state=open]:bg-accent h-9 w-9 rounded-md border"
+            className="size-9 rounded-md border data-[state=open]:bg-accent"
           >
             <MoreHorizontal />
           </Button>

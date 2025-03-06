@@ -75,7 +75,7 @@ const AnimatedPlaceholder = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -5 }}
       transition={{ duration: 0.1 }}
-      className="text-muted-foreground pointer-events-none absolute w-[150px] text-sm"
+      className="pointer-events-none absolute w-[150px] text-sm text-muted-foreground"
     >
       {showSearch
         ? "Search the web..."
@@ -130,7 +130,7 @@ export default function AiInput() {
   return (
     <div className="fixed bottom-0 w-full py-4">
       <div className="relative mx-auto w-full max-w-xl rounded-[22px] p-1">
-        <div className="bg-primary-foreground relative flex flex-col rounded-2xl border">
+        <div className="relative flex flex-col rounded-2xl border bg-primary-foreground">
           <div
             className="overflow-y-auto"
             style={{ maxHeight: `${MAX_HEIGHT}px` }}
@@ -170,7 +170,7 @@ export default function AiInput() {
                 className={cn(
                   "relative cursor-pointer rounded-full p-2",
                   imagePreview
-                    ? "bg-background text-primary border"
+                    ? "border bg-background text-primary"
                     : "text-muted-foreground"
                 )}
               >
@@ -182,12 +182,12 @@ export default function AiInput() {
                 />
                 <Paperclip
                   className={cn(
-                    "text-muted-foreground hover:text-primary h-4 w-4 transition-colors",
+                    "size-4 text-muted-foreground transition-colors hover:text-primary",
                     imagePreview && "text-primary"
                   )}
                 />
                 {imagePreview && (
-                  <div className="absolute bottom-[105px] left-0 h-[50px] w-[50px]">
+                  <div className="absolute bottom-[105px] left-0 size-[50px]">
                     <Image
                       className="rounded-lg object-cover"
                       src={imagePreview || "/picture1.jpeg"}
@@ -199,7 +199,7 @@ export default function AiInput() {
                       onClick={handelClose}
                       className="shadow-3xl absolute -left-2 -top-2 rotate-45 rounded-lg"
                     >
-                      <Plus className="h-6 w-6" />
+                      <Plus className="size-6" />
                     </button>
                   </div>
                 )}
@@ -212,11 +212,11 @@ export default function AiInput() {
                 className={cn(
                   "flex h-8 items-center gap-1 rounded-full border px-2 py-0.5 transition-all",
                   showSearch
-                    ? "bg-background text-muted-foreground hover:text-primary border"
+                    ? "border bg-background text-muted-foreground hover:text-primary"
                     : "border-transparent"
                 )}
               >
-                <div className="flex h-4 w-4 shrink-0 items-center justify-center">
+                <div className="flex size-4 shrink-0 items-center justify-center">
                   <motion.div
                     animate={{
                       rotate: showSearch ? 180 : 0,
@@ -239,7 +239,7 @@ export default function AiInput() {
                   >
                     <Globe
                       className={cn(
-                        "text-muted-foreground hover:text-primary h-4 w-4",
+                        "size-4 text-muted-foreground hover:text-primary",
                         showSearch ? "text-primary" : "text-muted-foreground"
                       )}
                     />
@@ -255,7 +255,7 @@ export default function AiInput() {
                       }}
                       exit={{ width: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="text-primary shrink-0 overflow-hidden whitespace-nowrap text-[11px]"
+                      className="shrink-0 overflow-hidden whitespace-nowrap text-[11px] text-primary"
                     >
                       Search
                     </motion.span>
@@ -270,11 +270,11 @@ export default function AiInput() {
                 className={cn(
                   "flex h-8 items-center gap-2 rounded-full border px-1.5 py-1 transition-all",
                   showResearch
-                    ? "bg-background text-muted-foreground hover:text-primary border"
+                    ? "border bg-background text-muted-foreground hover:text-primary"
                     : "border-transparent"
                 )}
               >
-                <div className="flex h-4 w-4 shrink-0 items-center justify-center">
+                <div className="flex size-4 shrink-0 items-center justify-center">
                   <motion.div
                     animate={{
                       rotate: showResearch ? 180 : 0,
@@ -297,7 +297,7 @@ export default function AiInput() {
                   >
                     <CircleDotDashed
                       className={cn(
-                        "text-muted-foreground hover:text-primary h-4 w-4",
+                        "size-4 text-muted-foreground hover:text-primary",
                         showResearch ? "text-primary" : "text-muted-foreground"
                       )}
                     />
@@ -313,7 +313,7 @@ export default function AiInput() {
                       }}
                       exit={{ width: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="text-primary shrink-0 overflow-hidden whitespace-nowrap text-[11px]"
+                      className="shrink-0 overflow-hidden whitespace-nowrap text-[11px] text-primary"
                     >
                       Research
                     </motion.span>
@@ -326,11 +326,11 @@ export default function AiInput() {
                 type="button"
                 onClick={handleSubmit}
                 className={cn(
-                  "text-muted-foreground hover:text-primary rounded-full p-2 transition-colors",
+                  "rounded-full p-2 text-muted-foreground transition-colors hover:text-primary",
                   value ? " text-primary" : " text-muted-foreground    "
                 )}
               >
-                <Send className="h-4 w-4" />
+                <Send className="size-4" />
               </button>
             </div>
           </div>

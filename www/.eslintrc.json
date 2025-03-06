@@ -3,8 +3,6 @@
   "root": true,
   "extends": [
     "next/core-web-vitals",
-    "turbo",
-    "prettier",
     "plugin:tailwindcss/recommended"
   ],
   "plugins": [
@@ -17,7 +15,8 @@
     "@next/next/no-html-link-for-pages": "off",
     "tailwindcss/no-custom-classname": "off",
     "tailwindcss/classnames-order": "error",
-    "@next/next/no-duplicate-head": "off"
+    "@next/next/no-duplicate-head": "off",
+    "tailwindcss/enforces-negative-arbitrary-values": "off"
   },
   "settings": {
     "tailwindcss": {
@@ -25,7 +24,7 @@
         "cn",
         "cva"
       ],
-      "config": "tailwind.config.cjs"
+      "config": "tailwind.config.ts"
     },
     "next": {
       "rootDir": [

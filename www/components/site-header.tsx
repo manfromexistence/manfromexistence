@@ -12,7 +12,7 @@ export function SiteHeader() {
       <div className="container flex h-14 max-w-screen-xl items-center">
         <MainNav />
         <MobileNav />
-        <div className="flex flex-1 items-center space-x-2 justify-end">
+        <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center space-x-2">
             <ThemeToggleButton
               showLabel
@@ -21,7 +21,7 @@ export function SiteHeader() {
             />
             <Link target="_blank" href={"https://www.upwork.com/freelancers/~01221bf135ed62b3b3"}>
               <EyeCatchingButton_v1 className="text-sm">
-                <Play className="h-4 w-4 mr-1" />
+                <Play className="mr-1 size-4" />
                 Start a Project
               </EyeCatchingButton_v1>
             </Link>

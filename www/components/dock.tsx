@@ -32,7 +32,7 @@ const DEFAULT_DISTANCE = 140;
 // );
 
 const dockVariants = cva(
-    "mt-4 h-[58px] p-2 flex gap-2 rounded-2xl border bg-background",
+    "mt-4 flex h-[58px] gap-2 rounded-2xl border bg-background p-2",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -142,49 +142,49 @@ export default function IOSDOCk() {
     // 360:7,sm:12,md:14,lg:20,xl:23
 
     return (
-        <div className="fixed bottom-4 left-1/2 translate-x-[-50%] z-50 flex items-center justify-center w-full !pb-100">
+        <div className="!pb-100 fixed bottom-4 left-1/2 z-50 flex w-full -translate-x-1/2 items-center justify-center">
             <Dock magnification={65} distance={113}>
-                <DockIcon className="dark:bg-primary-foreground bg-secondary p-1 rounded-full">
+                <DockIcon className="rounded-full bg-secondary p-1 dark:bg-primary-foreground">
                     <Link target="_blank" href="https://manfromexistence-ui.vercel.app">
-                        <Image className="dark:invert-0 invert" src="/manfromexistence/ui.png" height={75} width={75} alt="ui" />
+                        <Image className="invert dark:invert-0" src="/manfromexistence/ui.png" height={75} width={75} alt="ui" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full">
+                <DockIcon className="rounded-full bg-secondary p-3 dark:bg-primary-foreground">
                     <Link target="_blank" href="https://ustudy-mahabub.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/auth.svg" height={75} width={75} alt="auth" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden md:block">
+                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground md:block">
                     <Link target="_blank" href="https://spark-labs-website.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
+                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
                     <Link target="_blank" href="https://admin-panel-mahabub.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={75} width={75} alt="algorithm" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
+                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
                     <Link target="_blank" href="https://manofexistence-professional-portfolio.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/backend.svg" height={75} width={75} alt="backend" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden sm:block">
+                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
                     <Link target="_blank" href="https://manofexistence-brainwave.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/blockchain.svg" height={75} width={75} alt="blockchain" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
+                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground lg:block">
                     <Link target="_blank" href="https://fiverr-rocket-krypt.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/deployment.svg" height={75} width={75} alt="deployment" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden md:block">
+                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground md:block">
                     <Link target="_blank" href="https://aladdin.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="design-pattern" />
                     </Link>
                 </DockIcon>
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden lg:block">
+                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground lg:block">
                     <Link target="_blank" href="https://lolgamer-xstream.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/documentation.svg" height={75} width={75} alt="documentation" />
                     </Link>
@@ -290,78 +290,78 @@ export default function IOSDOCk() {
                         <Image className="invert-0 dark:invert" src="/manfromexistence/observerability.svg" height={75} width={75} alt="observerability" />
                     </Link>
                 </DockIcon> */}
-                <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full lg:hidden">
+                <DockIcon className="rounded-full bg-secondary p-3 dark:bg-primary-foreground lg:hidden">
                     <Drawer>
                         <DrawerTrigger asChild>
-                            <ListCollapse className="h-4 w-4" />
+                            <ListCollapse className="size-4" />
                         </DrawerTrigger>
-                        <DrawerContent className="h-[80%]">
-                            <div className="w-full flex flex-col overflow-auto pl-4 pr-1 mt-4">
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md md:hidden" target="_blank" href="https://ai.manfromexistence.com">
+                        <DrawerContent className="h-4/5">
+                            <div className="mt-4 flex w-full flex-col overflow-auto pl-4 pr-1">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://ai.manfromexistence.com">
                                     <h2>Ai</h2>
                                     <span className="text-muted-foreground">Copy & Past some ai related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md sm:hidden" target="_blank" href="https://algorithm.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 sm:hidden" target="_blank" href="https://algorithm.manfromexistence.com">
                                     <h2>Algorithm</h2>
                                     <span className="text-muted-foreground">Copy & Past some algorithm related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://auth.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://auth.manfromexistence.com">
                                     <h2>Auth</h2>
                                     <span className="text-muted-foreground">Copy & Past some auth related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md sm:hidden" target="_blank" href="https://backend.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 sm:hidden" target="_blank" href="https://backend.manfromexistence.com">
                                     <h2>Backend</h2>
                                     <span className="text-muted-foreground">Copy & Past some backend related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md sm:hidden" target="_blank" href="https://blockchain.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 sm:hidden" target="_blank" href="https://blockchain.manfromexistence.com">
                                     <h2>Blockchain</h2>
                                     <span className="text-muted-foreground">Copy & Past some auth blockchain code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://deployment.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://deployment.manfromexistence.com">
                                     <h2>Deployment</h2>
                                     <span className="text-muted-foreground">Copy & Past some backend deployment code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md md:hidden" target="_blank" href="https://design-pattern.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://design-pattern.manfromexistence.com">
                                     <h2>Design Pattern</h2>
                                     <span className="text-muted-foreground">Copy & Past some design-pattern related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://documentation.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://documentation.manfromexistence.com">
                                     <h2>Documentation</h2>
                                     <span className="text-muted-foreground">Copy & Past some documentation related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md sm:hidden" target="_blank" href="https://frontend.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 sm:hidden" target="_blank" href="https://frontend.manfromexistence.com">
                                     <h2>Frontend</h2>
                                     <span className="text-muted-foreground">Copy & Past some frontend related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md sm:hidden" target="_blank" href="https://package.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 sm:hidden" target="_blank" href="https://package.manfromexistence.com">
                                     <h2>Package</h2>
                                     <span className="text-muted-foreground">Copy & Past some package related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://privacy.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://privacy.manfromexistence.com">
                                     <h2>Privacy</h2>
                                     <span className="text-muted-foreground">Copy & Past some privacy related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md sm:hidden" target="_blank" href="https://test.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 sm:hidden" target="_blank" href="https://test.manfromexistence.com">
                                     <h2>Test</h2>
                                     <span className="text-muted-foreground">Copy & Past some test related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://theory.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://theory.manfromexistence.com">
                                     <h2>Theory</h2>
                                     <span className="text-muted-foreground">Copy & Past some backend theory code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://workspace.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://workspace.manfromexistence.com">
                                     <h2>Workspace</h2>
                                     <span className="text-muted-foreground">Copy & Past some workspace related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://tool.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://tool.manfromexistence.com">
                                     <h2>Tool</h2>
                                     <span className="text-muted-foreground">Copy & Past some tool related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://benchmark.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://benchmark.manfromexistence.com">
                                     <h2>Benchmark</h2>
                                     <span className="text-muted-foreground">Copy & Past some benchmark related code</span>
                                 </Link>
-                                <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://observeability.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://observeability.manfromexistence.com">
                                     <h2>Observeability</h2>
                                     <span className="text-muted-foreground">Copy & Past some observeability related code</span>
                                 </Link>

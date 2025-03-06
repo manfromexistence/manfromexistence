@@ -23,7 +23,7 @@ export default function Home() {
         strokeWidth="1"
         stroke="currentColor"
         {...rest}
-        className={cn('size-6 absolute  z-[100000]', className)}
+        className={cn('absolute z-[100000]  size-6', className)}
       >
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
       </svg>
@@ -31,63 +31,63 @@ export default function Home() {
   };
 
   return (
-    <div className="container flex max-w-screen-xl items-center flex-col space-y-8 pb-[75px]">
+    <div className="container flex max-w-screen-xl flex-col items-center space-y-8 pb-[75px]">
       <IOSDOCk />
-      <div className="w-full mt-2 space-y-8">
-        <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Developing Solutions for Problems with Curiosity and Thoughts</span>
-        <div className="w-full md:flex-row flex flex-col md:space-y-0 space-y-4 text-muted-foreground justify-between">
-          <div className="md:w-[60%] flex flex-col space-y-2 md:max-h-[200px]">
+      <div className="mt-2 w-full space-y-8">
+        <span className="text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">Developing Solutions for Problems with Curiosity and Thoughts</span>
+        <div className="flex w-full flex-col justify-between space-y-4 text-muted-foreground md:flex-row md:space-y-0">
+          <div className="flex flex-col space-y-2 md:max-h-[200px] md:w-3/5">
             <span>Delusions? I turn them into reality. Trying to solve as many problems as possible.</span>
-            <div className="h-full flex md:justify-end flex-col space-y-2">
+            <div className="flex h-full flex-col space-y-2 md:justify-end">
               <div className="flex flex-col">
                 <span>Now</span>
-                <div className="flex text-foreground items-center">
-                  <CircleSlash2 className="h-4 w-4 mr-2" /> Jobless, Working on my own projects.
+                <div className="flex items-center text-foreground">
+                  <CircleSlash2 className="mr-2 size-4" /> Jobless, Working on my own projects.
                 </div>
               </div>
               <div className="flex flex-col">
                 <span>Previously</span>
-                <div className="flex text-foreground items-center">
-                  <Briefcase className="h-4 w-4 mr-2" /> Freelancer at Fiverr & Upwork.
+                <div className="flex items-center text-foreground">
+                  <Briefcase className="mr-2 size-4" /> Freelancer at Fiverr & Upwork.
                 </div>
               </div>
             </div>
           </div>
           <div className='w-full md:max-w-[400px]'>
-            <div className="min-h-[200px] border border-dashed relative">
-              <Icon className="-top-3 -left-3" />
-              <Icon className="-top-3 -right-3" />
+            <div className="relative min-h-[200px] border border-dashed">
+              <Icon className="-left-3 -top-3" />
+              <Icon className="-right-3 -top-3" />
               <Icon className="-bottom-3 -left-3" />
               <Icon className="-bottom-3 -right-3" />
               <div className={cn('flex flex-col p-4')}>
-                <div className='md:justify-evenly rounded-md hover:bg-primary-foreground hover:text-primary flex w-full justify-center space-x-4 items-center p-2'>
+                <div className='flex w-full items-center justify-center space-x-4 rounded-md p-2 hover:bg-primary-foreground hover:text-primary md:justify-evenly'>
                   <Image width={50} height={50} src='/MANFROMEXISTENCE.jpg' alt='manfromexistnece' className='rounded-md' />
                   <div className='flex flex-col'>
                     <span className='text-foreground'>manfromexistence</span>
                     <span>Currently Does Exists</span>
                   </div>
-                  <div className='rounded-full border p-1 h-10 w-10 flex items-center justify-center'>
+                  <div className='flex size-10 items-center justify-center rounded-full border p-1'>
                     ❤
                   </div>
                 </div>
                 <Separator className="my-4" />
-                <div className='flex space-x-2 items-center justify-center'>
-                  <Link href={"https://www.youtube.com/@manfromexistence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+                <div className='flex items-center justify-center space-x-2'>
+                  <Link href={"https://www.youtube.com/@manfromexistence"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
                     <YouTube />
                   </Link>
-                  <Link href={"https://x.com/manfrexistence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+                  <Link href={"https://x.com/manfrexistence"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
                     <XformerlyTwitter className="invert dark:invert-0" />
                   </Link>
-                  <Link href={"https://github.com/manfromexistence"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+                  <Link href={"https://github.com/manfromexistence"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
                     <Github className="invert dark:invert-0" />
                   </Link>
-                  <Link href={"https://www.linkedin.com/in/man-from-existence-a50180314/"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+                  <Link href={"https://www.linkedin.com/in/man-from-existence-a50180314/"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
                     <LinkedIn />
                   </Link>
-                  <Link href={"https://www.threads.net/@manfromexistence?xmt=AQGzX0O_Vpo7BfxG054NKG79SDenEBx2ZFmcE11qaGLN5uw"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+                  <Link href={"https://www.threads.net/@manfromexistence?xmt=AQGzX0O_Vpo7BfxG054NKG79SDenEBx2ZFmcE11qaGLN5uw"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
                     <Threads className="invert dark:invert-0" />
                   </Link>
-                  <Link target="_blank" href={"mailto:ajju40959@gmail.com"} className='h-12 w-12 rounded-full flex items-center justify-center bg-primary-foreground text-primary'>
+                  <Link target="_blank" href={"mailto:ajju40959@gmail.com"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
                     <Gmail />
                   </Link>
                 </div>
@@ -95,50 +95,50 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='flex w-full md:flex-row flex-col md:gap-4 gap-8'>
+        <div className='flex w-full flex-col gap-8 md:flex-row md:gap-4'>
           <div className='w-full lg:w-[30%]'>
-            <div className="flex items-center justify-center min-h-full border border-dashed relative">
-              <Icon className="-top-3 -left-3" />
-              <Icon className="-top-3 -right-3" />
+            <div className="relative flex min-h-full items-center justify-center border border-dashed">
+              <Icon className="-left-3 -top-3" />
+              <Icon className="-right-3 -top-3" />
               <Icon className="-bottom-3 -left-3" />
               <Icon className="-bottom-3 -right-3" />
-              <div className={cn('flex flex-col p-4 space-y-4')}>
-                <span className='text-muted-foreground font-bold'>DESIGN, BUILD, INSPIRE.</span>
+              <div className={cn('flex flex-col space-y-4 p-4')}>
+                <span className='font-bold text-muted-foreground'>DESIGN, BUILD, INSPIRE.</span>
                 <span className='text-muted-foreground'>Branding, design, writing, product creation, development – I wear many hats, fueled by an insatiable passion for innovation. Think of me as your multi-faceted partner, bridging the gap between dream concepts and polished realities.</span>
                 <Button variant={'secondary'}>Let&apos;s not work togather, will work later😁</Button>
               </div>
             </div>
           </div>
           <div className='w-full lg:w-[70%]'>
-            <div className="min-h-full border border-dashed relative">
-              <Icon className="-top-3 -left-3" />
-              <Icon className="-top-3 -right-3" />
+            <div className="relative min-h-full border border-dashed">
+              <Icon className="-left-3 -top-3" />
+              <Icon className="-right-3 -top-3" />
               <Icon className="-bottom-3 -left-3" />
               <Icon className="-bottom-3 -right-3" />
-              <div className={cn('min-h-full grid md:grid-cols-3 xs:grid-cols-1')}>
-                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0'>
+              <div className={cn('xs:grid-cols-1 grid min-h-full md:grid-cols-3')}>
+                <div className='relative flex w-full flex-col items-center justify-center border border-l-0 border-t-0 border-dashed p-8 hover:bg-primary-foreground hover:text-primary'>
                   <Icon className="-bottom-3 -right-3" />
                   <span className='text-7xl'>6+</span>
                   <span className='text-muted-foreground'>Products</span>
                 </div>
-                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0'>
+                <div className='relative flex w-full flex-col items-center justify-center border border-l-0 border-t-0 border-dashed p-8 hover:bg-primary-foreground hover:text-primary'>
                   <Icon className="-bottom-3 -right-3" />
                   <span className='text-7xl'>2+</span>
                   <span className='text-muted-foreground'>Clients</span>
                 </div>
-                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0 border-r-0'>
+                <div className='relative flex w-full flex-col items-center justify-center border border-x-0 border-t-0 border-dashed p-8 hover:bg-primary-foreground hover:text-primary'>
                   <span className='text-7xl'>1+</span>
                   <span className='text-muted-foreground'>Facilitator</span>
                 </div>
-                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0 md:border-b-0'>
+                <div className='relative flex w-full flex-col items-center justify-center border border-l-0 border-t-0 border-dashed p-8 hover:bg-primary-foreground hover:text-primary md:border-b-0'>
                   <span className='text-7xl'>1+</span>
                   <span className='text-muted-foreground'>Talks</span>
                 </div>
-                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0 md:border-b-0'>
+                <div className='relative flex w-full flex-col items-center justify-center border border-l-0 border-t-0 border-dashed p-8 hover:bg-primary-foreground hover:text-primary md:border-b-0'>
                   <span className='text-7xl'>0</span>
                   <span className='text-muted-foreground'>Books</span>
                 </div>
-                <div className='hover:bg-primary-foreground hover:text-primary flex relative flex-col w-full items-center justify-center p-8 border border-dashed border-l-0 border-t-0 border-b-0'>
+                <div className='relative flex w-full flex-col items-center justify-center border border-y-0 border-l-0 border-dashed p-8 hover:bg-primary-foreground hover:text-primary'>
                   <span className='text-7xl'>∞</span>
                   <span className='text-muted-foreground'>Passion</span>
                 </div>

@@ -3,9 +3,9 @@ import IOSDOCk from '@/components/dock';
 
 export default function Home() {
     return (
-        <div className="container flex-col space-y-8 pb-[75px] h-screen flex items-center justify-center">
+        <div className="container flex h-screen flex-col items-center justify-center space-y-8 pb-[75px]">
             <IOSDOCk />
-            <span className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Thoughts are coming...</span>
+            <span className="text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">Thoughts are coming...</span>
         </div>
     );
 }

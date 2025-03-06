@@ -51,35 +51,35 @@ export default function Cards({ category, onProgressUpdate }: CardsProps) {
             <Card
               key={activity.id}
               className={`
-                group relative w-full sm:w-[300px] overflow-hidden 
-                transition-all hover:scale-105 cursor-pointer
+                group relative w-full cursor-pointer overflow-hidden 
+                transition-all hover:scale-105 sm:w-[300px]
                 ${completed[activity.id] ? "bg-primary/10" : ""}
               `}
               onClick={() => handleCardClick(activity.id)}
             >
               <div className="relative p-5">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center">
-                    <IconComponent className="h-6 w-6" />
+                <div className="mb-3 flex items-center justify-between">
+                  <div className="flex size-12 items-center justify-center rounded-full bg-secondary">
+                    <IconComponent className="size-6" />
                   </div>
-                  <div className="h-12 w-12 flex items-start justify-end">
+                  <div className="flex size-12 items-start justify-end">
                     <Checkbox
                       checked={completed[activity.id]}
                       onCheckedChange={() => handleCardClick(activity.id)}
-                      className="h-6 w-6"
+                      className="size-6"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold mb-1">
+                  <h3 className="mb-1 text-xl font-bold">
                     {activity.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-2">
+                  <p className="mb-2 text-sm text-muted-foreground">
                     {activity.time}
                   </p>
                   <div className="flex items-center text-xs text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1" />
+                    <Clock className="mr-1 size-3" />
                     <span>{activity.duration}</span>
                   </div>
                 </div>

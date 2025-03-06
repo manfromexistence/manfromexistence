@@ -4,7 +4,7 @@ import ThemeToggleButton from "@/components/ui/theme-toggle-button"
 
 const ThemeToggleAnimationsDemo = () => {
   return (
-    <div className="h-full w-full flex items-center justify-center ">
+    <div className="flex size-full items-center justify-center ">
       <ThemeToggleButton
         showLabel
         variant="gif"

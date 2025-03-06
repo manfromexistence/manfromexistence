@@ -40,7 +40,7 @@ export default function BlogCard({ title, description, image }: {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{ scale: 1.03 }} // Slightly increase size on hover
-      className="flex relative w-full rounded-2xl border hover:cursor-pointer overflow-hidden"
+      className="relative flex w-full overflow-hidden rounded-2xl border hover:cursor-pointer"
     >
       {/* Radial gradient overlay that follows the mouse */}
       <div
@@ -52,9 +52,9 @@ export default function BlogCard({ title, description, image }: {
         }}
       />
       {/* Card content */}
-      <div className="relative z-10 p-3 flex-1 flex flex-col">
+      <div className="relative z-10 flex flex-1 flex-col p-3">
         {/* Image container */}
-        <div className="relative w-full aspect-[16/9] rounded overflow-hidden">
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded">
           <Image
             src={image}
             alt="Thumbnail"
@@ -63,7 +63,7 @@ export default function BlogCard({ title, description, image }: {
           />
         </div>
         {/* Text content */}
-        <div className="flex flex-col gap-1 mt-2 ustify-center">
+        <div className="ustify-center mt-2 flex flex-col gap-1">
           <p className="text-sm text-primary">{title}</p>
           <p className="text-xs text-muted-foreground">{description}</p>
         </div>

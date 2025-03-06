@@ -229,7 +229,7 @@ const PixelatedTextComponent: React.FC<PixelatedTextProps> & {
     <PixelContext.Provider value={{ fontSize, pixelSize }}>
       <div 
         className={cn(
-          'inline-flex items-center gap-0 w-min', // Changed flex to inline-flex and added w-min
+          'inline-flex w-min items-center gap-0', // Changed flex to inline-flex and added w-min
           position === 'center' && 'justify-center',
           position === 'right' && 'justify-end',
           className

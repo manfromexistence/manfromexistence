@@ -19,7 +19,7 @@ export default function CalendarComponent() {
                 selected={range}
                 onSelect={setRange}
                 numberOfMonths={7}
-                className="rounded-md border shadow-sm [&>div]:gap-5 w-full"
+                className="w-full rounded-md border shadow-sm [&>div]:gap-5"
             />
         </div>
     )
