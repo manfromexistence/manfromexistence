@@ -10,23 +10,23 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Home",
-      href: "/home",
+      href: "/manfromexistence/home",
     },
     {
       title: "Thoughts",
-      href: "/thoughts",
+      href: "/manfromexistence/thoughts",
     },
     {
       title: "Works",
-      href: "/works",
+      href: "/manfromexistence/works",
     },
     {
       title: "Lists",
-      href: "/lists",
+      href: "/manfromexistence/lists",
     },
     {
       title: "Gaming",
-      href: "/gaming",
+      href: "/manfromexistence/gaming",
     },
   ],
   sidebarNav: [

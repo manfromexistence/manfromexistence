@@ -10,7 +10,7 @@ export function MainNav() {
   const pathname = usePathname()
   return (
     <div className="mr-4 hidden md:flex">
-      {/* <Link href="/" className="mr-4 flex items-center space-x-2 lg:mr-6">
+      {/* <Link href="/manfromexistence/" className="mr-4 flex items-center space-x-2 lg:mr-6">
         <Icons.logo className="h-6 w-6" />
         <span className="hidden font-bold lg:inline-block">
           {siteConfig.name}
@@ -18,19 +18,19 @@ export function MainNav() {
       </Link> */}
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <Link
-          href="/"
+          href="/manfromexistence"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/" ? "text-foreground" : "text-foreground/60"
+            pathname === "/manfromexistence" ? "text-foreground" : "text-foreground/60"
           )}
         >
           Home
         </Link>
         <Link
-          href="/thoughts"
+          href="/manfromexistence/thoughts"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/thoughts")
+            pathname?.startsWith("/manfromexistence/thoughts")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -38,10 +38,10 @@ export function MainNav() {
           Thoughts
         </Link>
         <Link
-          href="/works"
+          href="/manfromexistence/works"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/works")
+            pathname?.startsWith("/manfromexistence/works")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -49,10 +49,10 @@ export function MainNav() {
           Works
         </Link>
         <Link
-          href="/lists"
+          href="/manfromexistence/lists"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/lists")
+            pathname?.startsWith("/manfromexistence/lists")
               ? "text-foreground"
               : "text-foreground/60"
           )}
@@ -60,10 +60,10 @@ export function MainNav() {
           Lists
         </Link>
         <Link
-          href="/gaming"
+          href="/manfromexistence/gaming"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/gaming")
+            pathname?.startsWith("/manfromexistence/gaming")
               ? "text-foreground"
               : "text-foreground/60"
           )}
