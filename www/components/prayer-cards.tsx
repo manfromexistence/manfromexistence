@@ -111,48 +111,47 @@ export default function PrayerCards({ onProgressUpdate }: { onProgressUpdate: (p
 
   return (
     <div className="w-full">
-      <div className="flex flex-wrap gap-4 justify-start ">
+      <div className="flex flex-wrap justify-start gap-4 ">
         {prayers.map((prayer) => {
           const Icon = prayer.icon
           return (
             <Card
               key={prayer.id}
-              className={`group relative w-full sm:w-[300px] overflow-hidden transition-all duration-300 ease-in-out 
-                          hover:scale-105 hover:shadow-lg cursor-pointer bg-background
+              className={`group relative w-full cursor-pointer overflow-hidden bg-background transition-all duration-300 
+                          ease-in-out hover:scale-105 hover:shadow-lg sm:w-[300px]
                           ${completed[prayer.id] ? "bg-primary-foreground" : ""}`}
               onClick={() => handleCardClick(prayer.id)}
             >
               <div className="relative p-5">
-                <div className="flex items-center justify-between mb-3">
+                <div className="mb-3 flex items-center justify-between">
                   <div
-                    className={`h-12 w-12 rounded-full transition-colors duration-300
-                                  flex items-center justify-center bg-secondary
+                    className={`flex size-12 items-center justify-center rounded-full
+                                  bg-secondary transition-colors duration-300
                                 `}
                   >
-                    <Icon className="h-6 w-6" />
+                    <Icon className="size-6" />
                   </div>
                   <div
-                    className={`h-12 w-12 transition-colors duration-300
-                                    flex items-start justify-end
-                        }`}
+                    className={`} flex size-12 items-start
+                                    justify-end transition-colors duration-300`}
                   >
                     <Checkbox
                       id={prayer.id}
                       checked={completed[prayer.id]}
                       onCheckedChange={() => { }}
-                      className="h-6 w-6 rounded-full"
+                      className="size-6 rounded-full"
                     />
                   </div>
 
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold mb-1 transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="mb-1 text-xl font-bold transition-colors duration-300 group-hover:text-primary">
                     {prayer.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-2">{prayer.time}</p>
+                  <p className="mb-2 text-sm text-muted-foreground">{prayer.time}</p>
                   <div className="flex items-center text-xs text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1 inline-block" />
+                    <Clock className="mr-1 inline-block size-3" />
                     <span>{prayer.duration}</span>
                   </div>
                 </div>

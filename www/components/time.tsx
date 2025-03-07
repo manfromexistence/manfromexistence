@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Separator } from "@/ui/apps/www/registry/new-york/ui/separator";
+import { Separator } from "@/components/ui/separator";
 
 type TimeLevel = 'minutes' | 'hours';
 
@@ -63,7 +63,7 @@ const Time = () => {
                         key={i}
                         id={`minute-${i}`}
                         className={cn(
-                            "flex min-w-[20px] flex-col items-center justify-center relative h-full hover:bg-primary-foreground",
+                            "relative flex h-full min-w-[20px] flex-col items-center justify-center hover:bg-primary-foreground",
                             currentTime.getMinutes() === i && "bg-primary-foreground",
                             i % 5 === 0 ? "min-w-[40px]" : "min-w-[12px]" // Wider space for numbered minutes
                         )}
@@ -75,7 +75,7 @@ const Time = () => {
                             </span>
                         ) : (
                             // Small border marks for in-between minutes
-                            <div className="h-4 w-[1px] bg-border" />
+                            <div className="h-4 w-px bg-border" />
                         )}
                         {/* <div className="h-[20px] w-[1px] bg-border absolute right-0" /> */}
                     </div>
@@ -87,7 +87,7 @@ const Time = () => {
                         key={i}
                         id={`hour-${i}`}
                         className={cn(
-                            "flex min-w-[20px] flex-col items-center justify-center relative h-full hover:bg-primary-foreground",
+                            "relative flex h-full min-w-[20px] flex-col items-center justify-center hover:bg-primary-foreground",
                             currentTime.getHours() === i && "bg-primary-foreground",
                             i % 3 === 0 ? "min-w-[40px]" : "min-w-[12px]" // Wider space for numbered hours
                         )}
@@ -99,7 +99,7 @@ const Time = () => {
                             </span>
                         ) : (
                             // Small border marks for in-between hours
-                            <div className="h-4 w-[1px] bg-border" />
+                            <div className="h-4 w-px bg-border" />
                         )}
                     </div>
                 ));
@@ -217,10 +217,10 @@ const Time = () => {
                         onMouseLeave={handleScrollEnd}
                         onTouchStart={() => handleScrollStart('left')}
                         onTouchEnd={handleScrollEnd}
-                        className="absolute left-1 top-1/2 -translate-y-1/2 z-10 rounded-full w-6 h-6 p-0"
+                        className="absolute left-1 top-1/2 z-10 size-6 -translate-y-1/2 rounded-full p-0"
                         size="icon"
                     >
-                        <ChevronLeft className="h-4 w-4" />
+                        <ChevronLeft className="size-4" />
                     </Button>
                 )}
                 {showRightScroll && (
@@ -230,14 +230,14 @@ const Time = () => {
                         onMouseLeave={handleScrollEnd}
                         onTouchStart={() => handleScrollStart('right')}
                         onTouchEnd={handleScrollEnd}
-                        className="absolute right-1 top-1/2 -translate-y-1/2 z-10 rounded-full w-6 h-6 p-0"
+                        className="absolute right-1 top-1/2 z-10 size-6 -translate-y-1/2 rounded-full p-0"
                         size="icon"
                     >
-                        <ChevronRight className="h-4 w-4" />
+                        <ChevronRight className="size-4" />
                     </Button>
                 )}
                 <div
-                    className="w-full overflow-x-hidden select-none transition-all duration-200 ease-in-out flex items-center justify-center"
+                    className="flex w-full select-none items-center justify-center overflow-x-hidden transition-all duration-200 ease-in-out"
                     ref={scrollRef}
                 >
                     <div className="flex h-8 items-center">

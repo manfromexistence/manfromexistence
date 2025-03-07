@@ -373,18 +373,18 @@ export default function LeftSidebar({
       <SidebarContent>
         <ScrollArea className="w-full p-0">
           <div className="mb-2 flex flex-col gap-1 px-2">
-            <div className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex min-h-8 min-w-8 items-center justify-center rounded-md border text-sm">
+            <div className="flex min-h-8 min-w-8 items-center justify-center rounded-md border text-sm hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
               {state === "expanded" ? (
                 "Start New"
               ) : (
-                <Plus className="h-4 w-4" />
+                <Plus className="size-4" />
               )}
             </div>
 
             <Tooltip placement="rightTop" title="Home">
               <Link href="/home">
                 <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Home className="h-4 w-4" />
+                  <Home className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Home
                   </span>
@@ -395,7 +395,7 @@ export default function LeftSidebar({
             <Tooltip placement="rightTop" title="Automations">
               <Link href="/automations">
                 <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Sparkles className="h-4 w-4" />
+                  <Sparkles className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Automations
                   </span>
@@ -406,7 +406,7 @@ export default function LeftSidebar({
             <Tooltip placement="rightTop" title="Varients">
               <Link href="/variants">
                 <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <CircleSlash2 className="h-4 w-4" />
+                  <CircleSlash2 className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Varients
                   </span>
@@ -417,7 +417,7 @@ export default function LeftSidebar({
             <Tooltip placement="rightTop" title="Library">
               <Link href="/library">
                 <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <LibraryBig className="h-4 w-4" />
+                  <LibraryBig className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Library
                   </span>
@@ -428,7 +428,7 @@ export default function LeftSidebar({
             <Tooltip placement="rightTop" title="More">
               <Link href="/more">
                 <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Ellipsis className="h-4 w-4" />
+                  <Ellipsis className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     More
                   </span>
@@ -455,9 +455,9 @@ export default function LeftSidebar({
             onClick={() => {
               toggleSidebar()
             }}
-            className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground flex min-h-8 min-w-8 items-center justify-center rounded-md"
+            className="flex min-h-8 min-w-8 items-center justify-center rounded-md hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
           >
-            <PanelRight className="h-4 w-4" />
+            <PanelRight className="size-4" />
           </div>
         )}
         {/* <SettingsDialog /> */}

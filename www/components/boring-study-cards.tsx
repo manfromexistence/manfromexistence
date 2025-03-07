@@ -117,7 +117,7 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
     }, timeToMidnight);
 
     return () => clearTimeout(resetTimer);
-  }, []);
+  }, [completed, setCompleted]);
 
   const today = new Date()
 
@@ -246,66 +246,65 @@ export default function BoringStudyCards({ onProgressUpdate }: { onProgressUpdat
   }, [completed, todaySubjects, onProgressUpdate]);
 
   return (
-    <div className="w-full mt-1">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
+    <div className="mt-1 w-full">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
         {todaySubjects.map((subject) => {
           const Icon = subject.icon
           return (
             <Card
               key={subject.id}
-              className={`group relative transition-all duration-300 ease-in-out 
-                          hover:scale-105 hover:shadow-lg cursor-pointer bg-background h-[180px]
+              className={`group relative h-[180px] cursor-pointer bg-background 
+                          transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg
                           ${completed[subject.id] ? "bg-primary-foreground" : ""}`}
               onClick={() => handleCardClick(subject.id)}
             >
               <div className="relative p-5">
-                <div className="flex items-center justify-between mb-3">
+                <div className="mb-3 flex items-center justify-between">
                   <div
-                    className={`h-12 w-12 rounded-full transition-colors duration-300
-                                  flex items-center justify-center bg-secondary
+                    className={`flex size-12 items-center justify-center rounded-full
+                                  bg-secondary transition-colors duration-300
                                 `}
                   >
-                    <Icon className="h-6 w-6" />
+                    <Icon className="size-6" />
                   </div>
                   <div
-                    className={`h-12 w-12 transition-colors duration-300
-                                    flex items-start justify-end
-                        }`}
+                    className={`} flex size-12 items-start
+                                    justify-end transition-colors duration-300`}
                   >
                     <Checkbox
                       id={subject.id}
                       checked={completed[subject.id]}
                       onCheckedChange={() => { }}
-                      className="h-6 w-6 rounded-full"
+                      className="size-6 rounded-full"
                     />
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-1 transition-colors duration-300 group-hover:text-primary">
+                  <h3 className="mb-1 text-xl font-bold transition-colors duration-300 group-hover:text-primary">
                     {subject.name}
                   </h3>
-                  <div className="gap-1 flex items-center">
+                  <div className="flex items-center gap-1">
 
-                    <p className="text-sm text-muted-foreground mb-2 truncate max-w-[80%]">
+                    <p className="mb-2 max-w-[80%] truncate text-sm text-muted-foreground">
                       {subject.time}
                     </p>
                     <div className="mb-1">
                       <HoverCard>
                         <HoverCardTrigger asChild>
-                          <Info className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer" />
+                          <Info className="size-4 cursor-pointer text-muted-foreground transition-colors hover:text-primary" />
                         </HoverCardTrigger>
                         <Portal.Root>
                           <HoverCardContent
-                            className="w-auto p-2 bg-popover text-popover-foreground shadow-md rounded-md relative z-[9999]"
+                            className="relative z-[9999] w-auto rounded-md bg-popover p-2 text-popover-foreground shadow-md"
                           >
-                            <p className="text-sm whitespace-nowrap">{subject.time}</p>
+                            <p className="whitespace-nowrap text-sm">{subject.time}</p>
                           </HoverCardContent>
                         </Portal.Root>
                       </HoverCard>
                     </div>
                   </div>
                   <div className="flex items-center text-xs text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1 inline-block" />
+                    <Clock className="mr-1 inline-block size-3" />
                     <span>{subject.duration}</span>
                   </div>
                 </div>

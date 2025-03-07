@@ -59,10 +59,13 @@ git add . && git commit -m "feat: automated commit by manfromexistence" && git p
     "eslint-config-next": "15.0.0-rc.0"
   }
 }
-``` -->
+```
+  <img src="https://readme-typing-svg.demolab.com?font=Inconsolata&weight=500&size=50&duration=4000&pause=300&color=A7A459&center=true&vCenter=true&multiline=true&repeat=false&random=false&width=1300&height=140&lines=Hello+there!;I+am+a+good+human+being+and+a+problem+solver+%E2%9C%A9" width="70%" />
+-->
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Inconsolata&weight=500&size=50&duration=4000&pause=300&color=A7A459&center=true&vCenter=true&multiline=true&repeat=false&random=false&width=1300&height=140&lines=Hello+there!;I+am+a+good+human+being+and+a+problem+solver+%E2%9C%A9" width="70%" />
+  <img src="https://readme-typing-svg.demolab.com?font=Inconsolata&weight=500&size=50&duration=4000&pause=300&color=A7A459&center=true&vCenter=true&multiline=true&repeat=false&random=false&width=1300&height=140&lines=Hello+there!;I+am+aproblem+solver+%E2%9C%A9" width="70%" />
+	
 </div>
 
 <pre align="center">

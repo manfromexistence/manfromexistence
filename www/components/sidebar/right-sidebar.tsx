@@ -90,7 +90,7 @@ export function CategoryRightSidebar() {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
-            <div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50">
+            <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-muted-foreground/80 peer-disabled:opacity-50">
               {isLoading ? (
                 <LoaderCircle
                   className="animate-spin"
@@ -104,7 +104,7 @@ export function CategoryRightSidebar() {
               )}
             </div>
             <button
-              className="text-muted-foreground/80 hover:text-foreground focus-visible:outline-ring/70 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg outline-offset-2 transition-colors focus:z-10 focus-visible:outline focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+              className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg text-muted-foreground/80 outline-offset-2 transition-colors hover:text-foreground focus:z-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
               aria-label="Press to speak"
               type="submit"
             >
@@ -119,7 +119,7 @@ export function CategoryRightSidebar() {
             <Tooltip placement="rightTop" title="Home">
               <Link href="/home">
                 <CategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Home className="h-4 w-4" />
+                  <Home className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Home
                   </span>
@@ -129,7 +129,7 @@ export function CategoryRightSidebar() {
             <Tooltip placement="rightTop" title="Automations">
               <Link href="/automations">
                 <CategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Sparkles className="h-4 w-4" />
+                  <Sparkles className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Automations
                   </span>
@@ -139,7 +139,7 @@ export function CategoryRightSidebar() {
             <Tooltip placement="rightTop" title="Varients">
               <Link href="/variants">
                 <CategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <CircleSlash2 className="h-4 w-4" />
+                  <CircleSlash2 className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Varients
                   </span>
@@ -150,7 +150,7 @@ export function CategoryRightSidebar() {
             <Tooltip placement="rightTop" title="Library">
               <Link href="/library">
                 <CategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <LibraryBig className="h-4 w-4" />
+                  <LibraryBig className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Library
                   </span>
@@ -161,7 +161,7 @@ export function CategoryRightSidebar() {
             <Tooltip placement="rightTop" title="More">
               <Link href="/more">
                 <CategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Ellipsis className="h-4 w-4" />
+                  <Ellipsis className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     More
                   </span>
@@ -228,7 +228,7 @@ export function SubCategoryRightSidebar() {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
-            <div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50">
+            <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 text-muted-foreground/80 peer-disabled:opacity-50">
               {isLoading ? (
                 <LoaderCircle
                   className="animate-spin"
@@ -242,7 +242,7 @@ export function SubCategoryRightSidebar() {
               )}
             </div>
             <button
-              className="text-muted-foreground/80 hover:text-foreground focus-visible:outline-ring/70 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg outline-offset-2 transition-colors focus:z-10 focus-visible:outline focus-visible:outline-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+              className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg text-muted-foreground/80 outline-offset-2 transition-colors hover:text-foreground focus:z-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
               aria-label="Press to speak"
               type="submit"
             >
@@ -257,7 +257,7 @@ export function SubCategoryRightSidebar() {
             <Tooltip placement="rightTop" title="Home">
               <Link href="/home">
                 <SubCategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Home className="h-4 w-4" />
+                  <Home className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Home
                   </span>
@@ -267,7 +267,7 @@ export function SubCategoryRightSidebar() {
             <Tooltip placement="rightTop" title="Automations">
               <Link href="/automations">
                 <SubCategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Sparkles className="h-4 w-4" />
+                  <Sparkles className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Automations
                   </span>
@@ -277,7 +277,7 @@ export function SubCategoryRightSidebar() {
             <Tooltip placement="rightTop" title="Varients">
               <Link href="/variants">
                 <SubCategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <CircleSlash2 className="h-4 w-4" />
+                  <CircleSlash2 className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Varients
                   </span>
@@ -287,7 +287,7 @@ export function SubCategoryRightSidebar() {
             <Tooltip placement="rightTop" title="Library">
               <Link href="/library">
                 <SubCategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <LibraryBig className="h-4 w-4" />
+                  <LibraryBig className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     Library
                   </span>
@@ -297,7 +297,7 @@ export function SubCategoryRightSidebar() {
             <Tooltip placement="rightTop" title="More">
               <Link href="/more">
                 <SubCategorySidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
-                  <Ellipsis className="h-4 w-4" />
+                  <Ellipsis className="size-4" />
                   <span className="text-center text-sm leading-tight">
                     More
                   </span>
@@ -404,45 +404,45 @@ export function RightSidebar() {
       </Popover>
        */}
 
-      <div className="hover:bg-primary-foreground mr-2 flex h-9 items-center justify-center gap-1 rounded-md border px-1.5">
+      <div className="mr-2 flex h-9 items-center justify-center gap-1 rounded-md border px-1.5 hover:bg-primary-foreground">
         <div
           onClick={handleCategorySidebarToggle}
-          className="hover:bg-background flex h-6 w-6 items-center justify-center rounded-md"
+          className="flex size-6 items-center justify-center rounded-md hover:bg-background"
         >
           <Calendar
             className={cn(
               categorySidebarState === "expanded"
                 ? "text-primary"
                 : "text-muted-foreground",
-              "h-4 w-4"
+              "size-4"
             )}
           />
         </div>
         <Separator orientation="vertical" className="h-4" />
         <div
           onClick={handleSubCategorySidebarToggle}
-          className="hover:bg-background flex h-6 w-6 items-center justify-center rounded-md"
+          className="flex size-6 items-center justify-center rounded-md hover:bg-background"
         >
           <Mail
             className={cn(
               subCategorySidebarState === "expanded"
                 ? "text-primary"
                 : "text-muted-foreground",
-              "h-4 w-4"
+              "size-4"
             )}
           />
         </div>
         <Separator orientation="vertical" className="h-4" />
         <div
           onClick={handleSubCategorySidebarToggle}
-          className="hover:bg-background flex h-6 w-6 items-center justify-center rounded-md"
+          className="flex size-6 items-center justify-center rounded-md hover:bg-background"
         >
           <Cog
             className={cn(
               subCategorySidebarState === "expanded"
                 ? "text-primary"
                 : "text-muted-foreground",
-              "h-4 w-4"
+              "size-4"
             )}
           />
         </div>
