@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react";
 import { cn } from '@/lib/utils';
 import { Separator } from "@/components/ui/separator"
@@ -9,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import IOSDOCk from '@/components/dock';
 import { SiteFooter } from "@/components/site-footer";
+import PixelatedText from "@/components/pixel"
 
 export default function Home() {
 
@@ -32,9 +34,16 @@ export default function Home() {
 
   return (
     <div className="container flex max-w-screen-xl flex-col items-center space-y-8 pb-[75px]">
+
       <IOSDOCk />
       <div className="mt-2 w-full space-y-8">
-        <span className="text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">Developing Solutions for Problems with Curiosity and Thoughts</span>
+        {/* <PixelatedText fontSize={45} pixelSize={3} position="left" className="py-2">
+          Developing Solutions for Problems with <PixelatedText.Rainbow>Curiosity</PixelatedText.Rainbow> and <PixelatedText.Rainbow>Thoughts</PixelatedText.Rainbow>
+        </PixelatedText> */}
+        <PixelatedText fontSize={65} pixelSize={3} position="left" className="py-2">
+        Crafting Experiences with <PixelatedText.Rainbow>Pixels</PixelatedText.Rainbow> and <PixelatedText.Rainbow>Logic</PixelatedText.Rainbow>
+        </PixelatedText>
+        {/* <span className="text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">Developing Solutions for Problems with Curiosity and Thoughts</span> */}
         <div className="flex w-full flex-col justify-between space-y-4 text-muted-foreground md:flex-row md:space-y-0">
           <div className="flex flex-col space-y-2 md:max-h-[200px] md:w-3/5">
             <span>Delusions? I turn them into reality. Trying to solve as many problems as possible.</span>
@@ -54,7 +63,7 @@ export default function Home() {
             </div>
           </div>
           <div className='w-full md:max-w-[400px]'>
-            <div className="relative min-h-[200px] border border-dashed">
+            <div className="relative min-h-[150px] border border-dashed">
               <Icon className="-left-3 -top-3" />
               <Icon className="-right-3 -top-3" />
               <Icon className="-bottom-3 -left-3" />
