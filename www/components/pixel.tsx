@@ -3,6 +3,7 @@
 import * as React from "react"
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
+import { useTheme } from "next-themes"
 
 export const PixelatedText = React.memo<PixelatedTextProps>(({ children, fontSize = 30, pixelSize = 4, position = "left", className = "" }) => {
   const [mounted, setMounted] = useState(false)
@@ -83,9 +84,9 @@ const BasePixelatedText: React.FC<RainbowPixelatedTextProps> = ({
   children,
   className,
 }) => {
+  const { theme } = useTheme();
   const { fontSize, pixelSize } = React.useContext(PixelContext);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // Calculate dimensions on each render
   const canvasSize = measureText(children, fontSize);
 
   useEffect(() => {
@@ -94,11 +95,13 @@ const BasePixelatedText: React.FC<RainbowPixelatedTextProps> = ({
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Use theme from next-themes to determine text color
+    const textColor = theme === 'dark' ? '#ffffff' : '#000000';
+
     ctx.clearRect(0, 0, canvasSize.width, canvasSize.height);
     ctx.font = `bold ${fontSize}px monospace`;
     ctx.textBaseline = 'middle';
     
-    const textMetrics = ctx.measureText(children);
     const x = 0;
     const y = canvasSize.height / 2;
     
@@ -113,12 +116,12 @@ const BasePixelatedText: React.FC<RainbowPixelatedTextProps> = ({
       for (let x = 0; x < canvasSize.width; x += pixelSize) {
         const index = y * canvasSize.width * 4 + x * 4;
         if (data[index + 3] > 0) {
-          ctx.fillStyle = 'white'; // Or use textColor from context if needed
+          ctx.fillStyle = textColor;
           ctx.fillRect(x, y, pixelSize - 1, pixelSize - 1);
         }
       }
     }
-  }, [children, fontSize, pixelSize, canvasSize.width, canvasSize.height]);
+  }, [children, fontSize, pixelSize, canvasSize.width, canvasSize.height, theme]);
 
   return (
     <canvas
