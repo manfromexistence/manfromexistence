@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   ArrowDown,
   ArrowUp,
@@ -17,14 +17,14 @@ import {
   Star,
   Trash,
   Trash2,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/popover";
 import {
   Sidebar,
   SidebarContent,
@@ -33,7 +33,8 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/sidebar/actions-sidebar"
+} from "@/components/sidebar/actions-sidebar";
+import ThemeToggleButton from "@/components/ui/theme-toggle-button";
 
 const data = [
   [
@@ -96,10 +97,10 @@ const data = [
       icon: ArrowDown,
     },
   ],
-]
+];
 
 export function NavActions() {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
 
   // React.useEffect(() => {
   //   setIsOpen(true)
@@ -113,6 +114,12 @@ export function NavActions() {
       <Button variant="ghost" size="icon" className="h-7 w-7">
         <Star />
       </Button> */}
+      <ThemeToggleButton
+        className="mr-2 rounded-md border"
+        showLabel
+        variant="gif"
+        url="https://media.giphy.com/media/5PncuvcXbBuIZcSiQo/giphy.gif?cid=ecf05e47j7vdjtytp3fu84rslaivdun4zvfhej6wlvl6qqsz&ep=v1_stickers_search&rid=giphy.gif&ct=s"
+      />
       <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>
           <Button
@@ -149,5 +156,5 @@ export function NavActions() {
         </PopoverContent>
       </Popover>
     </div>
-  )
+  );
 }

@@ -11,11 +11,13 @@ import {
   AnimationVariant,
   createAnimation,
 } from "./theme-animations"
+import { cn } from "@/lib/utils"
 
 interface ThemeToggleAnimationProps {
   variant?: AnimationVariant
   start?: AnimationStart
   showLabel?: boolean
+  className?: string
   url?: string
 }
 
@@ -23,6 +25,7 @@ export default function ThemeToggleButton({
   variant = "circle-blur",
   start = "top-left",
   showLabel = false,
+  className = "",
   url = "",
 }: ThemeToggleAnimationProps) {
   const { theme, setTheme } = useTheme()
@@ -72,7 +75,7 @@ export default function ThemeToggleButton({
       onClick={toggleTheme}
       variant="ghost"
       size="icon"
-      className="group relative size-9 p-0"
+      className={cn("group relative size-9 p-0", className)}
       name="Theme Toggle Button"
     >
       <SunIcon className="size-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
