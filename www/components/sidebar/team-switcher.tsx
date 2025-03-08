@@ -48,7 +48,7 @@ export function TeamSwitcher({}: {
             // }}
             className="flex aspect-square min-h-8 min-w-8 items-center justify-center rounded-lg text-sidebar-primary-foreground"
           >
-            <LogoIcon className="size-8" />
+            <LogoIcon className="size-8 invert dark:invert-0" />
           </div>
           <PanelRight
             onClick={() => {
