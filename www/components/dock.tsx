@@ -144,6 +144,11 @@ export default function IOSDOCk() {
     return (
         <div className="!pb-100 fixed bottom-4 left-1/2 z-50 flex w-full -translate-x-1/2 items-center justify-center">
             <Dock magnification={65} distance={113}>
+                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
+                    <Link target="_blank" href="https://manfromexistence-friday.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={75} width={75} alt="algorithm" />
+                    </Link>
+                </DockIcon>
                 <DockIcon className="rounded-full bg-secondary p-1 dark:bg-primary-foreground">
                     <Link target="_blank" href="https://manfromexistence-ui.vercel.app">
                         <Image className="invert dark:invert-0" src="/manfromexistence/ui.png" height={75} width={75} alt="ui" />
@@ -157,11 +162,6 @@ export default function IOSDOCk() {
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground md:block">
                     <Link target="_blank" href="https://spark-labs-website.vercel.app/">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
-                    </Link>
-                </DockIcon>
-                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
-                    <Link target="_blank" href="https://admin-panel-mahabub.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={75} width={75} alt="algorithm" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
@@ -180,7 +180,7 @@ export default function IOSDOCk() {
                     </Link>
                 </DockIcon>
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground md:block">
-                    <Link target="_blank" href="https://aladdin.vercel.app/">
+                    <Link target="_blank" href="https://admin-panel-mahabub.vercel.app//">
                         <Image className="invert-0 dark:invert" src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="design-pattern" />
                     </Link>
                 </DockIcon>
