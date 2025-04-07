@@ -146,7 +146,7 @@ export default function IOSDOCk() {
             <Dock magnification={65} distance={113}>
                 <DockIcon className="rounded-full bg-secondary p-1 dark:bg-primary-foreground">
                     <Link target="_blank" href="https://manfromexistence-friday.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={65} width={65} alt="friday" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={25} width={25} alt="friday" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="rounded-full bg-secondary p-1 dark:bg-primary-foreground">
