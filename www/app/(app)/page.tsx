@@ -73,7 +73,7 @@ export default function Home() {
                   <Image width={50} height={50} src='/MANFROMEXISTENCE.jpg' alt='manfromexistnece' className='rounded-md' />
                   <div className='flex flex-col'>
                     <span className='text-foreground'>manfromexistence</span>
-                    <span>Currently Does Exists</span>
+                    <span>Currently Do Exists</span>
                   </div>
                   <div className='flex size-10 items-center justify-center rounded-full border p-1'>
                     ❤

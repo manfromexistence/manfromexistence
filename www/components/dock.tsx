@@ -144,9 +144,9 @@ export default function IOSDOCk() {
     return (
         <div className="!pb-100 fixed bottom-4 left-1/2 z-50 flex w-full -translate-x-1/2 items-center justify-center">
             <Dock magnification={65} distance={113}>
-                <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
+                <DockIcon className="rounded-full bg-secondary p-1 dark:bg-primary-foreground">
                     <Link target="_blank" href="https://manfromexistence-friday.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={75} width={75} alt="algorithm" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/algorithm.svg" height={65} width={65} alt="friday" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="rounded-full bg-secondary p-1 dark:bg-primary-foreground">
@@ -156,37 +156,37 @@ export default function IOSDOCk() {
                 </DockIcon>
                 <DockIcon className="rounded-full bg-secondary p-3 dark:bg-primary-foreground">
                     <Link target="_blank" href="https://ustudy-mahabub.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/auth.svg" height={75} width={75} alt="auth" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/auth.svg" height={75} width={75} alt="ustudy" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground md:block">
                     <Link target="_blank" href="https://spark-labs-website.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/ai.svg" height={75} width={75} alt="ai" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/ai.svg" height={75} width={75} alt="sparklabs" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
                     <Link target="_blank" href="https://manofexistence-professional-portfolio.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/backend.svg" height={75} width={75} alt="backend" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/backend.svg" height={75} width={75} alt="pro-portfolio" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground sm:block">
                     <Link target="_blank" href="https://manofexistence-brainwave.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/blockchain.svg" height={75} width={75} alt="blockchain" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/blockchain.svg" height={75} width={75} alt="brainwave" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground lg:block">
                     <Link target="_blank" href="https://fiverr-rocket-krypt.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/deployment.svg" height={75} width={75} alt="deployment" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/deployment.svg" height={75} width={75} alt="krypt" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground md:block">
-                    <Link target="_blank" href="https://admin-panel-mahabub.vercel.app//">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="design-pattern" />
+                    <Link target="_blank" href="https://admin-panel-mahabub.vercel.app/">
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/design-pattern.svg" height={75} width={75} alt="admin-panel" />
                     </Link>
                 </DockIcon>
                 <DockIcon className="hidden rounded-full bg-secondary p-3 dark:bg-primary-foreground lg:block">
                     <Link target="_blank" href="https://lolgamer-xstream.vercel.app/">
-                        <Image className="invert-0 dark:invert" src="/manfromexistence/documentation.svg" height={75} width={75} alt="documentation" />
+                        <Image className="invert-0 dark:invert" src="/manfromexistence/documentation.svg" height={75} width={75} alt="xstream" />
                     </Link>
                 </DockIcon>
                 {/* <DockIcon className="p-3 dark:bg-primary-foreground bg-secondary rounded-full hidden md:block">
@@ -297,7 +297,36 @@ export default function IOSDOCk() {
                         </DrawerTrigger>
                         <DrawerContent className="h-4/5">
                             <div className="mt-4 flex w-full flex-col overflow-auto pl-4 pr-1">
-                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://ai.manfromexistence.com">
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://ustudy-mahabub.vercel.app/">
+                                    <h2>Ustudy</h2>
+                                    <span className="text-muted-foreground">Copy & Past some ai related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://spark-labs-website.vercel.app/">
+                                    <h2>Sparklabs</h2>
+                                    <span className="text-muted-foreground">Copy & Past some ai related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://manofexistence-professional-portfolio.vercel.app/">
+                                    <h2>Pro Portfolio</h2>
+                                    <span className="text-muted-foreground">Copy & Past some ai related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://manofexistence-brainwave.vercel.app/">
+                                    <h2>Brainwave</h2>
+                                    <span className="text-muted-foreground">Copy & Past some ai related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://fiverr-rocket-krypt.vercel.app/">
+                                    <h2>Krypt</h2>
+                                    <span className="text-muted-foreground">Copy & Past some ai related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://admin-panel-mahabub.vercel.app/">
+                                    <h2>Admin Panel</h2>
+                                    <span className="text-muted-foreground">Copy & Past some ai related code</span>
+                                </Link>
+                                <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://lolgamer-xstream.vercel.app/">
+                                    <h2>Xstream</h2>
+                                    <span className="text-muted-foreground">Copy & Past some ai related code</span>
+                                </Link>
+
+                                {/* <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4 md:hidden" target="_blank" href="https://ai.manfromexistence.com">
                                     <h2>Ai</h2>
                                     <span className="text-muted-foreground">Copy & Past some ai related code</span>
                                 </Link>
@@ -364,7 +393,7 @@ export default function IOSDOCk() {
                                 <Link className="mb-2 flex flex-col space-y-1 rounded-md bg-primary-foreground p-4" target="_blank" href="https://observeability.manfromexistence.com">
                                     <h2>Observeability</h2>
                                     <span className="text-muted-foreground">Copy & Past some observeability related code</span>
-                                </Link>
+                                </Link> */}
                             </div>
                             {/* <ScrollArea className="h-full w-full space-y-2 p-4 pt-2 flex flex-col overflow-auto rounded-t-[10px]">
                                 <Link className="mb-2 flex flex-col bg-primary-foreground space-y-1 p-4 rounded-md" target="_blank" href="https://ai.manfromexistence.com">
