@@ -1,9 +1,10 @@
-# manfromexistence 👋 ManFromExistence(13/10/2005)(3)(sumon):;@!:)
+# manfromexistence 👋
 <div align="center">
   <img hight="300" width="100%" alt="manfromexistence" src="./inventory/manfromexistence.gif">
 </div>
 
 <!-- ```
+ManFromExistence(13/10/2005)(3)(sumon):;@!:)
 npm install -g npm@11.1.0 && npm install -g bun && bun install && bun run dev
 
 git add . && git commit -m "feat: this is an automated commit made by manfromexitence from manfromexsitence02 account" && git push
