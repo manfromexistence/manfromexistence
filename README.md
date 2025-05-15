@@ -1,4 +1,5 @@
-ManFromExistence(13/10/2005)(3)(sumon):;@!:)
+
+
 
 # manfromexistence 👋
 <div align="center">
@@ -6,6 +7,11 @@ ManFromExistence(13/10/2005)(3)(sumon):;@!:)
 </div>
 
 <!-- ```
+ashikul-islam-shimul
+fariya-jahan-tazmi
+antu-das-nirob/
+
+ManFromExistence(13/10/2005)(3)(sumon):;@!:)
 ManFromExistence(13/10/2005)(3)(sumon):;@!:)
 npm install -g npm@11.1.0 && npm install -g bun && bun install && bun run dev
 
