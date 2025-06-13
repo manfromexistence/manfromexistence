@@ -15,7 +15,7 @@ I am an experienced fullstack software engineer who loves to learn new techs and
 7. Ai: I personally don't like this Ai madness cause. For this my programming skills are at risk but I cannot deny the fact that it is more useful than the Blockchain madness that occurred some time earlier. So, I somehow managed myself to learn this new Ai techs and currently learning...
 
 So, now you already know about all of my skills. Here is the list of some of my already created projects:
-1. https://dx-ui.vercel.app/liquid-glass
+1. https://dx-ui.vercel.app
 2. https://manofexistence-professional-portfolio.vercel.app/
 3. https://manofexistence-brainwave.vercel.app/
 4. https://fiverr-rocket-krypt.vercel.app/
@@ -39,7 +39,7 @@ Hello, I am 100% sure that I can do this project.
 I am an experienced fullstack software engineer who loves to learn new techs and make something useful from that. 
 
 Here is the list of some of my already created projects:
-1. https://dx-ui.vercel.app/liquid-glass
+1. https://dx-ui.vercel.app
 2. https://manofexistence-professional-portfolio.vercel.app/
 3. https://manofexistence-brainwave.vercel.app/
 4. https://fiverr-rocket-krypt.vercel.app/
