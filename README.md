@@ -3,6 +3,8 @@
   <img hight="300" width="100%" alt="manfromexistence" src="./inventory/manfromexistence.gif">
 </div>
 
+<!-- ```
+
 ```
 1. Cline - https://github.com/cline/cline
 2. Roo code - https://github.com/RooCodeInc/Roo-Code
@@ -13,7 +15,6 @@
 7. TabbyML - https://github.com/TabbyML/tabby
 ```
 
-<!-- ```
 G_666#WSZav5B%h
 najmus.sakib.hossain@outlook.com
 Sumon123@!
