@@ -1,10 +1,10 @@
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
-import Script from "next/script"
 import { ThemeProvider } from "@/components/providers"
 import { cn } from "@/lib/utils"
 import { fontMono, fontSans } from "@/lib/fonts"
 import { META_THEME_COLORS, siteConfig } from "@/config/site"
+import GoogleAdsense from "./google-adsense"
 
 export const metadata: Metadata = {
   title: {
@@ -96,13 +96,8 @@ export default function RootLayout({
             {children}
           </div>
         </ThemeProvider>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3324153519180484"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
       </body>
+      <GoogleAdsense pId="3324153519180484" />
     </html>
   )
 }
