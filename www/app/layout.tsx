@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
+import Script from "next/script"
 import { ThemeProvider } from "@/components/providers"
 import { cn } from "@/lib/utils"
 import { fontMono, fontSans } from "@/lib/fonts"
@@ -95,6 +96,12 @@ export default function RootLayout({
             {children}
           </div>
         </ThemeProvider>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3324153519180484"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
