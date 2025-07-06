@@ -84,7 +84,7 @@ export default function Home() {
                   <Link href={"https://www.youtube.com/@manfromexistence"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
                     <YouTube />
                   </Link>
-                  <Link href={"https://x.com/manfrexistence"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
+                  <Link href={"https://otieu.com/4/9536902"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
                     <XformerlyTwitter className="invert dark:invert-0" />
                   </Link>
                   <Link href={"https://github.com/manfromexistence"} className='flex size-12 items-center justify-center rounded-full bg-primary-foreground text-primary'>
