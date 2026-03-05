@@ -1,5 +1,22 @@
 # manfromexistence
 ```
+bb11c-1308e 
+27ef1-9374d 
+8153b-5da25 
+5f08f-1c163 
+ddbce-6ab6b 
+b0126-b4370 
+4f1c5-054f3 
+31050-e3d2b 
+d9ddd-2630a 
+71693-2b90a 
+3e07c-8df95 
+9ff8d-3d15c 
+ff03d-0392e 
+f73bc-20a2d 
+cfc6b-24352 
+c9e52-1bced
+
 b22df-4f229 
 b43af-36d53 
 60226-24ba1 
