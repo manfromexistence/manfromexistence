@@ -16,23 +16,6 @@ ff03d-0392e
 f73bc-20a2d 
 cfc6b-24352 
 c9e52-1bced
-
-b22df-4f229 
-b43af-36d53 
-60226-24ba1 
-281cf-5e254 
-f95e1-d5621 
-b67e4-7204e 
-d5ed3-319de 
-b2f71-6b32d 
-5420c-58935 
-da650-80830 
-b8527-c6a15 
-fa89c-b644b 
-0fb43-e447d 
-21fef-e021e 
-5d565-c7253 
-3c846-afb91
 ```
 
 # manfromexistence01
